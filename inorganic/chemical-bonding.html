@@ -4,8 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chemical Bonding | JEE Chemistry Notes</title>
-  <meta name="description" content="Chemical Bonding Notes for JEE Mains — Ionic Bond, Lattice Energy, Fajan's Rule, VSEPR, Hybridisation, MOT, PYQ (2019-2026).">
+  <meta name="description" content="Chemical Bonding Notes for JEE Mains — Ionic Bond, Lattice Energy, Fajan's Rule, VSEPR, Hybridisation, MOT, PYQ Analysis (2019-2026).">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Print Button */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .print-btn:hover {
+      background: #2d8e47;
+    }
+    .print-btn-container {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Born-Haber Diagram */
+    .bh-diagram {
+      background: #f8f9fa;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+    }
+    .bh-diagram svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Numerical Example Box */
+    .numeric-box {
+      background: #e8f0fe;
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .numeric-box .box-title {
+      color: var(--primary-dark);
+    }
+    .numeric-box ol {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Notes Spacing */
+    .notes h2 {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+    }
+    .notes h2:first-child {
+      margin-top: 0;
+    }
+    .notes h3 {
+      margin-top: 1.5rem;
+    }
+    .notes p {
+      margin-bottom: 1rem;
+    }
+    .notes ul, .notes ol {
+      margin-bottom: 1.2rem;
+    }
+    .notes .box {
+      margin: 1.2rem 0;
+    }
+
+    /* Print Styles */
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer {
+        display: none !important;
+      }
+      .tab-content {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .chapter-header {
+        background: white !important;
+        color: black !important;
+      }
+      .notes h2 {
+        page-break-after: avoid;
+      }
+      .notes table, .notes .box {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,11 +135,16 @@
     <p>Ionic Bond, Lattice Energy, Fajan's Rule, VSEPR, Hybridisation, MOT</p>
   </header>
 
+  <!-- PRINT BUTTON -->
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
   <!-- TABS -->
   <div class="tabs">
     <button class="tab-btn" data-tab="tab-notes">📖 Full Notes</button>
     <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps</button>
-    <button class="tab-btn" data-tab="tab-pyq">📝 PYQ (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
     <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
   </div>
 
@@ -46,8 +153,300 @@
   <!-- ============================================ -->
   <div id="tab-notes" class="tab-content">
     <div class="notes">
-      <!-- CONTENT YAHAN AAYEGA (Step 9 mein) -->
-      <p>Content loading...</p>
+
+      <h2>1. Ionic Bond & Lattice Energy</h2>
+
+      <div class="box">
+        <span class="box-title">Ionic Bond Formation</span>
+        <p><strong>Condition:</strong> Low IE (e⁻ donor) + High EA (e⁻ acceptor)</p>
+        <p><strong>Stability Condition:</strong> Lattice Energy > (IE − EA)</p>
+      </div>
+
+      <h3>1.1 Lattice Energy (U) – Do Definitions</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Definition</th>
+            <th>Sign</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Formation</strong></td>
+            <td>1 mole solid banne par release hone wali energy</td>
+            <td>Negative (exothermic)</td>
+          </tr>
+          <tr>
+            <td><strong>Dissociation</strong></td>
+            <td>1 mole solid ko gaseous ions mein todne ki energy</td>
+            <td>Positive (endothermic)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="formula">
+        U ∝ (q₁ × q₂) / r₀, jahan r₀ = r(cation) + r(anion)
+      </div>
+
+      <h3>1.2 Trends</h3>
+      <ul>
+        <li><strong>Charge ↑</strong> → U ↑</li>
+        <li><strong>Size ↑</strong> → U ↓</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p>MgO > CaO > SrO > BaO (Size ↑, U ↓)</p>
+        <p>NaF &lt; MgF₂ &lt; AlF₃ (Charge ↑, U ↑)</p>
+      </div>
+
+      <h3>1.3 Born-Haber Cycle (Diagram)</h3>
+
+      <div class="bh-diagram">
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <!-- M(s) -->
+          <text x="30" y="40" fill="#202124" font-weight="600">M(s)</text>
+          <line x1="80" y1="35" x2="180" y2="35" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="95" y="25" fill="#1a73e8" font-size="11">Sublimation (+)</text>
+          <text x="195" y="40" fill="#202124" font-weight="600">M(g)</text>
+
+          <!-- M(g) to M+(g) -->
+          <line x1="240" y1="35" x2="340" y2="35" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="255" y="25" fill="#1a73e8" font-size="11">Ionisation (+)</text>
+          <text x="355" y="40" fill="#202124" font-weight="600">M⁺(g)</text>
+
+          <!-- Vertical downward line -->
+          <line x1="410" y1="45" x2="410" y2="150" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="420" y="100" fill="#ea4335" font-size="11">Lattice Formation (−)</text>
+
+          <!-- Bottom row: X2(g) -->
+          <text x="30" y="280" fill="#202124" font-weight="600">X₂(g)</text>
+          <line x1="80" y1="275" x2="180" y2="275" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="95" y="265" fill="#1a73e8" font-size="11">Dissociation (+)</text>
+          <text x="195" y="280" fill="#202124" font-weight="600">2X(g)</text>
+
+          <!-- 2X(g) to 2X-(g) -->
+          <line x1="240" y1="275" x2="340" y2="275" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="255" y="265" fill="#1a73e8" font-size="11">EA (−)</text>
+          <text x="355" y="280" fill="#202124" font-weight="600">2X⁻(g)</text>
+
+          <!-- 2X-(g) to MX(s) -->
+          <line x1="410" y1="275" x2="410" y2="190" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="420" y="240" fill="#34a853" font-size="11">MX(s)</text>
+
+          <!-- Arrow marker -->
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,6 L9,3 z" fill="#1a73e8"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Signs yaad rakho</span>
+        <ul>
+          <li>Sublimation: +</li>
+          <li>Ionisation: +</li>
+          <li>Dissociation: +</li>
+          <li>Electron Affinity: −</li>
+          <li>Lattice Formation: −</li>
+        </ul>
+      </div>
+
+      <h2>2. Fajan's Rule (Polarization)</h2>
+
+      <h3>2.1 Rules</h3>
+      <ol>
+        <li><strong>Cation chota</strong> → zyada covalent</li>
+        <li><strong>Anion bada</strong> → zyada covalent</li>
+        <li><strong>Charge zyada</strong> → zyada covalent</li>
+        <li><strong>d¹⁰ configuration</strong> (Ag⁺, Zn²⁺) → zyada covalent</li>
+      </ol>
+
+      <div class="box trap-box">
+        <span class="box-title">Priority Order (JEE Trick)</span>
+        <p><strong>Ionic vs Covalent</strong> ka sawal aaye toh:</p>
+        <ol>
+          <li>Pehle Charge dekho</li>
+          <li>Phir Size dekho</li>
+          <li>Phir d¹⁰ configuration dekho</li>
+        </ol>
+      </div>
+
+      <h3>2.2 Mains Fixed Orders</h3>
+      <ul>
+        <li>AlF₃ &lt; AlCl₃ &lt; AlBr₃ &lt; AlI₃</li>
+        <li>NaCl &lt; MgCl₂ &lt; AlCl₃</li>
+        <li>LiF most ionic, LiI most covalent</li>
+        <li>AgCl &lt; AgBr &lt; AgI (covalent)</li>
+      </ul>
+
+      <h2>3. VSEPR & Hybridisation</h2>
+
+      <h3>3.1 Steric Number (SN)</h3>
+      <div class="formula">
+        SN = σ bonds + Lone Pairs
+      </div>
+
+      <h3>3.2 Hybridisation Formula</h3>
+      <div class="formula">
+        H = ½ [V + M − C + A]
+      </div>
+      <ul>
+        <li><strong>V</strong> = Valence electrons of central atom</li>
+        <li><strong>M</strong> = Monovalent atoms attached</li>
+        <li><strong>C</strong> = Cation charge</li>
+        <li><strong>A</strong> = Anion charge</li>
+      </ul>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Examples (Hybridisation)</span>
+        <p><strong>Example 1:</strong> Find hybridisation of S in SF₄</p>
+        <ol>
+          <li>V = 6 (S ke valence e⁻)</li>
+          <li>M = 4 (4 F atoms)</li>
+          <li>C = 0, A = 0</li>
+          <li>H = ½ [6 + 4 − 0 + 0] = ½ × 10 = <strong>5</strong></li>
+          <li>SN = 5 → <strong>sp³d</strong> → See-Saw</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Examples (Hybridisation)</span>
+        <p><strong>Example 2:</strong> Find hybridisation of Xe in XeF₄</p>
+        <ol>
+          <li>V = 8 (Xe ke valence e⁻)</li>
+          <li>M = 4 (4 F atoms)</li>
+          <li>C = 0, A = 0</li>
+          <li>H = ½ [8 + 4 − 0 + 0] = ½ × 12 = <strong>6</strong></li>
+          <li>SN = 6 → <strong>sp³d²</strong> → Square Planar</li>
+        </ol>
+      </div>
+
+      <h3>3.3 Complete VSEPR Table</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>SN</th>
+            <th>LP</th>
+            <th>Shape</th>
+            <th>Bond Angle</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2</td><td>0</td><td>Linear</td><td>180°</td><td>BeCl₂, CO₂</td></tr>
+          <tr><td>3</td><td>0</td><td>Trigonal Planar</td><td>120°</td><td>BF₃</td></tr>
+          <tr><td>3</td><td>1</td><td>Bent</td><td>&lt;120°</td><td>SO₂, O₃</td></tr>
+          <tr><td>4</td><td>0</td><td>Tetrahedral</td><td>109.5°</td><td>CH₄, NH₄⁺</td></tr>
+          <tr><td>4</td><td>1</td><td>Pyramidal</td><td>107°</td><td>NH₃, PCl₃</td></tr>
+          <tr><td>4</td><td>2</td><td>Bent</td><td>104.5°</td><td>H₂O</td></tr>
+          <tr><td>5</td><td>0</td><td>Trigonal Bipyramidal</td><td>90°, 120°</td><td>PCl₅</td></tr>
+          <tr><td>5</td><td>1</td><td>See-Saw</td><td>89°, 117°</td><td>SF₄</td></tr>
+          <tr><td>5</td><td>2</td><td>T-Shape</td><td>87.5°</td><td>ClF₃</td></tr>
+          <tr><td>5</td><td>3</td><td>Linear</td><td>180°</td><td>XeF₂, I₃⁻</td></tr>
+          <tr><td>6</td><td>0</td><td>Octahedral</td><td>90°</td><td>SF₆</td></tr>
+          <tr><td>6</td><td>1</td><td>Square Pyramidal</td><td>84.8°</td><td>BrF₅</td></tr>
+          <tr><td>6</td><td>2</td><td>Square Planar</td><td>90°</td><td>XeF₄, [ICl₄]⁻</td></tr>
+          <tr><td>7</td><td>0</td><td>Pentagonal Bipyramidal</td><td>72°, 90°</td><td>IF₇</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.4 Bond Angle Comparison</h3>
+      <ul>
+        <li>CH₄ (109.5°) > NH₃ (107°) > H₂O (104.5°)</li>
+        <li><strong>NF₃ (102°) &lt; NH₃ (107°)</strong> ← Exception</li>
+        <li><strong>H₂S (92°)</strong> &lt; H₂O (104.5°)</li>
+      </ul>
+
+      <h2>4. Molecular Orbital Theory (MOT)</h2>
+
+      <h3>4.1 Bond Order Formula</h3>
+      <div class="formula">
+        BO = (N_b − N_a) / 2
+      </div>
+
+      <h3>4.2 MOT Order</h3>
+
+      <div class="box">
+        <span class="box-title">≤14 electrons (π pehle, σ baad)</span>
+        <p>σ1s, σ*1s, σ2s, σ*2s, (π2px = π2py), σ2pz, (π*2px = π*2py), σ*2pz</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">&gt;14 electrons (σ pehle, π baad)</span>
+        <p>σ1s, σ*1s, σ2s, σ*2s, σ2pz, (π2px = π2py), (π*2px = π*2py), σ*2pz</p>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Example (Bond Order)</span>
+        <p><strong>Example:</strong> Find bond order of O₂</p>
+        <ol>
+          <li>O₂ → 16 e⁻ → >14 e⁻ → σ pehle, π baad</li>
+          <li>Configuration: σ1s², σ*1s², σ2s², σ*2s², σ2pz², π2px² = π2py², π*2px¹ = π*2py¹</li>
+          <li>N_b = 2 + 2 + 2 + 2 + 2 = 10</li>
+          <li>N_a = 2 + 2 + 1 + 1 = 6</li>
+          <li>BO = (10 − 6) / 2 = <strong>2</strong></li>
+          <li>Unpaired e⁻ = 2 → <strong>Paramagnetic</strong></li>
+        </ol>
+      </div>
+
+      <h3>4.3 IMP List (JEE Mains 2019–2026)</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Molecule</th>
+            <th>Total e⁻</th>
+            <th>Bond Order</th>
+            <th>Magnetic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>B₂</td><td>10</td><td>1</td><td>Para</td></tr>
+          <tr><td>C₂</td><td>12</td><td>2</td><td>Dia</td></tr>
+          <tr><td>N₂</td><td>14</td><td>3</td><td>Dia</td></tr>
+          <tr><td>O₂</td><td>16</td><td>2</td><td>Para</td></tr>
+          <tr><td>O₂⁺</td><td>15</td><td>2.5</td><td>Para</td></tr>
+          <tr><td>O₂⁻</td><td>17</td><td>1.5</td><td>Para</td></tr>
+          <tr><td>O₂²⁻</td><td>18</td><td>1</td><td>Dia</td></tr>
+          <tr><td>F₂</td><td>18</td><td>1</td><td>Dia</td></tr>
+          <tr><td>NO</td><td>15</td><td>2.5</td><td>Para</td></tr>
+          <tr><td>NO⁺</td><td>14</td><td>3</td><td>Dia</td></tr>
+          <tr><td>CN⁻</td><td>14</td><td>3</td><td>Dia</td></tr>
+          <tr><td>CO</td><td>14</td><td>3</td><td>Dia</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.4 Stability Order</h3>
+      <div class="formula">
+        O₂⁺ (2.5) > O₂ (2) > O₂⁻ (1.5) > O₂²⁻ (1)
+      </div>
+
+      <h2>5. Dipole Moment</h2>
+
+      <div class="formula">
+        μ = q × d
+      </div>
+
+      <ul>
+        <li><strong>Symmetric molecule</strong> → μ = 0 (CO₂, CH₄, BF₃)</li>
+        <li><strong>Asymmetric molecule</strong> → μ ≠ 0 (H₂O, NH₃, CHCl₃)</li>
+        <li>NH₃ (1.47 D) > NF₃ (0.24 D)</li>
+      </ul>
+
+      <h2>6. Back Bonding</h2>
+      <ul>
+        <li>Lone pair donation from filled orbital to empty orbital of adjacent atom.</li>
+        <li><strong>BF₃</strong> – B has empty p orbital, F has lone pair</li>
+        <li><strong>CO</strong> – C and O both have lone pairs</li>
+        <li>Effect: Bond length ↓, Stability ↑</li>
+      </ul>
+
     </div>
   </div>
 
@@ -56,18 +455,197 @@
   <!-- ============================================ -->
   <div id="tab-traps" class="tab-content">
     <div class="notes">
-      <!-- CONTENT YAHAN AAYEGA (Step 10 mein) -->
-      <p>Content loading...</p>
+      <h2>Mains Traps — Chemical Bonding</h2>
+
+      <div class="box trap-box">
+        <span class="box-title">1. Lattice Energy Order</span>
+        <p>MgO &gt; CaO &gt; SrO &gt; BaO</p>
+        <p>NaF &lt; MgF₂ &lt; AlF₃</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">2. Fajan's Rule</span>
+        <p>LiF most ionic, LiI most covalent</p>
+        <p>AgCl &lt; AgBr &lt; AgI (covalent)</p>
+        <p>Priority: Charge &gt; Size &gt; d¹⁰</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">3. Bond Angle</span>
+        <p>CH₄ &gt; NH₃ &gt; H₂O</p>
+        <p>NF₃ &lt; NH₃ (Exception)</p>
+        <p>H₂S &lt; H₂O</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">4. MOT Bond Order</span>
+        <p>O₂⁺ &gt; O₂ &gt; O₂⁻ &gt; O₂²⁻</p>
+        <p>N₂ (3) &gt; O₂ (2) &gt; F₂ (1)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">5. Magnetic Nature</span>
+        <p>O₂ → Paramagnetic</p>
+        <p>N₂ → Diamagnetic</p>
+        <p>B₂ → Paramagnetic</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">6. Iso-electronic Species</span>
+        <p>14 e⁻: N₂, CO, CN⁻, NO⁺</p>
+        <p>16 e⁻: O₂, NO⁻</p>
+        <p>18 e⁻: F₂, O₂²⁻, Ar</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">7. Hybridisation</span>
+        <p>XeF₄ → sp³d², Square Planar</p>
+        <p>SF₄ → sp³d, See-Saw</p>
+        <p>ClF₃ → sp³d, T-Shape</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">8. Dipole Moment</span>
+        <p>NH₃ &gt; NF₃</p>
+        <p>H₂O &gt; H₂S</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">9. Repulsion Order</span>
+        <p>lp-lp &gt; lp-bp &gt; bp-bp</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">10. Back Bonding</span>
+        <p>BF₃, CO</p>
+        <p>Bond length ↓, Stability ↑</p>
+      </div>
     </div>
   </div>
 
   <!-- ============================================ -->
-  <!-- TAB 3: PYQ -->
+  <!-- TAB 3: PYQ ANALYSIS (2019–2026) -->
   <!-- ============================================ -->
   <div id="tab-pyq" class="tab-content">
     <div class="notes">
-      <!-- CONTENT YAHAN AAYEGA (Step 11 mein) -->
-      <p>Content loading...</p>
+
+      <h2>JEE Main 2019–2026: Chemical Bonding PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Topics Asked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Fajan's Rule, Isoelectronic, Bond order</td></tr>
+          <tr><td><strong>2020</strong></td><td>Lattice Energy, Born-Haber, MOT Bond Order</td></tr>
+          <tr><td><strong>2021</strong></td><td>MOT, VSEPR, Dipole moment</td></tr>
+          <tr><td><strong>2022</strong></td><td>Bond angle, Hybridisation, MOT</td></tr>
+          <tr><td><strong>2023</strong></td><td>Fajan's Rule, Bond angle, MOT stability</td></tr>
+          <tr><td><strong>2024</strong></td><td>Hybridisation, Shape, Lattice Energy, Isoelectronic</td></tr>
+          <tr><td><strong>2025</strong></td><td>VSEPR, MOT, Dipole moment</td></tr>
+          <tr><td><strong>2026</strong></td><td>Fajan's Rule, Bond angle, MOT</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>VSEPR & Hybridisation</strong> → Har saal</li>
+          <li><strong>Fajan's Rule</strong> → 4 baar (2019, 2023, 2024, 2026)</li>
+          <li><strong>MOT</strong> → Har saal</li>
+          <li><strong>Bond Angle</strong> → 3 baar</li>
+          <li><strong>Dipole Moment</strong> → 2 baar</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Fajan's Rule</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>LiCl &gt; NaCl (covalent)</li>
+          <li>LiF most ionic, LiI most covalent</li>
+          <li>AgCl &lt; AgBr &lt; AgI (covalent)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: VSEPR & Hybridisation</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>XeF₄ → sp³d², Square Planar</li>
+          <li>SF₄ → sp³d, See-Saw</li>
+          <li>ClF₃ → sp³d, T-Shape</li>
+          <li>IF₇ → sp³d³, Pentagonal Bipyramidal</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Bond Angle</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>CH₄ &gt; NH₃ &gt; H₂O</li>
+          <li>NH₃ &gt; NF₃ (Exception)</li>
+          <li>H₂O &gt; H₂S</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: MOT</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>O₂⁺ (2.5) &gt; O₂ (2) &gt; O₂⁻ (1.5) &gt; O₂²⁻ (1)</li>
+          <li>O₂ Paramagnetic, N₂ Diamagnetic</li>
+          <li>B₂ Paramagnetic</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Dipole Moment</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>NH₃ (1.47 D) &gt; NF₃ (0.24 D)</li>
+          <li>H₂O (1.85 D) &gt; H₂S (0.95 D)</li>
+          <li>CO₂, CH₄, BF₃ → μ = 0</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 6: Isoelectronic Species</h3>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>14 e⁻: N₂, CO, CN⁻, NO⁺</li>
+          <li>16 e⁻: O₂, NO⁻</li>
+          <li>18 e⁻: F₂, O₂²⁻, Ar</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>VSEPR/Hybridisation</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>MOT Bond Order</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Fajan's Rule</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Bond Angle</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Dipole Moment</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> VSEPR & Hybridisation (100%), MOT (100%).</p>
+
     </div>
   </div>
 
@@ -76,14 +654,84 @@
   <!-- ============================================ -->
   <div id="tab-revision" class="tab-content">
     <div class="notes">
-      <!-- CONTENT YAHAN AAYEGA (Step 12 mein) -->
-      <p>Content loading...</p>
+      <h2>Quick Revision — Chemical Bonding (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Formulas</span>
+        <ul>
+          <li>Lattice Energy: U ∝ (q₁q₂)/r₀</li>
+          <li>Hybridisation: H = ½ [V + M − C + A]</li>
+          <li>Bond Order: BO = (N_b − N_a)/2</li>
+          <li>Magnetic Moment: μ = √n(n+2) BM</li>
+          <li>Dipole Moment: μ = q × d</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Key Orders</span>
+        <ul>
+          <li>Lattice Energy: MgO > CaO > SrO > BaO</li>
+          <li>Bond Angle: CH₄ > NH₃ > H₂O</li>
+          <li>Stability: O₂⁺ > O₂ > O₂⁻ > O₂²⁻</li>
+          <li>Bond Order: N₂ (3) > O₂ (2) > F₂ (1)</li>
+          <li>Dipole Moment: H₂O > NH₃ > NF₃</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Exceptions</span>
+        <ul>
+          <li>LiF most ionic, LiI most covalent</li>
+          <li>AgCl < AgBr < AgI</li>
+          <li>NF₃ < NH₃</li>
+          <li>O₂ Paramagnetic, N₂ Diamagnetic</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔄 Iso-electronic Species</span>
+        <ul>
+          <li>14 e⁻: N₂, CO, CN⁻, NO⁺</li>
+          <li>16 e⁻: O₂, NO⁻</li>
+          <li>18 e⁻: F₂, O₂²⁻, Ar</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧬 Hybridisation & Shapes</span>
+        <ul>
+          <li>sp → Linear</li>
+          <li>sp² → Trigonal Planar</li>
+          <li>sp³ → Tetrahedral</li>
+          <li>sp³d → Trigonal Bipyramidal</li>
+          <li>sp³d² → Octahedral</li>
+          <li>sp³d³ → Pentagonal Bipyramidal</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 MOT Quick Points</span>
+        <ul>
+          <li>≤14 e⁻: π pehle, σ baad</li>
+          <li>&gt;14 e⁻: σ pehle, π baad</li>
+          <li>B₂: Paramagnetic</li>
+          <li>O₂: Paramagnetic</li>
+          <li>N₂: Diamagnetic</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Repulsion Order</span>
+        <ul>
+          <li>lp-lp &gt; lp-bp &gt; bp-bp</li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+    <p>Made with ❤️ & Curiosity | <a href="https://github.com/ravirajhere">GitHub</a></p>
   </footer>
 
   <script src="../js/main.js"></script>

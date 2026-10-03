@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haloalkanes & Haloarenes | JEE Chemistry Notes</title>
+  <meta name="description" content="Haloalkanes & Haloarenes Notes for JEE Mains — SN1, SN2, E1, E2, Grignard Reagent, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Haloalkanes & Haloarenes
+  </div>
+
+  <header class="chapter-header">
+    <h1>Haloalkanes & Haloarenes</h1>
+    <p>SN1, SN2, E1, E2 Mechanisms, Grignard Reagent, Haloarenes Reactions</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Diagrams</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Reaction Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & DIAGRAMS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Classification of Haloalkanes & Haloarenes</h2>
+
+      <div class="box">
+        <span class="box-title">Haloalkanes</span>
+        <p>Alkyl halides: R−X (X = F, Cl, Br, I)</p>
+        <p><strong>Nomenclature:</strong> Halo + alkane (e.g., Chloroethane)</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Haloarenes</span>
+        <p>Aryl halides: Ar−X</p>
+        <p><strong>Nomenclature:</strong> Halo + arene (e.g., Chlorobenzene)</p>
+      </div>
+
+      <table>
+        <thead><tr><th>Type</th><th>Example</th><th>Classification</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Primary (1°)</strong></td><td>CH₃CH₂Cl</td><td>−X on primary C</td></tr>
+          <tr><td><strong>Secondary (2°)</strong></td><td>CH₃CHClCH₃</td><td>−X on secondary C</td></tr>
+          <tr><td><strong>Tertiary (3°)</strong></td><td>(CH₃)₃CCl</td><td>−X on tertiary C</td></tr>
+          <tr><td><strong>Allylic</strong></td><td>CH₂=CHCH₂Cl</td><td>−X adjacent to C=C</td></tr>
+          <tr><td><strong>Benzylic</strong></td><td>C₆H₅CH₂Cl</td><td>−X adjacent to benzene</td></tr>
+          <tr><td><strong>Vinylic</strong></td><td>CH₂=CHCl</td><td>−X on C=C</td></tr>
+          <tr><td><strong>Aryl</strong></td><td>C₆H₅Cl</td><td>−X on benzene ring</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Reactivity Order:</strong></p>
+        <p>Allylic > Benzylic > 3° > 2° > 1° > Vinylic > Aryl</p>
+        <p>Aryl aur Vinylic halides unreactive hote hain (resonance + sp² character)</p>
+      </div>
+
+      <h2>2. Nucleophilic Substitution Reactions (SN)</h2>
+
+      <h3>2.1 SN1 vs SN2 Mechanism</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">SN1 vs SN2 Mechanism</text>
+          
+          <!-- SN1 -->
+          <text x="30" y="60" fill="#ea4335" font-weight="700" font-size="13">SN1 (Substitution Nucleophilic Unimolecular)</text>
+          <text x="50" y="85" fill="#202124" font-size="12">Step 1 (Slow): R−X → R⁺ + X⁻</text>
+          <text x="50" y="105" fill="#202124" font-size="12">Step 2 (Fast): R⁺ + Nu⁻ → R−Nu</text>
+          <text x="50" y="125" fill="#5f6368" font-size="11">Rate = k[R−X]</text>
+          <text x="50" y="145" fill="#5f6368" font-size="11">Carbocation intermediate (Racemisation)</text>
+
+          <!-- SN2 -->
+          <text x="350" y="60" fill="#34a853" font-weight="700" font-size="13">SN2 (Substitution Nucleophilic Bimolecular)</text>
+          <text x="370" y="85" fill="#202124" font-size="12">Single Step: Nu⁻ + R−X → R−Nu + X⁻</text>
+          <text x="370" y="105" fill="#5f6368" font-size="11">Rate = k[R−X][Nu⁻]</text>
+          <text x="370" y="125" fill="#5f6368" font-size="11">Transition state (Inversion — Walden)</text>
+          <text x="370" y="145" fill="#5f6368" font-size="11">No intermediate</text>
+        </svg>
+        <div class="diagram-caption">SN1 (Racemisation) vs SN2 (Inversion)</div>
+      </div>
+
+      <table>
+        <thead><tr><th>Feature</th><th>SN1</th><th>SN2</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Rate Law</strong></td><td>Rate = k[R−X]</td><td>Rate = k[R−X][Nu⁻]</td></tr>
+          <tr><td><strong>Molecularity</strong></td><td>Unimolecular</td><td>Bimolecular</td></tr>
+          <tr><td><strong>Substrate</strong></td><td>3° > 2° > 1°</td><td>1° > 2° > 3°</td></tr>
+          <tr><td><strong>Solvent</strong></td><td>Polar Protic (H₂O, EtOH)</td><td>Polar Aprotic (DMSO, DMF)</td></tr>
+          <tr><td><strong>Nucleophile</strong></td><td>Weak</td><td>Strong</td></tr>
+          <tr><td><strong>Stereochemistry</strong></td><td>Racemisation</td><td>Inversion (Walden)</td></tr>
+          <tr><td><strong>Intermediate</strong></td><td>Carbocation</td><td>Transition state</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>SN1:</strong> Polar Protic solvent, 3° substrate, Racemisation</li>
+          <li><strong>SN2:</strong> Polar Aprotic solvent, 1° substrate, Inversion</li>
+          <li>Allylic/Benzylic halides: SN1 bhi fast (resonance stabilized carbocation)</li>
+        </ul>
+      </div>
+
+      <h2>3. Elimination Reactions (E1 & E2)</h2>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">E1 vs E2 Mechanism</text>
+          
+          <!-- E1 -->
+          <text x="30" y="60" fill="#ea4335" font-weight="700" font-size="13">E1 (Elimination Unimolecular)</text>
+          <text x="50" y="85" fill="#202124" font-size="12">Step 1: R−X → R⁺ + X⁻ (Slow)</text>
+          <text x="50" y="105" fill="#202124" font-size="12">Step 2: R⁺ → Alkene + H⁺ (Fast)</text>
+          <text x="50" y="125" fill="#5f6368" font-size="11">Carbocation intermediate</text>
+          <text x="50" y="145" fill="#5f6368" font-size="11">Zaitsev's Rule (More substituted alkene)</text>
+
+          <!-- E2 -->
+          <text x="350" y="60" fill="#34a853" font-weight="700" font-size="13">E2 (Elimination Bimolecular)</text>
+          <text x="370" y="85" fill="#202124" font-size="12">Single Step: Base + R−X → Alkene</text>
+          <text x="370" y="105" fill="#5f6368" font-size="11">Anti-periplanar geometry</text>
+          <text x="370" y="125" fill="#5f6368" font-size="11">Bulky base → Hofmann product</text>
+          <text x="370" y="145" fill="#5f6368" font-size="11">Small base → Zaitsev product</text>
+        </svg>
+        <div class="diagram-caption">E1 (Zaitsev) vs E2 (Zaitsev/Hofmann)</div>
+      </div>
+
+      <table>
+        <thead><tr><th>Feature</th><th>E1</th><th>E2</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Rate Law</strong></td><td>Rate = k[R−X]</td><td>Rate = k[R−X][Base]</td></tr>
+          <tr><td><strong>Substrate</strong></td><td>3° > 2° > 1°</td><td>3° > 2° > 1°</td></tr>
+          <tr><td><strong>Base</strong></td><td>Weak</td><td>Strong</td></tr>
+          <tr><td><strong>Product</strong></td><td>Zaitsev (more substituted)</td><td>Zaitsev/Hofmann (depends on base)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Zaitsev's Rule:</strong> More substituted alkene (more stable)</li>
+          <li><strong>Hofmann Rule:</strong> Bulky base (t-BuOK) → Less substituted alkene</li>
+          <li><strong>E2:</strong> Anti-periplanar geometry required</li>
+        </ul>
+      </div>
+
+      <h2>4. Reactions of Haloalkanes</h2>
+
+      <h3>4.1 Nucleophilic Substitution</h3>
+      <table>
+        <thead><tr><th>Nucleophile</th><th>Product</th><th>Reaction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>OH⁻ (aq)</strong></td><td>Alcohol</td><td>R−X + OH⁻ → R−OH</td></tr>
+          <tr><td><strong>CN⁻</strong></td><td>Nitrile</td><td>R−X + CN⁻ → R−CN</td></tr>
+          <tr><td><strong>NH₃</strong></td><td>Amine</td><td>R−X + NH₃ → R−NH₂</td></tr>
+          <tr><td><strong>OR⁻</strong></td><td>Ether</td><td>R−X + OR⁻ → R−O−R</td></tr>
+          <tr><td><strong>SH⁻</strong></td><td>Thiol</td><td>R−X + SH⁻ → R−SH</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Grignard Reagent</h3>
+      <div class="box">
+        <span class="box-title">Formation</span>
+        <p>R−X + Mg (dry ether) → R−MgX</p>
+        <p><strong>Grignard Reagent:</strong> R−MgX</p>
+        <p><strong>Properties:</strong> Highly reactive, moisture-sensitive</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Grignard Reagent Reactions:</strong></p>
+        <ul>
+          <li>+ H₂O → Alkane</li>
+          <li>+ CO₂ → Carboxylic Acid</li>
+          <li>+ Aldehyde → Secondary Alcohol</li>
+          <li>+ Ketone → Tertiary Alcohol</li>
+        </ul>
+      </div>
+
+      <h3>4.3 Reduction</h3>
+      <div class="box">
+        <span class="box-title">Reduction of Haloalkanes</span>
+        <p>R−X + Zn/H⁺ → R−H</p>
+        <p>R−X + LiAlH₄ → R−H</p>
+        <p><strong>Product:</strong> Alkane</p>
+      </div>
+
+      <h3>4.4 Reaction with Metals</h3>
+      <div class="box">
+        <span class="box-title">Wurtz Reaction</span>
+        <p>2R−X + 2Na (dry ether) → R−R + 2NaX</p>
+        <p><strong>Limitation:</strong> Symmetrical alkanes hi bante hain</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Fittig Reaction</span>
+        <p>2Ar−X + 2Na (dry ether) → Ar−Ar + 2NaX</p>
+        <p><strong>Product:</strong> Biphenyl</p>
+      </div>
+
+      <h3>4.5 Elimination Reactions</h3>
+      <div class="box">
+        <span class="box-title">Dehydrohalogenation</span>
+        <p>R−CH₂−CH₂X + KOH (alc) → R−CH=CH₂ + KX + H₂O</p>
+        <p><strong>Reagent:</strong> Alcoholic KOH</p>
+      </div>
+
+      <h2>5. Haloarenes (Aryl Halides)</h2>
+
+      <h3>5.1 Preparation</h3>
+      <table>
+        <thead><tr><th>Method</th><th>Reaction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>From Benzene</strong></td><td>C₆H₆ + Cl₂ (AlCl₃) → C₆H₅Cl</td></tr>
+          <tr><td><strong>Sandmeyer</strong></td><td>ArN₂⁺Cl⁻ + Cu₂Cl₂/HCl → ArCl + N₂</td></tr>
+          <tr><td><strong>Gattermann</strong></td><td>ArN₂⁺Cl⁻ + Cu/HCl → ArCl + N₂</td></tr>
+        </tbody>
+      </table>
+
+      <h3>5.2 Reactions of Haloarenes</h3>
+
+      <div class="box">
+        <span class="box-title">1. Nucleophilic Substitution (SNAr)</span>
+        <p>C₆H₅Cl + NaOH (623 K, 300 atm) → C₆H₅OH</p>
+        <p><strong>Condition:</strong> High temperature & pressure</p>
+        <p><strong>Reason:</strong> C−Cl bond strong, sp² character</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">2. Electrophilic Substitution</span>
+        <p>Halogens are <strong>o/p directing</strong> (but deactivating)</p>
+        <p>Reactions: Nitration, Sulphonation, Friedel-Crafts</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Haloarenes:</strong> SN1/SN2 nahi dete (C−X bond strong)</li>
+          <li><strong>Haloarenes:</strong> SNAr dete hain (high T, P)</li>
+          <li><strong>Halogens:</strong> o/p directing but deactivating</li>
+        </ul>
+      </div>
+
+      <h2>6. Important Named Reactions</h2>
+
+      <table>
+        <thead><tr><th>Reaction</th><th>Reagent</th><th>Product</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sandmeyer</strong></td><td>Cu₂Cl₂/HCl</td><td>Aryl halide</td></tr>
+          <tr><td><strong>Gattermann</strong></td><td>Cu/HCl</td><td>Aryl halide</td></tr>
+          <tr><td><strong>Wurtz</strong></td><td>Na/dry ether</td><td>Alkane</td></tr>
+          <tr><td><strong>Wurtz-Fittig</strong></td><td>Na/dry ether (ArX + RX)</td><td>Alkylbenzene</td></tr>
+          <tr><td><strong>Fittig</strong></td><td>Na/dry ether (ArX)</td><td>Biphenyl</td></tr>
+          <tr><td><strong>Williamson</strong></td><td>RONa + RX</td><td>Ether</td></tr>
+          <tr><td><strong>Finkelstein</strong></td><td>NaI/acetone</td><td>Alkyl iodide</td></tr>
+          <tr><td><strong>Swarts</strong></td><td>AgF/SbF₃</td><td>Alkyl fluoride</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Finkelstein:</strong> R−Cl + NaI → R−I (NaI/acetone)</li>
+          <li><strong>Swarts:</strong> R−Cl + AgF → R−F</li>
+          <li><strong>Wurtz-Fittig:</strong> Alkyl + Aryl halide + Na → Alkylbenzene</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Haloalkanes & Haloarenes</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: SN1 vs SN2</span>
+        <p><strong>Q:</strong> Which reacts faster with NaOH: CH₃Cl or (CH₃)₃CCl?</p>
+        <ol>
+          <li>NaOH strong nucleophile hai</li>
+          <li>SN2 mechanism (1° substrate)</li>
+          <li>CH₃Cl (1°) → SN2 fast</li>
+          <li>(CH₃)₃CCl (3°) → SN1 fast (if polar protic)</li>
+          <li><strong>Answer: CH₃Cl (SN2), (CH₃)₃CCl (SN1)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Zaitsev's Rule</span>
+        <p><strong>Q:</strong> 2-Bromobutane + KOH (alc) → major product?</p>
+        <ol>
+          <li>E2 elimination</li>
+          <li>Zaitsev's Rule: More substituted alkene</li>
+          <li>2-Butene (major) > 1-Butene (minor)</li>
+          <li><strong>Answer: 2-Butene (major)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Hofmann Product</span>
+        <p><strong>Q:</strong> 2-Bromobutane + t-BuOK → major product?</p>
+        <ol>
+          <li>Bulky base (t-BuOK)</li>
+          <li>Hofmann Rule: Less substituted alkene</li>
+          <li>1-Butene (major)</li>
+          <li><strong>Answer: 1-Butene (Hofmann)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Grignard Reagent</span>
+        <p><strong>Q:</strong> CH₃MgBr + CO₂ → ?</p>
+        <ol>
+          <li>Grignard + CO₂ → Carboxylic acid</li>
+          <li>CH₃MgBr + CO₂ → CH₃COOH</li>
+          <li><strong>Answer: Acetic Acid</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Grignard + Aldehyde</span>
+        <p><strong>Q:</strong> CH₃MgBr + HCHO → ?</p>
+        <ol>
+          <li>Grignard + Aldehyde → Secondary Alcohol</li>
+          <li>HCHO (formaldehyde) → Primary Alcohol</li>
+          <li>CH₃MgBr + HCHO → CH₃CH₂OH</li>
+          <li><strong>Answer: Ethanol (Primary Alcohol)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Wurtz Reaction</span>
+        <p><strong>Q:</strong> CH₃Br + C₂H₅Br + Na (dry ether) → ?</p>
+        <ol>
+          <li>Wurtz Reaction mein symmetrical alkanes bante hain</li>
+          <li>CH₃−CH₃, C₂H₅−C₂H₅, CH₃−C₂H₅ (mixture)</li>
+          <li><strong>Answer: Mixture of Ethane, Butane, Propane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Sandmeyer Reaction</span>
+        <p><strong>Q:</strong> Benzenediazonium chloride + Cu₂Cl₂/HCl → ?</p>
+        <ol>
+          <li>Sandmeyer Reaction</li>
+          <li>ArN₂⁺Cl⁻ + Cu₂Cl₂/HCl → ArCl + N₂</li>
+          <li><strong>Answer: Chlorobenzene</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: Finkelstein Reaction</span>
+        <p><strong>Q:</strong> CH₃Cl + NaI (acetone) → ?</p>
+        <ol>
+          <li>Finkelstein Reaction</li>
+          <li>R−Cl + NaI → R−I + NaCl</li>
+          <li><strong>Answer: CH₃I (Methyl Iodide)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: SNAr</span>
+        <p><strong>Q:</strong> Chlorobenzene + NaOH (623 K, 300 atm) → ?</p>
+        <ol>
+          <li>Haloarene + NaOH (high T, P)</li>
+          <li>SNAr mechanism</li>
+          <li><strong>Answer: Phenol (C₆H₅OH)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Reactivity Order</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of SN2 reactivity: 1°, 2°, 3°</p>
+        <ol>
+          <li>SN2 mein steric hindrance important</li>
+          <li>1° (least hindered) > 2° > 3° (most hindered)</li>
+          <li><strong>Answer: 1° > 2° > 3°</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Haloalkanes & Haloarenes PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>SN1/SN2, E1/E2, Grignard Reagent</td></tr>
+          <tr><td><strong>2020</strong></td><td>Wurtz Reaction, Sandmeyer, Finkelstein</td></tr>
+          <tr><td><strong>2021</strong></td><td>Zaitsev's Rule, Hofmann, SNAr</td></tr>
+          <tr><td><strong>2022</strong></td><td>SN1 vs SN2, Grignard, Haloarene Reactions</td></tr>
+          <tr><td><strong>2023</strong></td><td>Elimination Reactions, Wurtz-Fittig, Swarts</td></tr>
+          <tr><td><strong>2024</strong></td><td>SN1/SN2, Grignard, Sandmeyer</td></tr>
+          <tr><td><strong>2025</strong></td><td>E1/E2, Finkelstein, Haloarene Substitution</td></tr>
+          <tr><td><strong>2026</strong></td><td>SN1/SN2, Zaitsev, Grignard, Named Reactions</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>SN1/SN2 Mechanism</strong> → Har saal aata hai</li>
+          <li><strong>E1/E2 (Zaitsev/Hofmann)</strong> → Har saal</li>
+          <li><strong>Grignard Reagent</strong> → 2019, 2022, 2024, 2026</li>
+          <li><strong>Named Reactions</strong> → 2020, 2023, 2025</li>
+          <li><strong>Haloarene Substitution</strong> → 2021, 2022, 2025</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: SN1 vs SN2</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>SN1:</strong> 3° substrate, Polar Protic, Racemisation</li>
+          <li><strong>SN2:</strong> 1° substrate, Polar Aprotic, Inversion</li>
+          <li>Allylic/Benzylic: SN1 fast</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: E1 vs E2</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Zaitsev:</strong> More substituted alkene</li>
+          <li><strong>Hofmann:</strong> Bulky base → Less substituted alkene</li>
+          <li><strong>E2:</strong> Anti-periplanar geometry</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Grignard Reagent</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>+ H₂O → Alkane</li>
+          <li>+ CO₂ → Carboxylic Acid</li>
+          <li>+ Aldehyde → Alcohol</li>
+          <li>+ Ketone → Tertiary Alcohol</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Named Reactions</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Sandmeyer:</strong> ArN₂⁺ + Cu₂Cl₂ → ArCl</li>
+          <li><strong>Finkelstein:</strong> R−Cl + NaI → R−I</li>
+          <li><strong>Swarts:</strong> R−Cl + AgF → R−F</li>
+          <li><strong>Wurtz-Fittig:</strong> ArX + RX + Na → Alkylbenzene</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Haloarene Reactions</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2022, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Haloarenes SN1/SN2 nahi dete</li>
+          <li>SNAr dete hain (high T, P)</li>
+          <li>Halogens: o/p directing but deactivating</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>SN1/SN2</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>E1/E2</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Grignard</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Named Reactions</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Haloarenes</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> SN1/SN2 (5/5), E1/E2 (4/5), Grignard (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Haloalkanes & Haloarenes (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>SN1:</strong> 3°, Polar Protic, Racemisation</li>
+          <li><strong>SN2:</strong> 1°, Polar Aprotic, Inversion</li>
+          <li><strong>Zaitsev:</strong> More substituted alkene</li>
+          <li><strong>Hofmann:</strong> Bulky base, Less substituted alkene</li>
+          <li><strong>Grignard:</strong> R−MgX (dry ether)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Haloarenes:</strong> SN1/SN2 nahi dete</li>
+          <li><strong>SN2:</strong> Steric hindrance important (1° > 2° > 3°)</li>
+          <li><strong>E2:</strong> Anti-periplanar geometry</li>
+          <li><strong>Grignard:</strong> Moisture-sensitive</li>
+          <li><strong>Halogens:</strong> o/p directing but deactivating</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Named Reactions</span>
+        <ul>
+          <li><strong>Sandmeyer:</strong> ArN₂⁺ + Cu₂Cl₂ → ArCl</li>
+          <li><strong>Finkelstein:</strong> R−Cl + NaI → R−I</li>
+          <li><strong>Swarts:</strong> R−Cl + AgF → R−F</li>
+          <li><strong>Wurtz:</strong> 2R−X + 2Na → R−R</li>
+          <li><strong>Wurtz-Fittig:</strong> ArX + RX + Na → Alkylbenzene</li>
+          <li><strong>Fittig:</strong> 2Ar−X + 2Na → Biphenyl</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Grignard Reagent</span>
+        <ul>
+          <li><strong>+ H₂O:</strong> Alkane</li>
+          <li><strong>+ CO₂:</strong> Carboxylic Acid</li>
+          <li><strong>+ Aldehyde:</strong> Secondary Alcohol</li>
+          <li><strong>+ Ketone:</strong> Tertiary Alcohol</li>
+          <li><strong>+ HCHO:</strong> Primary Alcohol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: REACTION SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Reaction Sheet — Haloalkanes & Haloarenes</h2>
+      <p style="color: #5f6368;">Saare reactions ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. HALOALKANES — PREPARATION</div>
+      <div class="reaction-box"><strong>From Alcohols:</strong> R−OH + PCl₅ → R−Cl + POCl₃ + HCl</div>
+      <div class="reaction-box"><strong>From Alcohols:</strong> R−OH + SOCl₂ → R−Cl + SO₂ + HCl</div>
+      <div class="reaction-box"><strong>From Alcohols:</strong> R−OH + HX → R−X + H₂O</div>
+      <div class="reaction-box"><strong>From Alkanes:</strong> R−H + X₂ (UV) → R−X + HX</div>
+      <div class="reaction-box"><strong>From Alkenes:</strong> R−CH=CH₂ + HX → R−CHX−CH₃</div>
+
+      <div class="formula-category">2. NUCLEOPHILIC SUBSTITUTION</div>
+      <div class="reaction-box"><strong>Hydrolysis:</strong> R−X + OH⁻ (aq) → R−OH</div>
+      <div class="reaction-box"><strong>Cyanide:</strong> R−X + CN⁻ → R−CN</div>
+      <div class="reaction-box"><strong>Ammonia:</strong> R−X + NH₃ → R−NH₂</div>
+      <div class="reaction-box"><strong>Alkoxide:</strong> R−X + OR⁻ → R−O−R (Williamson)</div>
+      <div class="reaction-box"><strong>Thiol:</strong> R−X + SH⁻ → R−SH</div>
+
+      <div class="formula-category">3. ELIMINATION</div>
+      <div class="reaction-box"><strong>Dehydrohalogenation:</strong> R−CH₂−CH₂X + KOH (alc) → R−CH=CH₂</div>
+      <div class="reaction-box"><strong>Zaitsev:</strong> More substituted alkene</div>
+      <div class="reaction-box"><strong>Hofmann:</strong> Bulky base → Less substituted alkene</div>
+
+      <div class="formula-category">4. GRIGNARD REAGENT</div>
+      <div class="reaction-box"><strong>Formation:</strong> R−X + Mg (dry ether) → R−MgX</div>
+      <div class="reaction-box"><strong>+ H₂O:</strong> R−H (Alkane)</div>
+      <div class="reaction-box"><strong>+ CO₂:</strong> R−COOH (Carboxylic Acid)</div>
+      <div class="reaction-box"><strong>+ HCHO:</strong> R−CH₂OH (Primary Alcohol)</div>
+      <div class="reaction-box"><strong>+ Aldehyde:</strong> R−CH(OH)−R' (Secondary Alcohol)</div>
+      <div class="reaction-box"><strong>+ Ketone:</strong> R−C(OH)(R')−R'' (Tertiary Alcohol)</div>
+
+      <div class="formula-category">5. NAMED REACTIONS</div>
+      <div class="reaction-box"><strong>Wurtz:</strong> 2R−X + 2Na (dry ether) → R−R + 2NaX</div>
+      <div class="reaction-box"><strong>Wurtz-Fittig:</strong> ArX + RX + 2Na → Ar−R + 2NaX</div>
+      <div class="reaction-box"><strong>Fittig:</strong> 2Ar−X + 2Na → Ar−Ar + 2NaX</div>
+      <div class="reaction-box"><strong>Sandmeyer:</strong> ArN₂⁺Cl⁻ + Cu₂Cl₂/HCl → ArCl + N₂</div>
+      <div class="reaction-box"><strong>Gattermann:</strong> ArN₂⁺Cl⁻ + Cu/HCl → ArCl + N₂</div>
+      <div class="reaction-box"><strong>Finkelstein:</strong> R−Cl + NaI (acetone) → R−I + NaCl</div>
+      <div class="reaction-box"><strong>Swarts:</strong> R−Cl + AgF → R−F + AgCl</div>
+      <div class="reaction-box"><strong>Williamson:</strong> R−ONa + R'−X → R−O−R' + NaX</div>
+
+      <div class="formula-category">6. HALOARENES — PREPARATION</div>
+      <div class="reaction-box"><strong>From Benzene:</strong> C₆H₆ + Cl₂ (AlCl₃) → C₆H₅Cl + HCl</div>
+      <div class="reaction-box"><strong>Sandmeyer:</strong> ArN₂⁺Cl⁻ + Cu₂Cl₂ → ArCl</div>
+
+      <div class="formula-category">7. HALOARENES — REACTIONS</div>
+      <div class="reaction-box"><strong>SNAr:</strong> C₆H₅Cl + NaOH (623 K, 300 atm) → C₆H₅OH</div>
+      <div class="reaction-box"><strong>Nitration:</strong> Chlorobenzene + HNO₃/H₂SO₄ → o/p Nitrochlorobenzene</div>
+      <div class="reaction-box"><strong>Friedel-Crafts:</strong> Chlorobenzene + CH₃Cl (AlCl₃) → o/p Chlorotoluene</div>
+
+      <div class="formula-category">8. REACTIVITY ORDER</div>
+      <div class="reaction-box"><strong>SN2:</strong> 1° > 2° > 3°</div>
+      <div class="reaction-box"><strong>SN1:</strong> 3° > 2° > 1°</div>
+      <div class="reaction-box"><strong>Overall:</strong> Allylic > Benzylic > 3° > 2° > 1° > Vinylic > Aryl</div>
+      <div class="reaction-box"><strong>Bond Strength:</strong> C−F > C−Cl > C−Br > C−I</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

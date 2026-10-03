@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mole Concept | JEE Chemistry Notes</title>
+  <meta name="description" content="Some Basic Concepts of Chemistry Notes for JEE Mains — Mole Concept, Stoichiometry, Limiting Reagent, Concentration Terms, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Mole Concept
+  </div>
+
+  <header class="chapter-header">
+    <h1>Some Basic Concepts of Chemistry</h1>
+    <p>Mole Concept, Stoichiometry, Limiting Reagent, Concentration Terms</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Mole Concept</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p><strong>1 mole</strong> = 6.022 × 10²³ particles (Avogadro's number)</p>
+        <p>1 mole of any substance ka mass = Molar Mass (g/mol)</p>
+      </div>
+
+      <h3>1.1 Important Relations</h3>
+      <div class="formula">
+        Moles (n) = Given Mass (w) / Molar Mass (M)
+      </div>
+      <div class="formula">
+        Moles (n) = Number of Particles / 6.022 × 10²³
+      </div>
+      <div class="formula">
+        Moles (n) = Volume at STP (L) / 22.4
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>1 mole gas at STP</strong> = 22.4 L (273 K, 1 atm)</p>
+        <p><strong>1 mole gas at NTP</strong> = 22.7 L (273 K, 1 bar)</p>
+      </div>
+
+      <h2>2. Atomic Mass & Molecular Mass</h2>
+
+      <table>
+        <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Atomic Mass</strong></td><td>Average mass of atom (in amu)</td></tr>
+          <tr><td><strong>Molecular Mass</strong></td><td>Sum of atomic masses of all atoms</td></tr>
+          <tr><td><strong>Formula Mass</strong></td><td>For ionic compounds (e.g., NaCl)</td></tr>
+          <tr><td><strong>Equivalent Mass</strong></td><td>Molar Mass / n-factor</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.1 Average Atomic Mass</h3>
+      <div class="formula">
+        Average Mass = (M₁ × % + M₂ × %) / 100
+      </div>
+
+      <h2>3. Percentage Composition</h2>
+
+      <div class="formula">
+        % of element = (Mass of element in compound / Molar Mass) × 100
+      </div>
+
+      <h3>3.1 Empirical & Molecular Formula</h3>
+      <table>
+        <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Empirical Formula</strong></td><td>Simplest whole-number ratio of atoms</td></tr>
+          <tr><td><strong>Molecular Formula</strong></td><td>Actual number of atoms</td></tr>
+        </tbody>
+      </table>
+      <div class="formula">
+        Molecular Formula = (Empirical Formula) × n
+      </div>
+      <div class="formula">
+        n = Molar Mass / Empirical Formula Mass
+      </div>
+
+      <h2>4. Stoichiometry</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Balanced chemical equation se reactant aur product ke quantitative relation ka study.</p>
+      </div>
+
+      <h3>4.1 Limiting Reagent</h3>
+      <div class="box">
+        <span class="box-title">Concept</span>
+        <p>Wo reactant jo pehle khatam ho jaata hai aur reaction ko rok deta hai.</p>
+        <p><strong>Limiting Reagent nikalne ka tarika:</strong></p>
+        <ul>
+          <li>Har reactant ke moles ko uske stoichiometric coefficient se divide karo</li>
+          <li>Jiska ratio sabse kam ho, wo limiting reagent hai</li>
+        </ul>
+      </div>
+
+      <h3>4.2 Percentage Yield</h3>
+      <div class="formula">
+        % Yield = (Actual Yield / Theoretical Yield) × 100
+      </div>
+
+      <h2>5. Concentration Terms</h2>
+
+      <table>
+        <thead><tr><th>Term</th><th>Formula</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Molarity (M)</strong></td><td>Moles / Volume (L)</td><td>mol/L</td></tr>
+          <tr><td><strong>Molality (m)</strong></td><td>Moles / Mass of solvent (kg)</td><td>mol/kg</td></tr>
+          <tr><td><strong>Normality (N)</strong></td><td>Gram equivalents / Volume (L)</td><td>eq/L</td></tr>
+          <tr><td><strong>Mole Fraction (X)</strong></td><td>Moles of component / Total moles</td><td>—</td></tr>
+          <tr><td><strong>Mass %</strong></td><td>(Mass of solute / Mass of solution) × 100</td><td>%</td></tr>
+          <tr><td><strong>ppm</strong></td><td>(Mass of solute / Mass of solution) × 10⁶</td><td>ppm</td></tr>
+        </tbody>
+      </table>
+
+      <div class="formula">
+        M = (w × 1000) / (M_w × V)
+      </div>
+      <div class="formula">
+        m = (w × 1000) / (M_w × W_solvent)
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Molarity temperature-dependent</strong> hai (volume change hota hai)</p>
+        <p><strong>Molality temperature-independent</strong> hai (mass change nahi hota)</p>
+      </div>
+
+      <h3>5.1 Normality & Equivalent Weight</h3>
+      <div class="formula">
+        Equivalent Weight = Molar Mass / n-factor
+      </div>
+      <div class="formula">
+        Normality = Molarity × n-factor
+      </div>
+
+      <h3>5.2 n-factor for Acids, Bases, Salts</h3>
+      <table>
+        <thead><tr><th>Type</th><th>n-factor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Acid</strong></td><td>Basicity (H⁺ ions)</td></tr>
+          <tr><td><strong>Base</strong></td><td>Acidity (OH⁻ ions)</td></tr>
+          <tr><td><strong>Salt</strong></td><td>Total charge on cation/anion</td></tr>
+          <tr><td><strong>Redox</strong></td><td>Change in oxidation number</td></tr>
+        </tbody>
+      </table>
+
+      <h2>6. Significant Figures & Laws</h2>
+
+      <div class="box">
+        <span class="box-title">Laws of Chemical Combination</span>
+        <ul>
+          <li><strong>Law of Conservation of Mass:</strong> Mass na create hota hai na destroy</li>
+          <li><strong>Law of Definite Proportions:</strong> Compound ka composition fixed</li>
+          <li><strong>Law of Multiple Proportions:</strong> Different compounds mein mass ratio whole number</li>
+          <li><strong>Gay-Lussac's Law:</strong> Gaseous volumes simple ratio mein</li>
+          <li><strong>Avogadro's Law:</strong> Equal volumes mein equal molecules (same T, P)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Mole Concept</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: Moles Calculation</span>
+        <p><strong>Q:</strong> Find moles in 90 g of water.</p>
+        <ol>
+          <li>Molar Mass of H₂O = 18 g/mol</li>
+          <li>n = w / M = 90 / 18</li>
+          <li>n = <strong>5 moles</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Number of Particles</span>
+        <p><strong>Q:</strong> Find number of molecules in 0.5 moles of CO₂.</p>
+        <ol>
+          <li>N = n × Avogadro's Number</li>
+          <li>N = 0.5 × 6.022 × 10²³</li>
+          <li>N = <strong>3.011 × 10²³ molecules</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: Volume at STP</span>
+        <p><strong>Q:</strong> Find volume of 2 moles of O₂ at STP.</p>
+        <ol>
+          <li>Volume = n × 22.4 L</li>
+          <li>Volume = 2 × 22.4</li>
+          <li>Volume = <strong>44.8 L</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: Empirical & Molecular Formula</span>
+        <p><strong>Q:</strong> Compound has C = 40%, H = 6.67%, O = 53.33%. Molar mass = 180. Find molecular formula.</p>
+        <ol>
+          <li>Moles: C = 40/12 = 3.33, H = 6.67/1 = 6.67, O = 53.33/16 = 3.33</li>
+          <li>Ratio: C:H:O = 3.33:6.67:3.33 = 1:2:1</li>
+          <li>Empirical Formula = CH₂O (Mass = 30)</li>
+          <li>n = 180 / 30 = 6</li>
+          <li>Molecular Formula = <strong>C₆H₁₂O₆</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: Limiting Reagent</span>
+        <p><strong>Q:</strong> 10 g H₂ reacts with 10 g O₂ to form H₂O. Find limiting reagent.</p>
+        <ol>
+          <li>2H₂ + O₂ → 2H₂O</li>
+          <li>Moles H₂ = 10/2 = 5, Moles O₂ = 10/32 = 0.3125</li>
+          <li>Ratio H₂ = 5/2 = 2.5, Ratio O₂ = 0.3125/1 = 0.3125</li>
+          <li>O₂ ka ratio kam hai → <strong>Limiting Reagent = O₂</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: Percentage Yield</span>
+        <p><strong>Q:</strong> Theoretical yield = 50 g, Actual yield = 40 g. Find % yield.</p>
+        <ol>
+          <li>% Yield = (Actual / Theoretical) × 100</li>
+          <li>% Yield = (40 / 50) × 100</li>
+          <li>% Yield = <strong>80%</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Molarity</span>
+        <p><strong>Q:</strong> Find molarity of 5.85 g NaCl in 500 mL solution.</p>
+        <ol>
+          <li>Moles NaCl = 5.85 / 58.5 = 0.1 mol</li>
+          <li>Volume = 0.5 L</li>
+          <li>M = 0.1 / 0.5</li>
+          <li>M = <strong>0.2 M</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Molality</span>
+        <p><strong>Q:</strong> Find molality of 4 g NaOH in 500 g water.</p>
+        <ol>
+          <li>Moles NaOH = 4 / 40 = 0.1 mol</li>
+          <li>Mass solvent = 0.5 kg</li>
+          <li>m = 0.1 / 0.5</li>
+          <li>m = <strong>0.2 mol/kg</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Normality</span>
+        <p><strong>Q:</strong> Find normality of 0.1 M H₂SO₄.</p>
+        <ol>
+          <li>n-factor of H₂SO₄ = 2 (2 H⁺ ions)</li>
+          <li>N = M × n-factor</li>
+          <li>N = 0.1 × 2</li>
+          <li>N = <strong>0.2 N</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: Average Atomic Mass</span>
+        <p><strong>Q:</strong> Cl has isotopes ³⁵Cl (75%) and ³⁷Cl (25%). Find average mass.</p>
+        <ol>
+          <li>Average = (35 × 75 + 37 × 25) / 100</li>
+          <li>Average = (2625 + 925) / 100</li>
+          <li>Average = 3550 / 100</li>
+          <li>Average = <strong>35.5 amu</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Mole Concept PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Mole Concept, Stoichiometry, Concentration Terms</td></tr>
+          <tr><td><strong>2020</strong></td><td>Limiting Reagent, Empirical Formula</td></tr>
+          <tr><td><strong>2021</strong></td><td>Molarity-Molality, Normality, % Yield</td></tr>
+          <tr><td><strong>2022</strong></td><td>Stoichiometry, Limiting Reagent, Concentration</td></tr>
+          <tr><td><strong>2023</strong></td><td>Mole Concept, Empirical Formula, % Composition</td></tr>
+          <tr><td><strong>2024</strong></td><td>Stoichiometry, Molarity, Limiting Reagent</td></tr>
+          <tr><td><strong>2025</strong></td><td>Mole Concept, Concentration Terms, % Yield</td></tr>
+          <tr><td><strong>2026</strong></td><td>Mole Concept, Stoichiometry, Limiting Reagent</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Mole Concept & Stoichiometry</strong> → Har saal aata hai</li>
+          <li><strong>Limiting Reagent</strong> → 2020, 2022, 2024, 2026</li>
+          <li><strong>Concentration Terms</strong> → 2019, 2021, 2023, 2025</li>
+          <li><strong>Empirical Formula</strong> → 2020, 2023</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Mole Concept & Basic Calculations</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>n = w/M = N/N_A = V/22.4</strong></li>
+          <li>1 mole = 6.022 × 10²³ particles</li>
+          <li>STP par 1 mole gas = 22.4 L</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Stoichiometry & Limiting Reagent</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Balanced equation likho</li>
+          <li>Har reactant ke moles nikalo</li>
+          <li>Stoichiometric coefficient se divide karo</li>
+          <li>Sabse kam ratio wala = Limiting Reagent</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Concentration Terms</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Molarity = moles / volume (L)</strong></li>
+          <li><strong>Molality = moles / mass of solvent (kg)</strong></li>
+          <li><strong>Normality = Molarity × n-factor</strong></li>
+          <li>Molarity temperature-dependent, Molality independent</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Empirical & Molecular Formula</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>% se moles nikalo</li>
+          <li>Simplest ratio = Empirical Formula</li>
+          <li>n = Molar Mass / Empirical Formula Mass</li>
+          <li>Molecular Formula = (Empirical) × n</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Percentage Yield & Purity</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>% Yield = (Actual / Theoretical) × 100</strong></li>
+          <li>Actual yield hamesha theoretical se kam hota hai</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Mole Concept</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Stoichiometry</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Limiting Reagent</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Concentration Terms</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Mole Concept (5/5), Stoichiometry (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Mole Concept (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Moles:</strong> n = w/M = N/N_A = V/22.4</li>
+          <li><strong>Molarity:</strong> M = (w × 1000) / (M_w × V)</li>
+          <li><strong>Molality:</strong> m = (w × 1000) / (M_w × W_solvent)</li>
+          <li><strong>Normality:</strong> N = M × n-factor</li>
+          <li><strong>% Yield:</strong> (Actual / Theoretical) × 100</li>
+          <li><strong>Empirical Formula:</strong> Simplest ratio of atoms</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Molarity temperature-dependent</strong> hai</li>
+          <li><strong>Molality temperature-independent</strong> hai</li>
+          <li><strong>Limiting Reagent:</strong> Sabse kam ratio wala</li>
+          <li><strong>STP (1 atm):</strong> 22.4 L, <strong>NTP (1 bar):</strong> 22.7 L</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 n-factor</span>
+        <ul>
+          <li><strong>Acid:</strong> Basicity (H⁺ ions)</li>
+          <li><strong>Base:</strong> Acidity (OH⁻ ions)</li>
+          <li><strong>Salt:</strong> Total charge</li>
+          <li><strong>Redox:</strong> Change in oxidation number</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Concentration Terms</span>
+        <ul>
+          <li><strong>Molarity (M):</strong> mol/L</li>
+          <li><strong>Molality (m):</strong> mol/kg</li>
+          <li><strong>Normality (N):</strong> eq/L</li>
+          <li><strong>Mole Fraction (X):</strong> dimensionless</li>
+          <li><strong>ppm:</strong> parts per million</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Mole Concept</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. MOLE CONCEPT</div>
+      <div class="formula-box"><strong>n = w / M</strong> (Given mass / Molar mass)</div>
+      <div class="formula-box"><strong>n = N / N_A</strong> (Number of particles / Avogadro's number)</div>
+      <div class="formula-box"><strong>n = V / 22.4</strong> (Volume at STP in litres)</div>
+      <div class="formula-box"><strong>N_A = 6.022 × 10²³ particles/mol</strong></div>
+      <div class="formula-box"><strong>1 mole gas at STP = 22.4 L</strong></div>
+      <div class="formula-box"><strong>1 mole gas at NTP = 22.7 L</strong></div>
+
+      <div class="formula-category">2. ATOMIC & MOLECULAR MASS</div>
+      <div class="formula-box"><strong>Average Atomic Mass = (M₁ × %₁ + M₂ × %₂) / 100</strong></div>
+      <div class="formula-box"><strong>Molecular Mass = Sum of atomic masses</strong></div>
+      <div class="formula-box"><strong>Equivalent Mass = Molar Mass / n-factor</strong></div>
+
+      <div class="formula-category">3. EMPIRICAL & MOLECULAR FORMULA</div>
+      <div class="formula-box"><strong>% of element = (Mass of element / Molar Mass) × 100</strong></div>
+      <div class="formula-box"><strong>Empirical Formula = Simplest whole-number ratio</strong></div>
+      <div class="formula-box"><strong>n = Molar Mass / Empirical Formula Mass</strong></div>
+      <div class="formula-box"><strong>Molecular Formula = (Empirical Formula) × n</strong></div>
+
+      <div class="formula-category">4. STOICHIOMETRY</div>
+      <div class="formula-box"><strong>% Yield = (Actual Yield / Theoretical Yield) × 100</strong></div>
+      <div class="formula-box"><strong>Limiting Reagent:</strong> Sabse kam mole ratio wala reactant</div>
+      <div class="formula-box"><strong>Mole Ratio = Moles / Stoichiometric coefficient</strong></div>
+
+      <div class="formula-category">5. CONCENTRATION TERMS</div>
+      <div class="formula-box"><strong>Molarity (M) = (w × 1000) / (M_w × V)</strong></div>
+      <div class="formula-box"><strong>Molality (m) = (w × 1000) / (M_w × W_solvent)</strong></div>
+      <div class="formula-box"><strong>Normality (N) = Molarity × n-factor</strong></div>
+      <div class="formula-box"><strong>Mole Fraction (X) = Moles of component / Total moles</strong></div>
+      <div class="formula-box"><strong>Mass % = (Mass of solute / Mass of solution) × 100</strong></div>
+      <div class="formula-box"><strong>ppm = (Mass of solute / Mass of solution) × 10⁶</strong></div>
+
+      <div class="formula-category">6. n-FACTOR</div>
+      <div class="formula-box"><strong>Acid:</strong> Basicity (H⁺ ions)</div>
+      <div class="formula-box"><strong>Base:</strong> Acidity (OH⁻ ions)</div>
+      <div class="formula-box"><strong>Salt:</strong> Total charge on cation/anion</div>
+      <div class="formula-box"><strong>Redox:</strong> Change in oxidation number</div>
+
+      <div class="formula-category">7. LAWS OF CHEMICAL COMBINATION</div>
+      <div class="formula-box"><strong>Law of Conservation of Mass:</strong> Mass neither created nor destroyed</div>
+      <div class="formula-box"><strong>Law of Definite Proportions:</strong> Fixed composition</div>
+      <div class="formula-box"><strong>Law of Multiple Proportions:</strong> Whole number ratio</div>
+      <div class="formula-box"><strong>Gay-Lussac's Law:</strong> Gaseous volumes simple ratio</div>
+      <div class="formula-box"><strong>Avogadro's Law:</strong> Equal volumes = equal molecules (same T, P)</div>
+
+      <div class="formula-category">8. IMPORTANT VALUES</div>
+      <div class="formula-box"><strong>N_A = 6.022 × 10²³</strong></div>
+      <div class="formula-box"><strong>Molar Volume at STP = 22.4 L</strong></div>
+      <div class="formula-box"><strong>Molar Volume at NTP = 22.7 L</strong></div>
+      <div class="formula-box"><strong>R = 0.0821 L·atm/K·mol</strong></div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

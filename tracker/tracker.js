@@ -93,7 +93,8 @@ const chaptersData = {
         chapters: [
           "Sequence & Series",
           "Matrices & Determinants",
-          "Vectors & 3D Geometry",
+          "Vectors",
+         "3D Geometry",
           "Quadratic Equations",
           "Complex Numbers",
           "Binomial Theorem",

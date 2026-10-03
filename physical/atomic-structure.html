@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Structure | JEE Chemistry Notes</title>
+  <meta name="description" content="Atomic Structure Notes for JEE Mains — Bohr Model, Hydrogen Spectrum, de Broglie, Quantum Numbers, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Atomic Structure
+  </div>
+
+  <header class="chapter-header">
+    <h1>Atomic Structure</h1>
+    <p>Bohr Model, Hydrogen Spectrum, de Broglie, Quantum Numbers, Photoelectric Effect</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Subatomic Particles</h2>
+
+      <table>
+        <thead><tr><th>Particle</th><th>Charge</th><th>Mass</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Electron</strong></td><td>−1.6 × 10⁻¹⁹ C</td><td>9.1 × 10⁻³¹ kg</td></tr>
+          <tr><td><strong>Proton</strong></td><td>+1.6 × 10⁻¹⁹ C</td><td>1.67 × 10⁻²⁷ kg</td></tr>
+          <tr><td><strong>Neutron</strong></td><td>0</td><td>1.67 × 10⁻²⁷ kg</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Isotopes, Isobars, Isotones</span>
+        <ul>
+          <li><strong>Isotopes:</strong> Same Z, different A (e.g., ¹H, ²H, ³H)</li>
+          <li><strong>Isobars:</strong> Same A, different Z (e.g., ⁴⁰Ar, ⁴⁰Ca)</li>
+          <li><strong>Isotones:</strong> Same number of neutrons</li>
+        </ul>
+      </div>
+
+      <h2>2. Bohr Model of Hydrogen Atom</h2>
+
+      <div class="box">
+        <span class="box-title">Postulates</span>
+        <ul>
+          <li>Electron fixed orbits mein revolve karta hai (stationary states)</li>
+          <li>Angular momentum quantized: <strong>mvr = nh/2π</strong></li>
+          <li>Energy absorbed/released jab electron orbit change karta hai</li>
+        </ul>
+      </div>
+
+      <h3>2.1 Radius of nth Orbit</h3>
+      <div class="formula">
+        r_n = 0.529 × n² / Z Å
+      </div>
+      <p>For H (Z=1): r₁ = 0.529 Å, r₂ = 2.116 Å, r₃ = 4.761 Å</p>
+
+      <h3>2.2 Energy of nth Orbit</h3>
+      <div class="formula">
+        E_n = −13.6 × Z² / n² eV
+      </div>
+      <p>For H (Z=1): E₁ = −13.6 eV, E₂ = −3.4 eV, E₃ = −1.51 eV</p>
+
+      <h3>2.3 Velocity of Electron</h3>
+      <div class="formula">
+        v_n = 2.18 × 10⁶ × Z / n m/s
+      </div>
+      <p>For H (Z=1, n=1): v = 2.18 × 10⁶ m/s</p>
+
+      <h3>2.4 Frequency of Revolution</h3>
+      <div class="formula">
+        f = v / 2πr
+      </div>
+      <div class="formula">
+        f ∝ Z² / n³
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Energy negative</strong> hoti hai (attraction ke karan)</p>
+        <p><strong>Radius ∝ n²</strong>, <strong>Energy ∝ −1/n²</strong>, <strong>Velocity ∝ 1/n</strong></p>
+      </div>
+
+      <h2>3. Hydrogen Spectrum</h2>
+
+      <div class="box">
+        <span class="box-title">Rydberg Equation</span>
+        <p>1/λ = R × (1/n₁² − 1/n₂²)</p>
+        <p>Jahan R = 1.097 × 10⁷ m⁻¹ (Rydberg constant)</p>
+        <p>n₁ = lower level, n₂ = higher level</p>
+      </div>
+
+      <h3>3.1 Spectral Series</h3>
+      <table>
+        <thead><tr><th>Series</th><th>n₁</th><th>Region</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Lyman</strong></td><td>1</td><td>Ultraviolet</td></tr>
+          <tr><td><strong>Balmer</strong></td><td>2</td><td>Visible</td></tr>
+          <tr><td><strong>Paschen</strong></td><td>3</td><td>Infrared</td></tr>
+          <tr><td><strong>Brackett</strong></td><td>4</td><td>Infrared</td></tr>
+          <tr><td><strong>Pfund</strong></td><td>5</td><td>Infrared</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Balmer series</strong> → Visible region (n₁ = 2)</p>
+        <p><strong>Lyman series</strong> → UV region (n₁ = 1)</p>
+        <p>H-alpha line → n = 3 → n = 2 (Balmer)</p>
+      </div>
+
+      <h3>3.2 Energy Level Diagram (H atom)</h3>
+      <ul>
+        <li>n = 1 → E = −13.6 eV (Ground state)</li>
+        <li>n = 2 → E = −3.4 eV (First excited state)</li>
+        <li>n = 3 → E = −1.51 eV (Second excited state)</li>
+        <li>n = 4 → E = −0.85 eV</li>
+        <li>n = ∞ → E = 0 (Ionization)</li>
+      </ul>
+
+      <h2>4. de Broglie Wavelength</h2>
+
+      <div class="formula">
+        λ = h / mv
+      </div>
+      <p>Jahan h = 6.626 × 10⁻³⁴ J·s</p>
+
+      <h3>4.1 For Accelerated Electron</h3>
+      <div class="formula">
+        λ = h / √(2mqV)
+      </div>
+      <p>Jahan V = accelerating potential, q = charge</p>
+
+      <div class="formula">
+        λ = 12.27 / √V Å
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p>Same potential difference (V) par accelerate:</p>
+        <p><strong>Lighter particle</strong> ki wavelength <strong>zyada</strong> hoti hai</p>
+        <p>λ ∝ 1/√m (same V par)</p>
+      </div>
+
+      <h2>5. Heisenberg's Uncertainty Principle</h2>
+
+      <div class="formula">
+        Δx × Δp ≥ h / 4π
+      </div>
+      <p>Position aur momentum ek saath exactly nahi nikal sakte.</p>
+
+      <h2>6. Quantum Numbers</h2>
+
+      <table>
+        <thead><tr><th>Quantum Number</th><th>Symbol</th><th>Values</th><th>Indicates</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Principal</strong></td><td>n</td><td>1, 2, 3, ...</td><td>Shell, size, energy</td></tr>
+          <tr><td><strong>Azimuthal</strong></td><td>l</td><td>0 to n−1</td><td>Subshell, shape</td></tr>
+          <tr><td><strong>Magnetic</strong></td><td>m</td><td>−l to +l</td><td>Orbital orientation</td></tr>
+          <tr><td><strong>Spin</strong></td><td>s</td><td>+½ or −½</td><td>Electron spin</td></tr>
+        </tbody>
+      </table>
+
+      <h3>6.1 Orbitals and Nodes</h3>
+      <table>
+        <thead><tr><th>Orbital</th><th>l</th><th>Shape</th></tr></thead>
+        <tbody>
+          <tr><td><strong>s</strong></td><td>0</td><td>Spherical</td></tr>
+          <tr><td><strong>p</strong></td><td>1</td><td>Dumbbell</td></tr>
+          <tr><td><strong>d</strong></td><td>2</td><td>Double dumbbell</td></tr>
+          <tr><td><strong>f</strong></td><td>3</td><td>Complex</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Number of Nodes</span>
+        <ul>
+          <li><strong>Radial nodes:</strong> n − l − 1</li>
+          <li><strong>Angular nodes:</strong> l</li>
+          <li><strong>Total nodes:</strong> n − 1</li>
+        </ul>
+      </div>
+
+      <h2>7. Electronic Configuration</h2>
+
+      <div class="box">
+        <span class="box-title">Rules</span>
+        <ul>
+          <li><strong>Aufbau Principle:</strong> Lower (n+l) pehle fill</li>
+          <li><strong>Pauli's Exclusion:</strong> No two electrons same 4 quantum numbers</li>
+          <li><strong>Hund's Rule:</strong> Degenerate orbitals mein pehle single fill</li>
+        </ul>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Cr (24):</strong> [Ar] 3d⁵ 4s¹</li>
+          <li><strong>Cu (29):</strong> [Ar] 3d¹⁰ 4s¹</li>
+        </ul>
+      </div>
+
+      <h2>8. Photoelectric Effect</h2>
+
+      <div class="formula">
+        hν = φ + KE_max
+      </div>
+      <p>Jahan φ = work function, KE_max = maximum kinetic energy</p>
+
+      <div class="formula">
+        KE_max = hν − hν₀
+      </div>
+      <p>Jahan ν₀ = threshold frequency</p>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Work function</strong> metal ki property hai</li>
+          <li>ν < ν₀ → No emission (chahe intensity kitni bhi ho)</li>
+          <li>Intensity ↑ → More electrons, but KE same</li>
+          <li>Frequency ↑ → KE ↑</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Atomic Structure</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: Radius of nth Orbit</span>
+        <p><strong>Q:</strong> Find radius of 2nd orbit of H atom.</p>
+        <ol>
+          <li>r_n = 0.529 × n² / Z Å</li>
+          <li>r₂ = 0.529 × 2² / 1</li>
+          <li>r₂ = 0.529 × 4</li>
+          <li>r₂ = <strong>2.116 Å</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Energy of nth Orbit</span>
+        <p><strong>Q:</strong> Find energy of 2nd orbit of Li²⁺ (Z = 3).</p>
+        <ol>
+          <li>E_n = −13.6 × Z² / n² eV</li>
+          <li>E₂ = −13.6 × 9 / 4</li>
+          <li>E₂ = <strong>−30.6 eV</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: Rydberg Equation (Wavelength)</span>
+        <p><strong>Q:</strong> Find wavelength for transition n = 3 → n = 2 in H atom. (R = 1.097 × 10⁷ m⁻¹)</p>
+        <ol>
+          <li>1/λ = R(1/n₁² − 1/n₂²)</li>
+          <li>1/λ = 1.097 × 10⁷ × (1/4 − 1/9)</li>
+          <li>1/λ = 1.097 × 10⁷ × (5/36)</li>
+          <li>1/λ = 1.524 × 10⁶ m⁻¹</li>
+          <li>λ = <strong>656 nm</strong> (H-alpha line, Balmer series)</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: Energy Difference (Transition)</span>
+        <p><strong>Q:</strong> Find energy released in n = 3 → n = 1 transition in H atom.</p>
+        <ol>
+          <li>ΔE = E₃ − E₁ = (−1.51) − (−13.6)</li>
+          <li>ΔE = 12.09 eV</li>
+          <li>ΔE = <strong>12.09 eV</strong> (or 1.93 × 10⁻¹⁸ J)</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: de Broglie Wavelength</span>
+        <p><strong>Q:</strong> Find de Broglie wavelength of an electron accelerated by 100 V.</p>
+        <ol>
+          <li>λ = 12.27 / √V Å</li>
+          <li>λ = 12.27 / √100</li>
+          <li>λ = 12.27 / 10</li>
+          <li>λ = <strong>1.227 Å</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: de Broglie (Ratio — 2026 PYQ)</span>
+        <p><strong>Q:</strong> Two particles (m and 4m) are accelerated by same V. Find ratio of wavelengths.</p>
+        <ol>
+          <li>λ = h/√(2mqV)</li>
+          <li>λ ∝ 1/√m (same V par)</li>
+          <li>λ₁/λ₂ = √(m₂/m₁) = √(4m/m) = 2</li>
+          <li>λ₁ : λ₂ = <strong>2 : 1</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Photoelectric Effect</span>
+        <p><strong>Q:</strong> Work function of metal = 2 eV. Find KE_max for light of 300 nm. (h = 6.626 × 10⁻³⁴, c = 3 × 10⁸)</p>
+        <ol>
+          <li>E = hc/λ = (6.626 × 10⁻³⁴ × 3 × 10⁸) / (300 × 10⁻⁹)</li>
+          <li>E = 6.626 × 10⁻¹⁹ J = 4.14 eV</li>
+          <li>KE_max = E − φ = 4.14 − 2</li>
+          <li>KE_max = <strong>2.14 eV</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Quantum Numbers</span>
+        <p><strong>Q:</strong> Find max electrons in n = 3.</p>
+        <ol>
+          <li>Max electrons = 2n²</li>
+          <li>Max = 2 × 3² = 2 × 9</li>
+          <li>Max = <strong>18 electrons</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Nodes</span>
+        <p><strong>Q:</strong> Find total nodes in 3p orbital.</p>
+        <ol>
+          <li>n = 3, l = 1</li>
+          <li>Total nodes = n − 1 = 3 − 1</li>
+          <li>Total nodes = <strong>2</strong></li>
+          <li>Radial nodes = n − l − 1 = 3 − 1 − 1 = 1</li>
+          <li>Angular nodes = l = 1</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: Energy Level Transition</span>
+        <p><strong>Q:</strong> Find ionization energy of H atom from n = 1.</p>
+        <ol>
+          <li>Ionization → n = 1 to n = ∞</li>
+          <li>E_∞ = 0, E₁ = −13.6 eV</li>
+          <li>IE = E_∞ − E₁ = 0 − (−13.6)</li>
+          <li>IE = <strong>13.6 eV</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Atomic Structure PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Bohr Model, Rydberg Equation, Quantum Numbers</td></tr>
+          <tr><td><strong>2020</strong></td><td>de Broglie, Photoelectric Effect, Electronic Configuration</td></tr>
+          <tr><td><strong>2021</strong></td><td>Hydrogen Spectrum, Energy Levels, Nodes</td></tr>
+          <tr><td><strong>2022</strong></td><td>Bohr Model, Rydberg, de Broglie</td></tr>
+          <tr><td><strong>2023</strong></td><td>Quantum Numbers, Photoelectric Effect, Isotopes</td></tr>
+          <tr><td><strong>2024</strong></td><td>Bohr, Spectrum, de Broglie, Energy Transitions</td></tr>
+          <tr><td><strong>2025</strong></td><td>Rydberg, Quantum Numbers, Photoelectric Effect</td></tr>
+          <tr><td><strong>2026</strong></td><td>Balmer/Lyman/Paschen Series, de Broglie Ratio, Frequency of Revolution</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Bohr Model & Hydrogen Spectrum</strong> → Har saal aata hai</li>
+          <li><strong>de Broglie Wavelength</strong> → 2020, 2022, 2024, 2026</li>
+          <li><strong>Quantum Numbers</strong> → 2019, 2023, 2025</li>
+          <li><strong>Photoelectric Effect</strong> → 2020, 2023, 2025</li>
+          <li><strong>Spectral Series (Balmer, Lyman, Paschen)</strong> → 2026</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Bohr Model & Energy Levels</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>r = 0.529 n²/Z Å</strong></li>
+          <li><strong>E = −13.6 Z²/n² eV</strong></li>
+          <li><strong>v ∝ Z/n</strong>, <strong>f ∝ Z²/n³</strong></li>
+          <li>Energy negative hoti hai</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Hydrogen Spectrum</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>1/λ = R(1/n₁² − 1/n₂²)</strong></li>
+          <li><strong>Balmer:</strong> n₁ = 2 (Visible)</li>
+          <li><strong>Lyman:</strong> n₁ = 1 (UV)</li>
+          <li><strong>Paschen:</strong> n₁ = 3 (IR)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: de Broglie Wavelength</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>λ = h/mv</strong></li>
+          <li><strong>λ = 12.27/√V Å</strong> (accelerated electron)</li>
+          <li>Same V par lighter particle ki λ zyada</li>
+          <li>λ ∝ 1/√m</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Quantum Numbers</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>n → shell, l → subshell, m → orbital, s → spin</li>
+          <li>Max electrons = 2n²</li>
+          <li>Radial nodes = n − l − 1</li>
+          <li>Angular nodes = l</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Photoelectric Effect</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>hν = φ + KE_max</strong></li>
+          <li>ν < ν₀ → No emission</li>
+          <li>Intensity ↑ → More electrons</li>
+          <li>Frequency ↑ → KE ↑</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Bohr Model</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Hydrogen Spectrum</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>de Broglie</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Quantum Numbers</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Photoelectric Effect</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Bohr Model (4/5), Hydrogen Spectrum (4/5), de Broglie (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Atomic Structure (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Radius:</strong> r = 0.529 × n²/Z Å</li>
+          <li><strong>Energy:</strong> E = −13.6 × Z²/n² eV</li>
+          <li><strong>Velocity:</strong> v = 2.18 × 10⁶ × Z/n m/s</li>
+          <li><strong>Frequency:</strong> f ∝ Z²/n³</li>
+          <li><strong>Rydberg:</strong> 1/λ = R(1/n₁² − 1/n₂²)</li>
+          <li><strong>de Broglie:</strong> λ = h/mv = 12.27/√V Å</li>
+          <li><strong>Photoelectric:</strong> hν = φ + KE_max</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Energy negative</strong> hoti hai</li>
+          <li><strong>Radius ∝ n²</strong>, <strong>Energy ∝ −1/n²</strong></li>
+          <li><strong>Balmer series</strong> → Visible</li>
+          <li><strong>Same V par lighter particle λ zyada</strong></li>
+          <li><strong>Cr:</strong> 3d⁵ 4s¹, <strong>Cu:</strong> 3d¹⁰ 4s¹</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Spectral Series</span>
+        <ul>
+          <li><strong>Lyman (n₁=1):</strong> UV</li>
+          <li><strong>Balmer (n₁=2):</strong> Visible</li>
+          <li><strong>Paschen (n₁=3):</strong> IR</li>
+          <li><strong>Brackett (n₁=4):</strong> IR</li>
+          <li><strong>Pfund (n₁=5):</strong> IR</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Quantum Numbers</span>
+        <ul>
+          <li><strong>n:</strong> Shell (1, 2, 3, ...)</li>
+          <li><strong>l:</strong> Subshell (0 to n−1)</li>
+          <li><strong>m:</strong> Orbital (−l to +l)</li>
+          <li><strong>s:</strong> Spin (+½ or −½)</li>
+          <li><strong>Max electrons:</strong> 2n²</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Nodes</span>
+        <ul>
+          <li><strong>Radial nodes:</strong> n − l − 1</li>
+          <li><strong>Angular nodes:</strong> l</li>
+          <li><strong>Total nodes:</strong> n − 1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Atomic Structure</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. BOHR MODEL</div>
+      <div class="formula-box"><strong>Radius:</strong> r_n = 0.529 × n² / Z Å</div>
+      <div class="formula-box"><strong>Energy:</strong> E_n = −13.6 × Z² / n² eV</div>
+      <div class="formula-box"><strong>Velocity:</strong> v_n = 2.18 × 10⁶ × Z / n m/s</div>
+      <div class="formula-box"><strong>Angular Momentum:</strong> mvr = nh/2π</div>
+      <div class="formula-box"><strong>Frequency:</strong> f = v/2πr ∝ Z²/n³</div>
+      <div class="formula-box"><strong>Energy Difference:</strong> ΔE = E₂ − E₁</div>
+
+      <div class="formula-category">2. HYDROGEN SPECTRUM</div>
+      <div class="formula-box"><strong>Rydberg Equation:</strong> 1/λ = R(1/n₁² − 1/n₂²)</div>
+      <div class="formula-box"><strong>R = 1.097 × 10⁷ m⁻¹</strong></div>
+      <div class="formula-box"><strong>Lyman:</strong> n₁ = 1 (UV)</div>
+      <div class="formula-box"><strong>Balmer:</strong> n₁ = 2 (Visible)</div>
+      <div class="formula-box"><strong>Paschen:</strong> n₁ = 3 (IR)</div>
+      <div class="formula-box"><strong>Brackett:</strong> n₁ = 4 (IR)</div>
+      <div class="formula-box"><strong>Pfund:</strong> n₁ = 5 (IR)</div>
+
+      <div class="formula-category">3. DE BROGLIE WAVELENGTH</div>
+      <div class="formula-box"><strong>λ = h / mv</strong></div>
+      <div class="formula-box"><strong>λ = h / √(2mqV)</strong> (accelerated)</div>
+      <div class="formula-box"><strong>λ = 12.27 / √V Å</strong> (electron, V in volts)</div>
+      <div class="formula-box"><strong>λ ∝ 1/√m</strong> (same V)</div>
+
+      <div class="formula-category">4. QUANTUM NUMBERS</div>
+      <div class="formula-box"><strong>n = 1, 2, 3, ...</strong> (Shell)</div>
+      <div class="formula-box"><strong>l = 0 to n−1</strong> (Subshell)</div>
+      <div class="formula-box"><strong>m = −l to +l</strong> (Orbital)</div>
+      <div class="formula-box"><strong>s = +½ or −½</strong> (Spin)</div>
+      <div class="formula-box"><strong>Max electrons = 2n²</strong></div>
+
+      <div class="formula-category">5. NODES</div>
+      <div class="formula-box"><strong>Radial nodes = n − l − 1</strong></div>
+      <div class="formula-box"><strong>Angular nodes = l</strong></div>
+      <div class="formula-box"><strong>Total nodes = n − 1</strong></div>
+
+      <div class="formula-category">6. PHOTOELECTRIC EFFECT</div>
+      <div class="formula-box"><strong>hν = φ + KE_max</strong></div>
+      <div class="formula-box"><strong>KE_max = hν − hν₀</strong></div>
+      <div class="formula-box"><strong>φ = Work function</strong></div>
+      <div class="formula-box"><strong>ν₀ = Threshold frequency</strong></div>
+
+      <div class="formula-category">7. HEISENBERG'S UNCERTAINTY PRINCIPLE</div>
+      <div class="formula-box"><strong>Δx × Δp ≥ h / 4π</strong></div>
+
+      <div class="formula-category">8. ELECTRONIC CONFIGURATION</div>
+      <div class="formula-box"><strong>Aufbau:</strong> Lower (n+l) pehle</div>
+      <div class="formula-box"><strong>Pauli:</strong> No two electrons same 4 quantum numbers</div>
+      <div class="formula-box"><strong>Hund's:</strong> Degenerate orbitals mein pehle single fill</div>
+      <div class="formula-box"><strong>Cr (24):</strong> [Ar] 3d⁵ 4s¹</div>
+      <div class="formula-box"><strong>Cu (29):</strong> [Ar] 3d¹⁰ 4s¹</div>
+
+      <div class="formula-category">9. IMPORTANT CONSTANTS</div>
+      <div class="formula-box"><strong>h = 6.626 × 10⁻³⁴ J·s</strong></div>
+      <div class="formula-box"><strong>c = 3 × 10⁸ m/s</strong></div>
+      <div class="formula-box"><strong>m_e = 9.1 × 10⁻³¹ kg</strong></div>
+      <div class="formula-box"><strong>e = 1.6 × 10⁻¹⁹ C</strong></div>
+      <div class="formula-box"><strong>R = 1.097 × 10⁷ m⁻¹</strong></div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PYQ Tracker | JEE Main 2019–2026</title>
+  <meta name="description" content="Track your JEE Main PYQ progress — Chemistry, Physics, Maths (2019-2026).">
+  <link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>🎯 Prepration Tracker</h1>
+    <p>JEE Main 2019–2026 | Chemistry • Physics • Maths</p>
+  </header>
+
+  <!-- STATS DASHBOARD -->
+  <section class="stats-dashboard">
+    <div class="stat-card">
+      <div class="stat-icon">📊</div>
+      <div class="stat-value" id="total-progress">0%</div>
+      <div class="stat-label">Overall Progress</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">✅</div>
+      <div class="stat-value" id="total-solved">0</div>
+      <div class="stat-label">Chapters Solved</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📝</div>
+      <div class="stat-value" id="total-questions">0</div>
+      <div class="stat-label">Questions Solved</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🔥</div>
+      <div class="stat-value" id="streak-days">0</div>
+      <div class="stat-label">Day Streak</div>
+    </div>
+  </section>
+
+  <!-- SUBJECT TABS -->
+  <div class="subject-tabs">
+    <button class="subject-tab active" data-subject="chemistry">🧪 Chemistry</button>
+    <button class="subject-tab" data-subject="physics">⚛️ Physics</button>
+    <button class="subject-tab" data-subject="maths">📐 Maths</button>
+  </div>
+
+  <!-- TRACKER CONTENT -->
+  <main class="container">
+    <div id="tracker-content"></div>
+  </main>
+
+  <!-- DATA MANAGEMENT -->
+  <section class="data-management">
+    <button class="data-btn" id="export-btn">📥 Export Progress</button>
+    <button class="data-btn" id="import-btn">📤 Import Progress</button>
+    <input type="file" id="import-file" accept=".json" style="display: none;">
+    <button class="data-btn print-btn-tracker" id="pdf-btn">📄 Save as PDF</button>
+  </section>
+
+  <!-- MODAL FOR MARKING SOLVED -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Mark as Solved</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info">
+          <p><strong>Chapter:</strong> <span id="modal-chapter"></span></p>
+          <p><strong>Year:</strong> <span id="modal-year"></span></p>
+        </div>
+        <div class="modal-field">
+          <label>📅 Date (Auto)</label>
+          <input type="text" id="modal-date" readonly>
+        </div>
+        <div class="modal-field">
+          <label>📝 Questions Solved</label>
+          <input type="number" id="modal-questions" min="1" placeholder="Enter count" autofocus>
+        </div>
+        <div class="modal-warning">
+          ⚠️ Ek baar save karne ke baad, ye <strong>lock</strong> ho jayega. Edit ya delete nahi kar paoge.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" id="modal-cancel">Cancel</button>
+        <button class="btn-save" id="modal-save">Save & Lock ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW MODAL (Locked Data) -->
+  <div class="modal-overlay" id="view-overlay">
+    <div class="modal view-modal">
+      <div class="modal-header">
+        <h2 id="view-title">Solved Details</h2>
+      </div>
+      <div class="modal-body">
+        <div class="view-info">
+          <div class="view-row">
+            <span class="view-icon">📅</span>
+            <span class="view-label">Date:</span>
+            <span class="view-value" id="view-date"></span>
+          </div>
+          <div class="view-row">
+            <span class="view-icon">📝</span>
+            <span class="view-label">Questions:</span>
+            <span class="view-value" id="view-questions"></span>
+          </div>
+          <div class="view-row">
+            <span class="view-icon">🔒</span>
+            <span class="view-label">Status:</span>
+            <span class="view-value locked-badge">Locked</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" id="view-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="tracker.js"></script>
+</body>
+</html>

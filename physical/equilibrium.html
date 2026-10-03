@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equilibrium | JEE Chemistry Notes</title>
+  <meta name="description" content="Chemical & Ionic Equilibrium Notes for JEE Mains — Kc, Kp, Le Chatelier, pH, Buffer, Ksp, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Equilibrium
+  </div>
+
+  <header class="chapter-header">
+    <h1>Chemical & Ionic Equilibrium</h1>
+    <p>Kc, Kp, Le Chatelier, pH, Buffer, Ksp, Salt Hydrolysis</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Chemical Equilibrium</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p><strong>Equilibrium:</strong> A state where the rate of forward reaction equals the rate of backward reaction. Concentrations become constant.</p>
+        <p><strong>Dynamic:</strong> Reactions dono taraf chal rahi hoti hain, bas net change zero hota hai.</p>
+      </div>
+
+      <h3>1.1 Law of Mass Action</h3>
+      <p>For a reaction: aA + bB ⇌ cC + dD</p>
+      <div class="formula">
+        Kc = [C]^c [D]^d / [A]^a [B]^b
+      </div>
+      <p>Jahan [ ] = equilibrium concentrations (mol/L)</p>
+
+      <h3>1.2 Kp and Kc Relationship</h3>
+      <div class="formula">
+        Kp = Kc (RT)^Δn
+      </div>
+      <p>Jahan Δn = (moles of gaseous products) − (moles of gaseous reactants)</p>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li>If <strong>Δn = 0</strong> → Kp = Kc</li>
+          <li>If <strong>Δn > 0</strong> → Kp > Kc</li>
+          <li>If <strong>Δn < 0</strong> → Kp < Kc</li>
+        </ul>
+      </div>
+
+      <h3>1.3 Reaction Quotient (Q)</h3>
+      <div class="box">
+        <span class="box-title">Q vs K</span>
+        <ul>
+          <li><strong>Q < K</strong> → Forward reaction (equilibrium right shift)</li>
+          <li><strong>Q > K</strong> → Backward reaction (equilibrium left shift)</li>
+          <li><strong>Q = K</strong> → System at equilibrium</li>
+        </ul>
+      </div>
+
+      <h3>1.4 Le Chatelier's Principle</h3>
+      <div class="box">
+        <span class="box-title">Principle</span>
+        <p>Agar equilibrium system par external stress daala jaaye, toh system aisa change karega jo stress ko minimize kare.</p>
+      </div>
+
+      <table>
+        <thead><tr><th>Change</th><th>Effect on Equilibrium</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Concentration ↑ (reactant)</strong></td><td>Forward shift</td></tr>
+          <tr><td><strong>Concentration ↑ (product)</strong></td><td>Backward shift</td></tr>
+          <tr><td><strong>Pressure ↑</strong></td><td>Shift towards fewer gas moles</td></tr>
+          <tr><td><strong>Pressure ↓</strong></td><td>Shift towards more gas moles</td></tr>
+          <tr><td><strong>Temperature ↑ (exothermic)</strong></td><td>Backward shift (K decreases)</td></tr>
+          <tr><td><strong>Temperature ↑ (endothermic)</strong></td><td>Forward shift (K increases)</td></tr>
+          <tr><td><strong>Catalyst</strong></td><td>No shift, only faster equilibrium</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Catalyst K ko change nahi karta</strong> — sirf equilibrium jaldi aata hai.</p>
+      </div>
+
+      <h3>1.5 ICE Table Method</h3>
+      <p><strong>I</strong> = Initial concentration, <strong>C</strong> = Change, <strong>E</strong> = Equilibrium concentration</p>
+      <p>Har numerical isi method se solve hoga.</p>
+
+      <div class="box">
+        <span class="box-title">Example</span>
+        <p>H₂ + I₂ ⇌ 2HI</p>
+        <p>Initial: 1, 1, 0</p>
+        <p>Change: −x, −x, +2x</p>
+        <p>Equilibrium: 1−x, 1−x, 2x</p>
+        <p>Kc = (2x)² / (1−x)²</p>
+      </div>
+
+      <h2>2. Ionic Equilibrium</h2>
+
+      <h3>2.1 Acids & Bases</h3>
+      <div class="box">
+        <span class="box-title">Arrhenius</span>
+        <p><strong>Acid:</strong> H⁺ deta hai. <strong>Base:</strong> OH⁻ deta hai.</p>
+      </div>
+      <div class="box">
+        <span class="box-title">Brønsted-Lowry</span>
+        <p><strong>Acid:</strong> Proton (H⁺) deta hai. <strong>Base:</strong> Proton leta hai.</p>
+      </div>
+      <div class="box">
+        <span class="box-title">Lewis</span>
+        <p><strong>Acid:</strong> Electron pair leta hai. <strong>Base:</strong> Electron pair deta hai.</p>
+      </div>
+
+      <h3>2.2 pH, pOH, and Kw</h3>
+      <div class="formula">
+        pH = −log[H⁺], pOH = −log[OH⁻]
+      </div>
+      <div class="formula">
+        pH + pOH = 14 (at 25°C)
+      </div>
+      <div class="formula">
+        Kw = [H⁺][OH⁻] = 10⁻¹⁴
+      </div>
+
+      <h3>2.3 Weak Acid and Base</h3>
+      <div class="formula">
+        Ka = [H⁺][A⁻] / [HA]
+      </div>
+      <div class="formula">
+        Kb = [BH⁺][OH⁻] / [B]
+      </div>
+      <div class="formula">
+        Ka × Kb = Kw
+      </div>
+
+      <div class="box">
+        <span class="box-title">Ostwald's Dilution Law</span>
+        <p>For weak acid: [H⁺] = √(Ka × C)</p>
+        <p>α = √(Ka / C)</p>
+      </div>
+
+      <h3>2.4 Buffer Solutions</h3>
+      <div class="box">
+        <span class="box-title">Buffer</span>
+        <p>Solution jo pH change ko resist karta hai. Do types:</p>
+        <ul>
+          <li><strong>Acidic Buffer:</strong> Weak acid + Salt (CH₃COOH + CH₃COONa)</li>
+          <li><strong>Basic Buffer:</strong> Weak base + Salt (NH₄OH + NH₄Cl)</li>
+        </ul>
+      </div>
+
+      <div class="formula">
+        pH = pKa + log([Salt] / [Acid])
+      </div>
+      <p>(Henderson-Hasselbalch Equation)</p>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Buffer capacity maximum</strong> hoti hai jab [Salt] = [Acid], matlab pH = pKa.</p>
+      </div>
+
+      <h3>2.5 Salt Hydrolysis</h3>
+      <table>
+        <thead><tr><th>Salt Type</th><th>Nature</th><th>pH</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Strong Acid + Strong Base</strong></td><td>Neutral</td><td>pH = 7</td></tr>
+          <tr><td><strong>Weak Acid + Strong Base</strong></td><td>Basic</td><td>pH > 7</td></tr>
+          <tr><td><strong>Strong Acid + Weak Base</strong></td><td>Acidic</td><td>pH < 7</td></tr>
+          <tr><td><strong>Weak Acid + Weak Base</strong></td><td>Depends on Ka/Kb</td><td>pH ≈ 7 (if Ka = Kb)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.6 Solubility Product (Ksp)</h3>
+      <div class="formula">
+        For AₓBᵧ: Ksp = [A⁺]ˣ [B⁻]ʸ
+      </div>
+
+      <div class="box">
+        <span class="box-title">Common Ion Effect</span>
+        <p>Common ion add karne se solubility <strong>decrease</strong> hoti hai.</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Q < Ksp</strong> → No precipitate (unsaturated)</li>
+          <li><strong>Q > Ksp</strong> → Precipitate forms (supersaturated)</li>
+          <li><strong>Q = Ksp</strong> → Saturated solution</li>
+        </ul>
+      </div>
+
+      <h3>2.7 Salt Hydrolysis Formulas</h3>
+      <table>
+        <thead><tr><th>Salt Type</th><th>pH Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Weak Acid + Strong Base</strong></td><td>pH = 7 + ½(pKa + log C)</td></tr>
+          <tr><td><strong>Strong Acid + Weak Base</strong></td><td>pH = 7 − ½(pKb + log C)</td></tr>
+          <tr><td><strong>Weak Acid + Weak Base</strong></td><td>pH = 7 + ½(pKa − pKb)</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Equilibrium</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: Kc Calculation (ICE Table)</span>
+        <p><strong>Q:</strong> For H₂ + I₂ ⇌ 2HI, initial [H₂] = [I₂] = 1 M, at equilibrium [HI] = 1.5 M. Find Kc.</p>
+        <ol>
+          <li>ICE Table: H₂ + I₂ ⇌ 2HI</li>
+          <li>Initial: 1, 1, 0</li>
+          <li>Change: −x, −x, +2x</li>
+          <li>Equilibrium: 1−x, 1−x, 2x</li>
+          <li>2x = 1.5 → x = 0.75</li>
+          <li>[H₂] = 0.25, [I₂] = 0.25, [HI] = 1.5</li>
+          <li>Kc = (1.5)² / (0.25 × 0.25) = 2.25 / 0.0625 = <strong>36</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Kp and Kc Relationship</span>
+        <p><strong>Q:</strong> For N₂ + 3H₂ ⇌ 2NH₃, Kc = 0.5 at 400 K. Find Kp.</p>
+        <ol>
+          <li>Δn = moles gas products − moles gas reactants = 2 − 4 = −2</li>
+          <li>Kp = Kc (RT)^Δn</li>
+          <li>Kp = 0.5 × (0.0821 × 400)^(−2)</li>
+          <li>Kp = 0.5 / (32.84)² = 0.5 / 1078.5</li>
+          <li>Kp = <strong>4.63 × 10⁻⁴</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: pH of Weak Acid</span>
+        <p><strong>Q:</strong> Find pH of 0.1 M CH₃COOH (Ka = 1.8 × 10⁻⁵)</p>
+        <ol>
+          <li>[H⁺] = √(Ka × C)</li>
+          <li>[H⁺] = √(1.8 × 10⁻⁵ × 0.1) = √(1.8 × 10⁻⁶)</li>
+          <li>[H⁺] = 1.34 × 10⁻³</li>
+          <li>pH = −log(1.34 × 10⁻³) = 3 − log(1.34)</li>
+          <li>pH = <strong>2.87</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: Buffer pH (Henderson Equation)</span>
+        <p><strong>Q:</strong> Find pH of buffer with 0.1 M CH₃COOH and 0.2 M CH₃COONa (pKa = 4.74)</p>
+        <ol>
+          <li>pH = pKa + log([Salt] / [Acid])</li>
+          <li>pH = 4.74 + log(0.2 / 0.1)</li>
+          <li>pH = 4.74 + log(2)</li>
+          <li>pH = 4.74 + 0.301</li>
+          <li>pH = <strong>5.04</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: Ksp and Solubility</span>
+        <p><strong>Q:</strong> Ksp of AgCl = 1.8 × 10⁻¹⁰. Find solubility.</p>
+        <ol>
+          <li>AgCl ⇌ Ag⁺ + Cl⁻</li>
+          <li>Ksp = s × s = s²</li>
+          <li>s = √Ksp = √(1.8 × 10⁻¹⁰)</li>
+          <li>s = <strong>1.34 × 10⁻⁵ M</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: Common Ion Effect</span>
+        <p><strong>Q:</strong> Find solubility of AgCl in 0.1 M NaCl (Ksp = 1.8 × 10⁻¹⁰)</p>
+        <ol>
+          <li>AgCl ⇌ Ag⁺ + Cl⁻</li>
+          <li>[Cl⁻] = 0.1 (from NaCl)</li>
+          <li>Ksp = [Ag⁺][Cl⁻] = s × 0.1</li>
+          <li>s = Ksp / 0.1 = 1.8 × 10⁻¹⁰ / 0.1</li>
+          <li>s = <strong>1.8 × 10⁻⁹ M</strong></li>
+          <li>(Solubility decreased from 1.34 × 10⁻⁵ to 1.8 × 10⁻⁹)</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Salt Hydrolysis pH</span>
+        <p><strong>Q:</strong> Find pH of 0.1 M CH₃COONa (Ka = 1.8 × 10⁻⁵)</p>
+        <ol>
+          <li>Weak Acid + Strong Base → Basic salt</li>
+          <li>pH = 7 + ½(pKa + log C)</li>
+          <li>pKa = −log(1.8 × 10⁻⁵) = 4.74</li>
+          <li>pH = 7 + ½(4.74 + log 0.1)</li>
+          <li>pH = 7 + ½(4.74 − 1)</li>
+          <li>pH = 7 + 1.87 = <strong>8.87</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Kp and Q (Reaction Direction)</span>
+        <p><strong>Q:</strong> For a reaction, Kp = 10, Q = 5. Direction of reaction?</p>
+        <ol>
+          <li>Q < K</li>
+          <li>Forward reaction favoured</li>
+          <li>Equilibrium shifts right</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Ostwald's Dilution Law</span>
+        <p><strong>Q:</strong> Find α of 0.01 M CH₃COOH (Ka = 1.8 × 10⁻⁵)</p>
+        <ol>
+          <li>α = √(Ka / C)</li>
+          <li>α = √(1.8 × 10⁻⁵ / 0.01)</li>
+          <li>α = √(1.8 × 10⁻³) = 0.0424</li>
+          <li>α = <strong>4.24%</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: pH of Strong Acid</span>
+        <p><strong>Q:</strong> Find pH of 0.001 M HCl</p>
+        <ol>
+          <li>HCl → H⁺ + Cl⁻ (complete dissociation)</li>
+          <li>[H⁺] = 0.001 = 10⁻³</li>
+          <li>pH = −log(10⁻³) = <strong>3</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Equilibrium PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Kc, Kp, Le Chatelier, pH of weak acid</td></tr>
+          <tr><td><strong>2020</strong></td><td>Buffer pH, Ksp, Common Ion Effect</td></tr>
+          <tr><td><strong>2021</strong></td><td>Salt Hydrolysis, pH calculation, ICE table</td></tr>
+          <tr><td><strong>2022</strong></td><td>Le Chatelier, Kp/Kc, Buffer capacity</td></tr>
+          <tr><td><strong>2023</strong></td><td>Ksp, Solubility, pH of salt, α calculation</td></tr>
+          <tr><td><strong>2024</strong></td><td>Buffer, pH, Ksp, Le Chatelier</td></tr>
+          <tr><td><strong>2025</strong></td><td>Ionic Equilibrium, pH, Salt Hydrolysis</td></tr>
+          <tr><td><strong>2026</strong></td><td>Chemical Equilibrium (Kc, Kp), Ionic Equilibrium (pH, Buffer, Ksp)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Ionic Equilibrium (pH, Buffer, Ksp)</strong> → Har saal aata hai</li>
+          <li><strong>Chemical Equilibrium (Kc, Kp, Le Chatelier)</strong> → Har saal</li>
+          <li><strong>Salt Hydrolysis</strong> → 2021, 2023, 2025</li>
+          <li><strong>Common Ion Effect</strong> → 2020, 2023</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Chemical Equilibrium (Kc, Kp, Le Chatelier)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Kp = Kc (RT)^Δn</strong></li>
+          <li><strong>Le Chatelier:</strong> Pressure ↑ → Fewer gas moles side</li>
+          <li><strong>Catalyst:</strong> K change nahi karta</li>
+          <li><strong>Q < K</strong> → Forward, <strong>Q > K</strong> → Backward</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Ionic Equilibrium (pH, Buffer, Ksp)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>pH = −log[H⁺]</strong></li>
+          <li><strong>Buffer pH = pKa + log([Salt]/[Acid])</strong></li>
+          <li><strong>Buffer capacity max</strong> jab [Salt] = [Acid]</li>
+          <li><strong>Ksp = s²</strong> (for AB type)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Salt Hydrolysis</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Weak Acid + Strong Base</strong> → Basic, pH > 7</li>
+          <li><strong>Strong Acid + Weak Base</strong> → Acidic, pH < 7</li>
+          <li><strong>Weak Acid + Weak Base</strong> → pH ≈ 7 (if Ka = Kb)</li>
+          <li><strong>pH = 7 + ½(pKa + log C)</strong></li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Common Ion Effect & Ksp</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Common ion add → Solubility ↓</li>
+          <li><strong>Q < Ksp</strong> → No precipitate</li>
+          <li><strong>Q > Ksp</strong> → Precipitate forms</li>
+          <li><strong>Q = Ksp</strong> → Saturated</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: ICE Table & Kc Calculation</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>ICE Table:</strong> Initial, Change, Equilibrium</li>
+          <li>Concentrations ko ICE table mein likho</li>
+          <li>Kc expression mein substitute karo</li>
+          <li>x nikal ke equilibrium concentrations nikalo</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Chemical Equilibrium</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Ionic Equilibrium</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Buffer</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Ksp</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Salt Hydrolysis</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Ionic Equilibrium (5/5), Chemical Equilibrium (4/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Equilibrium (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Kc:</strong> [Products]^coeff / [Reactants]^coeff</li>
+          <li><strong>Kp = Kc (RT)^Δn</strong></li>
+          <li><strong>pH = −log[H⁺]</strong></li>
+          <li><strong>pH + pOH = 14</strong></li>
+          <li><strong>Ka × Kb = Kw</strong></li>
+          <li><strong>Buffer pH = pKa + log([Salt]/[Acid])</strong></li>
+          <li><strong>Ksp = [A⁺]ˣ[B⁻]ʸ</strong></li>
+          <li><strong>α = √(Ka/C)</strong> (Ostwald)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Le Chatelier Summary</span>
+        <ul>
+          <li><strong>Concentration ↑ (reactant)</strong> → Forward</li>
+          <li><strong>Concentration ↑ (product)</strong> → Backward</li>
+          <li><strong>Pressure ↑</strong> → Fewer gas moles side</li>
+          <li><strong>Temperature ↑ (exothermic)</strong> → Backward</li>
+          <li><strong>Catalyst</strong> → No shift</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Catalyst K change nahi karta</strong></li>
+          <li><strong>Kp = Kc</strong> only if Δn = 0</li>
+          <li><strong>Buffer capacity max</strong> jab [Salt] = [Acid]</li>
+          <li><strong>Common ion</strong> → Solubility ↓</li>
+          <li><strong>Q < Ksp</strong> → No precipitate</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧪 Salt Hydrolysis</span>
+        <ul>
+          <li><strong>Weak Acid + Strong Base</strong> → pH > 7</li>
+          <li><strong>Strong Acid + Weak Base</strong> → pH < 7</li>
+          <li><strong>Weak Acid + Weak Base</strong> → pH ≈ 7</li>
+          <li><strong>Strong Acid + Strong Base</strong> → pH = 7</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Ksp Quick Points</span>
+        <ul>
+          <li><strong>Ksp = s²</strong> (AB type, e.g., AgCl)</li>
+          <li><strong>Ksp = 4s³</strong> (AB₂ type, e.g., PbCl₂)</li>
+          <li><strong>Common ion effect</strong> → Solubility ↓</li>
+          <li><strong>Q < Ksp</strong> → No precipitate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Equilibrium</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. CHEMICAL EQUILIBRIUM</div>
+      <div class="formula-box"><strong>Kc = [C]^c[D]^d / [A]^a[B]^b</strong> — Law of Mass Action</div>
+      <div class="formula-box"><strong>Kp = Kc (RT)^Δn</strong> — Kp and Kc relationship</div>
+      <div class="formula-box"><strong>Δn = (moles gaseous products) − (moles gaseous reactants)</strong></div>
+      <div class="formula-box"><strong>Q < K</strong> → Forward, <strong>Q > K</strong> → Backward, <strong>Q = K</strong> → Equilibrium</div>
+
+      <div class="formula-category">2. pH & pOH</div>
+      <div class="formula-box"><strong>pH = −log[H⁺]</strong></div>
+      <div class="formula-box"><strong>pOH = −log[OH⁻]</strong></div>
+      <div class="formula-box"><strong>pH + pOH = 14</strong> (at 25°C)</div>
+      <div class="formula-box"><strong>Kw = [H⁺][OH⁻] = 10⁻¹⁴</strong></div>
+
+      <div class="formula-category">3. WEAK ACID & BASE</div>
+      <div class="formula-box"><strong>Ka = [H⁺][A⁻] / [HA]</strong></div>
+      <div class="formula-box"><strong>Kb = [BH⁺][OH⁻] / [B]</strong></div>
+      <div class="formula-box"><strong>Ka × Kb = Kw</strong></div>
+      <div class="formula-box"><strong>[H⁺] = √(Ka × C)</strong> — Weak acid</div>
+      <div class="formula-box"><strong>α = √(Ka / C)</strong> — Ostwald's Dilution Law</div>
+
+      <div class="formula-category">4. BUFFER SOLUTIONS</div>
+      <div class="formula-box"><strong>pH = pKa + log([Salt] / [Acid])</strong> — Acidic Buffer</div>
+      <div class="formula-box"><strong>pOH = pKb + log([Salt] / [Base])</strong> — Basic Buffer</div>
+      <div class="formula-box"><strong>Buffer capacity max</strong> jab [Salt] = [Acid]</div>
+
+      <div class="formula-category">5. SALT HYDROLYSIS</div>
+      <div class="formula-box"><strong>Weak Acid + Strong Base:</strong> pH = 7 + ½(pKa + log C)</div>
+      <div class="formula-box"><strong>Strong Acid + Weak Base:</strong> pH = 7 − ½(pKb + log C)</div>
+      <div class="formula-box"><strong>Weak Acid + Weak Base:</strong> pH = 7 + ½(pKa − pKb)</div>
+      <div class="formula-box"><strong>Strong Acid + Strong Base:</strong> pH = 7</div>
+
+      <div class="formula-category">6. SOLUBILITY PRODUCT (Ksp)</div>
+      <div class="formula-box"><strong>For AB:</strong> Ksp = s²</div>
+      <div class="formula-box"><strong>For AB₂:</strong> Ksp = 4s³</div>
+      <div class="formula-box"><strong>For A₂B₃:</strong> Ksp = 108s⁵</div>
+      <div class="formula-box"><strong>Common Ion Effect:</strong> Solubility ↓</div>
+      <div class="formula-box"><strong>Q < Ksp</strong> → No precipitate, <strong>Q > Ksp</strong> → Precipitate</div>
+
+      <div class="formula-category">7. LE CHATELIER'S PRINCIPLE</div>
+      <div class="formula-box"><strong>Concentration ↑ (reactant)</strong> → Forward shift</div>
+      <div class="formula-box"><strong>Concentration ↑ (product)</strong> → Backward shift</div>
+      <div class="formula-box"><strong>Pressure ↑</strong> → Shift to fewer gas moles</div>
+      <div class="formula-box"><strong>Temperature ↑ (exothermic)</strong> → Backward, K ↓</div>
+      <div class="formula-box"><strong>Temperature ↑ (endothermic)</strong> → Forward, K ↑</div>
+      <div class="formula-box"><strong>Catalyst</strong> → No shift, K unchanged</div>
+
+      <div class="formula-category">8. ICE TABLE METHOD</div>
+      <div class="formula-box"><strong>I</strong> = Initial concentration</div>
+      <div class="formula-box"><strong>C</strong> = Change</div>
+      <div class="formula-box"><strong>E</strong> = Equilibrium concentration</div>
+      <div class="formula-box"><strong>Steps:</strong> Write equation → Fill I → Apply C → Calculate E → Substitute in Kc</div>
+
+      <div class="formula-category">9. IMPORTANT CONSTANTS</div>
+      <div class="formula-box"><strong>Kw = 10⁻¹⁴</strong> at 25°C</div>
+      <div class="formula-box"><strong>pH of neutral water = 7</strong></div>
+      <div class="formula-box"><strong>R = 0.0821 L·atm/K·mol</strong></div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

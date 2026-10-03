@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redox Reactions | JEE Chemistry Notes</title>
+  <meta name="description" content="Redox Reactions Notes for JEE Mains — Oxidation Number, Balancing, Disproportionation, Redox Titration, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Redox Reactions
+  </div>
+
+  <header class="chapter-header">
+    <h1>Redox Reactions</h1>
+    <p>Oxidation Number, Balancing, Disproportionation, Redox Titration</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Oxidation & Reduction</h2>
+
+      <div class="box">
+        <span class="box-title">Classical Definition</span>
+        <ul>
+          <li><strong>Oxidation:</strong> Addition of oxygen / Removal of hydrogen</li>
+          <li><strong>Reduction:</strong> Removal of oxygen / Addition of hydrogen</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Electronic Definition</span>
+        <ul>
+          <li><strong>Oxidation:</strong> Loss of electrons (LEO)</li>
+          <li><strong>Reduction:</strong> Gain of electrons (GER)</li>
+          <li><strong>Redox:</strong> Oxidation + Reduction together</li>
+        </ul>
+      </div>
+
+      <h3>1.1 Oxidising & Reducing Agents</h3>
+      <table>
+        <thead><tr><th>Agent</th><th>Kya karta hai</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Oxidising Agent</strong></td><td>Electrons leta hai, khud reduce hota hai</td><td>KMnO₄, K₂Cr₂O₇, Cl₂</td></tr>
+          <tr><td><strong>Reducing Agent</strong></td><td>Electrons deta hai, khud oxidize hota hai</td><td>H₂, CO, Zn, H₂S</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Oxidising agent</strong> khud reduce hota hai (electrons leta hai)</p>
+        <p><strong>Reducing agent</strong> khud oxidize hota hai (electrons deta hai)</p>
+      </div>
+
+      <h2>2. Oxidation Number (Oxidation State)</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Charge jo atom ke paas hota hai agar compound ke saare bonds ionic hote.</p>
+      </div>
+
+      <h3>2.1 Rules for Assigning Oxidation Number</h3>
+      <ol>
+        <li>Free element → 0</li>
+        <li>Monoatomic ion → Ion ka charge</li>
+        <li>Oxygen → −2 (except peroxides: −1, OF₂: +2)</li>
+        <li>Hydrogen → +1 (except metal hydrides: −1)</li>
+        <li>Alkali metals → +1, Alkaline earth → +2</li>
+        <li>Sum of oxidation numbers = Charge on species</li>
+      </ol>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>H₂O₂:</strong> O = −1</li>
+          <li><strong>OF₂:</strong> O = +2</li>
+          <li><strong>NaH:</strong> H = −1</li>
+          <li><strong>KMnO₄:</strong> Mn = +7</li>
+          <li><strong>K₂Cr₂O₇:</strong> Cr = +6</li>
+        </ul>
+      </div>
+
+      <h2>3. Types of Redox Reactions</h2>
+
+      <table>
+        <thead><tr><th>Type</th><th>Definition</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Combination</strong></td><td>A + B → C</td><td>2Na + Cl₂ → 2NaCl</td></tr>
+          <tr><td><strong>Decomposition</strong></td><td>C → A + B</td><td>2H₂O → 2H₂ + O₂</td></tr>
+          <tr><td><strong>Displacement</strong></td><td>A + BC → AC + B</td><td>Zn + CuSO₄ → ZnSO₄ + Cu</td></tr>
+          <tr><td><strong>Disproportionation</strong></td><td>Same element oxidize + reduce</td><td>2H₂O₂ → 2H₂O + O₂</td></tr>
+          <tr><td><strong>Comproportionation</strong></td><td>Two oxidation states → one</td><td>2H₂S + SO₂ → 3S + 2H₂O</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>Disproportionation:</strong> Cl₂ + 2KOH (cold) → KCl + KClO + H₂O</p>
+        <ul>
+          <li>Cl₂ (0) → Cl⁻ (−1) [Reduction]</li>
+          <li>Cl₂ (0) → ClO⁻ (+1) [Oxidation]</li>
+        </ul>
+        <p><strong>F₂ disproportionation nahi karta</strong> (F ka +1 state nahi hota)</p>
+      </div>
+
+      <h2>4. Balancing Redox Reactions</h2>
+
+      <div class="box">
+        <span class="box-title">Ion-Electron Method (Half-Reaction Method)</span>
+        <ol>
+          <li>Reaction ko 2 half-reactions mein todo (oxidation + reduction)</li>
+          <li>Har half-reaction ko balance karo:
+            <ul>
+              <li>Atoms balance karo (O ke liye H₂O, H ke liye H⁺)</li>
+              <li>Charge balance karo (electrons add karo)</li>
+            </ul>
+          </li>
+          <li>Electrons equal karo (multiply karo)</li>
+          <li>Dono half-reactions add karo</li>
+        </ol>
+      </div>
+
+      <h3>4.1 Acidic vs Basic Medium</h3>
+      <table>
+        <thead><tr><th>Medium</th><th>O balance</th><th>H balance</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Acidic</strong></td><td>H₂O add karo</td><td>H⁺ add karo</td></tr>
+          <tr><td><strong>Basic</strong></td><td>H₂O add karo</td><td>OH⁻ add karo</td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. n-factor (Valency Factor)</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Total number of electrons gained or lost per formula unit.</p>
+      </div>
+
+      <h3>5.1 n-factor for Different Species</h3>
+      <table>
+        <thead><tr><th>Species</th><th>n-factor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Acid</strong></td><td>Basicity (H⁺ ions)</td></tr>
+          <tr><td><strong>Base</strong></td><td>Acidity (OH⁻ ions)</td></tr>
+          <tr><td><strong>Salt</strong></td><td>Total charge on cation/anion</td></tr>
+          <tr><td><strong>Redox</strong></td><td>Change in oxidation number</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>KMnO₄ ka n-factor:</strong></p>
+        <ul>
+          <li>Acidic medium: n = 5 (Mn⁺⁷ → Mn⁺²)</li>
+          <li>Neutral medium: n = 3 (Mn⁺⁷ → Mn⁺⁴)</li>
+          <li>Basic medium: n = 1 (Mn⁺⁷ → Mn⁺⁶)</li>
+        </ul>
+        <p><strong>K₂Cr₂O₇ ka n-factor:</strong> Acidic medium: n = 6 (Cr⁺⁶ → Cr⁺³)</p>
+      </div>
+
+      <h2>6. Redox Titration</h2>
+
+      <div class="box">
+        <span class="box-title">Concept</span>
+        <p>Redox reaction ka use karke unknown concentration nikalna.</p>
+      </div>
+
+      <div class="formula">
+        M₁V₁ / n₁ = M₂V₂ / n₂
+      </div>
+      <div class="formula">
+        N₁V₁ = N₂V₂
+      </div>
+
+      <p>Jahan N = Normality = Molarity × n-factor</p>
+
+      <h3>6.1 Important Titrations</h3>
+      <table>
+        <thead><tr><th>Titration</th><th>Reaction</th><th>n-factor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>KMnO₄ vs Fe²⁺ (Mohr's salt)</strong></td><td>MnO₄⁻ + 5Fe²⁺ → Mn²⁺ + 5Fe³⁺</td><td>KMnO₄ = 5, Fe²⁺ = 1</td></tr>
+          <tr><td><strong>K₂Cr₂O₇ vs Fe²⁺</strong></td><td>Cr₂O₇²⁻ + 6Fe²⁺ → 2Cr³⁺ + 6Fe³⁺</td><td>K₂Cr₂O₇ = 6, Fe²⁺ = 1</td></tr>
+          <tr><td><strong>I₂ vs Na₂S₂O₃</strong></td><td>I₂ + 2S₂O₃²⁻ → 2I⁻ + S₄O₆²⁻</td><td>I₂ = 2, Na₂S₂O₃ = 1</td></tr>
+        </tbody>
+      </table>
+
+      <h2>7. Oxidising & Reducing Power</h2>
+
+      <div class="box">
+        <span class="box-title">Rule</span>
+        <ul>
+          <li><strong>Higher E°(reduction)</strong> → Stronger oxidising agent</li>
+          <li><strong>Lower E°(reduction)</strong> → Stronger reducing agent</li>
+        </ul>
+      </div>
+
+      <h3>7.1 Common Oxidising Agents (Strong to Weak)</h3>
+      <div class="formula">
+        F₂ > O₃ > H₂O₂ > KMnO₄ > Cl₂ > K₂Cr₂O₇ > HNO₃ > H₂SO₄
+      </div>
+
+      <h3>7.2 Common Reducing Agents (Strong to Weak)</h3>
+      <div class="formula">
+        Li > K > Ca > Na > Mg > Al > Zn > Fe > H₂ > Cu
+      </div>
+
+      <h2>8. Electrochemical Series</h2>
+
+      <div class="box">
+        <span class="box-title">Applications</span>
+        <ul>
+          <li><strong>Reactivity:</strong> Top wale metals zyada reactive</li>
+          <li><strong>Displacement:</strong> Top wala metal neeche wale ko displace karta hai</li>
+          <li><strong>Oxidising/Reducing Power:</strong> E° se compare karo</li>
+        </ul>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>Strong reducing agent</strong> kaun hai?</p>
+        <p>Ans: Jiska E°(reduction) sabse kam (most negative) ho.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Redox Reactions</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: Oxidation Number</span>
+        <p><strong>Q:</strong> Find oxidation number of Mn in KMnO₄.</p>
+        <ol>
+          <li>K = +1, O = −2 (4 O atoms = −8)</li>
+          <li>Sum = 0 → +1 + Mn + (−8) = 0</li>
+          <li>Mn = +7</li>
+          <li><strong>Answer: +7</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Oxidation Number (Peroxide)</span>
+        <p><strong>Q:</strong> Find oxidation number of O in H₂O₂.</p>
+        <ol>
+          <li>H = +1 (2 H atoms = +2)</li>
+          <li>Sum = 0 → +2 + 2O = 0</li>
+          <li>2O = −2 → O = −1</li>
+          <li><strong>Answer: −1</strong> (peroxide)</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: Disproportionation (2026 PYQ)</span>
+        <p><strong>Q:</strong> Cl₂ + 2KOH → KCl + KClO + H₂O. Identify oxidation and reduction.</p>
+        <ol>
+          <li>Cl₂ (0) → Cl⁻ (−1): Reduction (gain of e⁻)</li>
+          <li>Cl₂ (0) → ClO⁻ (+1): Oxidation (loss of e⁻)</li>
+          <li>Same element (Cl) oxidize aur reduce hua</li>
+          <li><strong>Answer: Disproportionation reaction</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: n-factor (KMnO₄)</span>
+        <p><strong>Q:</strong> Find n-factor of KMnO₄ in acidic, neutral, and basic medium.</p>
+        <ol>
+          <li><strong>Acidic:</strong> Mn⁺⁷ → Mn⁺² → Change = 5 → n = 5</li>
+          <li><strong>Neutral:</strong> Mn⁺⁷ → Mn⁺⁴ → Change = 3 → n = 3</li>
+          <li><strong>Basic:</strong> Mn⁺⁷ → Mn⁺⁶ → Change = 1 → n = 1</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: Redox Titration (Mohr's Salt)</span>
+        <p><strong>Q:</strong> 25 mL of 0.1 M Mohr's salt requires 20 mL of KMnO₄. Find molarity of KMnO₄.</p>
+        <ol>
+          <li>Mohr's salt (Fe²⁺): n-factor = 1</li>
+          <li>KMnO₄ (acidic): n-factor = 5</li>
+          <li>M₁V₁/n₁ = M₂V₂/n₂</li>
+          <li>0.1 × 25 / 1 = M₂ × 20 / 5</li>
+          <li>2.5 = M₂ × 4</li>
+          <li>M₂ = <strong>0.0625 M</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: Redox Titration (K₂Cr₂O₇)</span>
+        <p><strong>Q:</strong> 20 mL of 0.1 M FeSO₄ requires 10 mL of K₂Cr₂O₇. Find molarity.</p>
+        <ol>
+          <li>FeSO₄ (Fe²⁺): n-factor = 1</li>
+          <li>K₂Cr₂O₇ (acidic): n-factor = 6</li>
+          <li>M₁V₁/n₁ = M₂V₂/n₂</li>
+          <li>0.1 × 20 / 1 = M₂ × 10 / 6</li>
+          <li>2 = M₂ × 1.667</li>
+          <li>M₂ = <strong>0.12 M</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Electron Transfer (2026 PYQ)</span>
+        <p><strong>Q:</strong> I⁻ → I₂ and S²⁻ → S. Find total electrons transferred (x + y).</p>
+        <ol>
+          <li>I⁻ → I₂: 2I⁻ → I₂ + 2e⁻ → n = 1 per I⁻</li>
+          <li>S²⁻ → S: S²⁻ → S + 2e⁻ → n = 2 per S²⁻</li>
+          <li>Agar 2 I⁻ aur 1 S²⁻ hai: electrons = 2 + 2 = 4</li>
+          <li><strong>Answer: 4</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Balancing (Acidic Medium)</span>
+        <p><strong>Q:</strong> Balance MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺ (acidic)</p>
+        <ol>
+          <li>Oxidation: Fe²⁺ → Fe³⁺ + e⁻</li>
+          <li>Reduction: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O</li>
+          <li>Electrons equal karo (×5 oxidation)</li>
+          <li>Balanced: MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Balancing (Basic Medium)</span>
+        <p><strong>Q:</strong> Balance MnO₄⁻ + I⁻ → MnO₂ + I₂ (basic)</p>
+        <ol>
+          <li>Oxidation: 2I⁻ → I₂ + 2e⁻</li>
+          <li>Reduction: MnO₄⁻ + 2H₂O + 3e⁻ → MnO₂ + 4OH⁻</li>
+          <li>Electrons equal karo (×2 reduction, ×3 oxidation)</li>
+          <li>Balanced: 2MnO₄⁻ + 6I⁻ + 4H₂O → 2MnO₂ + 3I₂ + 8OH⁻</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: Oxidising Agent Comparison</span>
+        <p><strong>Q:</strong> Which is the strongest oxidising agent? (E°: F₂ = 2.87, Cl₂ = 1.36, Br₂ = 1.09, I₂ = 0.54)</p>
+        <ol>
+          <li>Higher E°(reduction) = Stronger oxidising agent</li>
+          <li>F₂ (2.87) > Cl₂ (1.36) > Br₂ (1.09) > I₂ (0.54)</li>
+          <li><strong>Answer: F₂</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Redox Reactions PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Oxidation Number, Balancing, Redox Titration</td></tr>
+          <tr><td><strong>2020</strong></td><td>Disproportionation, n-factor, Oxidising Agents</td></tr>
+          <tr><td><strong>2021</strong></td><td>Oxidation Number, Balancing, Redox Titration</td></tr>
+          <tr><td><strong>2022</strong></td><td>Disproportionation, n-factor, Electrochemical Series</td></tr>
+          <tr><td><strong>2023</strong></td><td>Oxidation Number, Balancing, Redox Titration</td></tr>
+          <tr><td><strong>2024</strong></td><td>Disproportionation, n-factor, Oxidising Power</td></tr>
+          <tr><td><strong>2025</strong></td><td>Oxidation Number, Redox Titration, Reducing Agents</td></tr>
+          <tr><td><strong>2026</strong></td><td>Disproportionation (Cl₂ + KOH), Electron Transfer, KMnO₄ Titration</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Oxidation Number & Balancing</strong> → Har saal aata hai</li>
+          <li><strong>Disproportionation</strong> → 2020, 2022, 2024, 2026</li>
+          <li><strong>Redox Titration</strong> → 2019, 2021, 2023, 2025</li>
+          <li><strong>n-factor</strong> → 2020, 2022, 2024, 2026</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Oxidation Number</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>KMnO₄ → Mn = +7</li>
+          <li>K₂Cr₂O₇ → Cr = +6</li>
+          <li>H₂O₂ → O = −1</li>
+          <li>OF₂ → O = +2</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Disproportionation (2026 PYQ)</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Cl₂ + 2KOH (cold) → KCl + KClO + H₂O</strong></li>
+          <li>Cl₂ (0) → Cl⁻ (−1) [Reduction]</li>
+          <li>Cl₂ (0) → ClO⁻ (+1) [Oxidation]</li>
+          <li><strong>F₂ disproportionation nahi karta</strong></li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: n-factor</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>KMnO₄:</strong> Acidic = 5, Neutral = 3, Basic = 1</li>
+          <li><strong>K₂Cr₂O₇:</strong> Acidic = 6</li>
+          <li><strong>Mohr's salt:</strong> n = 1</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Redox Titration</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>M₁V₁/n₁ = M₂V₂/n₂</strong></li>
+          <li>KMnO₄ vs Fe²⁺ (n₁ = 5, n₂ = 1)</li>
+          <li>K₂Cr₂O₇ vs Fe²⁺ (n₁ = 6, n₂ = 1)</li>
+          <li>I₂ vs Na₂S₂O₃ (n₁ = 2, n₂ = 1)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Oxidising/Reducing Power</h3>
+      <p><strong>PYQ Trend:</strong> 2024, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Higher E° = Stronger oxidising agent</li>
+          <li>Lower E° = Stronger reducing agent</li>
+          <li>F₂ strongest oxidising agent</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Oxidation Number</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Disproportionation</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Redox Titration</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>n-factor</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Oxidation Number (5/5), Disproportionation (3/5), Redox Titration (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Redox Reactions (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Oxidation:</strong> Loss of electrons (LEO)</li>
+          <li><strong>Reduction:</strong> Gain of electrons (GER)</li>
+          <li><strong>Redox Titration:</strong> M₁V₁/n₁ = M₂V₂/n₂</li>
+          <li><strong>Normality:</strong> N = M × n-factor</li>
+          <li><strong>Equivalent Weight:</strong> Molar Mass / n-factor</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>KMnO₄ n-factor:</strong> Acidic = 5, Neutral = 3, Basic = 1</li>
+          <li><strong>K₂Cr₂O₇ n-factor:</strong> Acidic = 6</li>
+          <li><strong>H₂O₂:</strong> O = −1</li>
+          <li><strong>OF₂:</strong> O = +2</li>
+          <li><strong>F₂ disproportionation nahi karta</strong></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 n-factor Table</span>
+        <ul>
+          <li><strong>Acid:</strong> Basicity</li>
+          <li><strong>Base:</strong> Acidity</li>
+          <li><strong>Salt:</strong> Total charge</li>
+          <li><strong>Redox:</strong> Change in oxidation number</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Important Titrations</span>
+        <ul>
+          <li><strong>KMnO₄ vs Fe²⁺:</strong> n₁ = 5, n₂ = 1</li>
+          <li><strong>K₂Cr₂O₇ vs Fe²⁺:</strong> n₁ = 6, n₂ = 1</li>
+          <li><strong>I₂ vs Na₂S₂O₃:</strong> n₁ = 2, n₂ = 1</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">💡 Oxidising/Reducing Power</span>
+        <ul>
+          <li><strong>Higher E°</strong> → Stronger oxidising agent</li>
+          <li><strong>Lower E°</strong> → Stronger reducing agent</li>
+          <li>F₂ > O₃ > H₂O₂ > KMnO₄ > Cl₂ > K₂Cr₂O₇</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Redox Reactions</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. OXIDATION & REDUCTION</div>
+      <div class="formula-box"><strong>Oxidation:</strong> Loss of electrons (LEO)</div>
+      <div class="formula-box"><strong>Reduction:</strong> Gain of electrons (GER)</div>
+      <div class="formula-box"><strong>Oxidising Agent:</strong> Electron leta hai, khud reduce hota hai</div>
+      <div class="formula-box"><strong>Reducing Agent:</strong> Electron deta hai, khud oxidize hota hai</div>
+
+      <div class="formula-category">2. OXIDATION NUMBER RULES</div>
+      <div class="formula-box"><strong>Free element:</strong> 0</div>
+      <div class="formula-box"><strong>Monoatomic ion:</strong> Ion ka charge</div>
+      <div class="formula-box"><strong>Oxygen:</strong> −2 (peroxides: −1, OF₂: +2)</div>
+      <div class="formula-box"><strong>Hydrogen:</strong> +1 (metal hydrides: −1)</div>
+      <div class="formula-box"><strong>Sum = Charge on species</strong></div>
+
+      <div class="formula-category">3. TYPES OF REDOX REACTIONS</div>
+      <div class="formula-box"><strong>Combination:</strong> A + B → C</div>
+      <div class="formula-box"><strong>Decomposition:</strong> C → A + B</div>
+      <div class="formula-box"><strong>Displacement:</strong> A + BC → AC + B</div>
+      <div class="formula-box"><strong>Disproportionation:</strong> Same element oxidize + reduce</div>
+      <div class="formula-box"><strong>Comproportionation:</strong> Two oxidation states → one</div>
+
+      <div class="formula-category">4. BALANCING (ION-ELECTRON METHOD)</div>
+      <div class="formula-box"><strong>Acidic Medium:</strong> O ke liye H₂O, H ke liye H⁺</div>
+      <div class="formula-box"><strong>Basic Medium:</strong> O ke liye H₂O, H ke liye OH⁻</div>
+      <div class="formula-box"><strong>Charge balance:</strong> Electrons add karo</div>
+      <div class="formula-box"><strong>Electrons equal karo</strong> (multiply karo)</div>
+
+      <div class="formula-category">5. n-FACTOR</div>
+      <div class="formula-box"><strong>Acid:</strong> Basicity (H⁺ ions)</div>
+      <div class="formula-box"><strong>Base:</strong> Acidity (OH⁻ ions)</div>
+      <div class="formula-box"><strong>Salt:</strong> Total charge</div>
+      <div class="formula-box"><strong>Redox:</strong> Change in oxidation number</div>
+      <div class="formula-box"><strong>KMnO₄:</strong> Acidic = 5, Neutral = 3, Basic = 1</div>
+      <div class="formula-box"><strong>K₂Cr₂O₇:</strong> Acidic = 6</div>
+
+      <div class="formula-category">6. REDOX TITRATION</div>
+      <div class="formula-box"><strong>M₁V₁/n₁ = M₂V₂/n₂</strong></div>
+      <div class="formula-box"><strong>N₁V₁ = N₂V₂</strong></div>
+      <div class="formula-box"><strong>KMnO₄ vs Fe²⁺:</strong> n₁ = 5, n₂ = 1</div>
+      <div class="formula-box"><strong>K₂Cr₂O₇ vs Fe²⁺:</strong> n₁ = 6, n₂ = 1</div>
+      <div class="formula-box"><strong>I₂ vs Na₂S₂O₃:</strong> n₁ = 2, n₂ = 1</div>
+
+      <div class="formula-category">7. OXIDISING/REDUCING POWER</div>
+      <div class="formula-box"><strong>Higher E°</strong> → Stronger oxidising agent</div>
+      <div class="formula-box"><strong>Lower E°</strong> → Stronger reducing agent</div>
+      <div class="formula-box"><strong>Oxidising Order:</strong> F₂ > O₃ > H₂O₂ > KMnO₄ > Cl₂ > K₂Cr₂O₇</div>
+      <div class="formula-box"><strong>Reducing Order:</strong> Li > K > Ca > Na > Mg > Al > Zn > Fe > H₂ > Cu</div>
+
+      <div class="formula-category">8. IMPORTANT OXIDATION NUMBERS</div>
+      <div class="formula-box"><strong>KMnO₄:</strong> Mn = +7</div>
+      <div class="formula-box"><strong>K₂Cr₂O₇:</strong> Cr = +6</div>
+      <div class="formula-box"><strong>H₂O₂:</strong> O = −1</div>
+      <div class="formula-box"><strong>OF₂:</strong> O = +2</div>
+      <div class="formula-box"><strong>NaH:</strong> H = −1</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

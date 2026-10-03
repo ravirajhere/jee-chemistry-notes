@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purification & Characterisation | JEE Chemistry Notes</title>
+  <meta name="description" content="Purification & Characterisation of Organic Compounds for JEE Mains — Crystallization, Distillation, Chromatography, Detection of Elements, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes h4 { margin-top: 1.2rem; color: var(--primary); font-size: 1.05rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    .reaction-svg { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem; margin: 0.8rem 0; }
+    .reaction-svg svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .dual-name { display: flex; justify-content: space-between; font-size: 0.75rem; color: #5f6368; padding: 0 0.5rem; margin-top: 0.2rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box, .reaction-svg { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Purification & Characterisation
+  </div>
+
+  <header class="chapter-header">
+    <h1>Purification & Characterisation</h1>
+    <p>Crystallization, Distillation, Chromatography, Detection of Elements</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Diagrams</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Diagram Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & DIAGRAMS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Purification Methods</h2>
+
+      <div class="box">
+        <span class="box-title">Basic Idea</span>
+        <p>Organic compounds ko impurities se alag karne ke liye different methods use hote hain, depending on the nature of compound and impurity.</p>
+      </div>
+
+      <h3>1.1 Crystallization</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Crystallization — Purification</text>
+          
+          <!-- Beaker -->
+          <rect x="100" y="60" width="120" height="120" fill="#e8f0fe" stroke="#202124" stroke-width="2" rx="5"/>
+          <text x="120" y="90" fill="#1a73e8" font-weight="600" font-size="12">Hot Solvent</text>
+          <text x="120" y="110" fill="#202124" font-size="11">+ Impure Solid</text>
+          
+          <!-- Dissolved -->
+          <text x="260" y="90" fill="#5f6368" font-size="11">→ Dissolves completely</text>
+          
+          <!-- Cooling -->
+          <text x="420" y="90" fill="#5f6368" font-size="11">→ Cool slowly</text>
+          
+          <!-- Crystals -->
+          <text x="560" y="90" fill="#34a853" font-weight="600" font-size="11">→ Pure crystals form</text>
+          
+          <!-- Diagram labels -->
+          <text x="100" y="200" fill="#5f6368" font-size="10">Impurities stay in solution</text>
+        </svg>
+        <div class="diagram-caption">Crystallization — Impure solid → Hot solvent → Cool → Pure crystals</div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Working</span>
+        <ul>
+          <li>Impure compound ko hot solvent mein dissolve karo</li>
+          <li>Solution ko slowly cool karo</li>
+          <li>Pure compound crystals form karta hai</li>
+          <li>Impurities solution mein hi rehti hain</li>
+        </ul>
+        <p><strong>Example:</strong> Sugar, Benzoic acid, Urea</p>
+      </div>
+
+      <h3>1.2 Sublimation</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Sublimation — Purification</text>
+          
+          <!-- Apparatus -->
+          <rect x="150" y="60" width="120" height="100" fill="#e8f0fe" stroke="#202124" stroke-width="2" rx="5"/>
+          <text x="170" y="90" fill="#202124" font-size="11">Impure Solid</text>
+          <text x="170" y="110" fill="#f9ab00" font-size="11">(Heated)</text>
+          
+          <!-- Vapors -->
+          <text x="290" y="90" fill="#5f6368" font-size="11">→ Vapors rise</text>
+          
+          <!-- Cold surface -->
+          <text x="450" y="90" fill="#5f6368" font-size="11">→ Cold surface</text>
+          <text x="450" y="110" fill="#34a853" font-size="11">→ Pure solid deposits</text>
+        </svg>
+        <div class="diagram-caption">Sublimation — Solid → Vapor → Solid (Pure)</div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Working</span>
+        <ul>
+          <li>Solid directly vapor mein convert hota hai (without liquid)</li>
+          <li>Vapors cold surface par deposit hote hain</li>
+          <li>Impurities jo volatile nahi hain wo peeche reh jaati hain</li>
+        </ul>
+        <p><strong>Example:</strong> Camphor, Naphthalene, Anthracene, Iodine, Benzoic acid</p>
+      </div>
+
+      <h3>1.3 Distillation</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Distillation — Types</text>
+          
+          <!-- Simple -->
+          <text x="50" y="60" fill="#34a853" font-weight="600" font-size="12">1. Simple Distillation</text>
+          <text x="50" y="80" fill="#202124" font-size="11">Liquid → Vapor → Condense → Pure liquid</text>
+          <text x="50" y="95" fill="#5f6368" font-size="10">(For liquids with large BP difference)</text>
+          
+          <!-- Fractional -->
+          <text x="50" y="130" fill="#f9ab00" font-weight="600" font-size="12">2. Fractional Distillation</text>
+          <text x="50" y="150" fill="#202124" font-size="11">Liquids with close BP → Fractionating column</text>
+          <text x="50" y="165" fill="#5f6368" font-size="10">(For liquids with BP difference < 25 K)</text>
+          
+          <!-- Steam -->
+          <text x="50" y="200" fill="#ea4335" font-weight="600" font-size="12">3. Steam Distillation</text>
+          <text x="50" y="220" fill="#202124" font-size="11">Steam passed → Volatile compound vaporizes</text>
+          <text x="50" y="235" fill="#5f6368" font-size="10">(For compounds insoluble in water)</text>
+        </svg>
+        <div class="diagram-caption">Distillation — Simple, Fractional, Steam</div>
+      </div>
+
+      <h4>Types of Distillation</h4>
+
+      <table>
+        <thead><tr><th>Type</th><th>Used For</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Simple</strong></td><td>Liquids with large BP difference</td><td>Chloroform + Aniline</td></tr>
+          <tr><td><strong>Fractional</strong></td><td>Liquids with close BP difference (< 25 K)</td><td>Benzene + Toluene</td></tr>
+          <tr><td><strong>Steam</strong></td><td>Compounds insoluble in water, volatile</td><td>Aniline, Nitrobenzene</td></tr>
+          <tr><td><strong>Vacuum</strong></td><td>Liquids with high BP (decompose)</td><td>Glycerol, Sugar</td></tr>
+          <tr><td><strong>Azeotropic</strong></td><td>Constant BP mixture</td><td>Ethanol + Water</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.4 Chromatography</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Chromatography — Principle</text>
+          
+          <!-- Paper -->
+          <rect x="150" y="50" width="60" height="130" fill="#f8f9fa" stroke="#202124" stroke-width="1"/>
+          
+          <!-- Solvent front -->
+          <text x="230" y="60" fill="#5f6368" font-size="11">Solvent front</text>
+          
+          <!-- Spots -->
+          <circle cx="180" cy="100" r="5" fill="#ea4335"/>
+          <text x="230" y="105" fill="#ea4335" font-size="11">Component A (Less adsorbed)</text>
+          
+          <circle cx="180" cy="130" r="5" fill="#1a73e8"/>
+          <text x="230" y="135" fill="#1a73e8" font-size="11">Component B (More adsorbed)</text>
+          
+          <!-- Mobile phase -->
+          <text x="50" y="160" fill="#5f6368" font-size="11">Mobile phase (Solvent)</text>
+          
+          <!-- Stationary phase -->
+          <text x="50" y="180" fill="#5f6368" font-size="11">Stationary phase (Paper)</text>
+        </svg>
+        <div class="diagram-caption">Chromatography — Separation Principle (Differential Adsorption)</div>
+      </div>
+
+      <h4>Types of Chromatography</h4>
+
+      <table>
+        <thead><tr><th>Type</th><th>Stationary Phase</th><th>Mobile Phase</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Paper</strong></td><td>Water (in paper)</td><td>Organic solvent</td></tr>
+          <tr><td><strong>Thin Layer (TLC)</strong></td><td>Silica gel / Alumina</td><td>Organic solvent</td></tr>
+          <tr><td><strong>Column</strong></td><td>Alumina / Silica</td><td>Organic solvent</td></tr>
+          <tr><td><strong>Gas-Liquid (GLC)</strong></td><td>Liquid on solid</td><td>Gas</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Paper Chromatography:</strong> Water = Stationary phase</li>
+          <li><strong>TLC:</strong> Silica gel = Stationary phase</li>
+          <li><strong>Column:</strong> Alumina = Stationary phase</li>
+        </ul>
+      </div>
+
+      <h2>2. Qualitative Analysis of Organic Compounds</h2>
+
+      <h3>2.1 Detection of Elements</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Detection of Elements — Lassaigne's Test</text>
+          
+          <!-- Step 1 -->
+          <text x="50" y="60" fill="#202124" font-weight="600" font-size="12">Step 1: Lassaigne's Test</text>
+          <text x="50" y="80" fill="#5f6368" font-size="11">Organic compound + Na → NaCN, Na₂S, NaX (if N, S, X present)</text>
+          
+          <!-- Step 2 -->
+          <text x="50" y="120" fill="#202124" font-weight="600" font-size="12">Step 2: Test for Nitrogen</text>
+          <text x="50" y="140" fill="#5f6368" font-size="11">NaCN + FeSO₄ + NaOH → Fe₄[Fe(CN)₆]₃ (Prussian Blue)</text>
+          
+          <!-- Step 3 -->
+          <text x="50" y="180" fill="#202124" font-weight="600" font-size="12">Step 3: Test for Sulphur</text>
+          <text x="50" y="200" fill="#5f6368" font-size="11">Na₂S + Na₂[Fe(CN)₅NO] → Violet colour</text>
+          
+          <!-- Step 4 -->
+          <text x="50" y="230" fill="#202124" font-weight="600" font-size="12">Step 4: Test for Halogens</text>
+          <text x="50" y="250" fill="#5f6368" font-size="11">NaX + AgNO₃ → AgX (White/Yellow ppt)</text>
+        </svg>
+        <div class="diagram-caption">Lassaigne's Test — Detection of N, S, Halogens</div>
+      </div>
+
+      <h3>2.2 Tests for Functional Groups</h3>
+
+      <table>
+        <thead><tr><th>Functional Group</th><th>Test</th><th>Observation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>−OH (Alcohol)</strong></td><td>Ceric ammonium nitrate</td><td>Red colour</td></tr>
+          <tr><td><strong>−OH (Phenol)</strong></td><td>FeCl₃</td><td>Violet colour</td></tr>
+          <tr><td><strong>−CHO</strong></td><td>Tollens / Fehling</td><td>Silver mirror / Red ppt</td></tr>
+          <tr><td><strong>>C=O</strong></td><td>2,4-DNP</td><td>Orange/Red ppt</td></tr>
+          <tr><td><strong>−COOH</strong></td><td>NaHCO₃</td><td>CO₂ bubbles</td></tr>
+          <tr><td><strong>−NH₂</strong></td><td>Carbylamine</td><td>Foul smell</td></tr>
+          <tr><td><strong>−NO₂</strong></td><td>Mulliken's test</td><td>Ag mirror</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Phenol:</strong> FeCl₃ → Violet colour</li>
+          <li><strong>Aldehyde:</strong> Tollens → Silver mirror</li>
+          <li><strong>Carboxylic acid:</strong> NaHCO₃ → CO₂ bubbles</li>
+          <li><strong>Primary amine:</strong> Carbylamine → Foul smell</li>
+        </ul>
+      </div>
+
+      <h2>3. Quantitative Analysis</h2>
+
+      <h3>3.1 Estimation of Elements</h3>
+
+      <table>
+        <thead><tr><th>Element</th><th>Method</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Carbon & Hydrogen</strong></td><td>Liebig's Method</td><td>%C = (12/44) × (mass CO₂ / mass compound) × 100</td></tr>
+          <tr><td><strong>Nitrogen</strong></td><td>Kjeldahl's Method</td><td>%N = (1.4 × N × V) / mass</td></tr>
+          <tr><td><strong>Nitrogen</strong></td><td>Dumas Method</td><td>%N = (28/22400) × (V at STP / mass) × 100</td></tr>
+          <tr><td><strong>Halogens</strong></td><td>Carius Method</td><td>%X = (atomic mass / AgX molar mass) × (mass AgX / mass) × 100</td></tr>
+          <tr><td><strong>Sulphur</strong></td><td>Carius Method</td><td>%S = (32/233) × (mass BaSO₄ / mass) × 100</td></tr>
+          <tr><td><strong>Phosphorus</strong></td><td>Carius Method</td><td>%P = (62/222) × (mass Mg₂P₂O₇ / mass) × 100</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Kjeldahl's:</strong> Nitrogen estimation (not for nitro/azo compounds)</li>
+          <li><strong>Dumas:</strong> Nitrogen estimation (all compounds)</li>
+          <li><strong>Carius:</strong> Halogens, Sulphur, Phosphorus</li>
+        </ul>
+      </div>
+
+      <h2>4. Determination of Molecular Formula</h2>
+
+      <div class="formula">
+        Empirical Formula → Molecular Formula
+      </div>
+
+      <div class="formula">
+        n = Molecular Mass / Empirical Formula Mass
+      </div>
+
+      <div class="box">
+        <span class="box-title">Steps</span>
+        <ol>
+          <li>% composition se moles nikalo</li>
+          <li>Simplest ratio = Empirical Formula</li>
+          <li>Molecular Mass (from various methods) / Empirical Formula Mass = n</li>
+          <li>Molecular Formula = (Empirical Formula) × n</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Purification & Characterisation</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Crystallization</span>
+        <p><strong>Q:</strong> Which method is used to purify sugar?</p>
+        <ol>
+          <li>Sugar ko impurities se alag karna hai</li>
+          <li>Crystallization best hai</li>
+          <li>Hot solvent mein dissolve → Cool → Pure crystals</li>
+          <li><strong>Answer: Crystallization</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Sublimation</span>
+        <p><strong>Q:</strong> Which of the following can be purified by sublimation: Camphor, Sugar, NaCl?</p>
+        <ol>
+          <li>Sublimation: Solid → Vapor directly</li>
+          <li>Camphor volatile hai</li>
+          <li>Sugar aur NaCl volatile nahi</li>
+          <li><strong>Answer: Camphor</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Distillation Type</span>
+        <p><strong>Q:</strong> Benzene (BP 353 K) and Toluene (BP 384 K) ko separate karne ke liye kaunsa method?</p>
+        <ol>
+          <li>BP difference = 384 − 353 = 31 K</li>
+          <li>31 > 25 K → Simple distillation</li>
+          <li><strong>Answer: Simple Distillation</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Steam Distillation</span>
+        <p><strong>Q:</strong> Which compound is purified by steam distillation?</p>
+        <ol>
+          <li>Steam distillation: Insoluble in water, volatile</li>
+          <li>Aniline steam volatile hai</li>
+          <li><strong>Answer: Aniline</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Chromatography</span>
+        <p><strong>Q:</strong> In paper chromatography, what is the stationary phase?</p>
+        <ol>
+          <li>Paper chromatography</li>
+          <li>Stationary phase: Water (in paper)</li>
+          <li>Mobile phase: Organic solvent</li>
+          <li><strong>Answer: Water</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Lassaigne's Test</span>
+        <p><strong>Q:</strong> Which colour confirms nitrogen in Lassaigne's test?</p>
+        <ol>
+          <li>NaCN + FeSO₄ + NaOH → Fe₄[Fe(CN)₆]₃</li>
+          <li>Prussian blue colour</li>
+          <li><strong>Answer: Prussian Blue</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Functional Group Test</span>
+        <p><strong>Q:</strong> Which test distinguishes phenol from alcohol?</p>
+        <ol>
+          <li>Phenol → FeCl₃ → Violet colour</li>
+          <li>Alcohol → No colour with FeCl₃</li>
+          <li><strong>Answer: FeCl₃ Test</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: Kjeldahl's Method</span>
+        <p><strong>Q:</strong> Which compound cannot be estimated by Kjeldahl's method?</p>
+        <ol>
+          <li>Kjeldahl's: Nitrogen estimation</li>
+          <li>Nitro compounds mein nitrogen ring mein hota hai</li>
+          <li>Wo decompose nahi hota</li>
+          <li><strong>Answer: Nitrobenzene (Nitro compounds)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: Carius Method</span>
+        <p><strong>Q:</strong> Carius method is used for estimation of:</p>
+        <ol>
+          <li>Halogens, Sulphur, Phosphorus</li>
+          <li>AgX, BaSO₄, Mg₂P₂O₇ formation</li>
+          <li><strong>Answer: Halogens, Sulphur, Phosphorus</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Molecular Formula</span>
+        <p><strong>Q:</strong> Empirical formula CH₂O, Molecular mass 180. Find molecular formula.</p>
+        <ol>
+          <li>Empirical formula mass = 12 + 2 + 16 = 30</li>
+          <li>n = 180 / 30 = 6</li>
+          <li>Molecular formula = (CH₂O) × 6 = C₆H₁₂O₆</li>
+          <li><strong>Answer: C₆H₁₂O₆ (Glucose)</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Purification & Characterisation PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Crystallization, Sublimation, Lassaigne's Test</td></tr>
+          <tr><td><strong>2020</strong></td><td>Distillation Types, Chromatography, Functional Group Tests</td></tr>
+          <tr><td><strong>2021</strong></td><td>Kjeldahl's Method, Carius Method, Molecular Formula</td></tr>
+          <tr><td><strong>2022</strong></td><td>Chromatography, Lassaigne's Test, Functional Group</td></tr>
+          <tr><td><strong>2023</strong></td><td>Steam Distillation, Dumas Method, Carius Method</td></tr>
+          <tr><td><strong>2024</strong></td><td>Purification Methods, Quantitative Analysis</td></tr>
+          <tr><td><strong>2025</strong></td><td>Chromatography, Lassaigne's Test, Functional Group</td></tr>
+          <tr><td><strong>2026</strong></td><td>Crystallization, Distillation, Kjeldahl's Method</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Purification Methods</strong> → Har saal aata hai</li>
+          <li><strong>Chromatography</strong> → 2020, 2022, 2025</li>
+          <li><strong>Lassaigne's Test</strong> → 2019, 2022, 2025</li>
+          <li><strong>Quantitative Analysis</strong> → 2021, 2023, 2024, 2026</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Purification Methods</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Crystallization:</strong> Sugar, Benzoic acid</li>
+          <li><strong>Sublimation:</strong> Camphor, Naphthalene</li>
+          <li><strong>Distillation:</strong> Simple (large BP), Fractional (close BP), Steam (water-insoluble)</li>
+          <li><strong>Chromatography:</strong> Paper, TLC, Column</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Chromatography</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Paper:</strong> Water = Stationary</li>
+          <li><strong>TLC:</strong> Silica gel = Stationary</li>
+          <li><strong>Column:</strong> Alumina = Stationary</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Lassaigne's Test</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Nitrogen:</strong> Prussian blue (Fe₄[Fe(CN)₆]₃)</li>
+          <li><strong>Sulphur:</strong> Violet colour</li>
+          <li><strong>Halogens:</strong> AgX ppt (White/Yellow)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Quantitative Analysis</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2023, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Kjeldahl's:</strong> Nitrogen (not for nitro compounds)</li>
+          <li><strong>Dumas:</strong> Nitrogen (all compounds)</li>
+          <li><strong>Carius:</strong> Halogens, Sulphur, Phosphorus</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Purification</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Chromatography</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Lassaigne's</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Quantitative</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Purification (5/5), Chromatography (2/5), Lassaigne's (2/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Purification & Characterisation (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Purification Methods</span>
+        <ul>
+          <li><strong>Crystallization:</strong> Sugar, Benzoic acid</li>
+          <li><strong>Sublimation:</strong> Camphor, Naphthalene</li>
+          <li><strong>Simple Distillation:</strong> Large BP difference</li>
+          <li><strong>Fractional:</strong> Close BP difference (< 25 K)</li>
+          <li><strong>Steam:</strong> Water-insoluble, volatile (Aniline)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Paper Chromatography:</strong> Water = Stationary</li>
+          <li><strong>TLC:</strong> Silica gel = Stationary</li>
+          <li><strong>Kjeldahl's:</strong> Not for nitro compounds</li>
+          <li><strong>Dumas:</strong> All compounds</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Lassaigne's Test</span>
+        <ul>
+          <li><strong>Nitrogen:</strong> Prussian blue</li>
+          <li><strong>Sulphur:</strong> Violet colour</li>
+          <li><strong>Halogens:</strong> AgX ppt</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Functional Group Tests</span>
+        <ul>
+          <li><strong>Phenol:</strong> FeCl₃ → Violet</li>
+          <li><strong>Aldehyde:</strong> Tollens → Silver mirror</li>
+          <li><strong>Carboxylic acid:</strong> NaHCO₃ → CO₂</li>
+          <li><strong>Primary amine:</strong> Carbylamine → Foul smell</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: DIAGRAM SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Diagram Sheet — Purification & Characterisation</h2>
+      <p style="color: #5f6368;">Saare important diagrams ek jagah — visual learning ke liye best.</p>
+
+      <div class="formula-category">1. CRYSTALLIZATION</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Crystallization</text>
+          
+          <rect x="100" y="60" width="120" height="100" fill="#e8f0fe" stroke="#202124" stroke-width="2" rx="5"/>
+          <text x="120" y="90" fill="#1a73e8" font-weight="600" font-size="12">Hot Solvent</text>
+          <text x="120" y="110" fill="#202124" font-size="11">+ Impure Solid</text>
+          <text x="120" y="140" fill="#5f6368" font-size="10">Cool slowly</text>
+          
+          <text x="280" y="100" fill="#5f6368" font-size="11">→ Pure crystals form</text>
+          <text x="280" y="130" fill="#5f6368" font-size="11">Impurities stay in solution</text>
+        </svg>
+        <div class="diagram-caption">Crystallization — Impure solid → Pure crystals</div>
+      </div>
+
+      <div class="formula-category">2. SUBLIMATION</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Sublimation</text>
+          
+          <rect x="150" y="60" width="120" height="80" fill="#e8f0fe" stroke="#202124" stroke-width="2" rx="5"/>
+          <text x="170" y="85" fill="#202124" font-size="11">Impure Solid</text>
+          <text x="170" y="105" fill="#f9ab00" font-size="11">(Heated)</text>
+          
+          <text x="300" y="90" fill="#5f6368" font-size="11">→ Vapors rise → Cold surface</text>
+          <text x="300" y="120" fill="#34a853" font-size="11">→ Pure solid deposits</text>
+        </svg>
+        <div class="diagram-caption">Sublimation — Solid → Vapor → Pure Solid</div>
+      </div>
+
+      <div class="formula-category">3. CHROMATOGRAPHY</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Chromatography</text>
+          
+          <rect x="150" y="50" width="60" height="130" fill="#f8f9fa" stroke="#202124" stroke-width="1"/>
+          <text x="230" y="60" fill="#5f6368" font-size="11">Solvent front</text>
+          
+          <circle cx="180" cy="100" r="5" fill="#ea4335"/>
+          <text x="230" y="105" fill="#ea4335" font-size="11">Component A</text>
+          
+          <circle cx="180" cy="130" r="5" fill="#1a73e8"/>
+          <text x="230" y="135" fill="#1a73e8" font-size="11">Component B</text>
+          
+          <text x="50" y="170" fill="#5f6368" font-size="11">Mobile phase</text>
+          <text x="50" y="190" fill="#5f6368" font-size="11">Stationary phase</text>
+        </svg>
+        <div class="diagram-caption">Chromatography — Separation Principle</div>
+      </div>
+
+      <div class="formula-category">4. LASSAIGNE'S TEST</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Lassaigne's Test — Detection of Elements</text>
+          
+          <text x="50" y="60" fill="#202124" font-weight="600" font-size="12">Step 1: Organic compound + Na → NaCN, Na₂S, NaX</text>
+          
+          <text x="50" y="100" fill="#202124" font-weight="600" font-size="12">Nitrogen:</text>
+          <text x="180" y="100" fill="#5f6368" font-size="11">NaCN + FeSO₄ + NaOH → Prussian Blue</text>
+          
+          <text x="50" y="140" fill="#202124" font-weight="600" font-size="12">Sulphur:</text>
+          <text x="180" y="140" fill="#5f6368" font-size="11">Na₂S + Na₂[Fe(CN)₅NO] → Violet</text>
+          
+          <text x="50" y="180" fill="#202124" font-weight="600" font-size="12">Halogens:</text>
+          <text x="180" y="180" fill="#5f6368" font-size="11">NaX + AgNO₃ → AgX ppt</text>
+        </svg>
+        <div class="diagram-caption">Lassaigne's Test — N, S, Halogens Detection</div>
+      </div>
+
+      <div class="formula-category">5. QUANTITATIVE ANALYSIS METHODS</div>
+
+      <table>
+        <thead><tr><th>Method</th><th>Element</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Liebig's</strong></td><td>C, H</td><td>%C = (12/44) × (mass CO₂ / mass) × 100</td></tr>
+          <tr><td><strong>Kjeldahl's</strong></td><td>N</td><td>%N = (1.4 × N × V) / mass</td></tr>
+          <tr><td><strong>Dumas</strong></td><td>N</td><td>%N = (28/22400) × (V / mass) × 100</td></tr>
+          <tr><td><strong>Carius</strong></td><td>Halogens, S, P</td><td>Various (AgX, BaSO₄, Mg₂P₂O₇)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="formula-category">6. FUNCTIONAL GROUP TESTS</div>
+
+      <table>
+        <thead><tr><th>Group</th><th>Test</th><th>Observation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>−OH (Alcohol)</strong></td><td>Ceric ammonium nitrate</td><td>Red colour</td></tr>
+          <tr><td><strong>−OH (Phenol)</strong></td><td>FeCl₃</td><td>Violet colour</td></tr>
+          <tr><td><strong>−CHO</strong></td><td>Tollens</td><td>Silver mirror</td></tr>
+          <tr><td><strong>>C=O</strong></td><td>2,4-DNP</td><td>Orange/Red ppt</td></tr>
+          <tr><td><strong>−COOH</strong></td><td>NaHCO₃</td><td>CO₂ bubbles</td></tr>
+          <tr><td><strong>−NH₂</strong></td><td>Carbylamine</td><td>Foul smell</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

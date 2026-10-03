@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOC | JEE Chemistry Notes</title>
+  <meta name="description" content="General Organic Chemistry Notes for JEE Mains — Electronic Effects, Stability, Acidity/Basicity, Isomerism, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; GOC
+  </div>
+
+  <header class="chapter-header">
+    <h1>General Organic Chemistry (GOC)</h1>
+    <p>Electronic Effects, Stability, Acidity/Basicity, Isomerism</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Concepts</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Concept Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & CONCEPTS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Electronic Effects</h2>
+
+      <h3>1.1 Inductive Effect (I)</h3>
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Sigma bond ke through electron displacement, electronegativity difference ke karan.</p>
+        <ul>
+          <li><strong>−I Effect:</strong> Electron withdrawing (NO₂, CN, Cl, F, COOH)</li>
+          <li><strong>+I Effect:</strong> Electron donating (CH₃, C₂H₅, alkyl groups)</li>
+        </ul>
+      </div>
+
+      <div class="formula">
+        −I Effect Order: −NO₂ > −CN > −COOH > −F > −Cl > −Br > −I
+      </div>
+      <div class="formula">
+        +I Effect Order: −C(CH₃)₃ > −CH(CH₃)₂ > −CH₂CH₃ > −CH₃
+      </div>
+
+      <h3>1.2 Resonance (Mesomeric Effect)</h3>
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Pi electrons ka delocalization conjugated system mein.</p>
+        <ul>
+          <li><strong>+M Effect:</strong> Electron donating (−OH, −NH₂, −OR, −Cl)</li>
+          <li><strong>−M Effect:</strong> Electron withdrawing (−NO₂, −CN, −CHO, −COOH)</li>
+        </ul>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Resonance &gt; Inductive Effect</strong> (resonance zyada strong hota hai)</p>
+        <p>−Cl mein −I aur +M dono hote hain, lekin −I zyada strong hota hai</p>
+      </div>
+
+      <h3>1.3 Hyperconjugation</h3>
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Sigma C−H bond ke electrons ka delocalization empty p-orbital ya pi-system ke saath.</p>
+        <p><strong>Requirement:</strong> Alpha hydrogen (adjacent carbon par H) hona chahiye</p>
+      </div>
+
+      <div class="formula">
+        Stability ∝ Number of alpha hydrogens (Hyperconjugation)
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>More alpha H = More stable</strong></p>
+        <p>CH₃−CH=CH₂ (3 αH) > CH₃−CH=CH−CH₃ (6 αH — more stable)</p>
+      </div>
+
+      <h3>1.4 Electromeric Effect</h3>
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Pi electrons ka complete transfer, attacking reagent ke presence mein.</p>
+        <p><strong>Temporary effect</strong> — sirf reagent ke presence mein hota hai</p>
+      </div>
+
+      <h2>2. Stability of Intermediates</h2>
+
+      <h3>2.1 Carbocation (R⁺)</h3>
+      <table>
+        <thead><tr><th>Stability Order</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td><strong>3° &gt; 2° &gt; 1° &gt; CH₃⁺</strong></td><td>Hyperconjugation + Inductive effect</td></tr>
+          <tr><td><strong>Benzyl &gt; Allyl &gt; 3°</strong></td><td>Resonance stabilisation</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Carbanion (R⁻)</h3>
+      <table>
+        <thead><tr><th>Stability Order</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td><strong>CH₃⁻ &gt; 1° &gt; 2° &gt; 3°</strong></td><td>Inductive effect (−I stabilizes)</td></tr>
+          <tr><td><strong>sp &gt; sp² &gt; sp³</strong></td><td>s-character zyada = more electronegative = stable</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>Carbanion Stability:</strong> sp &gt; sp² &gt; sp³</p>
+        <p>Example: HC≡C⁻ &gt; H₂C=CH⁻ &gt; CH₃CH₂⁻</p>
+      </div>
+
+      <h3>2.3 Free Radical (R•)</h3>
+      <div class="formula">
+        Stability: 3° &gt; 2° &gt; 1° &gt; CH₃• (same as carbocation)
+      </div>
+
+      <h2>3. Acidity & Basicity</h2>
+
+      <h3>3.1 Acidity Order (ARIO Rule)</h3>
+      <div class="box">
+        <span class="box-title">ARIO Rule</span>
+        <ul>
+          <li><strong>A</strong> — Atom (electronegativity)</li>
+          <li><strong>R</strong> — Resonance</li>
+          <li><strong>I</strong> — Inductive Effect</li>
+          <li><strong>O</strong> — Orbital (hybridisation)</li>
+        </ul>
+      </div>
+
+      <div class="formula">
+        Acidity: Carboxylic Acid &gt; Phenol &gt; Water &gt; Alcohol
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>−I effect</strong> acidity badhata hai</li>
+          <li><strong>+I effect</strong> acidity ghatata hai</li>
+          <li><strong>Resonance stabilised anion</strong> = More acidic</li>
+        </ul>
+      </div>
+
+      <h3>3.2 Basicity Order</h3>
+      <div class="formula">
+        Aliphatic Amines: 2° &gt; 1° &gt; 3° &gt; NH₃ (in aqueous solution)
+      </div>
+      <div class="formula">
+        In gas phase: 3° &gt; 2° &gt; 1° &gt; NH₃
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>+I effect</strong> basicity badhata hai</li>
+          <li><strong>−I/−M effect</strong> basicity ghatata hai</li>
+          <li>Aromatic amines (aniline) aliphatic se kam basic</li>
+        </ul>
+      </div>
+
+      <h2>4. Isomerism</h2>
+
+      <h3>4.1 Structural Isomerism</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Chain</strong></td><td>n-Butane vs Isobutane</td></tr>
+          <tr><td><strong>Position</strong></td><td>1-Butene vs 2-Butene</td></tr>
+          <tr><td><strong>Functional</strong></td><td>Ethanol vs Dimethyl ether</td></tr>
+          <tr><td><strong>Metamerism</strong></td><td>Diethyl ether vs Methyl propyl ether</td></tr>
+          <tr><td><strong>Tautomerism</strong></td><td>Keto-enol tautomerism</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Stereoisomerism</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Condition</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Geometrical</strong></td><td>Restricted rotation (C=C, ring)</td></tr>
+          <tr><td><strong>Optical</strong></td><td>Chiral carbon (4 different groups)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Optical Isomerism</span>
+        <ul>
+          <li><strong>Chiral carbon:</strong> 4 different groups attached</li>
+          <li><strong>Enantiomers:</strong> Non-superimposable mirror images</li>
+          <li><strong>Diastereomers:</strong> Non-mirror image stereoisomers</li>
+          <li><strong>Meso compound:</strong> Achiral despite chiral carbons (internal symmetry)</li>
+        </ul>
+      </div>
+
+      <h2>5. Aromaticity (Huckel's Rule)</h2>
+
+      <div class="box">
+        <span class="box-title">Huckel's Rule</span>
+        <p>Compound aromatic hoga agar:</p>
+        <ol>
+          <li><strong>Cyclic</strong> ho</li>
+          <li><strong>Planar</strong> ho</li>
+          <li><strong>Conjugated</strong> ho (alternate double bonds)</li>
+          <li><strong>(4n + 2) π electrons</strong> ho</li>
+        </ol>
+      </div>
+
+      <table>
+        <thead><tr><th>Compound</th><th>π electrons</th><th>Aromatic?</th></tr></thead>
+        <tbody>
+          <tr><td>Benzene</td><td>6</td><td>✅ Aromatic</td></tr>
+          <tr><td>Cyclobutadiene</td><td>4</td><td>❌ Anti-aromatic</td></tr>
+          <tr><td>Cyclooctatetraene</td><td>8</td><td>❌ Non-planar (non-aromatic)</td></tr>
+          <tr><td>Naphthalene</td><td>10</td><td>✅ Aromatic</td></tr>
+          <tr><td>Pyridine</td><td>6</td><td>✅ Aromatic</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>4n π electrons</strong> → Anti-aromatic (if planar)</li>
+          <li><strong>Non-planar</strong> → Non-aromatic</li>
+          <li><strong>Cyclooctatetraene</strong> → Non-planar (tub shape), isliye non-aromatic</li>
+        </ul>
+      </div>
+
+      <h2>6. IUPAC Nomenclature</h2>
+
+      <div class="box">
+        <span class="box-title">Basic Rules</span>
+        <ol>
+          <li>Longest chain identify karo</li>
+          <li>Lowest locant rule follow karo</li>
+          <li>Alphabetical order mein substituents likho</li>
+          <li>Prefixes: di, tri, tetra (same substituent ke liye)</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — GOC</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Carbanion Stability (2026 PYQ)</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of stability: CH₃⁻, HC≡C⁻, H₂C=CH⁻</p>
+        <ol>
+          <li>Stability ∝ s-character (zyada s-character = zyada electronegative = stable)</li>
+          <li>HC≡C⁻ → sp (50% s-character)</li>
+          <li>H₂C=CH⁻ → sp² (33% s-character)</li>
+          <li>CH₃⁻ → sp³ (25% s-character)</li>
+          <li><strong>Answer: HC≡C⁻ &gt; H₂C=CH⁻ &gt; CH₃⁻</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Acidity Comparison</span>
+        <p><strong>Q:</strong> Which is more acidic: Phenol or Ethanol?</p>
+        <ol>
+          <li>Phenol mein resonance stabilised phenoxide ion banta hai</li>
+          <li>Ethanol mein resonance nahi hota</li>
+          <li>Resonance stabilisation ke karan phenol zyada acidic</li>
+          <li><strong>Answer: Phenol &gt; Ethanol</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Hyperconjugation</span>
+        <p><strong>Q:</strong> Which is more stable: 1-Butene or 2-Butene?</p>
+        <ol>
+          <li>2-Butene mein 6 alpha hydrogens hain</li>
+          <li>1-Butene mein 3 alpha hydrogens hain</li>
+          <li>More alpha H = More hyperconjugation = More stable</li>
+          <li><strong>Answer: 2-Butene &gt; 1-Butene</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Isomerism Counting</span>
+        <p><strong>Q:</strong> How many structural isomers are possible for C₄H₁₀?</p>
+        <ol>
+          <li>n-Butane: CH₃−CH₂−CH₂−CH₃</li>
+          <li>Isobutane: (CH₃)₃CH</li>
+          <li><strong>Answer: 2 isomers</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Optical Isomerism</span>
+        <p><strong>Q:</strong> How many optical isomers are possible for 2-butanol?</p>
+        <ol>
+          <li>2-Butanol: CH₃−CH(OH)−CH₂−CH₃</li>
+          <li>Chiral carbon: C2 (4 different groups: H, OH, CH₃, C₂H₅)</li>
+          <li>1 chiral carbon → 2 optical isomers (d and l)</li>
+          <li><strong>Answer: 2 optical isomers</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Aromaticity</span>
+        <p><strong>Q:</strong> Is cyclopentadienyl anion aromatic?</p>
+        <ol>
+          <li>Cyclic? Yes</li>
+          <li>Planar? Yes</li>
+          <li>Conjugated? Yes</li>
+          <li>π electrons = 6 (4n + 2, n = 1)</li>
+          <li><strong>Answer: Aromatic</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Basicity</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of basicity: NH₃, CH₃NH₂, (CH₃)₂NH, (CH₃)₃N</p>
+        <ol>
+          <li>In aqueous solution: 2° &gt; 1° &gt; 3° &gt; NH₃</li>
+          <li>Solvation effect aur steric hindrance ka balance</li>
+          <li><strong>Answer: (CH₃)₂NH &gt; CH₃NH₂ &gt; (CH₃)₃N &gt; NH₃</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: Inductive Effect</span>
+        <p><strong>Q:</strong> Which is more acidic: CH₃COOH or ClCH₂COOH?</p>
+        <ol>
+          <li>Cl ka −I effect hai</li>
+          <li>−I effect acidity badhata hai (anion stabilize)</li>
+          <li>ClCH₂COOH mein −I effect ke karan zyada acidic</li>
+          <li><strong>Answer: ClCH₂COOH &gt; CH₃COOH</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: Carbocation Stability</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of stability: CH₃⁺, (CH₃)₃C⁺, (CH₃)₂CH⁺</p>
+        <ol>
+          <li>Hyperconjugation + Inductive effect</li>
+          <li>3° &gt; 2° &gt; 1° &gt; CH₃⁺</li>
+          <li><strong>Answer: (CH₃)₃C⁺ &gt; (CH₃)₂CH⁺ &gt; CH₃⁺</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Geometrical Isomerism</span>
+        <p><strong>Q:</strong> Does 2-butene show geometrical isomerism?</p>
+        <ol>
+          <li>C=C double bond hai (restricted rotation)</li>
+          <li>Same groups different sides par ho sakte hain</li>
+          <li>Cis-2-butene aur Trans-2-butene possible hain</li>
+          <li><strong>Answer: Yes, cis and trans isomers</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: GOC PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Inductive Effect, Acidity, Isomerism</td></tr>
+          <tr><td><strong>2020</strong></td><td>Resonance, Hyperconjugation, Carbocation Stability</td></tr>
+          <tr><td><strong>2021</strong></td><td>Isomerism, Aromaticity, Acidity/Basicity</td></tr>
+          <tr><td><strong>2022</strong></td><td>Asymmetric Carbon, Stereoisomers, Bronsted Base, Aromaticity</td></tr>
+          <tr><td><strong>2023</strong></td><td>Electronic Effects, Carbanion Stability, Isomerism</td></tr>
+          <tr><td><strong>2024</strong></td><td>Electron Displacement Effect, Acidity, Basicity</td></tr>
+          <tr><td><strong>2025</strong></td><td>GOC (high weightage), Isomerism, Acidity</td></tr>
+          <tr><td><strong>2026</strong></td><td>Isomerism (Chain/Position/Functional/Stereo), Carbanion Stability (sp &gt; sp² &gt; sp³)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Isomerism</strong> → Har saal aata hai (2026 mein direct match-the-column)</li>
+          <li><strong>Electronic Effects</strong> → 2019, 2020, 2023, 2024</li>
+          <li><strong>Carbanion/Carbocation Stability</strong> → 2020, 2023, 2026</li>
+          <li><strong>Acidity/Basicity</strong> → 2019, 2021, 2022, 2024</li>
+          <li><strong>Aromaticity</strong> → 2021, 2022</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Isomerism</h3>
+      <p><strong>PYQ Trend:</strong> Har saal (2026 most important)</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Chain Isomer:</strong> 2-Methylpropene vs But-1-ene</li>
+          <li><strong>Position Isomer:</strong> 1-Butene vs 2-Butene</li>
+          <li><strong>Functional Isomer:</strong> 2-Butanol vs Diethyl ether</li>
+          <li><strong>Stereo Isomer:</strong> Cis vs Trans, d vs l</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Carbanion Stability</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>sp &gt; sp² &gt; sp³</strong> (2026 PYQ)</li>
+          <li>s-character zyada = more electronegative = stable</li>
+          <li>HC≡C⁻ &gt; H₂C=CH⁻ &gt; CH₃⁻</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Acidity/Basicity</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2022, 2024</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Acidity:</strong> Carboxylic Acid &gt; Phenol &gt; Water &gt; Alcohol</li>
+          <li><strong>Basicity:</strong> 2° &gt; 1° &gt; 3° &gt; NH₃ (aqueous)</li>
+          <li><strong>−I effect</strong> acidity badhata hai</li>
+          <li><strong>+I effect</strong> basicity badhata hai</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Electronic Effects</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2020, 2023, 2024</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Inductive:</strong> −NO₂ &gt; −CN &gt; −F &gt; −Cl</li>
+          <li><strong>Resonance:</strong> +M (−OH, −NH₂) &gt; −M (−NO₂, −CN)</li>
+          <li><strong>Hyperconjugation:</strong> More αH = More stable</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Aromaticity</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2022</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Huckel's Rule:</strong> (4n+2) π electrons</li>
+          <li><strong>Planar</strong> hona zaroori hai</li>
+          <li>Cyclooctatetraene → Non-planar → Non-aromatic</li>
+          <li>Cyclobutadiene → 4π → Anti-aromatic</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Isomerism</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Electronic Effects</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Stability</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Acidity/Basicity</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Aromaticity</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Isomerism (4/5), Acidity/Basicity (3/5), Electronic Effects (2/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — GOC (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>Inductive Effect:</strong> −NO₂ &gt; −CN &gt; −F &gt; −Cl</li>
+          <li><strong>Resonance &gt; Inductive Effect</strong></li>
+          <li><strong>Hyperconjugation:</strong> More αH = More stable</li>
+          <li><strong>Carbocation:</strong> 3° &gt; 2° &gt; 1°</li>
+          <li><strong>Carbanion:</strong> sp &gt; sp² &gt; sp³</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Carbanion Stability:</strong> sp &gt; sp² &gt; sp³ (2026 PYQ)</li>
+          <li><strong>Acidity:</strong> Carboxylic Acid &gt; Phenol &gt; Water &gt; Alcohol</li>
+          <li><strong>Basicity:</strong> 2° &gt; 1° &gt; 3° &gt; NH₃ (aqueous)</li>
+          <li><strong>Aromaticity:</strong> Planar zaroori hai</li>
+          <li><strong>Cyclooctatetraene:</strong> Non-aromatic (non-planar)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Isomerism Summary</span>
+        <ul>
+          <li><strong>Structural:</strong> Chain, Position, Functional, Metamerism, Tautomerism</li>
+          <li><strong>Stereo:</strong> Geometrical (C=C), Optical (Chiral carbon)</li>
+          <li><strong>Chiral Carbon:</strong> 4 different groups</li>
+          <li><strong>Meso:</strong> Achiral despite chiral carbons</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Acidity/Basicity Rules</span>
+        <ul>
+          <li><strong>ARIO Rule:</strong> Atom, Resonance, Inductive, Orbital</li>
+          <li><strong>−I effect</strong> acidity badhata hai</li>
+          <li><strong>+I effect</strong> basicity badhata hai</li>
+          <li><strong>Resonance stabilised anion</strong> = More acidic</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">💡 Aromaticity</span>
+        <ul>
+          <li><strong>Huckel's Rule:</strong> (4n+2) π electrons</li>
+          <li><strong>Cyclic + Planar + Conjugated</strong></li>
+          <li><strong>Benzene:</strong> 6π, Aromatic</li>
+          <li><strong>Cyclobutadiene:</strong> 4π, Anti-aromatic</li>
+          <li><strong>Cyclooctatetraene:</strong> 8π, Non-planar, Non-aromatic</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: CONCEPT SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Concept Sheet — GOC</h2>
+      <p style="color: #5f6368;">Saare concepts aur orders ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. ELECTRONIC EFFECTS</div>
+      <div class="reaction-box"><strong>Inductive Effect (−I):</strong> −NO₂ > −CN > −COOH > −F > −Cl > −Br > −I</div>
+      <div class="reaction-box"><strong>Inductive Effect (+I):</strong> −C(CH₃)₃ > −CH(CH₃)₂ > −CH₂CH₃ > −CH₃</div>
+      <div class="reaction-box"><strong>Resonance (+M):</strong> −OH, −NH₂, −OR, −Cl</div>
+      <div class="reaction-box"><strong>Resonance (−M):</strong> −NO₂, −CN, −CHO, −COOH</div>
+      <div class="reaction-box"><strong>Hyperconjugation:</strong> More αH = More stable</div>
+
+      <div class="formula-category">2. STABILITY OF INTERMEDIATES</div>
+      <div class="reaction-box"><strong>Carbocation:</strong> 3° > 2° > 1° > CH₃⁺</div>
+      <div class="reaction-box"><strong>Carbocation (Resonance):</strong> Benzyl > Allyl > 3°</div>
+      <div class="reaction-box"><strong>Carbanion:</strong> CH₃⁻ > 1° > 2° > 3°</div>
+      <div class="reaction-box"><strong>Carbanion (Hybridisation):</strong> sp > sp² > sp³</div>
+      <div class="reaction-box"><strong>Free Radical:</strong> 3° > 2° > 1° > CH₃•</div>
+
+      <div class="formula-category">3. ACIDITY</div>
+      <div class="reaction-box"><strong>General Order:</strong> Carboxylic Acid > Phenol > Water > Alcohol</div>
+      <div class="reaction-box"><strong>ARIO Rule:</strong> Atom, Resonance, Inductive, Orbital</div>
+      <div class="reaction-box"><strong>−I effect:</strong> Acidity badhata hai</div>
+      <div class="reaction-box"><strong>+I effect:</strong> Acidity ghatata hai</div>
+      <div class="reaction-box"><strong>Resonance stabilised anion:</strong> More acidic</div>
+
+      <div class="formula-category">4. BASICITY</div>
+      <div class="reaction-box"><strong>Aliphatic Amines (aqueous):</strong> 2° > 1° > 3° > NH₃</div>
+      <div class="reaction-box"><strong>Aliphatic Amines (gas):</strong> 3° > 2° > 1° > NH₃</div>
+      <div class="reaction-box"><strong>+I effect:</strong> Basicity badhata hai</div>
+      <div class="reaction-box"><strong>−I/−M effect:</strong> Basicity ghatata hai</div>
+      <div class="reaction-box"><strong>Aromatic amines:</strong> Aliphatic se kam basic</div>
+
+      <div class="formula-category">5. ISOMERISM</div>
+      <div class="reaction-box"><strong>Structural:</strong> Chain, Position, Functional, Metamerism, Tautomerism</div>
+      <div class="reaction-box"><strong>Geometrical:</strong> C=C ya ring (restricted rotation)</div>
+      <div class="reaction-box"><strong>Optical:</strong> Chiral carbon (4 different groups)</div>
+      <div class="reaction-box"><strong>Meso:</strong> Achiral despite chiral carbons (internal symmetry)</div>
+
+      <div class="formula-category">6. AROMATICITY</div>
+      <div class="reaction-box"><strong>Huckel's Rule:</strong> (4n+2) π electrons</div>
+      <div class="reaction-box"><strong>Conditions:</strong> Cyclic + Planar + Conjugated</div>
+      <div class="reaction-box"><strong>Benzene:</strong> 6π, Aromatic</div>
+      <div class="reaction-box"><strong>Cyclobutadiene:</strong> 4π, Anti-aromatic</div>
+      <div class="reaction-box"><strong>Cyclooctatetraene:</strong> 8π, Non-planar, Non-aromatic</div>
+
+      <div class="formula-category">7. IUPAC NOMENCLATURE</div>
+      <div class="reaction-box"><strong>Longest chain</strong> identify karo</div>
+      <div class="reaction-box"><strong>Lowest locant rule</strong> follow karo</div>
+      <div class="reaction-box"><strong>Alphabetical order</strong> mein substituents</div>
+      <div class="reaction-box"><strong>Prefixes:</strong> di, tri, tetra (same substituent)</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

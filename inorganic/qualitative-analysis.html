@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qualitative Analysis | JEE Chemistry Notes</title>
+  <meta name="description" content="Qualitative Analysis (Salt Analysis) Notes for JEE Mains — Cation Groups, Anion Groups, Confirmatory Tests, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--secondary); color: white; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none;
+    }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+
+    .numeric-box {
+      background: #e8f0fe; border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0;
+    }
+    .numeric-box .box-title { color: var(--primary-dark); }
+
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Inorganic</a> &gt; Qualitative Analysis
+  </div>
+
+  <!-- CHAPTER HEADER -->
+  <header class="chapter-header">
+    <h1>Qualitative Analysis (Salt Analysis)</h1>
+    <p>Cation Groups, Anion Groups, Confirmatory Tests, Flame Tests, PYQ Analysis</p>
+  </header>
+
+  <!-- PRINT BUTTON -->
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Full Notes</button>
+    <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: FULL NOTES -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Basic Principles</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Qualitative salt analysis mein inorganic salt ke <strong>cations (basic radicals)</strong> aur <strong>anions (acidic radicals)</strong> ki identify ki jaati hai.</p>
+      </div>
+
+      <h3>1.1 Important Principles</h3>
+      <table>
+        <thead>
+          <tr><th>Principle</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Solubility Product</strong></td><td>Precipitation tab hota hai jab ionic product > Ksp</td></tr>
+          <tr><td><strong>Common Ion Effect</strong></td><td>Precipitation ko control karta hai</td></tr>
+          <tr><td><strong>Complex Formation</strong></td><td>Confirmatory tests mein use hota hai</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Solubility product</strong> ka concept important hai — jab ionic product <strong>Ksp se zyada</strong> ho jaata hai, tab precipitate milta hai.</p>
+      </div>
+
+      <h2>2. Preliminary Tests</h2>
+
+      <h3>2.1 Dry Tests</h3>
+      <table>
+        <thead>
+          <tr><th>Test</th><th>Kya Pata Chalta Hai</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Colour of Salt</strong></td><td>Blue → Cu²⁺, Green → Ni²⁺/Fe²⁺, Brown → Fe³⁺</td></tr>
+          <tr><td><strong>Odour</strong></td><td>Ammoniacal → NH₄⁺, Vinegar → CH₃COO⁻, Rotten egg → S²⁻</td></tr>
+          <tr><td><strong>Flame Test</strong></td><td>Brick red → Ca²⁺, Green → Ba²⁺, Crimson → Sr²⁺</td></tr>
+          <tr><td><strong>Borax Bead Test</strong></td><td>Cu²⁺ → Blue, Fe³⁺ → Yellow-brown</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Wet Test with Dilute HCl</h3>
+      <table>
+        <thead>
+          <tr><th>Gas Evolved</th><th>Anion</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>CO₂</strong> (colourless, lime water milky)</td><td>CO₃²⁻</td></tr>
+          <tr><td><strong>SO₂</strong> (suffocating smell)</td><td>SO₃²⁻</td></tr>
+          <tr><td><strong>H₂S</strong> (rotten egg smell)</td><td>S²⁻</td></tr>
+          <tr><td><strong>NO₂</strong> (brown gas)</td><td>NO₂⁻</td></tr>
+          <tr><td><strong>CH₃COOH</strong> (vinegar smell)</td><td>CH₃COO⁻</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Colour</strong> se directly cation pata chal sakta hai — Blue = Cu²⁺, Green = Ni²⁺, Brown = Fe³⁺</li>
+          <li><strong>Flame test</strong> mein Ca²⁺ (brick red), Ba²⁺ (apple green), Sr²⁺ (crimson)</li>
+        </ul>
+      </div>
+
+      <h2>3. Cation Analysis (Group-wise)</h2>
+
+      <h3>3.1 Group Reagents Table</h3>
+      <table>
+        <thead>
+          <tr><th>Group</th><th>Group Reagent</th><th>Cations</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Group I</strong></td><td>Dilute HCl</td><td>Pb²⁺, Ag⁺, Hg₂²⁺</td></tr>
+          <tr><td><strong>Group II</strong></td><td>H₂S in acidic medium</td><td>Cu²⁺, Pb²⁺, Hg²⁺, Bi³⁺</td></tr>
+          <tr><td><strong>Group III</strong></td><td>NH₄Cl + NH₄OH</td><td>Al³⁺, Fe³⁺, Cr³⁺</td></tr>
+          <tr><td><strong>Group IV</strong></td><td>H₂S in basic medium</td><td>Ni²⁺, Co²⁺, Mn²⁺, Zn²⁺</td></tr>
+          <tr><td><strong>Group V</strong></td><td>(NH₄)₂CO₃</td><td>Ca²⁺, Ba²⁺, Sr²⁺</td></tr>
+          <tr><td><strong>Group VI</strong></td><td>—</td><td>Mg²⁺, NH₄⁺</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.2 Important Group Reagents</h3>
+      <ul>
+        <li><strong>Group I:</strong> Dilute HCl → PbCl₂ (white ppt)</li>
+        <li><strong>Group II:</strong> H₂S + HCl → CuS (black), PbS (black), HgS (black)</li>
+        <li><strong>Group III:</strong> NH₄OH → Al(OH)₃ (gelatinous white), Fe(OH)₃ (reddish brown)</li>
+        <li><strong>Group IV:</strong> H₂S + NH₄OH → NiS (black), ZnS (white)</li>
+        <li><strong>Group V:</strong> (NH₄)₂CO₃ → CaCO₃ (white), BaCO₃ (white)</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Group reagent</strong> yaad rakho — Group I = HCl, Group II = H₂S (acidic), Group III = NH₄OH, Group IV = H₂S (basic), Group V = (NH₄)₂CO₃</li>
+          <li><strong>Pb²⁺</strong> dono Group I aur Group II mein aata hai</li>
+        </ul>
+      </div>
+
+      <h2>4. Anion Analysis</h2>
+
+      <h3>4.1 Anion Groups</h3>
+      <table>
+        <thead>
+          <tr><th>Group</th><th>Reagent</th><th>Anions</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Group A</strong></td><td>Dilute HCl</td><td>CO₃²⁻, S²⁻, SO₃²⁻, NO₂⁻, CH₃COO⁻</td></tr>
+          <tr><td><strong>Group B</strong></td><td>Concentrated H₂SO₄</td><td>Cl⁻, Br⁻, I⁻, NO₃⁻, C₂O₄²⁻</td></tr>
+          <tr><td><strong>Group C</strong></td><td>—</td><td>SO₄²⁻, PO₄³⁻</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Confirmatory Tests</h3>
+      <table>
+        <thead>
+          <tr><th>Anion</th><th>Test</th><th>Observation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>CO₃²⁻</strong></td><td>Dil. HCl</td><td>CO₂ gas (lime water milky)</td></tr>
+          <tr><td><strong>S²⁻</strong></td><td>Lead acetate paper</td><td>Black ppt (PbS)</td></tr>
+          <tr><td><strong>SO₄²⁻</strong></td><td>BaCl₂</td><td>White ppt (BaSO₄), insoluble in conc. HCl</td></tr>
+          <tr><td><strong>Cl⁻</strong></td><td>AgNO₃</td><td>White ppt (AgCl), soluble in NH₄OH</td></tr>
+          <tr><td><strong>Br⁻</strong></td><td>AgNO₃</td><td>Pale yellow ppt (AgBr), partially soluble</td></tr>
+          <tr><td><strong>I⁻</strong></td><td>AgNO₃</td><td>Yellow ppt (AgI), insoluble in NH₄OH</td></tr>
+          <tr><td><strong>NO₃⁻</strong></td><td>Brown ring test</td><td>Brown ring at junction</td></tr>
+          <tr><td><strong>CH₃COO⁻</strong></td><td>FeCl₃</td><td>Blood red colour</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>SO₄²⁻</strong> → BaCl₂ se white ppt, jo <strong>conc. HCl mein insoluble</strong> hota hai</li>
+          <li><strong>Cl⁻, Br⁻, I⁻</strong> → AgNO₃ se white, pale yellow, yellow ppt respectively. <strong>Solubility in NH₄OH</strong> ka difference yaad rakho</li>
+        </ul>
+      </div>
+
+      <h2>5. Confirmatory Tests (JEE Favourites)</h2>
+
+      <h3>5.1 Important Cation Confirmatory Tests</h3>
+      <table>
+        <thead>
+          <tr><th>Cation</th><th>Test</th><th>Observation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Pb²⁺</strong></td><td>KI</td><td>Yellow ppt (PbI₂)</td></tr>
+          <tr><td><strong>Cu²⁺</strong></td><td>K₄[Fe(CN)₆]</td><td>Chocolate brown ppt</td></tr>
+          <tr><td><strong>Al³⁺</strong></td><td>Blue litmus</td><td>Red (acidic)</td></tr>
+          <tr><td><strong>Fe³⁺</strong></td><td>KSCN</td><td>Blood red colour</td></tr>
+          <tr><td><strong>Zn²⁺</strong></td><td>K₄[Fe(CN)₆]</td><td>Bluish white ppt</td></tr>
+          <tr><td><strong>Ca²⁺</strong></td><td>(NH₄)₂C₂O₄</td><td>White ppt (CaC₂O₄)</td></tr>
+          <tr><td><strong>Ba²⁺</strong></td><td>K₂CrO₄</td><td>Yellow ppt (BaCrO₄)</td></tr>
+          <tr><td><strong>Mg²⁺</strong></td><td>Magneson reagent</td><td>Blue ppt</td></tr>
+          <tr><td><strong>NH₄⁺</strong></td><td>NaOH</td><td>NH₃ gas (pungent smell)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Fe³⁺</strong> → KSCN se <strong>blood red</strong> colour</li>
+          <li><strong>Cu²⁺</strong> → K₄[Fe(CN)₆] se <strong>chocolate brown</strong> ppt</li>
+          <li><strong>NH₄⁺</strong> → NaOH se <strong>NH₃ gas</strong></li>
+        </ul>
+      </div>
+
+      <h2>6. Flame Test Colours</h2>
+
+      <table>
+        <thead>
+          <tr><th>Cation</th><th>Flame Colour</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Na⁺</strong></td><td>Golden Yellow</td></tr>
+          <tr><td><strong>K⁺</strong></td><td>Lilac (Violet)</td></tr>
+          <tr><td><strong>Ca²⁺</strong></td><td>Brick Red</td></tr>
+          <tr><td><strong>Ba²⁺</strong></td><td>Apple Green</td></tr>
+          <tr><td><strong>Sr²⁺</strong></td><td>Crimson</td></tr>
+          <tr><td><strong>Cu²⁺</strong></td><td>Blue-Green</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p>Flame test mein Ca²⁺ (Brick Red), Ba²⁺ (Apple Green), Sr²⁺ (Crimson) — ye JEE Mains mein direct aata hai.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: MAINS TRAPS -->
+  <!-- ============================================ -->
+  <div id="tab-traps" class="tab-content">
+    <div class="notes">
+      <h2>Mains Traps — Qualitative Analysis</h2>
+
+      <div class="box trap-box">
+        <span class="box-title">1. Cation Group Reagents</span>
+        <p><strong>Group I:</strong> Dilute HCl</p>
+        <p><strong>Group II:</strong> H₂S (acidic)</p>
+        <p><strong>Group III:</strong> NH₄Cl + NH₄OH</p>
+        <p><strong>Group IV:</strong> H₂S (basic)</p>
+        <p><strong>Group V:</strong> (NH₄)₂CO₃</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">2. Flame Colours</span>
+        <p><strong>Ca²⁺</strong> → Brick Red</p>
+        <p><strong>Ba²⁺</strong> → Apple Green</p>
+        <p><strong>Sr²⁺</strong> → Crimson</p>
+        <p><strong>Na⁺</strong> → Golden Yellow</p>
+        <p><strong>K⁺</strong> → Lilac</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">3. Fe³⁺ Test</span>
+        <p><strong>KSCN</strong> → Blood Red colour</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">4. Cu²⁺ Test</span>
+        <p><strong>K₄[Fe(CN)₆]</strong> → Chocolate Brown ppt</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">5. SO₄²⁻ Test</span>
+        <p><strong>BaCl₂</strong> → White ppt (BaSO₄), <strong>insoluble in conc. HCl</strong></p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">6. AgNO₃ Tests (Halides)</span>
+        <p><strong>Cl⁻</strong> → White ppt (AgCl), soluble in NH₄OH</p>
+        <p><strong>Br⁻</strong> → Pale Yellow ppt (AgBr), partially soluble</p>
+        <p><strong>I⁻</strong> → Yellow ppt (AgI), insoluble in NH₄OH</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">7. Brown Ring Test</span>
+        <p><strong>NO₃⁻</strong> → Brown ring at junction</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">8. NH₄⁺ Test</span>
+        <p><strong>NaOH</strong> → NH₃ gas (pungent smell)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">9. Pb²⁺ Special</span>
+        <p>Pb²⁺ <strong>dono Group I aur Group II</strong> mein aata hai</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">10. Blood Red Colour</span>
+        <p><strong>CH₃COO⁻ + FeCl₃</strong> → Blood red colour</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS (2019–2026) -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+
+      <h2>JEE Main 2019–2026: Qualitative Analysis PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Topics Asked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Group Reagents, Flame Test</td></tr>
+          <tr><td><strong>2020</strong></td><td>Confirmatory Tests (Fe³⁺, Cu²⁺)</td></tr>
+          <tr><td><strong>2021</strong></td><td>Anion Tests (SO₄²⁻, Cl⁻)</td></tr>
+          <tr><td><strong>2022</strong></td><td>Cation Group Separation</td></tr>
+          <tr><td><strong>2023</strong></td><td>Brown Ring Test (NO₃⁻)</td></tr>
+          <tr><td><strong>2024</strong></td><td>Flame Colours (Ca²⁺, Ba²⁺, Sr²⁺)</td></tr>
+          <tr><td><strong>2025</strong></td><td>NH₄⁺ Test, Solubility Rules</td></tr>
+          <tr><td><strong>2026</strong></td><td>Group Reagents, Anion Group Reagents</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Group Reagents</strong> → 2019, 2022, 2026</li>
+          <li><strong>Confirmatory Tests</strong> → 2020, 2023, 2025</li>
+          <li><strong>Flame Colours</strong> → 2019, 2024</li>
+          <li><strong>Anion Tests</strong> → 2021, 2026</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Cation Groups</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Group I:</strong> Dilute HCl → Pb²⁺, Ag⁺, Hg₂²⁺</li>
+          <li><strong>Group II:</strong> H₂S (acidic) → Cu²⁺, Pb²⁺, Hg²⁺, Bi³⁺</li>
+          <li><strong>Group III:</strong> NH₄Cl + NH₄OH → Al³⁺, Fe³⁺, Cr³⁺</li>
+          <li><strong>Group IV:</strong> H₂S (basic) → Ni²⁺, Co²⁺, Mn²⁺, Zn²⁺</li>
+          <li><strong>Group V:</strong> (NH₄)₂CO₃ → Ca²⁺, Ba²⁺, Sr²⁺</li>
+          <li><strong>Group VI:</strong> Mg²⁺, NH₄⁺</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Anion Groups</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Group A:</strong> Dilute HCl → CO₃²⁻, S²⁻, SO₃²⁻, NO₂⁻, CH₃COO⁻</li>
+          <li><strong>Group B:</strong> Conc. H₂SO₄ → Cl⁻, Br⁻, I⁻, NO₃⁻, C₂O₄²⁻</li>
+          <li><strong>Group C:</strong> SO₄²⁻, PO₄³⁻</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Flame Colours</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2024</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Ca²⁺</strong> → Brick Red</li>
+          <li><strong>Ba²⁺</strong> → Apple Green</li>
+          <li><strong>Sr²⁺</strong> → Crimson</li>
+          <li><strong>Cu²⁺</strong> → Blue-Green</li>
+          <li><strong>Na⁺</strong> → Golden Yellow</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Confirmatory Tests</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Fe³⁺</strong> → KSCN → Blood Red</li>
+          <li><strong>Cu²⁺</strong> → K₄[Fe(CN)₆] → Chocolate Brown</li>
+          <li><strong>NH₄⁺</strong> → NaOH → NH₃ gas (pungent smell)</li>
+          <li><strong>NO₃⁻</strong> → Brown Ring Test</li>
+          <li><strong>SO₄²⁻</strong> → BaCl₂ → White ppt (insoluble in conc. HCl)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Solubility Rules</h3>
+      <p><strong>PYQ Trend:</strong> 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>AgCl → White ppt, soluble in NH₄OH</li>
+          <li>AgBr → Pale Yellow ppt, partially soluble</li>
+          <li>AgI → Yellow ppt, insoluble in NH₄OH</li>
+          <li>BaSO₄ → White ppt, insoluble in conc. HCl</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 6: Mains Traps</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Pb²⁺</strong> → Dono Group I aur Group II mein aata hai</li>
+          <li><strong>Fe³⁺</strong> → KSCN se Blood Red</li>
+          <li><strong>Cu²⁺</strong> → K₄[Fe(CN)₆] se Chocolate Brown</li>
+          <li><strong>NH₄⁺</strong> → NaOH se NH₃ gas</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Group Reagents</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Confirmatory Tests</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Flame Colours</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Anion Tests</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Solubility Rules</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Group Reagents (2/5 saal), Confirmatory Tests (2/5 saal).</p>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Qualitative Analysis (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Cation Groups</span>
+        <ul>
+          <li><strong>Group I:</strong> Dilute HCl → Pb²⁺, Ag⁺, Hg₂²⁺</li>
+          <li><strong>Group II:</strong> H₂S (acidic) → Cu²⁺, Pb²⁺, Hg²⁺, Bi³⁺</li>
+          <li><strong>Group III:</strong> NH₄Cl + NH₄OH → Al³⁺, Fe³⁺, Cr³⁺</li>
+          <li><strong>Group IV:</strong> H₂S (basic) → Ni²⁺, Co²⁺, Mn²⁺, Zn²⁺</li>
+          <li><strong>Group V:</strong> (NH₄)₂CO₃ → Ca²⁺, Ba²⁺, Sr²⁺</li>
+          <li><strong>Group VI:</strong> Mg²⁺, NH₄⁺</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📐 Anion Groups</span>
+        <ul>
+          <li><strong>Group A:</strong> Dilute HCl → CO₃²⁻, S²⁻, SO₃²⁻, NO₂⁻, CH₃COO⁻</li>
+          <li><strong>Group B:</strong> Conc. H₂SO₄ → Cl⁻, Br⁻, I⁻, NO₃⁻, C₂O₄²⁻</li>
+          <li><strong>Group C:</strong> SO₄²⁻, PO₄³⁻</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔥 Flame Colours</span>
+        <ul>
+          <li><strong>Na⁺</strong> → Golden Yellow</li>
+          <li><strong>K⁺</strong> → Lilac</li>
+          <li><strong>Ca²⁺</strong> → Brick Red</li>
+          <li><strong>Ba²⁺</strong> → Apple Green</li>
+          <li><strong>Sr²⁺</strong> → Crimson</li>
+          <li><strong>Cu²⁺</strong> → Blue-Green</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧪 Confirmatory Tests</span>
+        <ul>
+          <li><strong>Fe³⁺</strong> → KSCN → Blood Red</li>
+          <li><strong>Cu²⁺</strong> → K₄[Fe(CN)₆] → Chocolate Brown</li>
+          <li><strong>Pb²⁺</strong> → KI → Yellow ppt</li>
+          <li><strong>NH₄⁺</strong> → NaOH → NH₃ gas</li>
+          <li><strong>NO₃⁻</strong> → Brown Ring Test</li>
+          <li><strong>SO₄²⁻</strong> → BaCl₂ → White ppt</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧪 AgNO₃ Tests (Halides)</span>
+        <ul>
+          <li><strong>Cl⁻</strong> → White ppt (AgCl), soluble in NH₄OH</li>
+          <li><strong>Br⁻</strong> → Pale Yellow ppt (AgBr), partially soluble</li>
+          <li><strong>I⁻</strong> → Yellow ppt (AgI), insoluble in NH₄OH</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Pb²⁺</strong> → Dono Group I aur Group II mein</li>
+          <li><strong>SO₄²⁻</strong> → BaCl₂ ppt, insoluble in conc. HCl</li>
+          <li><strong>CH₃COO⁻ + FeCl₃</strong> → Blood red colour</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made with ❤️ & Curiosity | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -68,12 +68,12 @@ const chaptersData = {
           "MEC (Magnetic Effect)",
           "Solid State",
           "Ray Optics",
-          "EMT",
+          "EMI",
           "AC",
           "Fluid",
           "Modern Physics",
           "Rotation",
-          "V&D (Vernier & Dimension)",
+          "U&D (Caliper & Gauge)",
           "Wave Optics",
           "Semiconductors",
           "Thermal Properties",
@@ -141,14 +141,13 @@ let currentSubject = "chemistry";
 let progressData = {};
 
 // ---------- INIT ----------
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   loadProgress();
   initSubjectTabs();
   initModals();
   initDataManagement();
   renderTracker();
   updateStats();
-  setPrintDate();
 });
 
 // ---------- LOAD / SAVE ----------
@@ -165,16 +164,16 @@ function saveProgress() {
   try {
     localStorage.setItem("jeeTrackerProgress", JSON.stringify(progressData));
   } catch (e) {
-    alert("⚠️ Data save nahi ho paya. Browser storage full ho sakti hai.");
+    alert("⚠️ Could not save data. Browser storage might be full.");
   }
 }
 
 // ---------- SUBJECT TABS ----------
 function initSubjectTabs() {
   const tabs = document.querySelectorAll(".subject-tab");
-  tabs.forEach(function(tab) {
-    tab.addEventListener("click", function() {
-      tabs.forEach(function(t) { t.classList.remove("active"); });
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) { t.classList.remove("active"); });
       this.classList.add("active");
       currentSubject = this.getAttribute("data-subject");
       renderTracker();
@@ -189,25 +188,25 @@ function renderTracker() {
   const subject = chaptersData[currentSubject];
   let html = "";
 
-  subject.groups.forEach(function(group) {
+  subject.groups.forEach(function (group) {
     html += '<div class="section-header ' + group.layerClass + '">' + group.layer + '</div>';
     html += '<div class="chapter-table-wrapper">';
     html += '<table class="chapter-table">';
     html += '<thead><tr>';
     html += '<th>Chapter</th>';
-    YEARS.forEach(function(y) {
+    YEARS.forEach(function (y) {
       html += '<th>' + y + '</th>';
     });
-    html += '<th class="progress-col">Progress</th>';
+    html += '<th class="total-col">Total Qs</th>';
     html += '</tr></thead><tbody>';
 
-    group.chapters.forEach(function(chapter) {
+    group.chapters.forEach(function (chapter) {
       html += '<tr>';
       html += '<td>' + chapter + '</td>';
-      YEARS.forEach(function(year) {
+      YEARS.forEach(function (year) {
         html += renderCell(chapter, year);
       });
-      html += renderProgressCell(chapter);
+      html += renderTotalQuestionsCell(chapter);
       html += '</tr>';
     });
 
@@ -236,25 +235,24 @@ function renderCell(chapter, year) {
     '</td>';
 }
 
-function renderProgressCell(chapter) {
-  const stats = getChapterStats(chapter);
-  const pct = Math.round((stats.solved / YEARS.length) * 100);
-  return '<td class="progress-cell">' +
-    '<div class="progress-bar-mini"><div class="progress-fill-mini" style="width:' + pct + '%"></div></div>' +
-    '<div class="progress-text">' + stats.solved + '/' + YEARS.length + '</div>' +
+function renderTotalQuestionsCell(chapter) {
+  const total = getChapterTotalQuestions(chapter);
+  return '<td class="total-questions-cell">' +
+    total +
+    '<span class="q-label">questions</span>' +
     '</td>';
 }
 
 // ---------- CELL LISTENERS ----------
 function attachCellListeners() {
-  document.querySelectorAll(".check-cell:not(.locked-cell)").forEach(function(cell) {
-    cell.addEventListener("click", function() {
+  document.querySelectorAll(".check-cell:not(.locked-cell)").forEach(function (cell) {
+    cell.addEventListener("click", function () {
       openMarkModal(this.getAttribute("data-chapter"), parseInt(this.getAttribute("data-year")));
     });
   });
 
-  document.querySelectorAll(".check-cell.locked-cell").forEach(function(cell) {
-    cell.addEventListener("click", function() {
+  document.querySelectorAll(".check-cell.locked-cell").forEach(function (cell) {
+    cell.addEventListener("click", function () {
       openViewModal(this.getAttribute("data-chapter"), parseInt(this.getAttribute("data-year")));
     });
   });
@@ -268,15 +266,15 @@ function initModals() {
   document.getElementById("modal-save").addEventListener("click", saveMark);
   document.getElementById("view-close").addEventListener("click", closeViewModal);
 
-  document.getElementById("modal-questions").addEventListener("keypress", function(e) {
+  document.getElementById("modal-questions").addEventListener("keypress", function (e) {
     if (e.key === "Enter") saveMark();
   });
 
-  document.getElementById("modal-overlay").addEventListener("click", function(e) {
+  document.getElementById("modal-overlay").addEventListener("click", function (e) {
     if (e.target === this) closeMarkModal();
   });
 
-  document.getElementById("view-overlay").addEventListener("click", function(e) {
+  document.getElementById("view-overlay").addEventListener("click", function (e) {
     if (e.target === this) closeViewModal();
   });
 }
@@ -290,7 +288,7 @@ function openMarkModal(chapter, year) {
   document.getElementById("modal-questions").value = "";
 
   document.getElementById("modal-overlay").classList.add("active");
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("modal-questions").focus();
   }, 100);
 }
@@ -307,7 +305,7 @@ function saveMark() {
   const questions = parseInt(questionsInput);
 
   if (!questionsInput || isNaN(questions) || questions < 1) {
-    alert("⚠️ Questions solved ki count daalo (1 ya zyada).");
+    alert("⚠️ Please enter the number of questions solved (1 or more).");
     document.getElementById("modal-questions").focus();
     return;
   }
@@ -366,96 +364,66 @@ function escapeAttr(str) {
   return str.replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
-// ---------- STATS ----------
-function getChapterStats(chapter) {
-  let solved = 0;
-  let questions = 0;
-  YEARS.forEach(function(year) {
+// ---------- STATS HELPERS ----------
+function getChapterTotalQuestions(chapter) {
+  let total = 0;
+  YEARS.forEach(function (year) {
     const key = getKey(chapter, year);
     if (progressData[key] && progressData[key].locked) {
-      solved++;
-      questions += progressData[key].questions || 0;
+      total += progressData[key].questions || 0;
     }
   });
-  return { solved: solved, questions: questions };
+  return total;
 }
 
-function updateStats() {
-  const subject = chaptersData[currentSubject];
-  let totalChapters = 0;
-  let totalSolved = 0;
+function getSubjectStats(subjectKey) {
+  const subject = chaptersData[subjectKey];
   let totalQuestions = 0;
+  let chaptersSolved = 0;
 
-  subject.groups.forEach(function(group) {
-    group.chapters.forEach(function(chapter) {
-      totalChapters++;
-      const stats = getChapterStats(chapter);
-      if (stats.solved > 0) totalSolved++;
-      totalQuestions += stats.questions;
-    });
-  });
-
-  // Overall progress across all subjects
-  let allChapters = 0;
-  let allSolved = 0;
-  let allQuestions = 0;
-  const datesSet = new Set();
-
-  Object.keys(chaptersData).forEach(function(subj) {
-    chaptersData[subj].groups.forEach(function(group) {
-      group.chapters.forEach(function(chapter) {
-        allChapters++;
-        let chapterHasSolved = false;
-        YEARS.forEach(function(year) {
-          const key = subj + "|" + chapter + "|" + year;
-          if (progressData[key] && progressData[key].locked) {
-            chapterHasSolved = true;
-            allQuestions += progressData[key].questions || 0;
-            const dateOnly = progressData[key].date.split("T")[0];
-            datesSet.add(dateOnly);
-          }
-        });
-        if (chapterHasSolved) allSolved++;
+  subject.groups.forEach(function (group) {
+    group.chapters.forEach(function (chapter) {
+      let chapterHasSolved = false;
+      YEARS.forEach(function (year) {
+        const key = subjectKey + "|" + chapter + "|" + year;
+        if (progressData[key] && progressData[key].locked) {
+          chapterHasSolved = true;
+          totalQuestions += progressData[key].questions || 0;
+        }
       });
+      if (chapterHasSolved) chaptersSolved++;
     });
   });
 
-  const pct = allChapters > 0 ? Math.round((allSolved / allChapters) * 100) : 0;
+  return { questions: totalQuestions, chapters: chaptersSolved };
+}
 
-  document.getElementById("total-progress").textContent = pct + "%";
-  document.getElementById("total-solved").textContent = allSolved;
-  document.getElementById("total-questions").textContent = allQuestions;
+// ---------- UPDATE STATS DASHBOARD ----------
+function updateStats() {
+  // Chemistry
+  const chemStats = getSubjectStats("chemistry");
+  document.getElementById("chem-questions").textContent = chemStats.questions;
+  document.getElementById("chem-chapters").textContent = chemStats.chapters;
 
-  // Streak calculation
-  const datesArray = Array.from(datesSet).sort();
-  let streak = 0;
-  if (datesArray.length > 0) {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    let checkDate = new Date(today);
-    for (let i = 0; i < 365; i++) {
-      const dateStr = checkDate.toISOString().split("T")[0];
-      if (datesSet.has(dateStr)) {
-        streak++;
-        checkDate.setDate(checkDate.getDate() - 1);
-      } else if (i === 0) {
-        checkDate.setDate(checkDate.getDate() - 1);
-      } else {
-        break;
-      }
-    }
-  }
-  document.getElementById("streak-days").textContent = streak;
+  // Physics
+  const physStats = getSubjectStats("physics");
+  document.getElementById("phys-questions").textContent = physStats.questions;
+  document.getElementById("phys-chapters").textContent = physStats.chapters;
+
+  // Maths
+  const mathsStats = getSubjectStats("maths");
+  document.getElementById("maths-questions").textContent = mathsStats.questions;
+  document.getElementById("maths-chapters").textContent = mathsStats.chapters;
 }
 
 // ---------- DATA MANAGEMENT ----------
 function initDataManagement() {
   document.getElementById("export-btn").addEventListener("click", exportData);
-  document.getElementById("import-btn").addEventListener("click", function() {
+  document.getElementById("import-btn").addEventListener("click", function () {
     document.getElementById("import-file").click();
   });
   document.getElementById("import-file").addEventListener("change", importData);
-  document.getElementById("pdf-btn").addEventListener("click", function() {
+  document.getElementById("pdf-btn").addEventListener("click", function () {
     window.print();
   });
 }
@@ -479,32 +447,24 @@ function importData(event) {
   if (!file) return;
 
   const reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = function (e) {
     try {
       const imported = JSON.parse(e.target.result);
       if (typeof imported === "object" && imported !== null) {
-        if (confirm("⚠️ Import karne se tumhara current progress replace ho jayega. Continue?")) {
+        if (confirm("⚠️ Importing will replace your current progress. Continue?")) {
           progressData = imported;
           saveProgress();
           renderTracker();
           updateStats();
-          alert("✅ Progress import ho gaya!");
+          alert("✅ Progress imported successfully!");
         }
       } else {
         alert("❌ Invalid file format.");
       }
     } catch (err) {
-      alert("❌ File read nahi ho payi. Valid JSON file daalo.");
+      alert("❌ Could not read file. Please provide a valid JSON file.");
     }
     event.target.value = "";
   };
   reader.readAsText(file);
-}
-
-// ---------- PRINT DATE ----------
-function setPrintDate() {
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    hero.setAttribute("data-print-date", new Date().toLocaleString());
-  }
 }

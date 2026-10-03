@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydrocarbons | JEE Chemistry Notes</title>
+  <meta name="description" content="Hydrocarbons Notes for JEE Mains — Alkanes, Alkenes, Alkynes, Aromatic, Reaction Mechanisms, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Hydrocarbons
+  </div>
+
+  <header class="chapter-header">
+    <h1>Hydrocarbons</h1>
+    <p>Alkanes, Alkenes, Alkynes, Aromatic Compounds, Reaction Mechanisms</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Diagrams</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Reaction Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & DIAGRAMS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Alkanes (Saturated Hydrocarbons)</h2>
+
+      <div class="box">
+        <span class="box-title">General Formula</span>
+        <p>CₙH₂ₙ₊₂ (n = 1, 2, 3, ...)</p>
+        <p><strong>Hybridisation:</strong> sp³, Bond Angle: 109.5°</p>
+      </div>
+
+      <h3>1.1 Preparation of Alkanes</h3>
+      <table>
+        <thead><tr><th>Method</th><th>Reaction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Hydrogenation of Alkenes</strong></td><td>CH₂=CH₂ + H₂ → CH₃−CH₃ (Ni, Δ)</td></tr>
+          <tr><td><strong>Wurtz Reaction</strong></td><td>2R−X + 2Na → R−R + 2NaX (dry ether)</td></tr>
+          <tr><td><strong>Kolbe's Electrolysis</strong></td><td>2RCOONa + 2H₂O → R−R + 2CO₂ + H₂ + 2NaOH</td></tr>
+          <tr><td><strong>Decarboxylation</strong></td><td>RCOONa + NaOH (CaO, Δ) → R−H + Na₂CO₃</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.2 Reactions of Alkanes</h3>
+
+      <div class="box">
+        <span class="box-title">Halogenation (Free Radical Substitution)</span>
+        <p>CH₄ + Cl₂ → CH₃Cl + HCl (UV light)</p>
+        <p><strong>Mechanism:</strong></p>
+        <ol>
+          <li><strong>Initiation:</strong> Cl₂ → 2Cl• (UV)</li>
+          <li><strong>Propagation:</strong> Cl• + CH₄ → CH₃• + HCl; CH₃• + Cl₂ → CH₃Cl + Cl•</li>
+          <li><strong>Termination:</strong> Cl• + Cl• → Cl₂; CH₃• + CH₃• → C₂H₆</li>
+        </ol>
+      </div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Free Radical Halogenation Mechanism</text>
+          <text x="50" y="60" fill="#ea4335" font-weight="600" font-size="12">Initiation:</text>
+          <text x="150" y="60" fill="#202124" font-size="13">Cl₂ → 2Cl• (UV light)</text>
+          <text x="50" y="90" fill="#f9ab00" font-weight="600" font-size="12">Propagation:</text>
+          <text x="150" y="90" fill="#202124" font-size="13">Cl• + CH₄ → CH₃• + HCl</text>
+          <text x="150" y="115" fill="#202124" font-size="13">CH₃• + Cl₂ → CH₃Cl + Cl•</text>
+          <text x="50" y="145" fill="#34a853" font-weight="600" font-size="12">Termination:</text>
+          <text x="150" y="145" fill="#202124" font-size="13">CH₃• + Cl• → CH₃Cl</text>
+          <text x="150" y="170" fill="#202124" font-size="13">CH₃• + CH₃• → C₂H₆</text>
+        </svg>
+        <div class="diagram-caption">Alkane Halogenation — Free Radical Substitution</div>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Reactivity of Halogens:</strong> F₂ > Cl₂ > Br₂ > I₂</p>
+        <p><strong>Selectivity:</strong> Br₂ > Cl₂ (Br• zyada selective hai)</p>
+        <p><strong>Order of H reactivity:</strong> 3° > 2° > 1°</p>
+      </div>
+
+      <h2>2. Alkenes (Unsaturated Hydrocarbons)</h2>
+
+      <div class="box">
+        <span class="box-title">General Formula</span>
+        <p>CₙH₂ₙ (n ≥ 2)</p>
+        <p><strong>Hybridisation:</strong> sp², Bond Angle: 120°</p>
+      </div>
+
+      <h3>2.1 Preparation of Alkenes</h3>
+      <table>
+        <thead><tr><th>Method</th><th>Reaction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dehydration of Alcohols</strong></td><td>R−CH₂−CH₂OH → R−CH=CH₂ + H₂O (H₂SO₄, Δ)</td></tr>
+          <tr><td><strong>Dehydrohalogenation</strong></td><td>R−CH₂−CH₂Br + KOH (alc) → R−CH=CH₂</td></tr>
+          <tr><td><strong>From Alkynes</strong></td><td>HC≡CH + H₂ → H₂C=CH₂ (Lindlar's catalyst)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Reactions of Alkenes</h3>
+
+      <div class="box">
+        <span class="box-title">1. Addition of HBr (Markovnikov)</span>
+        <p>CH₃−CH=CH₂ + HBr → CH₃−CHBr−CH₃</p>
+        <p><strong>Rule:</strong> H zyada substituted carbon par jaata hai (more stable carbocation)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>Anti-Markovnikov (Peroxide Effect):</strong></p>
+        <p>CH₃−CH=CH₂ + HBr (Peroxide) → CH₃−CH₂−CH₂Br</p>
+        <p><strong>Sirf HBr ke saath</strong> hota hai, HCl/HI ke saath nahi</p>
+      </div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Markovnikov vs Anti-Markovnikov</text>
+          <!-- Propene -->
+          <text x="50" y="70" fill="#202124" font-weight="600" font-size="14">CH₃−CH=CH₂ + HBr</text>
+          <!-- Markovnikov -->
+          <text x="50" y="110" fill="#ea4335" font-weight="600" font-size="12">Without Peroxide (Markovnikov):</text>
+          <text x="300" y="110" fill="#202124" font-size="14">CH₃−CHBr−CH₃</text>
+          <text x="300" y="130" fill="#5f6368" font-size="11">(Br on more substituted C)</text>
+          <!-- Anti-Markovnikov -->
+          <text x="50" y="170" fill="#34a853" font-weight="600" font-size="12">With Peroxide (Anti-Markovnikov):</text>
+          <text x="300" y="170" fill="#202124" font-size="14">CH₃−CH₂−CH₂Br</text>
+          <text x="300" y="190" fill="#5f6368" font-size="11">(Br on less substituted C)</text>
+        </svg>
+        <div class="diagram-caption">Markovnikov vs Anti-Markovnikov Addition</div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">2. Ozonolysis</span>
+        <p>CH₃−CH=CH−CH₃ + O₃ → 2CH₃CHO (Zn/H₂O)</p>
+        <p><strong>Reductive:</strong> Aldehyde/Ketone</p>
+        <p><strong>Oxidative:</strong> Carboxylic Acid</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">3. Hydroboration-Oxidation</span>
+        <p>CH₃−CH=CH₂ + BH₃ → (CH₃−CH₂−CH₂)₃B → CH₃−CH₂−CH₂OH</p>
+        <p><strong>Anti-Markovnikov</strong> addition of water</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">4. Halogenation</span>
+        <p>CH₂=CH₂ + Br₂ → CH₂Br−CH₂Br (Reddish-brown colour disappears)</p>
+        <p><strong>Test for Unsaturation:</strong> Br₂ water decolourisation</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Baeyer's Reagent:</strong> Cold dilute KMnO₄ → Purple colour disappears → Test for unsaturation</p>
+        <p><strong>Product:</strong> Vicinal diol (Glycol)</p>
+      </div>
+
+      <h2>3. Alkynes (Triple Bonded)</h2>
+
+      <div class="box">
+        <span class="box-title">General Formula</span>
+        <p>CₙH₂ₙ₋₂ (n ≥ 2)</p>
+        <p><strong>Hybridisation:</strong> sp, Bond Angle: 180°</p>
+      </div>
+
+      <h3>3.1 Preparation of Alkynes</h3>
+      <table>
+        <thead><tr><th>Method</th><th>Reaction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dehydrohalogenation</strong></td><td>CH₂Br−CH₂Br + 2KOH (alc) → HC≡CH + 2KBr</td></tr>
+          <tr><td><strong>From Calcium Carbide</strong></td><td>CaC₂ + 2H₂O → HC≡CH + Ca(OH)₂</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3.2 Reactions of Alkynes</h3>
+
+      <div class="box">
+        <span class="box-title">1. Acidic Hydrogen</span>
+        <p>HC≡CH + Na → HC≡C⁻Na⁺ + ½H₂</p>
+        <p><strong>Reason:</strong> sp carbon zyada electronegative hai</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">2. Addition of HBr</span>
+        <p>HC≡CH + HBr → CH₂=CHBr (Markovnikov)</p>
+        <p>CH₂=CHBr + HBr → CH₃−CHBr₂</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">3. Hydration (Kucherov)</span>
+        <p>HC≡CH + H₂O (HgSO₄/H₂SO₄) → CH₃CHO</p>
+        <p><strong>Product:</strong> Aldehyde (terminal alkyne) ya Ketone (internal alkyne)</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">4. Hydroboration-Oxidation</span>
+        <p>HC≡CH + BH₃ → (CH₂=CH)₃B → CH₃CHO</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Terminal Alkyne:</strong> Acidic H → Sodium acetylide</p>
+        <p><strong>Internal Alkyne:</strong> Acidic H nahi → Sodium acetylide nahi banta</p>
+        <p><strong>Test:</strong> Ammoniacal AgNO₃ ya Cu₂Cl₂ → White/Yellow ppt (terminal alkyne)</p>
+      </div>
+
+      <h2>4. Aromatic Hydrocarbons (Benzene)</h2>
+
+      <div class="box">
+        <span class="box-title">Benzene (C₆H₆)</span>
+        <p><strong>Structure:</strong> Planar hexagonal ring, sp² hybridised</p>
+        <p><strong>Aromaticity:</strong> Huckel's Rule (4n+2)π = 6π electrons</p>
+      </div>
+
+      <h3>4.1 Electrophilic Aromatic Substitution (EAS)</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="12">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Electrophilic Aromatic Substitution</text>
+          <!-- Benzene -->
+          <polygon points="60,80 90,60 120,80 120,110 90,130 60,110" fill="none" stroke="#202124" stroke-width="2"/>
+          <circle cx="90" cy="95" r="18" fill="none" stroke="#ea4335" stroke-width="1.5"/>
+          <text x="55" y="150" fill="#202124" font-size="12">Benzene</text>
+          <!-- Arrow -->
+          <text x="150" y="100" fill="#202124" font-size="18">+ E⁺</text>
+          <!-- Arenium ion -->
+          <polygon points="240,80 270,60 300,80 300,110 270,130 240,110" fill="none" stroke="#f9ab00" stroke-width="2"/>
+          <text x="260" y="100" fill="#f9ab00" font-size="14" font-weight="700">H</text>
+          <text x="235" y="150" fill="#202124" font-size="12">Arenium Ion</text>
+          <text x="235" y="165" fill="#5f6368" font-size="10">(Intermediate)</text>
+          <!-- Arrow -->
+          <text x="330" y="100" fill="#202124" font-size="18">→</text>
+          <!-- Substituted Benzene -->
+          <polygon points="420,80 450,60 480,80 480,110 450,130 420,110" fill="none" stroke="#34a853" stroke-width="2"/>
+          <circle cx="450" cy="95" r="18" fill="none" stroke="#34a853" stroke-width="1.5"/>
+          <text x="440" y="100" fill="#34a853" font-size="12" font-weight="700">E</text>
+          <text x="415" y="150" fill="#202124" font-size="12">Substituted Benzene</text>
+          <!-- H+ -->
+          <text x="560" y="100" fill="#ea4335" font-size="14">+ H⁺</text>
+        </svg>
+        <div class="diagram-caption">EAS Mechanism — Arenium Ion Intermediate</div>
+      </div>
+
+      <h3>4.2 Important EAS Reactions</h3>
+      <table>
+        <thead><tr><th>Reaction</th><th>Reagent</th><th>Product</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nitration</strong></td><td>Conc. HNO₃ + Conc. H₂SO₄</td><td>Nitrobenzene</td></tr>
+          <tr><td><strong>Sulphonation</strong></td><td>Conc. H₂SO₄, Δ</td><td>Benzenesulphonic acid</td></tr>
+          <tr><td><strong>Halogenation</strong></td><td>Cl₂/Br₂ + AlCl₃/FeBr₃</td><td>Chlorobenzene/Bromobenzene</td></tr>
+          <tr><td><strong>Friedel-Crafts Alkylation</strong></td><td>RCl + AlCl₃</td><td>Alkylbenzene</td></tr>
+          <tr><td><strong>Friedel-Crafts Acylation</strong></td><td>RCOCl + AlCl₃</td><td>Ketone</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.3 Directing Effects</h3>
+      <table>
+        <thead><tr><th>Group</th><th>Effect</th><th>Direction</th></tr></thead>
+        <tbody>
+          <tr><td><strong>−OH, −NH₂, −OR, −R</strong></td><td>Activating</td><td>o/p directing</td></tr>
+          <tr><td><strong>−NO₂, −CN, −COOH, −CHO</strong></td><td>Deactivating</td><td>m directing</td></tr>
+          <tr><td><strong>−Cl, −Br, −I</strong></td><td>Deactivating</td><td>o/p directing</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Activating groups:</strong> Electron donating → o/p directing → Rate ↑</p>
+        <p><strong>Deactivating groups:</strong> Electron withdrawing → m directing → Rate ↓</p>
+        <p><strong>Halogens:</strong> Deactivating but o/p directing (exception)</p>
+      </div>
+
+      <h3>4.4 Reactions of Benzene</h3>
+
+      <div class="box">
+        <span class="box-title">1. Addition (Under Special Conditions)</span>
+        <p>Benzene + 3H₂ → Cyclohexane (Ni, 200°C)</p>
+        <p>Benzene + 3Cl₂ → Benzene hexachloride (UV light)</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">2. Oxidation</span>
+        <p>Benzene + O₂ (V₂O₅, 500°C) → Maleic anhydride</p>
+        <p><strong>Toluene</strong> + KMnO₄ → Benzoic acid</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">3. Side Chain Reactions</span>
+        <p><strong>Free Radical Halogenation:</strong> Toluene + Cl₂ (UV) → Benzyl chloride</p>
+        <p><strong>Oxidation:</strong> Toluene + KMnO₄ → Benzoic acid</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Hydrocarbons</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Markovnikov Addition</span>
+        <p><strong>Q:</strong> Propene + HBr → ?</p>
+        <ol>
+          <li>Markovnikov rule: H zyada substituted C par</li>
+          <li>CH₃−CH=CH₂ + HBr → CH₃−CHBr−CH₃</li>
+          <li><strong>Answer: 2-Bromopropane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Anti-Markovnikov (Peroxide)</span>
+        <p><strong>Q:</strong> Propene + HBr (Peroxide) → ?</p>
+        <ol>
+          <li>Peroxide effect: Anti-Markovnikov</li>
+          <li>Br less substituted C par jaata hai</li>
+          <li>CH₃−CH=CH₂ + HBr → CH₃−CH₂−CH₂Br</li>
+          <li><strong>Answer: 1-Bromopropane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Ozonolysis</span>
+        <p><strong>Q:</strong> Alkene (C₄H₈) ka ozonolysis se 2CH₃CHO banta hai. Structure?</p>
+        <ol>
+          <li>Ozonolysis se C=C toot jaata hai</li>
+          <li>2CH₃CHO → CH₃−CH=CH−CH₃</li>
+          <li><strong>Answer: 2-Butene</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Terminal Alkyne Test</span>
+        <p><strong>Q:</strong> Which alkyne gives white ppt with ammoniacal AgNO₃?</p>
+        <ol>
+          <li>Terminal alkyne mein acidic H hota hai</li>
+          <li>HC≡CH + AgNO₃/NH₄OH → AgC≡CAg (white ppt)</li>
+          <li>Internal alkyne (CH₃C≡CCH₃) nahi deta</li>
+          <li><strong>Answer: Terminal alkyne (HC≡CH)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Kucherov Hydration</span>
+        <p><strong>Q:</strong> HC≡CH + H₂O (HgSO₄/H₂SO₄) → ?</p>
+        <ol>
+          <li>Kucherov hydration</li>
+          <li>Terminal alkyne → Aldehyde</li>
+          <li>CH₃CHO</li>
+          <li><strong>Answer: Acetaldehyde (CH₃CHO)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: EAS Directing Effect</span>
+        <p><strong>Q:</strong> Nitrobenzene ka nitration kahan hota hai?</p>
+        <ol>
+          <li>−NO₂ deactivating aur m-directing group hai</li>
+          <li>Nitration meta position par hota hai</li>
+          <li><strong>Answer: m-Dinitrobenzene</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Friedel-Crafts</span>
+        <p><strong>Q:</strong> Benzene + CH₃Cl (AlCl₃) → ?</p>
+        <ol>
+          <li>Friedel-Crafts Alkylation</li>
+          <li>CH₃⁺ electrophile banta hai</li>
+          <li>Benzene ring par attack karta hai</li>
+          <li><strong>Answer: Toluene (C₆H₅CH₃)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: Toluene Oxidation</span>
+        <p><strong>Q:</strong> Toluene + KMnO₄ → ?</p>
+        <ol>
+          <li>Side chain oxidation</li>
+          <li>CH₃ group → COOH group</li>
+          <li><strong>Answer: Benzoic Acid (C₆H₅COOH)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: Baeyer's Test</span>
+        <p><strong>Q:</strong> Alkene + Cold Dilute KMnO₄ → ?</p>
+        <ol>
+          <li>Baeyer's Reagent (Cold dilute KMnO₄)</li>
+          <li>Purple colour disappears</li>
+          <li>Vicinal diol banta hai</li>
+          <li><strong>Answer: Glycol (Vicinal diol)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Wurtz Reaction</span>
+        <p><strong>Q:</strong> CH₃Br + Na (dry ether) → ?</p>
+        <ol>
+          <li>Wurtz Reaction</li>
+          <li>2CH₃Br + 2Na → CH₃−CH₃ + 2NaBr</li>
+          <li><strong>Answer: Ethane (C₂H₆)</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Hydrocarbons PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Markovnikov, Ozonolysis, EAS</td></tr>
+          <tr><td><strong>2020</strong></td><td>Peroxide Effect, Alkyne Acidity, Friedel-Crafts</td></tr>
+          <tr><td><strong>2021</strong></td><td>Hydroboration, EAS Directing Effects, Ozonolysis</td></tr>
+          <tr><td><strong>2022</strong></td><td>Markovnikov, Alkyne Reactions, Aromaticity</td></tr>
+          <tr><td><strong>2023</strong></td><td>Free Radical Halogenation, EAS, Ozonolysis</td></tr>
+          <tr><td><strong>2024</strong></td><td>Anti-Markovnikov, Alkyne Hydration, Friedel-Crafts</td></tr>
+          <tr><td><strong>2025</strong></td><td>Markovnikov, EAS, Alkyne Acidity</td></tr>
+          <tr><td><strong>2026</strong></td><td>Peroxide Effect, Ozonolysis, EAS Directing Effects</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Markovnikov & Anti-Markovnikov</strong> → Har saal aata hai</li>
+          <li><strong>EAS (Nitration, Friedel-Crafts)</strong> → Har saal</li>
+          <li><strong>Ozonolysis</strong> → 2019, 2021, 2023, 2026</li>
+          <li><strong>Alkyne Reactions (Acidity, Hydration)</strong> → 2020, 2022, 2024, 2025</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Markovnikov vs Anti-Markovnikov</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Markovnikov:</strong> H zyada substituted C par (no peroxide)</li>
+          <li><strong>Anti-Markovnikov:</strong> Br less substituted C par (peroxide)</li>
+          <li><strong>Sirf HBr</strong> ke saath peroxide effect</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: EAS (Electrophilic Aromatic Substitution)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Activating:</strong> −OH, −NH₂, −R (o/p directing)</li>
+          <li><strong>Deactivating:</strong> −NO₂, −COOH (m directing)</li>
+          <li><strong>Halogens:</strong> Deactivating but o/p directing</li>
+          <li><strong>Friedel-Crafts:</strong> RCl + AlCl₃ → Alkylbenzene</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Ozonolysis</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2023, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>C=C double bond toot jaata hai</li>
+          <li><strong>Reductive:</strong> Aldehyde/Ketone</li>
+          <li><strong>Oxidative:</strong> Carboxylic Acid</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Alkyne Reactions</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2024, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Terminal Alkyne:</strong> Acidic H → Na metal reaction</li>
+          <li><strong>Kucherov Hydration:</strong> Terminal → Aldehyde</li>
+          <li><strong>Internal Alkyne:</strong> Hydration → Ketone</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Free Radical Halogenation</h3>
+      <p><strong>PYQ Trend:</strong> 2023, 2024</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Mechanism:</strong> Initiation → Propagation → Termination</li>
+          <li><strong>Reactivity:</strong> F₂ > Cl₂ > Br₂ > I₂</li>
+          <li><strong>Selectivity:</strong> Br₂ > Cl₂</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Markovnikov</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>EAS</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Ozonolysis</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Alkyne Reactions</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Free Radical</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Markovnikov (4/5), EAS (5/5), Alkyne Reactions (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Hydrocarbons (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>Markovnikov:</strong> H zyada substituted C par (no peroxide)</li>
+          <li><strong>Anti-Markovnikov:</strong> H less substituted C par (peroxide, only HBr)</li>
+          <li><strong>Ozonolysis:</strong> C=C toot jaata hai</li>
+          <li><strong>Baeyer's Reagent:</strong> Cold dilute KMnO₄ → Glycol</li>
+          <li><strong>Terminal Alkyne:</strong> Acidic H → Sodium acetylide</li>
+          <li><strong>Kucherov:</strong> Hydration of Alkyne</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Peroxide Effect:</strong> Sirf HBr ke saath</li>
+          <li><strong>EAS Directing:</strong> −OH → o/p, −NO₂ → m</li>
+          <li><strong>Halogens:</strong> Deactivating but o/p directing</li>
+          <li><strong>Toluene Oxidation:</strong> Benzoic acid</li>
+          <li><strong>Alkyne Acidity:</strong> sp carbon zyada electronegative</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Reaction Summary</span>
+        <ul>
+          <li><strong>Alkane:</strong> Halogenation (Free radical)</li>
+          <li><strong>Alkene:</strong> Addition (Markovnikov), Ozonolysis, Hydroboration</li>
+          <li><strong>Alkyne:</strong> Acidic H, Kucherov Hydration</li>
+          <li><strong>Aromatic:</strong> EAS (Nitration, Friedel-Crafts)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 EAS Summary</span>
+        <ul>
+          <li><strong>Activating:</strong> −OH, −NH₂, −R (o/p)</li>
+          <li><strong>Deactivating:</strong> −NO₂, −COOH (m)</li>
+          <li><strong>Halogens:</strong> Deactivating but o/p</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: REACTION SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Reaction Sheet — Hydrocarbons</h2>
+      <p style="color: #5f6368;">Saare reactions ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. ALKANES — PREPARATION</div>
+      <div class="reaction-box"><strong>Hydrogenation:</strong> CH₂=CH₂ + H₂ (Ni, Δ) → CH₃−CH₃</div>
+      <div class="reaction-box"><strong>Wurtz Reaction:</strong> 2R−X + 2Na (dry ether) → R−R + 2NaX</div>
+      <div class="reaction-box"><strong>Kolbe's Electrolysis:</strong> 2RCOONa + 2H₂O → R−R + 2CO₂ + H₂ + 2NaOH</div>
+      <div class="reaction-box"><strong>Decarboxylation:</strong> RCOONa + NaOH (CaO, Δ) → R−H + Na₂CO₃</div>
+
+      <div class="formula-category">2. ALKANES — REACTIONS</div>
+      <div class="reaction-box"><strong>Halogenation:</strong> CH₄ + Cl₂ (UV) → CH₃Cl + HCl (Free radical)</div>
+      <div class="reaction-box"><strong>Combustion:</strong> CH₄ + 2O₂ → CO₂ + 2H₂O</div>
+
+      <div class="formula-category">3. ALKENES — PREPARATION</div>
+      <div class="reaction-box"><strong>Dehydration:</strong> R−CH₂−CH₂OH (H₂SO₄, Δ) → R−CH=CH₂ + H₂O</div>
+      <div class="reaction-box"><strong>Dehydrohalogenation:</strong> R−CH₂−CH₂Br + KOH (alc) → R−CH=CH₂</div>
+
+      <div class="formula-category">4. ALKENES — REACTIONS</div>
+      <div class="reaction-box"><strong>Markovnikov:</strong> CH₃−CH=CH₂ + HBr → CH₃−CHBr−CH₃</div>
+      <div class="reaction-box"><strong>Anti-Markovnikov:</strong> CH₃−CH=CH₂ + HBr (Peroxide) → CH₃−CH₂−CH₂Br</div>
+      <div class="reaction-box"><strong>Ozonolysis:</strong> CH₃−CH=CH−CH₃ + O₃ → 2CH₃CHO (Zn/H₂O)</div>
+      <div class="reaction-box"><strong>Hydroboration:</strong> CH₃−CH=CH₂ + BH₃ → CH₃−CH₂−CH₂OH</div>
+      <div class="reaction-box"><strong>Halogenation:</strong> CH₂=CH₂ + Br₂ → CH₂Br−CH₂Br</div>
+      <div class="reaction-box"><strong>Baeyer's Test:</strong> Alkene + Cold Dil. KMnO₄ → Glycol</div>
+
+      <div class="formula-category">5. ALKYNES — PREPARATION</div>
+      <div class="reaction-box"><strong>From CaC₂:</strong> CaC₂ + 2H₂O → HC≡CH + Ca(OH)₂</div>
+      <div class="reaction-box"><strong>Dehydrohalogenation:</strong> CH₂Br−CH₂Br + 2KOH (alc) → HC≡CH + 2KBr</div>
+
+      <div class="formula-category">6. ALKYNES — REACTIONS</div>
+      <div class="reaction-box"><strong>Acidic H:</strong> HC≡CH + Na → HC≡C⁻Na⁺ + ½H₂</div>
+      <div class="reaction-box"><strong>Kucherov Hydration:</strong> HC≡CH + H₂O (HgSO₄/H₂SO₄) → CH₃CHO</div>
+      <div class="reaction-box"><strong>HBr Addition:</strong> HC≡CH + HBr → CH₂=CHBr → CH₃−CHBr₂</div>
+      <div class="reaction-box"><strong>Terminal Alkyne Test:</strong> HC≡CH + AgNO₃/NH₄OH → AgC≡CAg (white ppt)</div>
+
+      <div class="formula-category">7. AROMATIC — EAS</div>
+      <div class="reaction-box"><strong>Nitration:</strong> Benzene + HNO₃/H₂SO₄ → Nitrobenzene</div>
+      <div class="reaction-box"><strong>Sulphonation:</strong> Benzene + H₂SO₄ (Δ) → Benzenesulphonic acid</div>
+      <div class="reaction-box"><strong>Halogenation:</strong> Benzene + Cl₂ (AlCl₃) → Chlorobenzene</div>
+      <div class="reaction-box"><strong>Friedel-Crafts Alkylation:</strong> Benzene + RCl (AlCl₃) → Alkylbenzene</div>
+      <div class="reaction-box"><strong>Friedel-Crafts Acylation:</strong> Benzene + RCOCl (AlCl₃) → Ketone</div>
+
+      <div class="formula-category">8. AROMATIC — OTHER REACTIONS</div>
+      <div class="reaction-box"><strong>Hydrogenation:</strong> Benzene + 3H₂ (Ni, 200°C) → Cyclohexane</div>
+      <div class="reaction-box"><strong>Oxidation:</strong> Toluene + KMnO₄ → Benzoic acid</div>
+      <div class="reaction-box"><strong>Side Chain Halogenation:</strong> Toluene + Cl₂ (UV) → Benzyl chloride</div>
+
+      <div class="formula-category">9. DIRECTING EFFECTS (EAS)</div>
+      <div class="reaction-box"><strong>Activating:</strong> −OH, −NH₂, −OR, −R (o/p directing)</div>
+      <div class="reaction-box"><strong>Deactivating:</strong> −NO₂, −CN, −COOH, −CHO (m directing)</div>
+      <div class="reaction-box"><strong>Halogens:</strong> −Cl, −Br, −I (Deactivating but o/p directing)</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

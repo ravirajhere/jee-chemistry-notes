@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomolecules | JEE Chemistry Notes</title>
+  <meta name="description" content="Biomolecules Deep Notes for JEE Mains — Carbohydrates, Proteins, Enzymes, Vitamins, Nucleic Acids, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes h4 { margin-top: 1.2rem; color: var(--primary); font-size: 1.05rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    .pattern-box { background: #fce8e6; border-left: 4px solid #ea4335; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; }
+    .pattern-box .box-title { color: #c5221f; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Biomolecules
+  </div>
+
+  <header class="chapter-header">
+    <h1>Biomolecules — Deep Notes</h1>
+    <p>Carbohydrates, Proteins, Enzymes, Vitamins, Nucleic Acids, Hormones</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Deep Theory</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Patterns (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Diagram Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: DEEP THEORY -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Carbohydrates</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Polyhydroxy aldehydes ya ketones, ya unke derivatives jo hydrolysis par aise compounds dete hain.</p>
+        <p><strong>General Formula:</strong> Cₙ(H₂O)ₘ (Hydrates of Carbon)</p>
+      </div>
+
+      <h3>1.1 Classification</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Carbohydrate Classification</text>
+          
+          <!-- Monosaccharides -->
+          <rect x="50" y="50" width="180" height="50" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" rx="8"/>
+          <text x="75" y="80" fill="#1a73e8" font-weight="600" font-size="13">Monosaccharides</text>
+          <text x="60" y="120" fill="#202124" font-size="11">Glucose, Fructose</text>
+          <text x="60" y="140" fill="#5f6368" font-size="10">Cannot be hydrolysed</text>
+          
+          <!-- Oligosaccharides -->
+          <rect x="270" y="50" width="180" height="50" fill="#fef7e0" stroke="#f9ab00" stroke-width="2" rx="8"/>
+          <text x="295" y="80" fill="#f9ab00" font-weight="600" font-size="13">Oligosaccharides</text>
+          <text x="280" y="120" fill="#202124" font-size="11">Sucrose, Maltose</text>
+          <text x="280" y="140" fill="#5f6368" font-size="10">2–10 units</text>
+          
+          <!-- Polysaccharides -->
+          <rect x="490" y="50" width="180" height="50" fill="#e6f4ea" stroke="#34a853" stroke-width="2" rx="8"/>
+          <text x="515" y="80" fill="#34a853" font-weight="600" font-size="13">Polysaccharides</text>
+          <text x="500" y="120" fill="#202124" font-size="11">Starch, Cellulose</text>
+          <text x="500" y="140" fill="#5f6368" font-size="10">Many units</text>
+          
+          <!-- Lines -->
+          <line x1="140" y1="100" x2="140" y2="160" stroke="#5f6368" stroke-width="1"/>
+          <line x1="360" y1="100" x2="360" y2="160" stroke="#5f6368" stroke-width="1"/>
+          <line x1="580" y1="100" x2="580" y2="160" stroke="#5f6368" stroke-width="1"/>
+          
+          <!-- Reducing/Non-reducing -->
+          <text x="50" y="185" fill="#1a73e8" font-weight="600" font-size="12">Reducing Sugars:</text>
+          <text x="50" y="205" fill="#202124" font-size="11">Glucose, Fructose, Maltose, Lactose</text>
+          
+          <text x="50" y="235" fill="#ea4335" font-weight="600" font-size="12">Non-Reducing Sugars:</text>
+          <text x="50" y="255" fill="#202124" font-size="11">Sucrose (Glycosidic linkage)</text>
+        </svg>
+        <div class="diagram-caption">Carbohydrate Classification — Mono, Oligo, Poly</div>
+      </div>
+
+      <h3>1.2 Important Monosaccharides</h3>
+
+      <table>
+        <thead><tr><th>Common Name</th><th>IUPAC Name</th><th>Formula</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Glucose</strong></td><td>Aldohexose</td><td>C₆H₁₂O₆</td><td>Aldose</td></tr>
+          <tr><td><strong>Fructose</strong></td><td>Ketohexose</td><td>C₆H₁₂O₆</td><td>Ketose</td></tr>
+          <tr><td><strong>Ribose</strong></td><td>Aldopentose</td><td>C₅H₁₀O₅</td><td>RNA mein</td></tr>
+          <tr><td><strong>Deoxyribose</strong></td><td>Deoxyaldopentose</td><td>C₅H₁₀O₄</td><td>DNA mein</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Glucose = Aldohexose</strong> (−CHO group)</p>
+        <p><strong>Fructose = Ketohexose</strong> (>C=O group)</p>
+        <p>Dono C₆H₁₂O₆ hain (isomers)</p>
+      </div>
+
+      <h3>1.3 Structure of Glucose (Cyclic — Haworth Projection)</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Glucose — Haworth Projection (α-D-Glucose)</text>
+          
+          <!-- Hexagon -->
+          <polygon points="150,100 200,70 250,100 250,150 200,180 150,150" fill="none" stroke="#202124" stroke-width="2"/>
+          
+          <!-- Oxygen -->
+          <text x="230" y="85" fill="#ea4335" font-weight="700" font-size="14">O</text>
+          
+          <!-- OH groups -->
+          <text x="105" y="95" fill="#34a853" font-size="11">HO</text>
+          <text x="265" y="95" fill="#34a853" font-size="11">OH</text>
+          <text x="265" y="155" fill="#34a853" font-size="11">OH</text>
+          <text x="105" y="165" fill="#34a853" font-size="11">OH</text>
+          <text x="195" y="195" fill="#34a853" font-size="11">OH</text>
+          <text x="195" y="60" fill="#34a853" font-size="11">CH₂OH</text>
+          
+          <!-- Labels -->
+          <text x="400" y="80" fill="#5f6368" font-size="11">• Six-membered ring (Pyranose)</text>
+          <text x="400" y="100" fill="#5f6368" font-size="11">• 5 OH groups + 1 CH₂OH</text>
+          <text x="400" y="120" fill="#5f6368" font-size="11">• Anomeric carbon: C1</text>
+          <text x="400" y="140" fill="#5f6368" font-size="11">• α and β forms possible</text>
+        </svg>
+        <div class="diagram-caption">Glucose — Cyclic Structure (Pyranose Ring)</div>
+      </div>
+
+      <h3>1.4 Important Reactions of Glucose</h3>
+
+      <div class="reaction-box">
+        <strong>1. With Br₂ water:</strong> Gluconic acid (Test for −CHO)<br>
+        <strong>2. With HNO₃:</strong> Saccharic acid<br>
+        <strong>3. With HCN:</strong> Cyanohydrin<br>
+        <strong>4. With NH₂OH:</strong> Oxime<br>
+        <strong>5. With Acetic anhydride:</strong> Pentaacetate<br>
+        <strong>6. With Tollens/Fehling:</strong> Positive (Reducing sugar)
+      </div>
+
+      <h3>1.5 Important Disaccharides</h3>
+
+      <table>
+        <thead><tr><th>Disaccharide</th><th>Composition</th><th>Linkage</th><th>Reducing?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sucrose</strong></td><td>Glucose + Fructose</td><td>α-1,β-2</td><td>❌ Non-reducing</td></tr>
+          <tr><td><strong>Maltose</strong></td><td>Glucose + Glucose</td><td>α-1,4</td><td>✅ Reducing</td></tr>
+          <tr><td><strong>Lactose</strong></td><td>Glucose + Galactose</td><td>β-1,4</td><td>✅ Reducing</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Sucrose:</strong> Non-reducing (glycosidic linkage dono anomeric carbons par)</p>
+        <p><strong>Maltose, Lactose:</strong> Reducing (free anomeric carbon)</p>
+      </div>
+
+      <h3>1.6 Polysaccharides</h3>
+
+      <table>
+        <thead><tr><th>Polysaccharide</th><th>Composition</th><th>Linkage</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Starch</strong></td><td>α-Glucose</td><td>α-1,4 + α-1,6</td><td>Energy storage (plants)</td></tr>
+          <tr><td><strong>Cellulose</strong></td><td>β-Glucose</td><td>β-1,4</td><td>Structural (plants)</td></tr>
+          <tr><td><strong>Glycogen</strong></td><td>α-Glucose</td><td>α-1,4 + α-1,6</td><td>Energy storage (animals)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Proteins</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Biomolecules jo amino acids ke polymers hote hain, peptide bonds se jude.</p>
+        <p><strong>Building Blocks:</strong> α-Amino acids (H₂N−CHR−COOH)</p>
+      </div>
+
+      <h3>2.1 Classification of Amino Acids</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Amino Acid Classification</text>
+          
+          <!-- Essential -->
+          <rect x="50" y="50" width="280" height="60" fill="#fce8e6" stroke="#ea4335" stroke-width="2" rx="8"/>
+          <text x="70" y="80" fill="#ea4335" font-weight="600" font-size="13">Essential Amino Acids</text>
+          <text x="70" y="100" fill="#202124" font-size="11">Body mein synthesize nahi hote (10)</text>
+          <text x="70" y="115" fill="#5f6368" font-size="10">Diet se lene padte hain</text>
+          
+          <!-- Non-Essential -->
+          <rect x="370" y="50" width="280" height="60" fill="#e6f4ea" stroke="#34a853" stroke-width="2" rx="8"/>
+          <text x="390" y="80" fill="#34a853" font-weight="600" font-size="13">Non-Essential Amino Acids</text>
+          <text x="390" y="100" fill="#202124" font-size="11">Body mein synthesize ho jaate hain</text>
+          
+          <!-- Types -->
+          <text x="50" y="150" fill="#1a73e8" font-weight="600" font-size="12">Types:</text>
+          <text x="50" y="170" fill="#202124" font-size="11">• Neutral (Glycine, Alanine)</text>
+          <text x="50" y="190" fill="#202124" font-size="11">• Acidic (Aspartic, Glutamic)</text>
+          <text x="370" y="170" fill="#202124" font-size="11">• Basic (Lysine, Arginine)</text>
+          <text x="370" y="190" fill="#202124" font-size="11">• Aromatic (Phenylalanine, Tyrosine)</text>
+        </svg>
+        <div class="diagram-caption">Amino Acids — Essential vs Non-Essential</div>
+      </div>
+
+      <h3>2.2 Peptide Bond Formation</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Peptide Bond Formation</text>
+          
+          <!-- Amino Acid 1 -->
+          <text x="50" y="70" fill="#202124" font-size="13" font-weight="600">H₂N−CHR−COOH</text>
+          
+          <!-- Arrow -->
+          <text x="220" y="70" fill="#1a73e8" font-size="14">+</text>
+          
+          <!-- Amino Acid 2 -->
+          <text x="260" y="70" fill="#202124" font-size="13" font-weight="600">H₂N−CHR'−COOH</text>
+          
+          <!-- Arrow -->
+          <text x="450" y="70" fill="#1a73e8" font-size="18">→</text>
+          
+          <!-- Dipeptide -->
+          <text x="490" y="60" fill="#202124" font-size="13" font-weight="600">H₂N−CHR−CO−NH−CHR'−COOH</text>
+          <text x="510" y="85" fill="#ea4335" font-size="11">(Peptide Bond: −CO−NH−)</text>
+          <text x="510" y="105" fill="#5f6368" font-size="11">+ H₂O (Condensation)</text>
+        </svg>
+        <div class="diagram-caption">Peptide Bond — −CO−NH− Linkage</div>
+      </div>
+
+      <h3>2.3 Protein Structure Levels</h3>
+
+      <table>
+        <thead><tr><th>Level</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Primary</strong></td><td>Amino acid sequence</td></tr>
+          <tr><td><strong>Secondary</strong></td><td>α-Helix, β-Pleated sheet (H-bonding)</td></tr>
+          <tr><td><strong>Tertiary</strong></td><td>3D folding (Disulphide, H-bond, Ionic)</td></tr>
+          <tr><td><strong>Quaternary</strong></td><td>Multiple polypeptide chains</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Primary:</strong> Covalent bonds (Peptide)</li>
+          <li><strong>Secondary:</strong> H-bonding (α-Helix, β-Sheet)</li>
+          <li><strong>Tertiary:</strong> Disulphide, H-bond, Ionic, Hydrophobic</li>
+          <li><strong>Denaturation:</strong> Secondary/Tertiary structure destroy (Primary intact)</li>
+        </ul>
+      </div>
+
+      <h3>2.4 Types of Proteins</h3>
+
+      <table>
+        <thead><tr><th>Type</th><th>Example</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fibrous</strong></td><td>Keratin, Collagen</td><td>Structural</td></tr>
+          <tr><td><strong>Globular</strong></td><td>Haemoglobin, Insulin</td><td>Functional</td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Enzymes</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Biocatalysts jo biochemical reactions ko catalyse karte hain. Proteins hote hain (except Ribozymes — RNA).</p>
+      </div>
+
+      <h3>3.1 Characteristics</h3>
+
+      <ul>
+        <li><strong>Highly specific:</strong> Lock and Key model</li>
+        <li><strong>Optimum pH:</strong> Pepsin (1.5–2), Trypsin (7.5–8)</li>
+        <li><strong>Optimum Temperature:</strong> 37°C</li>
+        <li><strong>Denaturation:</strong> High temperature/pH se activity lost</li>
+      </ul>
+
+      <h3>3.2 Important Enzymes</h3>
+
+      <table>
+        <thead><tr><th>Enzyme</th><th>Substrate</th><th>Product</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Amylase</strong></td><td>Starch</td><td>Maltose</td></tr>
+          <tr><td><strong>Maltase</strong></td><td>Maltose</td><td>Glucose</td></tr>
+          <tr><td><strong>Lactase</strong></td><td>Lactose</td><td>Glucose + Galactose</td></tr>
+          <tr><td><strong>Invertase</strong></td><td>Sucrose</td><td>Glucose + Fructose</td></tr>
+          <tr><td><strong>Pepsin</strong></td><td>Proteins</td><td>Peptides</td></tr>
+          <tr><td><strong>Trypsin</strong></td><td>Proteins</td><td>Peptides</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Amylase:</strong> Starch → Maltose</li>
+          <li><strong>Maltase:</strong> Maltose → Glucose</li>
+          <li><strong>Invertase:</strong> Sucrose → Glucose + Fructose</li>
+          <li><strong>Zymase:</strong> Glucose → Ethanol + CO₂</li>
+        </ul>
+      </div>
+
+      <h2>4. Vitamins</h2>
+
+      <h3>4.1 Classification</h3>
+
+      <table>
+        <thead><tr><th>Type</th><th>Vitamins</th><th>Solubility</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fat-Soluble</strong></td><td>A, D, E, K</td><td>Fat mein soluble</td></tr>
+          <tr><td><strong>Water-Soluble</strong></td><td>B-complex, C</td><td>Water mein soluble</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Important Vitamins</h3>
+
+      <table>
+        <thead><tr><th>Vitamin</th><th>Chemical Name</th><th>Deficiency Disease</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A</strong></td><td>Retinol</td><td>Night blindness</td></tr>
+          <tr><td><strong>B₁</strong></td><td>Thiamine</td><td>Beriberi</td></tr>
+          <tr><td><strong>B₂</strong></td><td>Riboflavin</td><td>Ariboflavinosis</td></tr>
+          <tr><td><strong>B₃</strong></td><td>Niacin</td><td>Pellagra</td></tr>
+          <tr><td><strong>B₆</strong></td><td>Pyridoxine</td><td>Anaemia</td></tr>
+          <tr><td><strong>B₁₂</strong></td><td>Cyanocobalamin</td><td>Pernicious anaemia</td></tr>
+          <tr><td><strong>C</strong></td><td>Ascorbic acid</td><td>Scurvy</td></tr>
+          <tr><td><strong>D</strong></td><td>Calciferol</td><td>Rickets</td></tr>
+          <tr><td><strong>E</strong></td><td>Tocopherol</td><td>Muscular weakness</td></tr>
+          <tr><td><strong>K</strong></td><td>Phylloquinone</td><td>Blood clotting</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Vitamin C:</strong> Ascorbic acid (Scurvy)</li>
+          <li><strong>Vitamin D:</strong> Calciferol (Rickets)</li>
+          <li><strong>Vitamin B₁₂:</strong> Cyanocobalamin (Pernicious anaemia)</li>
+          <li><strong>Vitamin K:</strong> Blood clotting</li>
+        </ul>
+      </div>
+
+      <h2>5. Nucleic Acids</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Biomolecules jo genetic information carry karte hain. Nucleotides ke polymers.</p>
+      </div>
+
+      <h3>5.1 Nucleotide Components</h3>
+
+      <ul>
+        <li><strong>Pentose Sugar:</strong> Ribose (RNA) / Deoxyribose (DNA)</li>
+        <li><strong>Nitrogenous Base:</strong> Purines (A, G) / Pyrimidines (C, T, U)</li>
+        <li><strong>Phosphate Group:</strong> H₃PO₄</li>
+      </ul>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Nucleic Acids — DNA vs RNA</text>
+          
+          <!-- DNA -->
+          <rect x="50" y="50" width="280" height="150" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" rx="8"/>
+          <text x="150" y="80" fill="#1a73e8" font-weight="700" font-size="14">DNA</text>
+          <text x="70" y="105" fill="#202124" font-size="11">• Deoxyribose sugar</text>
+          <text x="70" y="125" fill="#202124" font-size="11">• Bases: A, T, G, C</text>
+          <text x="70" y="145" fill="#202124" font-size="11">• Double helix</text>
+          <text x="70" y="165" fill="#202124" font-size="11">• Genetic information</text>
+          <text x="70" y="185" fill="#5f6368" font-size="10">(Watson & Crick, 1953)</text>
+          
+          <!-- RNA -->
+          <rect x="370" y="50" width="280" height="150" fill="#e6f4ea" stroke="#34a853" stroke-width="2" rx="8"/>
+          <text x="470" y="80" fill="#34a853" font-weight="700" font-size="14">RNA</text>
+          <text x="390" y="105" fill="#202124" font-size="11">• Ribose sugar</text>
+          <text x="390" y="125" fill="#202124" font-size="11">• Bases: A, U, G, C</text>
+          <text x="390" y="145" fill="#202124" font-size="11">• Single strand</text>
+          <text x="390" y="165" fill="#202124" font-size="11">• Protein synthesis</text>
+          <text x="390" y="185" fill="#5f6368" font-size="10">(3 types: m, r, t)</text>
+        </svg>
+        <div class="diagram-caption">DNA vs RNA — Differences</div>
+      </div>
+
+      <h3>5.2 DNA Double Helix — Key Points</h3>
+
+      <ul>
+        <li><strong>Watson & Crick (1953)</strong> — Double helix model</li>
+        <li><strong>A = T</strong> (2 H-bonds), <strong>G ≡ C</strong> (3 H-bonds)</li>
+        <li><strong>Antiparallel strands</strong> (5' → 3' and 3' → 5')</li>
+        <li><strong>B-DNA:</strong> Right-handed helix</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>DNA:</strong> Deoxyribose, Thymine, Double helix</li>
+          <li><strong>RNA:</strong> Ribose, Uracil, Single strand</li>
+          <li><strong>A=T:</strong> 2 H-bonds, <strong>G≡C:</strong> 3 H-bonds</li>
+        </ul>
+      </div>
+
+      <h2>6. Hormones</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Chemical messengers jo endocrine glands se secrete hote hain aur body functions regulate karte hain.</p>
+      </div>
+
+      <h3>6.1 Important Hormones</h3>
+
+      <table>
+        <thead><tr><th>Hormone</th><th>Gland</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Insulin</strong></td><td>Pancreas</td><td>Blood sugar ↓</td></tr>
+          <tr><td><strong>Glucagon</strong></td><td>Pancreas</td><td>Blood sugar ↑</td></tr>
+          <tr><td><strong>Thyroxine</strong></td><td>Thyroid</td><td>Metabolism</td></tr>
+          <tr><td><strong>Adrenaline</strong></td><td>Adrenal</td><td>Emergency response</td></tr>
+          <tr><td><strong>Testosterone</strong></td><td>Testes</td><td>Male sex hormone</td></tr>
+          <tr><td><strong>Estrogen</strong></td><td>Ovary</td><td>Female sex hormone</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Insulin:</strong> Protein hormone (Diabetes)</li>
+          <li><strong>Thyroxine:</strong> Iodine-containing (Goitre)</li>
+          <li><strong>Adrenaline:</strong> Emergency hormone</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Biomolecules</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Glucose vs Fructose</span>
+        <p><strong>Q:</strong> Differentiate glucose and fructose structurally.</p>
+        <ol>
+          <li>Glucose → Aldohexose (−CHO group)</li>
+          <li>Fructose → Ketohexose (>C=O group)</li>
+          <li>Both C₆H₁₂O₆ (isomers)</li>
+          <li><strong>Answer: Glucose (Aldose), Fructose (Ketose)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Reducing Sugars</span>
+        <p><strong>Q:</strong> Which is a non-reducing sugar: Sucrose, Maltose, Lactose?</p>
+        <ol>
+          <li>Sucrose: Glycosidic linkage (both anomeric C)</li>
+          <li>Maltose, Lactose: Free anomeric C</li>
+          <li><strong>Answer: Sucrose (Non-reducing)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Peptide Bond</span>
+        <p><strong>Q:</strong> What is a peptide bond? Write its structure.</p>
+        <ol>
+          <li>Amino acids ke beech ka bond</li>
+          <li>−CO−NH− linkage</li>
+          <li>Condensation reaction se banta hai (H₂O nikalta hai)</li>
+          <li><strong>Answer: −CO−NH− (Amide bond)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Protein Structure</span>
+        <p><strong>Q:</strong> What happens during denaturation of proteins?</p>
+        <ol>
+          <li>Secondary aur tertiary structure destroy</li>
+          <li>Primary structure intact</li>
+          <li>H-bonding, disulphide bonds toot jaate hain</li>
+          <li><strong>Answer: 2°/3° structure lost, 1° retained</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Enzyme Specificity</span>
+        <p><strong>Q:</strong> Which enzyme catalyses: Starch → Maltose?</p>
+        <ol>
+          <li>Amylase → Starch → Maltose</li>
+          <li>Maltase → Maltose → Glucose</li>
+          <li><strong>Answer: Amylase</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Vitamin Deficiency</span>
+        <p><strong>Q:</strong> Which vitamin deficiency causes Scurvy?</p>
+        <ol>
+          <li>Scurvy → Vitamin C deficiency</li>
+          <li>Ascorbic acid</li>
+          <li><strong>Answer: Vitamin C</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Vitamin B₁₂</span>
+        <p><strong>Q:</strong> Chemical name of Vitamin B₁₂?</p>
+        <ol>
+          <li>B₁₂ → Cyanocobalamin</li>
+          <li>Contains Cobalt</li>
+          <li><strong>Answer: Cyanocobalamin</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: DNA Bases</span>
+        <p><strong>Q:</strong> Which base is present in RNA but not in DNA?</p>
+        <ol>
+          <li>DNA: A, T, G, C</li>
+          <li>RNA: A, U, G, C</li>
+          <li><strong>Answer: Uracil (U)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: DNA H-bonds</span>
+        <p><strong>Q:</strong> How many H-bonds are there between G and C?</p>
+        <ol>
+          <li>A=T → 2 H-bonds</li>
+          <li>G≡C → 3 H-bonds</li>
+          <li><strong>Answer: 3 H-bonds</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Insulin</span>
+        <p><strong>Q:</strong> Which hormone is secreted by pancreas and lowers blood sugar?</p>
+        <ol>
+          <li>Insulin → Blood sugar ↓</li>
+          <li>Glucagon → Blood sugar ↑</li>
+          <li><strong>Answer: Insulin</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ PATTERNS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Biomolecules PYQ Patterns</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka deep analysis — question type, concept, aur solution approach.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Question Type</th><th>Concept</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Glucose structure, Vitamin deficiency</td><td>Aldohexose, Scurvy</td></tr>
+          <tr><td><strong>2020</strong></td><td>Protein structure, Enzyme specificity</td><td>Peptide bond, Amylase</td></tr>
+          <tr><td><strong>2021</strong></td><td>DNA vs RNA, Reducing sugars</td><td>Uracil, Sucrose</td></tr>
+          <tr><td><strong>2022</strong></td><td>Peptide bond, Vitamin B₁₂</td><td>−CO−NH−, Cyanocobalamin</td></tr>
+          <tr><td><strong>2023</strong></td><td>DNA H-bonds, Denaturation</td><td>G≡C (3 H-bonds), 2°/3° lost</td></tr>
+          <tr><td><strong>2024</strong></td><td>Carbohydrate classification, Hormones</td><td>Reducing/Non-reducing, Insulin</td></tr>
+          <tr><td><strong>2025</strong></td><td>Enzymes, Nucleic acids, Vitamins</td><td>Amylase, DNA structure, Deficiency</td></tr>
+          <tr><td><strong>2026</strong></td><td>Glucose reactions, Protein structure, DNA</td><td>Aldohexose, Peptide, Double helix</td></tr>
+        </tbody>
+      </table>
+
+      <h3>🧠 Concept 1: Carbohydrates (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal 1–2 questions</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Glucose:</strong> Aldohexose (−CHO)</li>
+          <li><strong>Fructose:</strong> Ketohexose (>C=O)</li>
+          <li><strong>Sucrose:</strong> Non-reducing (α-1,β-2)</li>
+          <li><strong>Maltose, Lactose:</strong> Reducing</li>
+          <li><strong>Starch:</strong> α-1,4 + α-1,6</li>
+          <li><strong>Cellulose:</strong> β-1,4</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Proteins & Enzymes (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Peptide bond:</strong> −CO−NH−</li>
+          <li><strong>Denaturation:</strong> 2°/3° lost, 1° retained</li>
+          <li><strong>Amylase:</strong> Starch → Maltose</li>
+          <li><strong>Maltase:</strong> Maltose → Glucose</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Vitamins (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Vitamin C:</strong> Ascorbic acid (Scurvy)</li>
+          <li><strong>Vitamin D:</strong> Calciferol (Rickets)</li>
+          <li><strong>Vitamin B₁₂:</strong> Cyanocobalamin (Pernicious anaemia)</li>
+          <li><strong>Vitamin K:</strong> Blood clotting</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Nucleic Acids (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2023, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>DNA:</strong> Deoxyribose, Thymine, Double helix</li>
+          <li><strong>RNA:</strong> Ribose, Uracil, Single strand</li>
+          <li><strong>A=T:</strong> 2 H-bonds, <strong>G≡C:</strong> 3 H-bonds</li>
+          <li><strong>Watson & Crick:</strong> Double helix model (1953)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Hormones (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2024, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Insulin:</strong> Protein hormone (Blood sugar ↓)</li>
+          <li><strong>Thyroxine:</strong> Iodine-containing (Goitre)</li>
+          <li><strong>Adrenaline:</strong> Emergency hormone</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Carbohydrates</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Proteins/Enzymes</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Vitamins</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Nucleic Acids</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Hormones</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Carbohydrates (5/5), Proteins/Enzymes (3/5), Vitamins (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Biomolecules (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>Glucose:</strong> Aldohexose (−CHO)</li>
+          <li><strong>Fructose:</strong> Ketohexose (>C=O)</li>
+          <li><strong>Sucrose:</strong> Non-reducing (α-1,β-2)</li>
+          <li><strong>Maltose, Lactose:</strong> Reducing</li>
+          <li><strong>Peptide bond:</strong> −CO−NH−</li>
+          <li><strong>Denaturation:</strong> 2°/3° lost, 1° retained</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Sucrose:</strong> Non-reducing (glycosidic linkage)</li>
+          <li><strong>DNA:</strong> Deoxyribose, Thymine</li>
+          <li><strong>RNA:</strong> Ribose, Uracil</li>
+          <li><strong>G≡C:</strong> 3 H-bonds, <strong>A=T:</strong> 2 H-bonds</li>
+          <li><strong>Denaturation:</strong> Primary structure intact</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Important Values</span>
+        <ul>
+          <li><strong>Vitamin C:</strong> Ascorbic acid (Scurvy)</li>
+          <li><strong>Vitamin D:</strong> Calciferol (Rickets)</li>
+          <li><strong>Vitamin B₁₂:</strong> Cyanocobalamin</li>
+          <li><strong>Amylase:</strong> Starch → Maltose</li>
+          <li><strong>Maltase:</strong> Maltose → Glucose</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Nucleic Acids</span>
+        <ul>
+          <li><strong>DNA:</strong> Double helix (Watson & Crick)</li>
+          <li><strong>RNA:</strong> Single strand</li>
+          <li><strong>Bases:</strong> Purines (A, G), Pyrimidines (C, T, U)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: DIAGRAM SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Diagram Sheet — Biomolecules</h2>
+      <p style="color: #5f6368;">Saare important diagrams ek jagah — visual learning ke liye best.</p>
+
+      <div class="formula-category">1. CARBOHYDRATE CLASSIFICATION</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Carbohydrate Classification</text>
+          
+          <rect x="50" y="50" width="180" height="50" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" rx="8"/>
+          <text x="75" y="80" fill="#1a73e8" font-weight="600" font-size="13">Monosaccharides</text>
+          <text x="60" y="120" fill="#202124" font-size="11">Glucose, Fructose</text>
+          
+          <rect x="270" y="50" width="180" height="50" fill="#fef7e0" stroke="#f9ab00" stroke-width="2" rx="8"/>
+          <text x="295" y="80" fill="#f9ab00" font-weight="600" font-size="13">Oligosaccharides</text>
+          <text x="280" y="120" fill="#202124" font-size="11">Sucrose, Maltose</text>
+          
+          <rect x="490" y="50" width="180" height="50" fill="#e6f4ea" stroke="#34a853" stroke-width="2" rx="8"/>
+          <text x="515" y="80" fill="#34a853" font-weight="600" font-size="13">Polysaccharides</text>
+          <text x="500" y="120" fill="#202124" font-size="11">Starch, Cellulose</text>
+          
+          <text x="50" y="170" fill="#1a73e8" font-weight="600" font-size="12">Reducing Sugars:</text>
+          <text x="50" y="190" fill="#202124" font-size="11">Glucose, Fructose, Maltose, Lactose</text>
+          <text x="50" y="210" fill="#ea4335" font-weight="600" font-size="12">Non-Reducing:</text>
+          <text x="180" y="210" fill="#202124" font-size="11">Sucrose</text>
+        </svg>
+        <div class="diagram-caption">Carbohydrate Classification</div>
+      </div>
+
+      <div class="formula-category">2. GLUCOSE — HAWORTH PROJECTION</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Glucose — Haworth Projection</text>
+          
+          <polygon points="150,100 200,70 250,100 250,150 200,180 150,150" fill="none" stroke="#202124" stroke-width="2"/>
+          <text x="230" y="85" fill="#ea4335" font-weight="700" font-size="14">O</text>
+          <text x="105" y="95" fill="#34a853" font-size="11">HO</text>
+          <text x="265" y="95" fill="#34a853" font-size="11">OH</text>
+          <text x="265" y="155" fill="#34a853" font-size="11">OH</text>
+          <text x="105" y="165" fill="#34a853" font-size="11">OH</text>
+          <text x="195" y="195" fill="#34a853" font-size="11">OH</text>
+          <text x="195" y="60" fill="#34a853" font-size="11">CH₂OH</text>
+          
+          <text x="400" y="80" fill="#5f6368" font-size="11">• Pyranose ring</text>
+          <text x="400" y="100" fill="#5f6368" font-size="11">• Anomeric C: C1</text>
+          <text x="400" y="120" fill="#5f6368" font-size="11">• α and β forms</text>
+        </svg>
+        <div class="diagram-caption">Glucose — Cyclic Structure</div>
+      </div>
+
+      <div class="formula-category">3. PEPTIDE BOND</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Peptide Bond Formation</text>
+          
+          <text x="50" y="70" fill="#202124" font-size="13" font-weight="600">H₂N−CHR−COOH</text>
+          <text x="220" y="70" fill="#1a73e8" font-size="14">+</text>
+          <text x="260" y="70" fill="#202124" font-size="13" font-weight="600">H₂N−CHR'−COOH</text>
+          <text x="450" y="70" fill="#1a73e8" font-size="18">→</text>
+          <text x="490" y="60" fill="#202124" font-size="13" font-weight="600">H₂N−CHR−CO−NH−CHR'−COOH</text>
+          <text x="510" y="85" fill="#ea4335" font-size="11">(Peptide Bond: −CO−NH−)</text>
+          <text x="510" y="105" fill="#5f6368" font-size="11">+ H₂O</text>
+        </svg>
+        <div class="diagram-caption">Peptide Bond — −CO−NH−</div>
+      </div>
+
+      <div class="formula-category">4. DNA vs RNA</div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">DNA vs RNA</text>
+          
+          <rect x="50" y="50" width="280" height="150" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" rx="8"/>
+          <text x="150" y="80" fill="#1a73e8" font-weight="700" font-size="14">DNA</text>
+          <text x="70" y="105" fill="#202124" font-size="11">• Deoxyribose sugar</text>
+          <text x="70" y="125" fill="#202124" font-size="11">• Bases: A, T, G, C</text>
+          <text x="70" y="145" fill="#202124" font-size="11">• Double helix</text>
+          <text x="70" y="165" fill="#202124" font-size="11">• Genetic information</text>
+          <text x="70" y="185" fill="#5f6368" font-size="10">(Watson & Crick, 1953)</text>
+          
+          <rect x="370" y="50" width="280" height="150" fill="#e6f4ea" stroke="#34a853" stroke-width="2" rx="8"/>
+          <text x="470" y="80" fill="#34a853" font-weight="700" font-size="14">RNA</text>
+          <text x="390" y="105" fill="#202124" font-size="11">• Ribose sugar</text>
+          <text x="390" y="125" fill="#202124" font-size="11">• Bases: A, U, G, C</text>
+          <text x="390" y="145" fill="#202124" font-size="11">• Single strand</text>
+          <text x="390" y="165" fill="#202124" font-size="11">• Protein synthesis</text>
+          <text x="390" y="185" fill="#5f6368" font-size="10">(3 types: m, r, t)</text>
+        </svg>
+        <div class="diagram-caption">DNA vs RNA — Complete Comparison</div>
+      </div>
+
+      <div class="formula-category">5. IMPORTANT TESTS</div>
+
+      <table>
+        <thead><tr><th>Test</th><th>Positive For</th><th>Observation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tollens</strong></td><td>Reducing sugar</td><td>Silver mirror</td></tr>
+          <tr><td><strong>Fehling</strong></td><td>Reducing sugar</td><td>Red ppt (Cu₂O)</td></tr>
+          <tr><td><strong>Molisch</strong></td><td>Carbohydrates</td><td>Violet ring</td></tr>
+          <tr><td><strong>Biuret</strong></td><td>Proteins</td><td>Violet colour</td></tr>
+          <tr><td><strong>Xanthoproteic</strong></td><td>Proteins (Aromatic)</td><td>Yellow colour</td></tr>
+        </tbody>
+      </table>
+
+      <div class="formula-category">6. VITAMIN DEFICIENCY DISEASES</div>
+
+      <table>
+        <thead><tr><th>Vitamin</th><th>Deficiency Disease</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A</strong></td><td>Night blindness</td></tr>
+          <tr><td><strong>B₁</strong></td><td>Beriberi</td></tr>
+          <tr><td><strong>B₃</strong></td><td>Pellagra</td></tr>
+          <tr><td><strong>B₁₂</strong></td><td>Pernicious anaemia</td></tr>
+          <tr><td><strong>C</strong></td><td>Scurvy</td></tr>
+          <tr><td><strong>D</strong></td><td>Rickets</td></tr>
+          <tr><td><strong>E</strong></td><td>Muscular weakness</td></tr>
+          <tr><td><strong>K</strong></td><td>Blood clotting</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

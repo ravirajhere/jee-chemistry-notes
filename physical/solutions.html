@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions | JEE Chemistry Notes</title>
+  <meta name="description" content="Solutions Notes for JEE Mains — Colligative Properties, Raoult's Law, Van't Hoff Factor, Henry's Law, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Solutions
+  </div>
+
+  <header class="chapter-header">
+    <h1>Solutions</h1>
+    <p>Colligative Properties, Raoult's Law, Van't Hoff Factor, Henry's Law</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Types of Solutions</h2>
+
+      <table>
+        <thead><tr><th>Solute</th><th>Solvent</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Solid</td><td>Solid</td><td>Alloys (Brass)</td></tr>
+          <tr><td>Solid</td><td>Liquid</td><td>Salt in water</td></tr>
+          <tr><td>Liquid</td><td>Liquid</td><td>Alcohol in water</td></tr>
+          <tr><td>Gas</td><td>Liquid</td><td>O₂ in water</td></tr>
+          <tr><td>Gas</td><td>Gas</td><td>Air</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Concentration Terms</h2>
+
+      <div class="box">
+        <span class="box-title">Important Terms</span>
+        <ul>
+          <li><strong>Molarity (M):</strong> Moles of solute per litre of solution. Temperature-dependent.</li>
+          <li><strong>Molality (m):</strong> Moles of solute per kg of solvent. Temperature-independent.</li>
+          <li><strong>Mole Fraction (X):</strong> Moles of component / Total moles</li>
+          <li><strong>Mass % :</strong> (Mass of solute / Mass of solution) × 100</li>
+          <li><strong>ppm:</strong> Parts per million</li>
+        </ul>
+      </div>
+
+      <div class="formula">
+        M = (w × 1000) / (M_w × V)
+      </div>
+      <div class="formula">
+        m = (w × 1000) / (M_w × W_solvent)
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Molarity temperature-dependent</strong> hai (volume change hota hai)</p>
+        <p><strong>Molality temperature-independent</strong> hai (mass change nahi hota)</p>
+      </div>
+
+      <h2>3. Raoult's Law</h2>
+
+      <div class="box">
+        <span class="box-title">For Volatile Solute-Solvent (Binary Solution)</span>
+        <p>P_total = P_A + P_B</p>
+        <p>P_A = P_A° × X_A (Partial vapour pressure of A)</p>
+        <p>P_B = P_B° × X_B (Partial vapour pressure of B)</p>
+      </div>
+
+      <div class="formula">
+        P_total = P_A° X_A + P_B° X_B
+      </div>
+
+      <h3>3.1 Vapour Phase Composition</h3>
+      <div class="formula">
+        Y_A = P_A / P_total
+      </div>
+      <div class="formula">
+        Y_B = P_B / P_total
+      </div>
+
+      <div class="box">
+        <span class="box-title">For Non-Volatile Solute</span>
+        <p>P_total = P_A° × X_A (solute ka vapour pressure zero)</p>
+        <p>Relative lowering of vapour pressure = (P_A° − P_A) / P_A° = X_B</p>
+      </div>
+
+      <h3>3.2 Raoult's Law for Non-Ideal Solutions</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Deviation</th><th>ΔH_mix</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Positive</strong></td><td>P > P_Raoult</td><td>+ve</td><td>Ethanol + Acetone</td></tr>
+          <tr><td><strong>Negative</strong></td><td>P < P_Raoult</td><td>−ve</td><td>Acetone + Chloroform</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Positive deviation:</strong> Weaker unlike forces (A-B)</li>
+          <li><strong>Negative deviation:</strong> Stronger unlike forces (A-B)</li>
+          <li><strong>Minimum boiling azeotrope:</strong> Positive deviation</li>
+          <li><strong>Maximum boiling azeotrope:</strong> Negative deviation</li>
+        </ul>
+      </div>
+
+      <h2>4. Colligative Properties</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>Aise properties jo solute particles ki <strong>number</strong> par depend karti hain, nature par nahi.</p>
+      </div>
+
+      <h3>4.1 Relative Lowering of Vapour Pressure</h3>
+      <div class="formula">
+        (P° − P) / P° = X_solute = n / (n + N)
+      </div>
+      <p>For dilute solution: (P° − P) / P° = n / N = w × M / (m × W)</p>
+
+      <h3>4.2 Elevation of Boiling Point</h3>
+      <div class="formula">
+        ΔT_b = i × K_b × m
+      </div>
+      <p>Jahan K_b = molal elevation constant, m = molality, i = Van't Hoff factor</p>
+
+      <h3>4.3 Depression of Freezing Point</h3>
+      <div class="formula">
+        ΔT_f = i × K_f × m
+      </div>
+      <p>Jahan K_f = molal depression constant</p>
+
+      <h3>4.4 Osmotic Pressure</h3>
+      <div class="formula">
+        π = i × C × R × T
+      </div>
+      <div class="formula">
+        π = i × (n/V) × R × T
+      </div>
+      <p>Jahan C = molarity, R = 0.0821 L·atm/K·mol, T = temperature (K)</p>
+
+      <h2>5. Van't Hoff Factor (i)</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p>i = (Observed colligative property) / (Calculated colligative property)</p>
+        <p>i = (Normal molar mass) / (Abnormal molar mass)</p>
+      </div>
+
+      <table>
+        <thead><tr><th>Type</th><th>i</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>No change</strong></td><td>1</td><td>Glucose, Urea</td></tr>
+          <tr><td><strong>Dissociation</strong></td><td>> 1</td><td>NaCl (i = 2), CaCl₂ (i = 3)</td></tr>
+          <tr><td><strong>Association</strong></td><td>< 1</td><td>Benzoic acid in benzene (i = 0.5)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Dissociation:</strong> i = 1 + (n−1)α</li>
+          <li><strong>Association:</strong> i = 1 − (1 − 1/n)α</li>
+          <li>Dimerization (n = 2): i = 1 − α/2</li>
+        </ul>
+      </div>
+
+      <h2>6. Henry's Law</h2>
+
+      <div class="box">
+        <span class="box-title">Statement</span>
+        <p>Gas ki solubility liquid mein uske partial pressure ke directly proportional hoti hai.</p>
+        <p>P = K_H × X</p>
+      </div>
+
+      <div class="formula">
+        P = K_H × X_gas
+      </div>
+      <p>Jahan K_H = Henry's law constant, X_gas = mole fraction of gas in solution</p>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>K_H</strong> temperature ke saath badhta hai (solubility decrease)</li>
+          <li>Higher K_H → Lower solubility</li>
+          <li>Application: Scuba diving, Soft drinks, Oxygen tanks</li>
+        </ul>
+      </div>
+
+      <h2>7. Osmotic Pressure & Osmosis</h2>
+
+      <div class="box">
+        <span class="box-title">Osmosis</span>
+        <p>Solvent molecules ka movement semi-permeable membrane ke through, higher concentration se lower concentration ki taraf.</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Osmotic Pressure</span>
+        <p>Minimum pressure jo osmosis ko rokne ke liye apply karni padti hai.</p>
+        <p><strong>π = iCRT</strong></p>
+      </div>
+
+      <h3>7.1 Types of Solutions (Osmotic Pressure ke hisaab se)</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Isotonic</strong></td><td>Same osmotic pressure</td></tr>
+          <tr><td><strong>Hypertonic</strong></td><td>Higher osmotic pressure</td></tr>
+          <tr><td><strong>Hypotonic</strong></td><td>Lower osmotic pressure</td></tr>
+        </tbody>
+      </table>
+
+      <h2>8. Abnormal Molar Mass</h2>
+
+      <div class="box">
+        <span class="box-title">Cause</span>
+        <ul>
+          <li><strong>Dissociation:</strong> i > 1, observed molar mass < normal</li>
+          <li><strong>Association:</strong> i < 1, observed molar mass > normal</li>
+        </ul>
+      </div>
+
+      <div class="formula">
+        i = Normal molar mass / Observed molar mass
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>NaCl</strong> → i = 2 (Na⁺ + Cl⁻)</li>
+          <li><strong>CaCl₂</strong> → i = 3 (Ca²⁺ + 2Cl⁻)</li>
+          <li><strong>K₄[Fe(CN)₆]</strong> → i = 5</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Solutions</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: Molarity Calculation</span>
+        <p><strong>Q:</strong> Find molarity of solution containing 5.85 g NaCl in 500 mL solution. (M(NaCl) = 58.5)</p>
+        <ol>
+          <li>Moles of NaCl = 5.85 / 58.5 = 0.1 mol</li>
+          <li>Volume = 500 mL = 0.5 L</li>
+          <li>M = moles / volume = 0.1 / 0.5</li>
+          <li>M = <strong>0.2 M</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Molality Calculation</span>
+        <p><strong>Q:</strong> Find molality of solution containing 4 g NaOH in 500 g water. (M(NaOH) = 40)</p>
+        <ol>
+          <li>Moles of NaOH = 4 / 40 = 0.1 mol</li>
+          <li>Mass of solvent = 500 g = 0.5 kg</li>
+          <li>m = moles / mass of solvent (kg) = 0.1 / 0.5</li>
+          <li>m = <strong>0.2 mol/kg</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: Raoult's Law — Vapour Pressure</span>
+        <p><strong>Q:</strong> P°_A = 100 mm Hg, P°_B = 200 mm Hg, X_A = 0.4. Find P_total.</p>
+        <ol>
+          <li>X_B = 1 − 0.4 = 0.6</li>
+          <li>P_A = P°_A × X_A = 100 × 0.4 = 40 mm</li>
+          <li>P_B = P°_B × X_B = 200 × 0.6 = 120 mm</li>
+          <li>P_total = 40 + 120 = <strong>160 mm Hg</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: Relative Lowering of Vapour Pressure</span>
+        <p><strong>Q:</strong> P° = 100 mm, P = 90 mm. Find mole fraction of solute.</p>
+        <ol>
+          <li>(P° − P) / P° = (100 − 90) / 100 = 0.1</li>
+          <li>X_solute = 0.1</li>
+          <li>X_solute = <strong>0.1</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: Elevation of Boiling Point</span>
+        <p><strong>Q:</strong> Find ΔTb for 0.1 m glucose solution. (Kb = 0.52 K·kg/mol)</p>
+        <ol>
+          <li>Glucose → No dissociation → i = 1</li>
+          <li>ΔTb = i × Kb × m</li>
+          <li>ΔTb = 1 × 0.52 × 0.1</li>
+          <li>ΔTb = <strong>0.052 K</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: Depression of Freezing Point</span>
+        <p><strong>Q:</strong> Find ΔTf for 0.1 m NaCl solution. (Kf = 1.86 K·kg/mol)</p>
+        <ol>
+          <li>NaCl → i = 2</li>
+          <li>ΔTf = i × Kf × m</li>
+          <li>ΔTf = 2 × 1.86 × 0.1</li>
+          <li>ΔTf = <strong>0.372 K</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Osmotic Pressure</span>
+        <p><strong>Q:</strong> Find osmotic pressure of 0.1 M glucose solution at 300 K. (R = 0.0821 L·atm/K·mol)</p>
+        <ol>
+          <li>π = iCRT</li>
+          <li>π = 1 × 0.1 × 0.0821 × 300</li>
+          <li>π = <strong>2.463 atm</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Van't Hoff Factor (Dissociation)</span>
+        <p><strong>Q:</strong> Find i for 0.1 M CaCl₂ if α = 0.8.</p>
+        <ol>
+          <li>CaCl₂ → Ca²⁺ + 2Cl⁻ → n = 3</li>
+          <li>i = 1 + (n−1)α = 1 + (3−1) × 0.8</li>
+          <li>i = 1 + 1.6</li>
+          <li>i = <strong>2.6</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Van't Hoff Factor (Association)</span>
+        <p><strong>Q:</strong> Benzoic acid dimerizes in benzene with α = 0.6. Find i.</p>
+        <ol>
+          <li>Dimerization → n = 2</li>
+          <li>i = 1 − (1 − 1/n)α = 1 − (1 − 1/2) × 0.6</li>
+          <li>i = 1 − 0.5 × 0.6 = 1 − 0.3</li>
+          <li>i = <strong>0.7</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: Henry's Law</span>
+        <p><strong>Q:</strong> KH = 100 bar, partial pressure of gas = 10 bar. Find mole fraction of gas in solution.</p>
+        <ol>
+          <li>P = KH × X</li>
+          <li>10 = 100 × X</li>
+          <li>X = 10 / 100</li>
+          <li>X = <strong>0.1</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Solutions PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Raoult's Law, Colligative Properties, Van't Hoff Factor</td></tr>
+          <tr><td><strong>2020</strong></td><td>Depression of Freezing Point, Osmotic Pressure</td></tr>
+          <tr><td><strong>2021</strong></td><td>Molarity-Molality, Non-Ideal Solutions</td></tr>
+          <tr><td><strong>2022</strong></td><td>Colligative Properties, Van't Hoff Factor, Henry's Law</td></tr>
+          <tr><td><strong>2023</strong></td><td>Raoult's Law, Vapour Pressure, Azeotropes</td></tr>
+          <tr><td><strong>2024</strong></td><td>Colligative Properties, Osmotic Pressure, Concentration Terms</td></tr>
+          <tr><td><strong>2025</strong></td><td>Depression of Freezing Point, Van't Hoff Factor</td></tr>
+          <tr><td><strong>2026</strong></td><td>Colligative Properties, Raoult's Law, Concentration Terms</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Colligative Properties (ΔTf, ΔTb, π)</strong> → Har saal aata hai</li>
+          <li><strong>Van't Hoff Factor</strong> → 2019, 2022, 2025</li>
+          <li><strong>Raoult's Law & Vapour Pressure</strong> → 2019, 2023, 2026</li>
+          <li><strong>Concentration Terms</strong> → 2021, 2024, 2026</li>
+          <li><strong>Henry's Law</strong> → 2022</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Colligative Properties</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>ΔTf = i × Kf × m</strong></li>
+          <li><strong>ΔTb = i × Kb × m</strong></li>
+          <li><strong>π = iCRT</strong></li>
+          <li>Van't Hoff factor (i) integration mandatory</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Van't Hoff Factor (i)</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Dissociation:</strong> i = 1 + (n−1)α</li>
+          <li><strong>Association:</strong> i = 1 − (1−1/n)α</li>
+          <li>NaCl → i = 2, CaCl₂ → i = 3</li>
+          <li>Benzoic acid in benzene → i = 0.5 (dimer)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Raoult's Law & Vapour Pressure</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2023, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>P_total = P_A° X_A + P_B° X_B</strong></li>
+          <li>Vapour phase composition: Y_A = P_A / P_total</li>
+          <li>Relative lowering = X_solute</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Non-Ideal Solutions</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2023</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Positive deviation:</strong> Ethanol + Acetone, ΔH > 0</li>
+          <li><strong>Negative deviation:</strong> Acetone + Chloroform, ΔH < 0</li>
+          <li><strong>Minimum boiling azeotrope:</strong> Positive</li>
+          <li><strong>Maximum boiling azeotrope:</strong> Negative</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Concentration Terms</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Molarity (M):</strong> Temperature-dependent</li>
+          <li><strong>Molality (m):</strong> Temperature-independent</li>
+          <li>Conversion: M → m without formula memorization</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Colligative Properties</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Van't Hoff Factor</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Raoult's Law</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Concentration Terms</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Colligative Properties (5/5), Van't Hoff Factor (3/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Solutions (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Molarity:</strong> M = (w × 1000) / (M_w × V)</li>
+          <li><strong>Molality:</strong> m = (w × 1000) / (M_w × W_solvent)</li>
+          <li><strong>Raoult's Law:</strong> P_total = P_A° X_A + P_B° X_B</li>
+          <li><strong>Relative Lowering:</strong> (P° − P)/P° = X_solute</li>
+          <li><strong>ΔTb = i × Kb × m</strong></li>
+          <li><strong>ΔTf = i × Kf × m</strong></li>
+          <li><strong>π = iCRT</strong></li>
+          <li><strong>Henry's Law:</strong> P = K_H × X</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Molality temperature-independent</strong> hai</li>
+          <li><strong>Molarity temperature-dependent</strong> hai</li>
+          <li><strong>Positive deviation:</strong> Ethanol + Acetone</li>
+          <li><strong>Negative deviation:</strong> Acetone + Chloroform</li>
+          <li><strong>K_H temperature ke saath badhta hai</strong></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Van't Hoff Factor</span>
+        <ul>
+          <li><strong>No change:</strong> i = 1 (Glucose)</li>
+          <li><strong>Dissociation:</strong> i > 1 (NaCl → 2, CaCl₂ → 3)</li>
+          <li><strong>Association:</strong> i < 1 (Benzoic acid in benzene → 0.5)</li>
+          <li><strong>i = Normal molar mass / Observed molar mass</strong></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Colligative Properties Summary</span>
+        <ul>
+          <li><strong>Relative Lowering:</strong> X_solute</li>
+          <li><strong>ΔTb:</strong> i Kb m</li>
+          <li><strong>ΔTf:</strong> i Kf m</li>
+          <li><strong>π:</strong> iCRT</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Non-Ideal Solutions</span>
+        <ul>
+          <li><strong>Positive Deviation:</strong> ΔH > 0, Minimum boiling azeotrope</li>
+          <li><strong>Negative Deviation:</strong> ΔH < 0, Maximum boiling azeotrope</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Solutions</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. CONCENTRATION TERMS</div>
+      <div class="formula-box"><strong>Molarity (M) = moles of solute / volume of solution (L)</strong></div>
+      <div class="formula-box"><strong>M = (w × 1000) / (M_w × V)</strong></div>
+      <div class="formula-box"><strong>Molality (m) = moles of solute / mass of solvent (kg)</strong></div>
+      <div class="formula-box"><strong>m = (w × 1000) / (M_w × W_solvent)</strong></div>
+      <div class="formula-box"><strong>Mole Fraction (X) = moles of component / total moles</strong></div>
+      <div class="formula-box"><strong>Mass % = (mass of solute / mass of solution) × 100</strong></div>
+
+      <div class="formula-category">2. RAOULT'S LAW</div>
+      <div class="formula-box"><strong>P_A = P_A° × X_A</strong></div>
+      <div class="formula-box"><strong>P_total = P_A° X_A + P_B° X_B</strong></div>
+      <div class="formula-box"><strong>Y_A = P_A / P_total</strong> (vapour phase mole fraction)</div>
+      <div class="formula-box"><strong>(P° − P) / P° = X_solute</strong> (relative lowering)</div>
+      <div class="formula-box"><strong>(P° − P) / P° = n / (n + N)</strong></div>
+
+      <div class="formula-category">3. COLLIGATIVE PROPERTIES</div>
+      <div class="formula-box"><strong>ΔTb = i × Kb × m</strong> (elevation of boiling point)</div>
+      <div class="formula-box"><strong>ΔTf = i × Kf × m</strong> (depression of freezing point)</div>
+      <div class="formula-box"><strong>π = iCRT</strong> (osmotic pressure)</div>
+      <div class="formula-box"><strong>π = i × (n/V) × R × T</strong></div>
+      <div class="formula-box"><strong>R = 0.0821 L·atm/K·mol</strong></div>
+
+      <div class="formula-category">4. VAN'T HOFF FACTOR</div>
+      <div class="formula-box"><strong>i = Observed colligative property / Calculated colligative property</strong></div>
+      <div class="formula-box"><strong>i = Normal molar mass / Observed molar mass</strong></div>
+      <div class="formula-box"><strong>Dissociation: i = 1 + (n−1)α</strong></div>
+      <div class="formula-box"><strong>Association: i = 1 − (1 − 1/n)α</strong></div>
+      <div class="formula-box"><strong>Dimerization (n=2): i = 1 − α/2</strong></div>
+
+      <div class="formula-category">5. HENRY'S LAW</div>
+      <div class="formula-box"><strong>P = K_H × X_gas</strong></div>
+      <div class="formula-box"><strong>Higher K_H → Lower solubility</strong></div>
+      <div class="formula-box"><strong>K_H temperature ke saath badhta hai</strong></div>
+
+      <div class="formula-category">6. NON-IDEAL SOLUTIONS</div>
+      <div class="formula-box"><strong>Positive Deviation:</strong> P > P_Raoult, ΔH > 0</div>
+      <div class="formula-box"><strong>Negative Deviation:</strong> P < P_Raoult, ΔH < 0</div>
+      <div class="formula-box"><strong>Minimum Boiling Azeotrope:</strong> Positive Deviation</div>
+      <div class="formula-box"><strong>Maximum Boiling Azeotrope:</strong> Negative Deviation</div>
+
+      <div class="formula-category">7. OSMOTIC PRESSURE</div>
+      <div class="formula-box"><strong>π = iCRT</strong></div>
+      <div class="formula-box"><strong>Isotonic:</strong> Same π</div>
+      <div class="formula-box"><strong>Hypertonic:</strong> Higher π</div>
+      <div class="formula-box"><strong>Hypotonic:</strong> Lower π</div>
+
+      <div class="formula-category">8. IMPORTANT VALUES</div>
+      <div class="formula-box"><strong>NaCl → i = 2</strong> (Na⁺ + Cl⁻)</div>
+      <div class="formula-box"><strong>CaCl₂ → i = 3</strong> (Ca²⁺ + 2Cl⁻)</div>
+      <div class="formula-box"><strong>K₄[Fe(CN)₆] → i = 5</strong></div>
+      <div class="formula-box"><strong>Glucose/Urea → i = 1</strong></div>
+      <div class="formula-box"><strong>Benzoic acid in benzene → i = 0.5</strong> (dimer)</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

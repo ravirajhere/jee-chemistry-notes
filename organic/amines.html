@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amines | JEE Chemistry Notes</title>
+  <meta name="description" content="Amines Deep Notes for JEE Mains — Basicity Reasoning, Exceptions, Comparison Tables, Hofmann, Gabriel, Diazonium, PYQ Patterns (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes h4 { margin-top: 1.2rem; color: var(--primary); font-size: 1.05rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    .reaction-svg { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem; margin: 0.8rem 0; }
+    .reaction-svg svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .dual-name { display: flex; justify-content: space-between; font-size: 0.75rem; color: #5f6368; padding: 0 0.5rem; margin-top: 0.2rem; }
+    .pattern-box { background: #fce8e6; border-left: 4px solid #ea4335; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; }
+    .pattern-box .box-title { color: #c5221f; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box, .reaction-svg { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Amines
+  </div>
+
+  <header class="chapter-header">
+    <h1>Amines — Deep Notes</h1>
+    <p>Basicity Reasoning, Exceptions, Comparison Tables, Mechanisms, PYQ Patterns</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Deep Theory</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Patterns (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Reaction Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: DEEP THEORY -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Classification & Nomenclature</h2>
+
+      <table>
+        <thead><tr><th>Type</th><th>Common Name</th><th>IUPAC Name</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Primary (1°)</strong></td><td>Methylamine</td><td>Methanamine</td><td>CH₃NH₂</td></tr>
+          <tr><td><strong>Secondary (2°)</strong></td><td>Dimethylamine</td><td>N-Methylmethanamine</td><td>(CH₃)₂NH</td></tr>
+          <tr><td><strong>Tertiary (3°)</strong></td><td>Trimethylamine</td><td>N,N-Dimethylmethanamine</td><td>(CH₃)₃N</td></tr>
+          <tr><td><strong>Aromatic</strong></td><td>Aniline</td><td>Benzenamine</td><td>C₆H₅NH₂</td></tr>
+          <tr><td><strong>Aryl</strong></td><td>Benzylamine</td><td>Phenylmethanamine</td><td>C₆H₅CH₂NH₂</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Aniline = Benzenamine</strong> (−NH₂ directly on benzene)</p>
+        <p><strong>Benzylamine = Phenylmethanamine</strong> (−CH₂NH₂ attached to benzene)</p>
+        <p>Ye distinction JEE Mains mein aata hai — IUPAC name identify karna.</p>
+      </div>
+
+      <h2>2. Structure & Hybridisation</h2>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Amine Structure — sp³ Nitrogen</text>
+          
+          <!-- Nitrogen -->
+          <circle cx="150" cy="100" r="22" fill="#1a73e8" opacity="0.8"/>
+          <text x="143" y="106" fill="white" font-weight="700" font-size="16">N</text>
+          
+          <!-- Lone pair -->
+          <text x="130" y="72" fill="#ea4335" font-weight="700" font-size="14">••</text>
+          <text x="90" y="65" fill="#ea4335" font-size="11">(Lone pair)</text>
+          
+          <!-- Bonds -->
+          <line x1="128" y1="90" x2="80" y2="70" stroke="#202124" stroke-width="2"/>
+          <text x="65" y="65" fill="#202124" font-size="14">R</text>
+          
+          <line x1="128" y1="110" x2="80" y2="130" stroke="#202124" stroke-width="2"/>
+          <text x="65" y="145" fill="#202124" font-size="14">R'</text>
+          
+          <line x1="172" y1="100" x2="220" y2="100" stroke="#202124" stroke-width="2"/>
+          <text x="225" y="105" fill="#202124" font-size="14">R''</text>
+
+          <!-- Properties -->
+          <text x="300" y="65" fill="#5f6368" font-size="12">• sp³ hybridised</text>
+          <text x="300" y="85" fill="#5f6368" font-size="12">• Pyramidal shape</text>
+          <text x="300" y="105" fill="#5f6368" font-size="12">• Lone pair on N (basic)</text>
+          <text x="300" y="125" fill="#5f6368" font-size="12">• Lewis base</text>
+          <text x="300" y="145" fill="#5f6368" font-size="12">• Bond angle ~107° (NH₃)</text>
+        </svg>
+        <div class="diagram-caption">Amine Structure — Nitrogen with Lone Pair (Basic Site)</div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Basicity Ka Reason (Deep)</span>
+        <p><strong>Basicity ∝ Electron density on Nitrogen</strong></p>
+        <p>Lone pair nitrogen par hota hai. Ye lone pair jitna zyada "free" aur "electron-rich" hoga, utni basicity zyada.</p>
+        <ul>
+          <li><strong>+I effect</strong> (alkyl groups) → Electron density ↑ → Basicity ↑</li>
+          <li><strong>−I effect</strong> (EWG) → Electron density ↓ → Basicity ↓</li>
+          <li><strong>Resonance</strong> (aromatic amines) → Lone pair delocalized → Basicity ↓↓</li>
+          <li><strong>Solvation</strong> (aqueous) → Conjugate acid stabilise → Basicity ↑</li>
+          <li><strong>Steric hindrance</strong> (3° amines) → Solvation block → Basicity ↓</li>
+        </ul>
+      </div>
+
+      <h2>3. Basicity of Amines — Deep Analysis</h2>
+
+      <h3>3.1 Aqueous vs Gas Phase (PYQ Favourite)</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Basicity Order — Aqueous vs Gas Phase</text>
+          
+          <!-- Aqueous -->
+          <text x="50" y="65" fill="#34a853" font-weight="700" font-size="13">In Aqueous Solution:</text>
+          <text x="80" y="90" fill="#202124" font-size="15">2° > 1° > 3° > NH₃</text>
+          <text x="80" y="110" fill="#5f6368" font-size="11">Solvation effect dominates</text>
+          
+          <!-- Gas -->
+          <text x="50" y="150" fill="#f9ab00" font-weight="700" font-size="13">In Gas Phase:</text>
+          <text x="80" y="175" fill="#202124" font-size="15">3° > 2° > 1° > NH₃</text>
+          <text x="80" y="195" fill="#5f6368" font-size="11">Steric hindrance dominates</text>
+
+          <!-- Reason -->
+          <text x="450" y="90" fill="#5f6368" font-size="11">2° = Best balance of</text>
+          <text x="450" y="105" fill="#5f6368" font-size="11">+I and solvation</text>
+          <text x="450" y="175" fill="#5f6368" font-size="11">3° = More +I but</text>
+          <text x="450" y="190" fill="#5f6368" font-size="11">no solvation in gas</text>
+        </svg>
+        <div class="diagram-caption">Basicity: Aqueous (Solvation) vs Gas (Steric)</div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Kyun 2° > 1° > 3° (Aqueous)?</span>
+        <ul>
+          <li><strong>2° Amine:</strong> +I effect (2 alkyl) + Solvation (1 H on N) → Best balance → <strong>Maximum basicity</strong></li>
+          <li><strong>1° Amine:</strong> +I effect (1 alkyl) + Solvation (2 H on N) → Good, but less +I</li>
+          <li><strong>3° Amine:</strong> +I effect (3 alkyl) + <strong>No H on N</strong> → Solvation nahi hoti → Steric hindrance → <strong>Minimum basicity</strong></li>
+          <li><strong>NH₃:</strong> No +I effect, only solvation → Least basic</li>
+        </ul>
+      </div>
+
+      <h3>3.2 Aromatic Amines (Aniline) — Basicity</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Aniline Basicity — Resonance Effect</text>
+          
+          <!-- Aniline -->
+          <text x="50" y="70" fill="#202124" font-weight="600" font-size="14">Aniline:</text>
+          <text x="180" y="70" fill="#202124" font-size="14">C₆H₅−NH₂</text>
+          <text x="180" y="90" fill="#5f6368" font-size="11">Lone pair delocalized in ring</text>
+          <text x="180" y="110" fill="#5f6368" font-size="11">→ Less available for H⁺</text>
+          <text x="180" y="130" fill="#ea4335" font-size="12" font-weight="600">Basicity ↓↓</text>
+
+          <!-- Ethylamine -->
+          <text x="50" y="170" fill="#202124" font-weight="600" font-size="14">Ethylamine:</text>
+          <text x="180" y="170" fill="#202124" font-size="14">C₂H₅−NH₂</text>
+          <text x="180" y="190" fill="#5f6368" font-size="11">Lone pair free, +I effect</text>
+        </svg>
+        <div class="diagram-caption">Aniline — Resonance Se Basicity Kam</div>
+      </div>
+
+      <div class="formula">
+        Basicity Order: Aliphatic Amines >> Aniline
+      </div>
+
+      <h3>3.3 Substituted Anilines — Comparison Table (PYQ Favourite)</h3>
+
+      <table>
+        <thead><tr><th>Substituent</th><th>Type</th><th>Basicity Effect</th><th>Order</th></tr></thead>
+        <tbody>
+          <tr><td><strong>−NH₂</strong></td><td>EDG (+M)</td><td>↑↑</td><td>p-Phenylenediamine > Aniline</td></tr>
+          <tr><td><strong>−OCH₃</strong></td><td>EDG (+M)</td><td>↑</td><td>p-Anisidine > Aniline</td></tr>
+          <tr><td><strong>−CH₃</strong></td><td>EDG (+I)</td><td>↑</td><td>p-Toluidine > Aniline</td></tr>
+          <tr><td><strong>−H</strong></td><td>—</td><td>Reference</td><td>Aniline</td></tr>
+          <tr><td><strong>−Cl</strong></td><td>EWG (−I)</td><td>↓</td><td>p-Chloroaniline &lt; Aniline</td></tr>
+          <tr><td><strong>−NO₂</strong></td><td>EWG (−M, −I)</td><td>↓↓</td><td>p-Nitroaniline &lt;&lt; Aniline</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>EWG (electron withdrawing)</strong> → Lone pair zyada delocalize → Basicity ↓</p>
+        <p><strong>EDG (electron donating)</strong> → Lone pair zyada available → Basicity ↑</p>
+        <p><strong>o-Nitroaniline:</strong> Intramolecular H-bonding + resonance → p-Nitroaniline se bhi kam basic</p>
+      </div>
+
+      <h2>4. Preparation of Amines — Deep</h2>
+
+      <h3>4.1 Hofmann Bromamide Degradation</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CONH₂ + Br₂ + 4NaOH → R−NH₂ + Na₂CO₃ + 2NaBr + 2H₂O</text>
+        </svg>
+        <div class="dual-name"><span>Acetamide (Ethanamide) → Methylamine (Methanamine)</span><span>(Hofmann Bromamide)</span></div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Mechanism (Deep)</span>
+        <ol>
+          <li><strong>Step 1:</strong> Br₂ + NaOH → NaOBr (Sodium hypobromite)</li>
+          <li><strong>Step 2:</strong> R−CONH₂ + NaOBr → R−CONHBr (N-Bromoamide)</li>
+          <li><strong>Step 3:</strong> R−CONHBr + NaOH → R−N=C=O (Isocyanate intermediate)</li>
+          <li><strong>Step 4:</strong> R−N=C=O + 2NaOH → R−NH₂ + Na₂CO₃</li>
+        </ol>
+        <p><strong>Key Point:</strong> Primary amine (1 carbon less than amide)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Hofmann Bromamide:</strong> Primary amine banta hai (1 carbon less)</p>
+        <p><strong>Example:</strong> CH₃CONH₂ → CH₃NH₂ (Acetamide → Methylamine)</p>
+        <p><strong>Note:</strong> Aromatic amide (Benzamide) se bhi Aniline banta hai</p>
+      </div>
+
+      <h3>4.2 Gabriel Phthalimide Synthesis</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Gabriel Phthalimide Synthesis</text>
+          
+          <!-- Step 1 -->
+          <text x="50" y="60" fill="#202124" font-weight="600" font-size="13">Step 1:</text>
+          <text x="130" y="60" fill="#202124" font-size="12">Phthalimide + KOH → Potassium phthalimide</text>
+          
+          <!-- Step 2 -->
+          <text x="50" y="95" fill="#202124" font-weight="600" font-size="13">Step 2:</text>
+          <text x="130" y="95" fill="#202124" font-size="12">+ R−X (SN2) → N-Alkylphthalimide</text>
+          
+          <!-- Step 3 -->
+          <text x="50" y="130" fill="#202124" font-weight="600" font-size="13">Step 3:</text>
+          <text x="130" y="130" fill="#202124" font-size="12">+ Hydrolysis → Primary Amine (R−NH₂)</text>
+        </svg>
+        <div class="diagram-caption">Gabriel Synthesis — Primary Amine (Aryl nahi)</div>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Gabriel:</strong> Sirf Primary amines ke liye</p>
+        <p><strong>Limitation:</strong> Aryl halide ke saath nahi chalta (SN2 nahi hota)</p>
+        <p><strong>Kyun?</strong> Aryl halide mein C−X bond strong hai, SN2 possible nahi</p>
+      </div>
+
+      <h3>4.3 Reduction of Nitro Compounds</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−NO₂ + 6[H] (Sn/HCl) → R−NH₂ + 2H₂O</text>
+        </svg>
+        <div class="dual-name"><span>Nitrobenzene → Aniline (Sn/HCl)</span><span>(Reduction)</span></div>
+      </div>
+
+      <h2>5. Reactions of Amines — Deep</h2>
+
+      <h3>5.1 Carbylamine Test (Isocyanide Test)</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−NH₂ + CHCl₃ + 3KOH → R−NC + 3KCl + 3H₂O</text>
+        </svg>
+        <div class="dual-name"><span>Primary Amine → Isocyanide (Foul smell)</span><span>(Carbylamine Test)</span></div>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Deep Reasoning</span>
+        <ul>
+          <li><strong>Positive for:</strong> Only Primary amines</li>
+          <li><strong>Product:</strong> Isocyanide (R−NC) — extremely foul smell</li>
+          <li><strong>Why only 1°?</strong> 2° aur 3° mein H atom nahi hota CHCl₃ se react karne ke liye</li>
+          <li><strong>Exception:</strong> Aromatic primary amines (Aniline) bhi positive dete hain</li>
+        </ul>
+      </div>
+
+      <h3>5.2 Hinsberg Test</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Hinsberg Test — Distinction of 1°, 2°, 3°</text>
+          
+          <text x="50" y="60" fill="#202124" font-size="12">Reagent: Benzenesulphonyl chloride (C₆H₅SO₂Cl)</text>
+          
+          <!-- 1° -->
+          <text x="50" y="100" fill="#34a853" font-weight="600" font-size="13">1° Amine:</text>
+          <text x="200" y="100" fill="#202124" font-size="13">R−NH−SO₂C₆H₅ (Mono-substituted)</text>
+          <text x="200" y="120" fill="#5f6368" font-size="11">Soluble in alkali (acidic H present)</text>
+          
+          <!-- 2° -->
+          <text x="50" y="155" fill="#f9ab00" font-weight="600" font-size="13">2° Amine:</text>
+          <text x="200" y="155" fill="#202124" font-size="13">R₂N−SO₂C₆H₅ (Di-substituted)</text>
+          <text x="200" y="175" fill="#5f6368" font-size="11">Insoluble in alkali (no acidic H)</text>
+          
+          <!-- 3° -->
+          <text x="50" y="210" fill="#ea4335" font-weight="600" font-size="13">3° Amine:</text>
+          <text x="200" y="210" fill="#202124" font-size="13">No reaction</text>
+        </svg>
+        <div class="diagram-caption">Hinsberg Test — 1°, 2°, 3° Amines Distinction</div>
+      </div>
+
+      <h3>5.3 Reaction with HNO₂ (Nitrous Acid)</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="14">
+          <text x="10" y="30" fill="#34a853" font-weight="600">1° Amine:</text>
+          <text x="150" y="30" fill="#202124">R−NH₂ + HNO₂ → R−OH + N₂↑</text>
+          <text x="500" y="30" fill="#5f6368" font-size="11">(N₂ bubbles)</text>
+          
+          <text x="10" y="65" fill="#f9ab00" font-weight="600">2° Amine:</text>
+          <text x="150" y="65" fill="#202124">R₂NH + HNO₂ → R₂N−N=O</text>
+          <text x="500" y="65" fill="#5f6368" font-size="11">(N-Nitrosamine — Yellow oil)</text>
+          
+          <text x="10" y="100" fill="#ea4335" font-weight="600">3° Amine:</text>
+          <text x="150" y="100" fill="#202124">R₃N + HNO₂ → R₃N⁺−NO₂⁻</text>
+          <text x="500" y="100" fill="#5f6368" font-size="11">(Salt — No reaction)</text>
+        </svg>
+        <div class="dual-name"><span>Reaction with Nitrous Acid — Distinction</span><span>(HNO₂ Test)</span></div>
+      </div>
+
+      <h3>5.4 Diazonium Salt Formation & Reactions</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">C₆H₅NH₂ + NaNO₂ + HCl (0-5°C) → C₆H₅N₂⁺Cl⁻</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Diazotization)</text>
+        </svg>
+        <div class="dual-name"><span>Aniline → Benzenediazonium Chloride</span><span>(Diazotization)</span></div>
+      </div>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Diazonium Salt — 8 Reactions</text>
+          
+          <!-- Central -->
+          <rect x="300" y="120" width="150" height="40" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2" rx="8"/>
+          <text x="325" y="145" fill="#202124" font-weight="600" font-size="13">C₆H₅N₂⁺Cl⁻</text>
+          
+          <!-- Reactions -->
+          <text x="20" y="70" fill="#5f6368" font-size="11">1. Sandmeyer</text>
+          <text x="20" y="85" fill="#202124" font-size="11">Cu₂Cl₂/HCl → ArCl</text>
+          
+          <text x="20" y="120" fill="#5f6368" font-size="11">2. Gattermann</text>
+          <text x="20" y="135" fill="#202124" font-size="11">Cu/HCl → ArCl</text>
+          
+          <text x="20" y="170" fill="#5f6368" font-size="11">3. Balz-Schiemann</text>
+          <text x="20" y="185" fill="#202124" font-size="11">HBF₄/Δ → ArF</text>
+          
+          <text x="20" y="220" fill="#5f6368" font-size="11">4. Coupling</text>
+          <text x="20" y="235" fill="#202124" font-size="11">Phenol → Azo dye</text>
+          
+          <text x="560" y="70" fill="#5f6368" font-size="11">5. Reduction</text>
+          <text x="560" y="85" fill="#202124" font-size="11">H₃PO₂ → Benzene</text>
+          
+          <text x="560" y="120" fill="#5f6368" font-size="11">6. Nitration</text>
+          <text x="560" y="135" fill="#202124" font-size="11">HNO₃ → ArNO₂</text>
+          
+          <text x="560" y="170" fill="#5f6368" font-size="11">7. Cyanide</text>
+          <text x="560" y="185" fill="#202124" font-size="11">CuCN → ArCN</text>
+          
+          <text x="560" y="220" fill="#5f6368" font-size="11">8. Iodide</text>
+          <text x="560" y="235" fill="#202124" font-size="11">KI → ArI</text>
+        </svg>
+        <div class="diagram-caption">Diazonium Salt — 8 Important Reactions</div>
+      </div>
+
+      <h2>6. JEE Main Question Patterns (PYQ se Nikale)</h2>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 1: Basicity Order</span>
+        <p><strong>Kaise pucha jaata hai:</strong> "Arrange in increasing/decreasing order of basicity"</p>
+        <p><strong>Example (2024):</strong> (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃ — Aqueous mein</p>
+        <p><strong>Kaise solve karein:</strong> Solvation vs +I effect ka balance</p>
+      </div>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 2: Substituted Aniline Basicity</span>
+        <p><strong>Kaise pucha jaata hai:</strong> "Which is most basic?"</p>
+        <p><strong>Example:</strong> p-Toluidine > Aniline > p-Chloroaniline > p-Nitroaniline</p>
+        <p><strong>Kaise solve karein:</strong> EDG/EWG ka effect yaad rakho</p>
+      </div>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 3: Hofmann Bromamide Product</span>
+        <p><strong>Kaise pucha jaata hai:</strong> "Product of R−CONH₂ + Br₂/NaOH is?"</p>
+        <p><strong>Example:</strong> Acetamide → Methylamine (1 carbon less)</p>
+        <p><strong>Kaise solve karein:</strong> 1 carbon less rule</p>
+      </div>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 4: Distinction Tests</span>
+        <p><strong>Kaise pucha jaata hai:</strong> "Which test distinguishes 1° from 2° amine?"</p>
+        <p><strong>Example:</strong> Carbylamine Test (only 1°), Hinsberg Test (all three)</p>
+      </div>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 5: Diazonium Salt Reaction</span>
+        <p><strong>Kaise pucha jaata hai:</strong> "Product of Sandmeyer/Coupling reaction?"</p>
+        <p><strong>Example:</strong> ArN₂⁺ + Phenol → Orange-red dye</p>
+      </div>
+
+      <div class="pattern-box">
+        <span class="box-title">Pattern 6: Match the Following</span>
+        <p><strong>Kaise pucha jaata hai:</strong> Reagent → Product ka match</p>
+        <p><strong>Example:</strong> Hofmann → 1° amine, Gabriel → 1° amine, Carbylamine → Isocyanide</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Amines (Deep)</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Basicity (Aqueous)</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of basicity (aqueous): NH₃, CH₃NH₂, (CH₃)₂NH, (CH₃)₃N</p>
+        <ol>
+          <li>2° amine: +I (2 alkyl) + Solvation (1 H)</li>
+          <li>1° amine: +I (1 alkyl) + Solvation (2 H)</li>
+          <li>3° amine: +I (3 alkyl) + No H → No solvation</li>
+          <li>NH₃: No +I, only solvation</li>
+          <li><strong>Answer: (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Basicity (Gas)</span>
+        <p><strong>Q:</strong> Arrange in decreasing order of basicity (gas phase): NH₃, CH₃NH₂, (CH₃)₂NH, (CH₃)₃N</p>
+        <ol>
+          <li>Gas phase mein solvation nahi hoti</li>
+          <li>Sirf +I effect aur steric hindrance ka balance</li>
+          <li>3° amine: Maximum +I → Most basic</li>
+          <li><strong>Answer: (CH₃)₃N > (CH₃)₂NH > CH₃NH₂ > NH₃</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Substituted Aniline Basicity</span>
+        <p><strong>Q:</strong> Arrange: Aniline, p-Nitroaniline, p-Toluidine, p-Chloroaniline</p>
+        <ol>
+          <li>−CH₃ = EDG → Basicity ↑</li>
+          <li>−Cl = EWG (−I) → Basicity ↓ (slightly)</li>
+          <li>−NO₂ = EWG (−M, −I) → Basicity ↓↓</li>
+          <li><strong>Answer: p-Toluidine > Aniline > p-Chloroaniline > p-Nitroaniline</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Hofmann Bromamide</span>
+        <p><strong>Q:</strong> Benzamide + Br₂/NaOH → ?</p>
+        <ol>
+          <li>Hofmann Bromamide Degradation</li>
+          <li>Benzamide (C₆H₅CONH₂) → Aniline (C₆H₅NH₂)</li>
+          <li><strong>Answer: Aniline (Benzenamine)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Gabriel Synthesis Limitation</span>
+        <p><strong>Q:</strong> Which amine cannot be prepared by Gabriel synthesis?</p>
+        <ol>
+          <li>Gabriel: Primary amine only</li>
+          <li>Aryl halide ke saath SN2 nahi hota</li>
+          <li><strong>Answer: Aromatic Amines (Aniline)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Carbylamine Test</span>
+        <p><strong>Q:</strong> Which of the following gives carbylamine test: 1°, 2°, 3° amine?</p>
+        <ol>
+          <li>Carbylamine: R−NH₂ + CHCl₃ + KOH → R−NC</li>
+          <li>Only 1° amine mein 2 H atoms hote hain (reaction ke liye zaroori)</li>
+          <li><strong>Answer: Only 1° Amine</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: Hinsberg Test</span>
+        <p><strong>Q:</strong> Which amine gives product insoluble in alkali with Hinsberg reagent?</p>
+        <ol>
+          <li>1° → Mono-substituted (Soluble — acidic H)</li>
+          <li>2° → Di-substituted (Insoluble — no acidic H)</li>
+          <li>3° → No reaction</li>
+          <li><strong>Answer: 2° Amine</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: HNO₂ Test</span>
+        <p><strong>Q:</strong> Which amine gives yellow oily product with HNO₂?</p>
+        <ol>
+          <li>1° → N₂ gas</li>
+          <li>2° → N-Nitrosamine (Yellow oil)</li>
+          <li>3° → Salt (No reaction)</li>
+          <li><strong>Answer: 2° Amine</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: Diazonium Coupling</span>
+        <p><strong>Q:</strong> Benzenediazonium chloride + Phenol/NaOH → ?</p>
+        <ol>
+          <li>Coupling Reaction</li>
+          <li>ArN₂⁺ + Phenol → p-Hydroxyazobenzene</li>
+          <li><strong>Answer: Orange-red azo dye</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: Balz-Schiemann</span>
+        <p><strong>Q:</strong> Benzenediazonium chloride + HBF₄/Δ → ?</p>
+        <ol>
+          <li>Balz-Schiemann Reaction</li>
+          <li>ArN₂⁺ + HBF₄ → ArF + N₂ + BF₃</li>
+          <li><strong>Answer: Fluorobenzene</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ PATTERNS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Amines PYQ Patterns</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka deep analysis — question type, concept, aur solution approach.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Question Type</th><th>Concept</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Basicity order, Hofmann product</td><td>Aqueous vs Gas, 1 carbon less</td></tr>
+          <tr><td><strong>2020</strong></td><td>Carbylamine test, Basicity comparison</td><td>Only 1°, Solvation</td></tr>
+          <tr><td><strong>2021</strong></td><td>Gabriel product, Aniline vs Ethylamine</td><td>Primary amine, Resonance</td></tr>
+          <tr><td><strong>2022</strong></td><td>Diazonium reaction, Sandmeyer</td><td>ArCl formation</td></tr>
+          <tr><td><strong>2023</strong></td><td>Hinsberg test, Coupling reaction</td><td>Solubility, Azo dye</td></tr>
+          <tr><td><strong>2024</strong></td><td>Substituted aniline basicity, Carbylamine</td><td>EWG/EDG effect</td></tr>
+          <tr><td><strong>2025</strong></td><td>Basicity, Hofmann, Diazonium coupling</td><td>All concepts</td></tr>
+          <tr><td><strong>2026</strong></td><td>Basicity, Hofmann, Carbylamine, Coupling</td><td>Deep reasoning</td></tr>
+        </tbody>
+      </table>
+
+      <h3>🧠 Concept 1: Basicity — Deep Reasoning (Har Saal)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal 1–2 questions</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Aqueous:</strong> 2° > 1° > 3° > NH₃ (Solvation + +I balance)</li>
+          <li><strong>Gas:</strong> 3° > 2° > 1° > NH₃ (Only +I, no solvation)</li>
+          <li><strong>Aniline:</strong> Resonance → Aliphatic se kam basic</li>
+          <li><strong>EWG:</strong> Basicity ↓, <strong>EDG:</strong> Basicity ↑</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Hofmann Bromamide (4/8 saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>R−CONH₂ + Br₂/NaOH → R−NH₂</li>
+          <li>Primary amine (1 carbon less)</li>
+          <li>Mechanism: Isocyanate intermediate</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Diazonium Salt (4/8 saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2022, 2024, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Sandmeyer: ArN₂⁺ + Cu₂Cl₂ → ArCl</li>
+          <li>Coupling: ArN₂⁺ + Phenol → Azo dye (Orange-red)</li>
+          <li>Balz-Schiemann: ArN₂⁺ + HBF₄ → ArF</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Carbylamine Test (3/8 saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Only 1° amine</li>
+          <li>R−NH₂ + CHCl₃ + KOH → R−NC (Foul smell)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Gabriel Synthesis (3/8 saal)</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Primary amine only</li>
+          <li>Aryl halide ke saath nahi chalta</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Basicity</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Hofmann</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Diazonium</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Carbylamine</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Gabriel</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Basicity (5/5), Diazonium (4/5), Hofmann (2/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Amines (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>Basicity (Aqueous):</strong> 2° > 1° > 3° > NH₃</li>
+          <li><strong>Basicity (Gas):</strong> 3° > 2° > 1° > NH₃</li>
+          <li><strong>Aniline:</strong> Resonance → Aliphatic se kam basic</li>
+          <li><strong>EWG:</strong> Basicity ↓, <strong>EDG:</strong> Basicity ↑</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Hofmann:</strong> 1 carbon less</li>
+          <li><strong>Gabriel:</strong> Aryl halide nahi chalta</li>
+          <li><strong>Carbylamine:</strong> Only 1° Amine</li>
+          <li><strong>Hinsberg:</strong> 1° Soluble, 2° Insoluble, 3° No reaction</li>
+          <li><strong>HNO₂:</strong> 1° (N₂), 2° (Yellow), 3° (Salt)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Named Reactions</span>
+        <ul>
+          <li><strong>Hofmann:</strong> R−CONH₂ → R−NH₂</li>
+          <li><strong>Gabriel:</strong> Primary Amine (Aryl nahi)</li>
+          <li><strong>Carbylamine:</strong> R−NH₂ → R−NC</li>
+          <li><strong>Hinsberg:</strong> Distinction Test</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Diazonium Salt</span>
+        <ul>
+          <li><strong>Sandmeyer:</strong> ArCl</li>
+          <li><strong>Gattermann:</strong> ArCl</li>
+          <li><strong>Coupling:</strong> Azo dye (Orange-red)</li>
+          <li><strong>Balz-Schiemann:</strong> ArF</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: REACTION SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Reaction Sheet — Amines</h2>
+      <p style="color: #5f6368;">Saare reactions diagram form mein — visual learning ke liye best.</p>
+
+      <div class="formula-category">1. PREPARATION</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CONH₂ + Br₂ + 4NaOH → R−NH₂</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Hofmann)</text>
+        </svg>
+        <div class="dual-name"><span>Acetamide → Methylamine</span><span>(Hofmann Bromamide)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">Phthalimide + KOH + R−X → R−NH₂</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Gabriel)</text>
+        </svg>
+        <div class="dual-name"><span>Gabriel Synthesis (Aryl nahi)</span><span>(Gabriel)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−NO₂ + 6[H] → R−NH₂ + 2H₂O</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Reduction)</text>
+        </svg>
+        <div class="dual-name"><span>Nitrobenzene → Aniline</span><span>(Reduction)</span></div>
+      </div>
+
+      <div class="formula-category">2. DISTINCTION TESTS</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−NH₂ + CHCl₃ + KOH → R−NC</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Carbylamine)</text>
+        </svg>
+        <div class="dual-name"><span>1° Amine → Isocyanide (Foul smell)</span><span>(Carbylamine Test)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="14">
+          <text x="10" y="30" fill="#34a853" font-weight="600">1°:</text>
+          <text x="60" y="30" fill="#202124">R−NH₂ + C₆H₅SO₂Cl → Soluble</text>
+          <text x="10" y="60" fill="#f9ab00" font-weight="600">2°:</text>
+          <text x="60" y="60" fill="#202124">R₂NH + C₆H₅SO₂Cl → Insoluble</text>
+          <text x="10" y="90" fill="#ea4335" font-weight="600">3°:</text>
+          <text x="60" y="90" fill="#202124">R₃N + C₆H₅SO₂Cl → No reaction</text>
+        </svg>
+        <div class="dual-name"><span>Hinsberg Test — 1°, 2°, 3°</span><span>(Hinsberg)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="14">
+          <text x="10" y="30" fill="#34a853" font-weight="600">1°:</text>
+          <text x="60" y="30" fill="#202124">R−NH₂ + HNO₂ → R−OH + N₂↑</text>
+          <text x="10" y="60" fill="#f9ab00" font-weight="600">2°:</text>
+          <text x="60" y="60" fill="#202124">R₂NH + HNO₂ → R₂N−N=O (Yellow)</text>
+          <text x="10" y="90" fill="#ea4335" font-weight="600">3°:</text>
+          <text x="60" y="90" fill="#202124">R₃N + HNO₂ → Salt</text>
+        </svg>
+        <div class="dual-name"><span>Reaction with HNO₂</span><span>(HNO₂ Test)</span></div>
+      </div>
+
+      <div class="formula-category">3. DIAZONIUM SALT REACTIONS</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">C₆H₅NH₂ + NaNO₂ + HCl → C₆H₅N₂⁺Cl⁻</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Diazotization)</text>
+        </svg>
+        <div class="dual-name"><span>Aniline → Benzenediazonium Chloride</span><span>(Diazotization)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">C₆H₅N₂⁺Cl⁻ + Cu₂Cl₂/HCl → C₆H₅Cl</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Sandmeyer)</text>
+        </svg>
+        <div class="dual-name"><span>Diazonium → Chlorobenzene</span><span>(Sandmeyer)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">C₆H₅N₂⁺Cl⁻ + Phenol/NaOH → Azo dye</text>
+          <text x="480" y="40" fill="#5f6368" font-size="12">(Coupling)</text>
+        </svg>
+        <div class="dual-name"><span>Diazonium + Phenol → Orange-red dye</span><span>(Coupling)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">C₆H₅N₂⁺Cl⁻ + HBF₄/Δ → C₆H₅F</text>
+          <text x="480" y="40" fill="#5f6368" font-size="12">(Balz-Schiemann)</text>
+        </svg>
+        <div class="dual-name"><span>Diazonium → Fluorobenzene</span><span>(Balz-Schiemann)</span></div>
+      </div>
+
+      <div class="formula-category">4. BASICITY — COMPLETE ORDER</div>
+      <div class="reaction-box"><strong>Aliphatic (Aqueous):</strong> 2° > 1° > 3° > NH₃</div>
+      <div class="reaction-box"><strong>Aliphatic (Gas):</strong> 3° > 2° > 1° > NH₃</div>
+      <div class="reaction-box"><strong>Aromatic vs Aliphatic:</strong> Aliphatic >> Aniline</div>
+      <div class="reaction-box"><strong>Substituted Aniline:</strong> p-NH₂ > p-OCH₃ > p-CH₃ > Aniline > p-Cl > p-NO₂</div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

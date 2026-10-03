@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d & f Block Elements | JEE Chemistry Notes</title>
+  <meta name="description" content="d & f Block Elements Notes for JEE Mains — Transition Elements, Lanthanide Contraction, KMnO₄, K₂Cr₂O₇, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--secondary); color: white; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none;
+    }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+
+    .trend-diagram {
+      background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto;
+    }
+    .trend-diagram svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+
+    .numeric-box {
+      background: #e8f0fe; border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0;
+    }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Inorganic</a> &gt; d & f Block Elements
+  </div>
+
+  <!-- CHAPTER HEADER -->
+  <header class="chapter-header">
+    <h1>d & f Block Elements</h1>
+    <p>Transition Elements, Lanthanide Contraction, KMnO₄, K₂Cr₂O₇, PYQ Analysis</p>
+  </header>
+
+  <!-- PRINT BUTTON -->
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Full Notes</button>
+    <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: FULL NOTES -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Introduction</h2>
+
+      <div class="box">
+        <span class="box-title">d-Block Kya Hai?</span>
+        <ul>
+          <li>Group <strong>3 se 12</strong> tak ke elements</li>
+          <li>Inka last electron <strong>d-orbital</strong> mein jaata hai</li>
+          <li><strong>General configuration:</strong> (n−1)d¹⁻¹⁰ ns¹⁻²</li>
+          <li>Inhe <strong>Transition Elements</strong> bhi kehte hain</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">Transition Element Definition</span>
+        <p>Aise elements jinke <strong>atom ya stable ion</strong> mein <strong>partially filled d-orbital</strong> ho.</p>
+        <p><strong>Zn, Cd, Hg</strong> → d¹⁰ (fully filled), isliye ye <strong>transition elements nahi hain</strong>.</p>
+      </div>
+
+      <div class="box">
+        <span class="box-title">f-Block Kya Hai?</span>
+        <ul>
+          <li><strong>Lanthanides</strong> (4f series) → Ce (58) se Lu (71)</li>
+          <li><strong>Actinides</strong> (5f series) → Th (90) se Lr (103)</li>
+          <li>Inhe <strong>Inner Transition Elements</strong> kehte hain</li>
+        </ul>
+      </div>
+
+      <h2>2. Electronic Configuration</h2>
+
+      <h3>2.1 Important Configurations (JEE Favourites)</h3>
+      <table>
+        <thead>
+          <tr><th>Element</th><th>Expected</th><th>Actual</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Cr (24)</strong></td><td>3d⁴ 4s²</td><td><strong>3d⁵ 4s¹</strong></td><td>Half-filled stable</td></tr>
+          <tr><td><strong>Cu (29)</strong></td><td>3d⁹ 4s²</td><td><strong>3d¹⁰ 4s¹</strong></td><td>Fully-filled stable</td></tr>
+          <tr><td><strong>Mo (42)</strong></td><td>4d⁴ 5s²</td><td><strong>4d⁵ 5s¹</strong></td><td>Half-filled stable</td></tr>
+          <tr><td><strong>Ag (47)</strong></td><td>4d⁹ 5s²</td><td><strong>4d¹⁰ 5s¹</strong></td><td>Fully-filled stable</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Cr, Mo</strong> → d⁵ s¹ (half-filled)</p>
+        <p><strong>Cu, Ag, Au</strong> → d¹⁰ s¹ (fully-filled)</p>
+      </div>
+
+      <h2>3. General Properties</h2>
+
+      <h3>3.1 Atomic Radius</h3>
+      <ul>
+        <li><strong>Across period</strong> → Decreases (Nuclear charge ↑)</li>
+        <li><strong>Down group</strong> → Increases (New shell)</li>
+        <li><strong>Exception:</strong> <strong>Zr ≈ Hf</strong> aur <strong>Mo ≈ W</strong> (Lanthanide contraction)</li>
+      </ul>
+
+      <h3>3.2 Lanthanide Contraction</h3>
+      <ul>
+        <li>4f electrons <strong>poor shielding</strong> karte hain</li>
+        <li>Isliye <strong>Zr ≈ Hf</strong> aur <strong>Mo ≈ W</strong> ka radius almost same</li>
+      </ul>
+
+      <h3>3.3 Ionization Enthalpy</h3>
+      <ul>
+        <li><strong>Across period</strong> → Increases</li>
+        <li><strong>Down group</strong> → Decreases</li>
+        <li><strong>Exception:</strong> <strong>Zn > Cu</strong> (Zn ka d¹⁰ full-filled hai)</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Mn⁺ &lt; Cr⁺</strong> — Mn⁺ ka 3d⁵ 4s¹, Cr⁺ ka 3d⁵ (more stable)</li>
+          <li><strong>Fe²⁺ &lt; Fe³⁺</strong> — Fe³⁺ ka 3d⁵ half-filled, Fe²⁺ ka 3d⁶</li>
+        </ul>
+      </div>
+
+      <h3>3.4 Oxidation States</h3>
+      <ul>
+        <li><strong>Common:</strong> +2, +3</li>
+        <li><strong>Maximum:</strong> Mn → +7 (KMnO₄)</li>
+        <li><strong>Sc</strong> → +3 only</li>
+        <li><strong>Zn</strong> → +2 only</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Mn</strong> → +7 (maximum)</li>
+          <li><strong>Sc</strong> → +3 (only)</li>
+          <li><strong>Zn</strong> → +2 (only)</li>
+          <li><strong>Fe</strong> → +2, +3 (common)</li>
+        </ul>
+      </div>
+
+      <h2>4. Important Compounds</h2>
+
+      <h3>4.1 Potassium Permanganate (KMnO₄)</h3>
+      <ul>
+        <li><strong>Oxidation State of Mn</strong> → +7</li>
+        <li><strong>Colour</strong> → Purple</li>
+        <li><strong>Acidic medium</strong> → Mn²⁺ (colourless)</li>
+        <li><strong>Neutral medium</strong> → MnO₂ (brown)</li>
+        <li><strong>Basic medium</strong> → MnO₄²⁻ (green)</li>
+      </ul>
+
+      <h3>4.2 Potassium Dichromate (K₂Cr₂O₇)</h3>
+      <ul>
+        <li><strong>Oxidation State of Cr</strong> → +6</li>
+        <li><strong>Colour</strong> → Orange</li>
+        <li><strong>Acidic medium</strong> → Cr³⁺ (green)</li>
+        <li><strong>Structure</strong> → Two tetrahedra sharing one oxygen</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>KMnO₄</strong> → Purple, Mn = +7</li>
+          <li><strong>K₂Cr₂O₇</strong> → Orange, Cr = +6</li>
+          <li>Acidic medium mein <strong>KMnO₄</strong> → Mn²⁺ (colourless)</li>
+        </ul>
+      </div>
+
+      <h2>5. Magnetic Properties</h2>
+
+      <div class="formula">
+        μ = √n(n+2) BM
+      </div>
+      <p>Jahan n = number of unpaired electrons</p>
+
+      <h3>5.1 Important Ions</h3>
+      <table>
+        <thead>
+          <tr><th>Ion</th><th>Configuration</th><th>Unpaired e⁻</th><th>Magnetic Moment</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sc³⁺</strong></td><td>3d⁰</td><td>0</td><td>0 BM (Dia)</td></tr>
+          <tr><td><strong>Ti³⁺</strong></td><td>3d¹</td><td>1</td><td>1.73 BM</td></tr>
+          <tr><td><strong>V³⁺</strong></td><td>3d²</td><td>2</td><td>2.83 BM</td></tr>
+          <tr><td><strong>Cr³⁺</strong></td><td>3d³</td><td>3</td><td>3.87 BM</td></tr>
+          <tr><td><strong>Mn²⁺</strong></td><td>3d⁵</td><td>5</td><td>5.92 BM</td></tr>
+          <tr><td><strong>Fe²⁺</strong></td><td>3d⁶</td><td>4</td><td>4.90 BM</td></tr>
+          <tr><td><strong>Fe³⁺</strong></td><td>3d⁵</td><td>5</td><td>5.92 BM</td></tr>
+          <tr><td><strong>Co²⁺</strong></td><td>3d⁷</td><td>3</td><td>3.87 BM</td></tr>
+          <tr><td><strong>Ni²⁺</strong></td><td>3d⁸</td><td>2</td><td>2.83 BM</td></tr>
+          <tr><td><strong>Cu²⁺</strong></td><td>3d⁹</td><td>1</td><td>1.73 BM</td></tr>
+          <tr><td><strong>Zn²⁺</strong></td><td>3d¹⁰</td><td>0</td><td>0 BM (Dia)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Example (Magnetic Moment)</span>
+        <p><strong>Example:</strong> Find magnetic moment of [MnBr₄]²⁻</p>
+        <ol>
+          <li>Mn²⁺ → d⁵</li>
+          <li>Br⁻ → Weak field → High Spin → 5 unpaired e⁻</li>
+          <li>μ = √5(5+2) = √35 = <strong>5.92 BM</strong></li>
+          <li>Paramagnetic</li>
+        </ol>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Mn²⁺</strong> aur <strong>Fe³⁺</strong> → 5 unpaired e⁻, 5.92 BM</li>
+          <li><strong>Sc³⁺, Zn²⁺</strong> → 0 unpaired, diamagnetic</li>
+          <li><strong>Cu²⁺</strong> → 1 unpaired, 1.73 BM</li>
+        </ul>
+      </div>
+
+      <h2>6. Colour of Ions</h2>
+
+      <div class="box">
+        <span class="box-title">Reason</span>
+        <p><strong>d-d transition</strong> ke karan colour hota hai.</p>
+        <p><strong>d⁰ and d¹⁰</strong> → Colourless (no d-d transition)</p>
+      </div>
+
+      <h3>6.1 Important Colours</h3>
+      <table>
+        <thead>
+          <tr><th>Ion</th><th>Colour</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sc³⁺</strong></td><td>Colourless</td></tr>
+          <tr><td><strong>Ti³⁺</strong></td><td>Purple</td></tr>
+          <tr><td><strong>V³⁺</strong></td><td>Green</td></tr>
+          <tr><td><strong>Cr³⁺</strong></td><td>Green</td></tr>
+          <tr><td><strong>Mn²⁺</strong></td><td>Pink</td></tr>
+          <tr><td><strong>Fe²⁺</strong></td><td>Green</td></tr>
+          <tr><td><strong>Fe³⁺</strong></td><td>Yellow</td></tr>
+          <tr><td><strong>Co²⁺</strong></td><td>Pink</td></tr>
+          <tr><td><strong>Ni²⁺</strong></td><td>Green</td></tr>
+          <tr><td><strong>Cu²⁺</strong></td><td>Blue</td></tr>
+          <tr><td><strong>Zn²⁺</strong></td><td>Colourless</td></tr>
+        </tbody>
+      </table>
+
+      <h2>7. Lanthanides</h2>
+
+      <h3>7.1 General Properties</h3>
+      <ul>
+        <li><strong>4f series</strong> → Ce (58) to Lu (71)</li>
+        <li><strong>Common Oxidation State</strong> → +3</li>
+        <li><strong>Ce</strong> → +4 (stable, noble gas config)</li>
+        <li><strong>Eu</strong> → +2 (stable, half-filled f⁷)</li>
+      </ul>
+
+      <h3>7.2 Lanthanide Contraction</h3>
+      <ul>
+        <li>4f electrons <strong>poor shielding</strong> karte hain</li>
+        <li>Isliye <strong>size</strong> expected se kam hota hai</li>
+        <li><strong>Result:</strong> Zr ≈ Hf, Mo ≈ W</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Ce⁴⁺</strong> → Strong oxidising agent</li>
+          <li><strong>Eu²⁺</strong> → Reducing agent</li>
+          <li><strong>Lanthanide contraction</strong> → Zr ≈ Hf</li>
+        </ul>
+      </div>
+
+      <h2>8. Actinides</h2>
+
+      <ul>
+        <li><strong>5f series</strong> → Th (90) to Lr (103)</li>
+        <li><strong>Radioactive</strong> elements</li>
+        <li><strong>Common Oxidation State</strong> → +3, +4</li>
+        <li><strong>Th</strong> → +4 stable</li>
+        <li><strong>U</strong> → +6 stable</li>
+      </ul>
+
+      <h2>9. Important Compounds (JEE Favourites)</h2>
+
+      <table>
+        <thead>
+          <tr><th>Compound</th><th>Formula</th><th>Oxidation State</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>KMnO₄</strong></td><td>KMnO₄</td><td>Mn = +7</td><td>Oxidising agent</td></tr>
+          <tr><td><strong>K₂Cr₂O₇</strong></td><td>K₂Cr₂O₇</td><td>Cr = +6</td><td>Oxidising agent</td></tr>
+          <tr><td><strong>FeSO₄</strong></td><td>FeSO₄</td><td>Fe = +2</td><td>Reducing agent</td></tr>
+          <tr><td><strong>CuSO₄</strong></td><td>CuSO₄</td><td>Cu = +2</td><td>Blue vitriol</td></tr>
+          <tr><td><strong>ZnSO₄</strong></td><td>ZnSO₄</td><td>Zn = +2</td><td>White vitriol</td></tr>
+          <tr><td><strong>AgNO₃</strong></td><td>AgNO₃</td><td>Ag = +1</td><td>Photography</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: MAINS TRAPS -->
+  <!-- ============================================ -->
+  <div id="tab-traps" class="tab-content">
+    <div class="notes">
+      <h2>Mains Traps — d & f Block Elements</h2>
+
+      <div class="box trap-box">
+        <span class="box-title">1. Configuration</span>
+        <p><strong>Cr</strong> → 3d⁵ 4s¹ (half-filled)</p>
+        <p><strong>Cu</strong> → 3d¹⁰ 4s¹ (fully-filled)</p>
+        <p><strong>Mo</strong> → 4d⁵ 5s¹, <strong>Ag</strong> → 4d¹⁰ 5s¹</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">2. Transition Elements</span>
+        <p><strong>Zn, Cd, Hg</strong> → Not transition elements (d¹⁰)</p>
+        <p>Partially filled d-orbital hona zaroori hai</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">3. Lanthanide Contraction</span>
+        <p><strong>Zr ≈ Hf</strong>, <strong>Mo ≈ W</strong></p>
+        <p>4f electrons poor shielding karte hain</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">4. Oxidation States</span>
+        <p><strong>Mn</strong> → +7 (maximum)</p>
+        <p><strong>Sc</strong> → +3 (only)</p>
+        <p><strong>Zn</strong> → +2 (only)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">5. Ionization Enthalpy Exceptions</span>
+        <p><strong>Mn⁺ &lt; Cr⁺</strong> — Mn⁺ ka 3d⁵ 4s¹, Cr⁺ ka 3d⁵ (more stable)</p>
+        <p><strong>Fe²⁺ &lt; Fe³⁺</strong> — Fe³⁺ ka 3d⁵ half-filled</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">6. Magnetic Moment</span>
+        <p><strong>Mn²⁺, Fe³⁺</strong> → 5 unpaired, 5.92 BM</p>
+        <p><strong>Sc³⁺, Zn²⁺</strong> → 0 unpaired, diamagnetic</p>
+        <p><strong>Cu²⁺</strong> → 1 unpaired, 1.73 BM</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">7. Colour</span>
+        <p><strong>Sc³⁺ (d⁰), Zn²⁺ (d¹⁰)</strong> → Colourless</p>
+        <p><strong>Cu²⁺</strong> → Blue, <strong>Fe³⁺</strong> → Yellow</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">8. KMnO₄</span>
+        <p>Purple, Mn = +7</p>
+        <p>Acidic → Mn²⁺ (colourless)</p>
+        <p>Neutral → MnO₂ (brown)</p>
+        <p>Basic → MnO₄²⁻ (green)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">9. K₂Cr₂O₇</span>
+        <p>Orange, Cr = +6</p>
+        <p>Acidic → Cr³⁺ (green)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">10. Lanthanides</span>
+        <p><strong>Ce⁴⁺</strong> → Strong oxidising agent</p>
+        <p><strong>Eu²⁺</strong> → Reducing agent</p>
+        <p><strong>Gd³⁺</strong> → Half-filled f⁷, stable</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS (2019–2026) -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+
+      <h2>JEE Main 2019–2026: d & f Block PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Topics Asked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Oxidation states, KMnO₄/K₂Cr₂O₇</td></tr>
+          <tr><td><strong>2020</strong></td><td>Lanthanide contraction, Magnetic moment</td></tr>
+          <tr><td><strong>2021</strong></td><td>Colour of ions, Interstitial compounds</td></tr>
+          <tr><td><strong>2022</strong></td><td>Lanthanoid half-filled/fully-filled (Eu²⁺, Yb²⁺)</td></tr>
+          <tr><td><strong>2023</strong></td><td>Lanthanoid configuration, Ce⁴⁺ oxidising agent</td></tr>
+          <tr><td><strong>2024</strong></td><td>Magnetic moment (VO₂⁺, MnO₄⁻, Cr₂O₇²⁻)</td></tr>
+          <tr><td><strong>2025</strong></td><td>Ionisation enthalpy order (Mn⁺ &lt; Cr⁺, Fe²⁺ &lt; Fe³⁺)</td></tr>
+          <tr><td><strong>2026</strong></td><td>K₂Cr₂O₇ + SO₂ (green colour), d-block colour, magnetic moment</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Oxidation States & KMnO₄/K₂Cr₂O₇</strong> → 2019, 2024, 2026</li>
+          <li><strong>Lanthanoid Contraction & f-Block</strong> → 2020, 2022, 2023</li>
+          <li><strong>Magnetic Moment</strong> → 2020, 2024, 2026</li>
+          <li><strong>Ionisation Enthalpy Exceptions</strong> → 2025</li>
+          <li><strong>Colour of Ions</strong> → 2021, 2026</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Electronic Configuration Exceptions</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2024, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Cr (24):</strong> 3d⁵ 4s¹ (half-filled)</li>
+          <li><strong>Cu (29):</strong> 3d¹⁰ 4s¹ (fully-filled)</li>
+          <li><strong>Pd (46):</strong> [Kr] 4d¹⁰ (no 5s electrons)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Oxidation States & KMnO₄/K₂Cr₂O₇</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Mn:</strong> +2 to +7 (maximum in 3d series)</li>
+          <li><strong>KMnO₄:</strong> Mn = +7, Purple; Acidic → Mn²⁺ (colourless)</li>
+          <li><strong>K₂Cr₂O₇:</strong> Cr = +6, Orange; Acidic + SO₂ → Cr³⁺ (green)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Magnetic Moment</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>[MnBr₄]²⁻:</strong> Mn²⁺, d⁵, weak field → 5 unpaired → 5.92 BM</li>
+          <li><strong>[Ni(CN)₄]²⁻:</strong> Ni²⁺, d⁸, strong field → 0 unpaired → Diamagnetic</li>
+          <li><strong>[VO₂]⁺:</strong> V⁵⁺, d⁰ → 0 unpaired → Diamagnetic</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Lanthanoid Contraction & f-Block</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2022, 2023</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Zr ≈ Hf, Mo ≈ W</strong> — 4f electrons poor shielding</li>
+          <li><strong>Ce⁴⁺</strong> → Strong oxidising agent</li>
+          <li><strong>Eu²⁺</strong> → Reducing agent (half-filled f⁷)</li>
+          <li><strong>Gd³⁺</strong> → Half-filled f⁷, stable</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Ionisation Enthalpy Exceptions</h3>
+      <p><strong>PYQ Trend:</strong> 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Mn⁺ &lt; Cr⁺</strong> — Mn⁺ ka 3d⁵ 4s¹, Cr⁺ ka 3d⁵ (more stable)</li>
+          <li><strong>Fe²⁺ &lt; Fe³⁺</strong> — Fe³⁺ ka 3d⁵ half-filled, Fe²⁺ ka 3d⁶</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 6: Colour of Ions</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>d-d transition</strong> ke karan colour</li>
+          <li><strong>d⁰, d¹⁰</strong> → Colourless (Sc³⁺, Zn²⁺, Ti⁴⁺)</li>
+          <li><strong>Cu²⁺</strong> → Blue, <strong>Ni²⁺</strong> → Green, <strong>Fe³⁺</strong> → Yellow</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Oxidation States/KMnO₄</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Lanthanoid Contraction</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Magnetic Moment</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>IE Exceptions</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Colour of Ions</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Oxidation States & KMnO₄ (2/5 saal), Magnetic Moment (2/5 saal).</p>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — d & f Block Elements (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Points</span>
+        <ul>
+          <li><strong>d-Block:</strong> Group 3–12, (n−1)d¹⁻¹⁰ ns¹⁻²</li>
+          <li><strong>Transition Elements:</strong> Partially filled d-orbital (Zn, Cd, Hg excluded)</li>
+          <li><strong>Cr:</strong> 3d⁵ 4s¹ | <strong>Cu:</strong> 3d¹⁰ 4s¹</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Key Orders</span>
+        <ul>
+          <li><strong>Lanthanide Contraction:</strong> Zr ≈ Hf, Mo ≈ W</li>
+          <li><strong>Oxidation States:</strong> Mn (+7), Sc (+3), Zn (+2)</li>
+          <li><strong>IE Exceptions:</strong> Mn⁺ &lt; Cr⁺, Fe²⁺ &lt; Fe³⁺</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Cr/Cu Configuration:</strong> d⁵ s¹ / d¹⁰ s¹</li>
+          <li><strong>Zn, Cd, Hg</strong> → Not transition elements</li>
+          <li><strong>Mn²⁺/Fe³⁺</strong> → 5 unpaired, 5.92 BM</li>
+          <li><strong>Sc³⁺, Zn²⁺</strong> → Colourless</li>
+          <li><strong>Ce⁴⁺</strong> → Oxidising, <strong>Eu²⁺</strong> → Reducing</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧬 Magnetic Moment</span>
+        <ul>
+          <li><strong>Formula:</strong> μ = √n(n+2) BM</li>
+          <li><strong>Sc³⁺ (d⁰)</strong> → 0 BM (Dia)</li>
+          <li><strong>Ti³⁺ (d¹)</strong> → 1.73 BM</li>
+          <li><strong>Mn²⁺/Fe³⁺ (d⁵)</strong> → 5.92 BM</li>
+          <li><strong>Cu²⁺ (d⁹)</strong> → 1.73 BM</li>
+          <li><strong>Zn²⁺ (d¹⁰)</strong> → 0 BM (Dia)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 KMnO₄ & K₂Cr₂O₇</span>
+        <ul>
+          <li><strong>KMnO₄</strong> → Purple, Mn = +7</li>
+          <li>Acidic → Mn²⁺ (colourless)</li>
+          <li>Neutral → MnO₂ (brown)</li>
+          <li>Basic → MnO₄²⁻ (green)</li>
+          <li><strong>K₂Cr₂O₇</strong> → Orange, Cr = +6</li>
+          <li>Acidic + SO₂ → Cr³⁺ (green)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">💡 Lanthanides & Actinides</span>
+        <ul>
+          <li><strong>Lanthanides:</strong> 4f series, +3 common, Ce⁴⁺ oxidising</li>
+          <li><strong>Actinides:</strong> 5f series, Radioactive, +3/+4 common</li>
+          <li><strong>Zr ≈ Hf</strong> (Lanthanide contraction)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

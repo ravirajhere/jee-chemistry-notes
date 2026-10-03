@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordination Compounds | JEE Chemistry Notes</title>
+  <meta name="description" content="Coordination Compounds Notes for JEE Mains — Nomenclature, Isomerism, CFT, Magnetic Properties, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--secondary); color: white; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none;
+    }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+
+    .trend-diagram {
+      background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto;
+    }
+    .trend-diagram svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+
+    .numeric-box {
+      background: #e8f0fe; border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0;
+    }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Inorganic</a> &gt; Coordination Compounds
+  </div>
+
+  <!-- CHAPTER HEADER -->
+  <header class="chapter-header">
+    <h1>Coordination Compounds</h1>
+    <p>Nomenclature, Isomerism, CFT, Magnetic Properties, EAN Rule, PYQ Analysis</p>
+  </header>
+
+  <!-- PRINT BUTTON -->
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Full Notes</button>
+    <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: FULL NOTES -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Basic Terms</h2>
+
+      <div class="box">
+        <span class="box-title">Definition</span>
+        <p><strong>Coordination Compound:</strong> Aise compound jisme central metal atom/ion ke around ligands coordinated hote hain.</p>
+        <ul>
+          <li><strong>Double Salt</strong> → Water mein poora dissociate ho jaata hai (e.g., Mohr's salt)</li>
+          <li><strong>Complex</strong> → Water mein dissociate nahi hota ya partial (e.g., [Cu(NH₃)₄]SO₄)</li>
+        </ul>
+      </div>
+
+      <h3>1.1 Important Terms</h3>
+      <table>
+        <thead>
+          <tr><th>Term</th><th>Definition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Central Atom</strong></td><td>Metal atom/ion jo ligands ko hold karta hai</td></tr>
+          <tr><td><strong>Ligand</strong></td><td>Ion/molecule jo central atom ko donate karta hai (Lewis base)</td></tr>
+          <tr><td><strong>Coordination Number (CN)</strong></td><td>Central atom se attached ligand ki total donor atoms</td></tr>
+          <tr><td><strong>Coordination Sphere</strong></td><td>Central atom + ligands ka group [ ] mein</td></tr>
+          <tr><td><strong>Counter Ion</strong></td><td>Coordination sphere ke bahar wala ion</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>CN</strong> = number of <strong>donor atoms</strong>, not number of ligands.</p>
+        <p>[Co(en)₃]³⁺ mein CN = 6 (en bidentate, 3 × 2 = 6).</p>
+      </div>
+
+      <h2>2. Classification of Ligands</h2>
+
+      <h3>2.1 Types (Denticity ke hisaab se)</h3>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Donor Atoms</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Monodentate</strong></td><td>1</td><td>Cl⁻, NH₃, H₂O, CN⁻, CO</td></tr>
+          <tr><td><strong>Bidentate</strong></td><td>2</td><td>en, ox, acac</td></tr>
+          <tr><td><strong>Tridentate</strong></td><td>3</td><td>dien</td></tr>
+          <tr><td><strong>Tetradentate</strong></td><td>4</td><td>trien</td></tr>
+          <tr><td><strong>Hexadentate</strong></td><td>6</td><td>EDTA</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Special Ligands</h3>
+      <ul>
+        <li><strong>Ambidentate Ligand:</strong> Do different atoms se attach ho sakta hai
+          <ul>
+            <li><strong>NO₂⁻</strong> → N se (nitro), O se (nitrito)</li>
+            <li><strong>SCN⁻</strong> → S se (thiocyanato), N se (isothiocyanato)</li>
+          </ul>
+        </li>
+        <li><strong>Flexidentate Ligand:</strong> Denticity change kar sakta hai (EDTA → 4 ya 6)</li>
+      </ul>
+
+      <h2>3. Nomenclature (IUPAC)</h2>
+
+      <h3>3.1 Rules</h3>
+      <ol>
+        <li><strong>Cation pehle</strong>, anion baad mein</li>
+        <li><strong>Ligands alphabetical order</strong> mein</li>
+        <li><strong>Ligand ke naam:</strong>
+          <ul>
+            <li>Anionic: -ide → -ido, -ite → -ito, -ate → -ato</li>
+            <li>Neutral: NH₃ → ammine, H₂O → aqua, CO → carbonyl</li>
+          </ul>
+        </li>
+        <li><strong>Prefixes:</strong> 2 → di, 3 → tri, 4 → tetra, 5 → penta, 6 → hexa</li>
+        <li><strong>Oxidation State:</strong> Roman numerals mein brackets mein</li>
+      </ol>
+
+      <h3>3.2 Examples</h3>
+      <table>
+        <thead>
+          <tr><th>Formula</th><th>IUPAC Name</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Co(NH₃)₆]Cl₃</td><td>Hexaamminecobalt(III) chloride</td></tr>
+          <tr><td>[Cu(NH₃)₄]SO₄</td><td>Tetraamminecopper(II) sulphate</td></tr>
+          <tr><td>K₄[Fe(CN)₆]</td><td>Potassium hexacyanoferrate(II)</td></tr>
+          <tr><td>[Pt(NH₃)₂Cl₂]</td><td>Diamminedichloridoplatinum(II)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>NH₃</strong> → ammine (double m), <strong>NH₂</strong> → amido, <strong>NH</strong> → imido</li>
+          <li><strong>H₂O</strong> → aqua, <strong>NO</strong> → nitrosyl, <strong>CO</strong> → carbonyl</li>
+        </ul>
+      </div>
+
+      <h2>4. Isomerism in Coordination Compounds</h2>
+
+      <h3>4.1 Types</h3>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Definition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Structural</strong></td><td>Different connectivity</td></tr>
+          <tr><td><strong>Stereoisomerism</strong></td><td>Same connectivity, different arrangement</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Structural Isomerism</h3>
+      <ol>
+        <li><strong>Ionisation Isomerism:</strong> [Co(NH₃)₅Br]SO₄ vs [Co(NH₃)₅SO₄]Br</li>
+        <li><strong>Hydrate Isomerism:</strong> [Cr(H₂O)₆]Cl₃ vs [Cr(H₂O)₅Cl]Cl₂·H₂O</li>
+        <li><strong>Linkage Isomerism:</strong> [Co(NH₃)₅(NO₂)]²⁺ vs [Co(NH₃)₅(ONO)]²⁺</li>
+        <li><strong>Coordination Isomerism:</strong> [Co(NH₃)₆][Cr(CN)₆] vs [Cr(NH₃)₆][Co(CN)₆]</li>
+      </ol>
+
+      <h3>4.3 Stereoisomerism</h3>
+      <ul>
+        <li><strong>Geometrical (cis-trans):</strong>
+          <ul>
+            <li>Square Planar: [MA₂B₂] → cis/trans</li>
+            <li>Octahedral: [MA₄B₂] → cis/trans</li>
+            <li>Octahedral: [MA₃B₃] → fac/mer</li>
+          </ul>
+        </li>
+        <li><strong>Optical:</strong>
+          <ul>
+            <li>[M(en)₃]³⁺ → d and l forms</li>
+            <li>[M(en)₂Cl₂] cis → Optical + Geometrical</li>
+            <li>[M(en)₂Cl₂] trans → Only Geometrical</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>[M(en)₃]³⁺</strong> → Optical isomerism (d and l)</li>
+          <li><strong>[M(en)₂Cl₂]</strong> → cis (optical + geometrical), trans (only geometrical)</li>
+        </ul>
+      </div>
+
+      <h2>5. Crystal Field Theory (CFT)</h2>
+
+      <div class="box">
+        <span class="box-title">Basic Concept</span>
+        <p>Metal ion ke d-orbitals ligands ke electric field se split ho jaate hain.</p>
+        <p><strong>Crystal Field Splitting Energy (Δ₀ or Δₜ):</strong> d-orbitals ke beech ka energy difference.</p>
+      </div>
+
+      <h3>5.1 Splitting Patterns</h3>
+      <table>
+        <thead>
+          <tr><th>Geometry</th><th>Splitting</th><th>Orbitals</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Octahedral</strong></td><td>Δ₀</td><td>t₂g (lower), e_g (higher)</td></tr>
+          <tr><td><strong>Tetrahedral</strong></td><td>Δₜ</td><td>e (lower), t₂ (higher)</td></tr>
+          <tr><td><strong>Square Planar</strong></td><td>Δ</td><td>d_x²-y² (highest), d_xy (lowest)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>5.2 Important Points</h3>
+      <ul>
+        <li><strong>Δₜ = 4/9 Δ₀</strong> (Tetrahedral splitting is smaller)</li>
+        <li><strong>Strong Field Ligands</strong> → Large Δ₀ → Low Spin</li>
+        <li><strong>Weak Field Ligands</strong> → Small Δ₀ → High Spin</li>
+      </ul>
+
+      <h3>5.3 Spectrochemical Series</h3>
+      <div class="formula">
+        I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < H₂O < NH₃ < en < NO₂⁻ < CN⁻ < CO
+      </div>
+
+      <h3>5.4 CFSE (Crystal Field Stabilization Energy)</h3>
+      <div class="formula">
+        CFSE (Octahedral) = [−0.4 n(t₂g) + 0.6 n(e_g)] Δ₀
+      </div>
+      <p>Jahan n(t₂g) = t₂g mein electrons, n(e_g) = e_g mein electrons.</p>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Example (CFSE)</span>
+        <p><strong>Example 1:</strong> Find CFSE of [Fe(CN)₆]³⁻</p>
+        <ol>
+          <li>Fe³⁺ → d⁵</li>
+          <li>CN⁻ → Strong field → Low Spin → t₂g⁵ e_g⁰</li>
+          <li>CFSE = [−0.4 × 5 + 0.6 × 0] Δ₀ = −2.0 Δ₀</li>
+          <li><strong>Answer:</strong> −2.0 Δ₀</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Example (CFSE)</span>
+        <p><strong>Example 2:</strong> Find CFSE of [Fe(H₂O)₆]²⁺</p>
+        <ol>
+          <li>Fe²⁺ → d⁶</li>
+          <li>H₂O → Weak field → High Spin → t₂g⁴ e_g²</li>
+          <li>CFSE = [−0.4 × 4 + 0.6 × 2] Δ₀ = (−1.6 + 1.2) Δ₀ = −0.4 Δ₀</li>
+          <li><strong>Answer:</strong> −0.4 Δ₀</li>
+        </ol>
+      </div>
+
+      <h2>6. Magnetic Properties</h2>
+
+      <div class="formula">
+        μ = √n(n+2) BM
+      </div>
+      <p>Jahan n = number of unpaired electrons</p>
+
+      <h3>6.1 High Spin vs Low Spin</h3>
+      <table>
+        <thead>
+          <tr><th>Ligand</th><th>Spin</th><th>Unpaired e⁻</th><th>Magnetic Moment</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Weak Field</td><td>High Spin</td><td>More</td><td>High</td></tr>
+          <tr><td>Strong Field</td><td>Low Spin</td><td>Less</td><td>Low</td></tr>
+        </tbody>
+      </table>
+
+      <h3>6.2 Examples</h3>
+      <table>
+        <thead>
+          <tr><th>Complex</th><th>Unpaired e⁻</th><th>Magnetic Moment</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Fe(H₂O)₆]²⁺</td><td>4</td><td>4.90 BM</td><td>High Spin</td></tr>
+          <tr><td>[Fe(CN)₆]⁴⁻</td><td>0</td><td>0 BM</td><td>Low Spin</td></tr>
+          <tr><td>[CoF₆]³⁻</td><td>4</td><td>4.90 BM</td><td>High Spin</td></tr>
+          <tr><td>[Co(CN)₆]³⁻</td><td>0</td><td>0 BM</td><td>Low Spin</td></tr>
+          <tr><td>[Ni(H₂O)₆]²⁺</td><td>2</td><td>2.83 BM</td><td>High Spin</td></tr>
+          <tr><td>[Ni(CN)₄]²⁻</td><td>0</td><td>0 BM</td><td>Low Spin</td></tr>
+        </tbody>
+      </table>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Numerical Example (Magnetic Moment)</span>
+        <p><strong>Example:</strong> Find magnetic moment of [MnBr₄]²⁻</p>
+        <ol>
+          <li>Mn²⁺ → d⁵</li>
+          <li>Br⁻ → Weak field → High Spin → 5 unpaired e⁻</li>
+          <li>μ = √5(5+2) = √35 = <strong>5.92 BM</strong></li>
+          <li>Paramagnetic</li>
+        </ol>
+      </div>
+
+      <h2>7. Colour in Coordination Compounds</h2>
+
+      <div class="box">
+        <span class="box-title">Reason</span>
+        <p>d-d transition ke karan colour hota hai. Δ₀ ke hisaab se absorbed light ki wavelength change hoti hai.</p>
+      </div>
+
+      <ul>
+        <li><strong>d⁰ and d¹⁰</strong> → Colourless (no d-d transition)</li>
+        <li><strong>Ti⁴⁺ (d⁰)</strong> → Colourless</li>
+        <li><strong>Zn²⁺ (d¹⁰)</strong> → Colourless</li>
+        <li><strong>Cu²⁺ (d⁹)</strong> → Blue</li>
+        <li><strong>Ni²⁺ (d⁸)</strong> → Green</li>
+        <li><strong>Co²⁺ (d⁷)</strong> → Pink</li>
+      </ul>
+
+      <h2>8. Stability of Complexes</h2>
+
+      <ul>
+        <li><strong>Higher K</strong> → More stable complex</li>
+        <li><strong>Chelate Effect:</strong> Chelating ligands (bidentate, polydentate) se stability badhti hai</li>
+        <li><strong>Factors:</strong> Charge on Metal ↑ → Stable, Size ↓ → Stable, Chelate Effect</li>
+      </ul>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>[Ni(en)₃]²⁺ > [Ni(NH₃)₆]²⁺</strong> (Chelate effect)</p>
+      </div>
+
+      <h2>9. Important Compounds (JEE Favourites)</h2>
+
+      <table>
+        <thead>
+          <tr><th>Compound</th><th>Formula</th><th>CN</th><th>Geometry</th><th>Magnetic</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Wilkinson's Catalyst</strong></td><td>[Rh(PPh₃)₃Cl]</td><td>4</td><td>Square Planar</td><td>Diamagnetic</td></tr>
+          <tr><td><strong>Zeise's Salt</strong></td><td>K[PtCl₃(C₂H₄)]</td><td>4</td><td>Square Planar</td><td>Diamagnetic</td></tr>
+          <tr><td><strong>Cisplatin</strong></td><td>[Pt(NH₃)₂Cl₂]</td><td>4</td><td>Square Planar</td><td>Diamagnetic</td></tr>
+          <tr><td><strong>Vitamin B₁₂</strong></td><td>Cobalamin</td><td>6</td><td>Octahedral</td><td>Diamagnetic</td></tr>
+          <tr><td><strong>Haemoglobin</strong></td><td>Fe-porphyrin</td><td>6</td><td>Octahedral</td><td>Paramagnetic</td></tr>
+          <tr><td><strong>Ferrocene</strong></td><td>[Fe(C₅H₅)₂]</td><td>6</td><td>Sandwiched</td><td>Diamagnetic</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li><strong>Cisplatin</strong> → Anti-cancer drug</li>
+          <li><strong>Wilkinson's Catalyst</strong> → Hydrogenation catalyst</li>
+          <li><strong>Zeise's Salt</strong> → First organometallic compound</li>
+        </ul>
+      </div>
+
+      <h2>10. EAN Rule (Effective Atomic Number)</h2>
+
+      <div class="formula">
+        EAN = Z − Oxidation State + 2 × CN
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Complex</th><th>EAN Calculation</th><th>EAN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Co(NH₃)₆]³⁺</td><td>27 − 3 + 12 = 36</td><td>36 (Kr)</td></tr>
+          <tr><td>[Fe(CN)₆]⁴⁻</td><td>26 − 2 + 12 = 36</td><td>36 (Kr)</td></tr>
+          <tr><td>[Ni(CO)₄]</td><td>28 − 0 + 8 = 36</td><td>36 (Kr)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>EAN = 36</strong> (Kr) most stable hota hai.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: MAINS TRAPS -->
+  <!-- ============================================ -->
+  <div id="tab-traps" class="tab-content">
+    <div class="notes">
+      <h2>Mains Traps — Coordination Compounds</h2>
+
+      <div class="box trap-box">
+        <span class="box-title">1. Coordination Number</span>
+        <p><strong>CN = Donor atoms</strong>, not ligands.</p>
+        <p>[Co(en)₃]³⁺ → CN = 6 (en = bidentate)</p>
+        <p>EDTA → CN = 6 (hexadentate)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">2. Magnetic Moment</span>
+        <p><strong>[Ni(CN)₄]²⁻</strong> → Diamagnetic (Square Planar)</p>
+        <p><strong>[NiCl₄]²⁻</strong> → Paramagnetic (Tetrahedral)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">3. Hybridisation (VBT)</span>
+        <p><strong>[Fe(CN)₆]³⁻</strong> → d²sp³ (Inner, Low Spin)</p>
+        <p><strong>[FeF₆]³⁻</strong> → sp³d² (Outer, High Spin)</p>
+        <p><strong>[Ni(CN)₄]²⁻</strong> → dsp² (Square Planar)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">4. Isomerism</span>
+        <p><strong>[Co(en)₂Cl₂]</strong> → cis (Optical + Geometrical), trans (Only Geometrical)</p>
+        <p><strong>[M(en)₃]³⁺</strong> → Optical isomerism</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">5. Linkage Isomerism</span>
+        <p><strong>NO₂⁻</strong> → N se (Nitro), O se (Nitrito)</p>
+        <p><strong>SCN⁻</strong> → S se (Thiocyanato), N se (Isothiocyanato)</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">6. Spectrochemical Series</span>
+        <p><strong>CO</strong> → Strongest field ligand</p>
+        <p><strong>I⁻</strong> → Weakest field ligand</p>
+        <p>Order: I⁻ &lt; Br⁻ &lt; Cl⁻ &lt; F⁻ &lt; H₂O &lt; NH₃ &lt; en &lt; CN⁻ &lt; CO</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">7. Colour</span>
+        <p><strong>d⁰, d¹⁰</strong> → Colourless (Zn²⁺, Ti⁴⁺, Sc³⁺)</p>
+        <p><strong>Cu²⁺</strong> → Blue, <strong>Fe³⁺</strong> → Yellow, <strong>Ni²⁺</strong> → Green</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">8. CFSE</span>
+        <p>Strong field → Low Spin → Large CFSE (negative zyada)</p>
+        <p>Weak field → High Spin → Small CFSE</p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">9. Chelate Effect</span>
+        <p><strong>[Ni(en)₃]²⁺ > [Ni(NH₃)₆]²⁺</strong></p>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">10. Important Compounds</span>
+        <p><strong>Cisplatin</strong> → Anti-cancer</p>
+        <p><strong>Wilkinson's</strong> → Hydrogenation catalyst</p>
+        <p><strong>Zeise's Salt</strong> → First organometallic</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS (2019–2026) -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+
+      <h2>JEE Main 2019–2026: Coordination Compounds PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Topics Asked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Coordination Number (en, oxalate), Homoleptic complexes</td></tr>
+          <tr><td><strong>2020</strong></td><td>IUPAC Naming, Magnetic Moment (spin-only)</td></tr>
+          <tr><td><strong>2021</strong></td><td>Secondary Valency (Werner), Hybridisation (Ni(CN)₄²⁻)</td></tr>
+          <tr><td><strong>2022</strong></td><td>Spectrochemical Series, Linkage Isomerism (NO₂⁻)</td></tr>
+          <tr><td><strong>2023</strong></td><td>Linkage Isomerism, Werner's Theory (Primary/Secondary)</td></tr>
+          <tr><td><strong>2024</strong></td><td>Homoleptic complexes, IUPAC Naming</td></tr>
+          <tr><td><strong>2025</strong></td><td>Low Spin/High Spin (Homoleptic), Magnetic Moments</td></tr>
+          <tr><td><strong>2026</strong></td><td>Spin-only Magnetic Moment (MnBr₄²⁻, Cu(H₂O)₆²⁺, Ni(CN)₄²⁻), Hybridisation</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Magnetic Moment & Hybridisation</strong> → Har saal</li>
+          <li><strong>IUPAC Nomenclature & Isomerism</strong> → Har saal</li>
+          <li><strong>CFT (CFSE Calculation)</strong> → 2024, 2026</li>
+          <li><strong>Werner's Theory</strong> → 2021, 2023</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Magnetic Moment & Spin State</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>[MnBr₄]²⁻</strong> (Mn²⁺, d⁵, weak) → 5 unpaired → 5.92 BM</li>
+          <li><strong>[Ni(CN)₄]²⁻</strong> (Ni²⁺, d⁸, strong) → 0 unpaired → Diamagnetic</li>
+          <li><strong>[Ni(H₂O)₆]²⁺</strong> (Ni²⁺, d⁸, weak) → 2 unpaired → 2.83 BM</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Hybridisation (VBT & CFT)</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>[Fe(CN)₆]³⁻</strong> → d²sp³ (Inner, Low Spin)</li>
+          <li><strong>[FeF₆]³⁻</strong> → sp³d² (Outer, High Spin)</li>
+          <li><strong>[Ni(CN)₄]²⁻</strong> → dsp² (Square Planar)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: IUPAC Nomenclature</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2024</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Naming rules: Cation first, alphabetical order, oxidation state</li>
+          <li>[Cr(H₂O)₆]Cl₃ → Hexaaquachromium(III) chloride</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Isomerism</h3>
+      <p><strong>PYQ Trend:</strong> 2022, 2023</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Linkage:</strong> [Co(NH₃)₅(NO₂)]²⁺ → Nitro vs Nitrito</li>
+          <li><strong>Solvate:</strong> [Cr(H₂O)₆]Cl₃</li>
+          <li><strong>Geometrical + Optical:</strong> [Co(en)₂Cl₂]</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: CFT & CFSE</h3>
+      <p><strong>PYQ Trend:</strong> 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>CFSE (Octahedral) = [−0.4 n(t₂g) + 0.6 n(e_g)] Δ₀</strong></li>
+          <li>[Co(CN)₆]³⁻ → Strong field, Low Spin, Large Δ₀</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 6: Stability & Chelate Effect</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>[Ni(en)₃]²⁺ > [Ni(NH₃)₆]²⁺</strong></li>
+          <li>EDTA → Hexadentate → Very stable</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Magnetic Moment</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Hybridisation</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>IUPAC Naming</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Isomerism</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td>CFT/CFSE</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Magnetic Moment (100%), Hybridisation (100%).</p>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Coordination Compounds (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Formulas</span>
+        <ul>
+          <li><strong>Magnetic Moment:</strong> μ = √n(n+2) BM</li>
+          <li><strong>EAN:</strong> Z − OS + 2 × CN</li>
+          <li><strong>CFSE (Octahedral):</strong> [−0.4 n(t₂g) + 0.6 n(e_g)] Δ₀</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Key Orders</span>
+        <ul>
+          <li><strong>Spectrochemical Series:</strong> I⁻ &lt; Br⁻ &lt; Cl⁻ &lt; F⁻ &lt; H₂O &lt; NH₃ &lt; en &lt; CN⁻ &lt; CO</li>
+          <li><strong>Stability:</strong> [Ni(en)₃]²⁺ &gt; [Ni(NH₃)₆]²⁺</li>
+          <li><strong>Magnetic:</strong> High Spin &gt; Low Spin</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>CN = Donor atoms</strong>, not ligands</li>
+          <li><strong>en</strong> → bidentate, <strong>EDTA</strong> → hexadentate</li>
+          <li><strong>Ambidentate:</strong> NO₂⁻, SCN⁻</li>
+          <li><strong>[M(en)₃]³⁺</strong> → Optical isomerism</li>
+          <li><strong>[Ni(CN)₄]²⁻</strong> → Diamagnetic</li>
+          <li><strong>[NiCl₄]²⁻</strong> → Paramagnetic</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🧬 Hybridisation & Shapes</span>
+        <ul>
+          <li><strong>CN = 4:</strong> Tetrahedral (sp³) ya Square Planar (dsp²)</li>
+          <li><strong>CN = 6:</strong> Octahedral (sp³d² ya d²sp³)</li>
+          <li><strong>[Ni(CN)₄]²⁻</strong> → dsp² (Square Planar, Dia)</li>
+          <li><strong>[NiCl₄]²⁻</strong> → sp³ (Tetrahedral, Para)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 CFT Quick Points</span>
+        <ul>
+          <li><strong>Strong Field:</strong> Low Spin, Large Δ₀, Diamagnetic</li>
+          <li><strong>Weak Field:</strong> High Spin, Small Δ₀, Paramagnetic</li>
+          <li><strong>Δₜ = 4/9 Δ₀</strong></li>
+          <li><strong>CO</strong> → Strongest ligand</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">💡 Important Compounds</span>
+        <ul>
+          <li><strong>Cisplatin</strong> → Anti-cancer</li>
+          <li><strong>Wilkinson's</strong> → Hydrogenation catalyst</li>
+          <li><strong>Zeise's Salt</strong> → First organometallic</li>
+          <li><strong>Vitamin B₁₂</strong> → Cobalamin</li>
+          <li><strong>Haemoglobin</strong> → Fe-porphyrin</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Colour</span>
+        <ul>
+          <li><strong>d⁰, d¹⁰</strong> → Colourless (Zn²⁺, Ti⁴⁺, Sc³⁺)</li>
+          <li><strong>Cu²⁺</strong> → Blue</li>
+          <li><strong>Ni²⁺</strong> → Green</li>
+          <li><strong>Fe³⁺</strong> → Yellow</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

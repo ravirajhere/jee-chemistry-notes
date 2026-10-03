@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldehydes, Ketones & Carboxylic Acids | JEE Chemistry Notes</title>
+  <meta name="description" content="Aldehydes, Ketones & Carboxylic Acids Notes for JEE Mains — Aldol, Cannizzaro, Clemmensen, Wolff-Kishner, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    .reaction-svg { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem; margin: 0.8rem 0; }
+    .reaction-svg svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .dual-name { display: flex; justify-content: space-between; font-size: 0.75rem; color: #5f6368; padding: 0 0.5rem; margin-top: 0.2rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box, .reaction-svg { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="../physical/index.html">Physical</a>
+        <a href="index.html" class="active">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Organic</a> &gt; Aldehydes, Ketones & Carboxylic Acids
+  </div>
+
+  <header class="chapter-header">
+    <h1>Aldehydes, Ketones & Carboxylic Acids</h1>
+    <p>Aldol, Cannizzaro, Clemmensen, Wolff-Kishner, HVZ, Decarboxylation</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Diagrams</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Solved Problems</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Reaction Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & DIAGRAMS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Common Names vs IUPAC Names</h2>
+
+      <table>
+        <thead><tr><th>Common Name</th><th>IUPAC Name</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Formaldehyde</strong></td><td>Methanal</td><td>HCHO</td></tr>
+          <tr><td><strong>Acetaldehyde</strong></td><td>Ethanal</td><td>CH₃CHO</td></tr>
+          <tr><td><strong>Propionaldehyde</strong></td><td>Propanal</td><td>CH₃CH₂CHO</td></tr>
+          <tr><td><strong>Acetone</strong></td><td>Propanone</td><td>CH₃COCH₃</td></tr>
+          <tr><td><strong>Acetophenone</strong></td><td>Phenyl ethanone</td><td>C₆H₅COCH₃</td></tr>
+          <tr><td><strong>Benzaldehyde</strong></td><td>Benzenecarbaldehyde</td><td>C₆H₅CHO</td></tr>
+          <tr><td><strong>Formic Acid</strong></td><td>Methanoic Acid</td><td>HCOOH</td></tr>
+          <tr><td><strong>Acetic Acid</strong></td><td>Ethanoic Acid</td><td>CH₃COOH</td></tr>
+          <tr><td><strong>Benzoic Acid</strong></td><td>Benzenecarboxylic Acid</td><td>C₆H₅COOH</td></tr>
+          <tr><td><strong>Oxalic Acid</strong></td><td>Ethanedioic Acid</td><td>COOH−COOH</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Common name yaad rakho, IUPAC se question banta hai</strong></p>
+        <p>Acetone = Propanone, Acetaldehyde = Ethanal</p>
+      </div>
+
+      <h2>2. Structure of Carbonyl Group</h2>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Carbonyl Group (C=O)</text>
+          
+          <!-- Carbonyl -->
+          <text x="50" y="80" fill="#202124" font-weight="700" font-size="20">C</text>
+          <text x="50" y="60" fill="#ea4335" font-weight="700" font-size="18">=O</text>
+          <line x1="75" y1="80" x2="120" y2="80" stroke="#202124" stroke-width="2"/>
+          <text x="125" y="85" fill="#202124" font-size="14">R</text>
+          <line x1="50" y1="100" x2="50" y2="120" stroke="#202124" stroke-width="2"/>
+          <text x="40" y="135" fill="#202124" font-size="14">R'</text>
+          
+          <text x="250" y="60" fill="#5f6368" font-size="12">• sp² hybridised</text>
+          <text x="250" y="80" fill="#5f6368" font-size="12">• Planar (120°)</text>
+          <text x="250" y="100" fill="#5f6368" font-size="12">• Polar (C=O)</text>
+          <text x="250" y="120" fill="#5f6368" font-size="12">• Nucleophilic addition</text>
+        </svg>
+        <div class="diagram-caption">Carbonyl Group — Planar, Polar, sp² Hybridised</div>
+      </div>
+
+      <h3>2.1 Aldehyde vs Ketone</h3>
+      <table>
+        <thead><tr><th>Feature</th><th>Aldehyde (R−CHO)</th><th>Ketone (R−CO−R')</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Structure</strong></td><td>−CHO group</td><td>−CO− group</td></tr>
+          <tr><td><strong>Reactivity</strong></td><td>More reactive (less steric)</td><td>Less reactive</td></tr>
+          <tr><td><strong>Oxidation</strong></td><td>Easily oxidised</td><td>Difficult</td></tr>
+          <tr><td><strong>Tollens Test</strong></td><td>Positive</td><td>Negative</td></tr>
+          <tr><td><strong>Fehling Test</strong></td><td>Positive</td><td>Negative</td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Reactions of Aldehydes & Ketones</h2>
+
+      <h3>3.1 Nucleophilic Addition Reactions</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + HCN</text>
+          <text x="180" y="40" fill="#1a73e8">→</text>
+          <text x="205" y="40" fill="#202124" font-weight="600">R−CH(OH)−CN</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(Cyanohydrin)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde + HCN → 2-Hydroxypropanenitrile</span><span>(Cyanohydrin)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NaHSO₃</text>
+          <text x="200" y="40" fill="#1a73e8">→</text>
+          <text x="225" y="40" fill="#202124" font-weight="600">R−CH(OH)−SO₃Na</text>
+          <text x="450" y="40" fill="#5f6368" font-size="12">(Bisulphite adduct)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde + NaHSO₃ → Sodium bisulphite adduct (White ppt)</span><span>(Purification)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + R'MgX</text>
+          <text x="190" y="40" fill="#1a73e8">→</text>
+          <text x="215" y="40" fill="#202124" font-weight="600">R−CH(OH)−R'</text>
+          <text x="430" y="40" fill="#5f6368" font-size="12">(Alcohol)</text>
+        </svg>
+        <div class="dual-name"><span>Grignard Reagent + Aldehyde → Secondary Alcohol</span><span>(Grignard)</span></div>
+      </div>
+
+      <h3>3.2 Oxidation Reactions</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Oxidation of Aldehydes & Ketones</text>
+          
+          <!-- Aldehyde -->
+          <text x="50" y="60" fill="#34a853" font-weight="600" font-size="13">Aldehyde:</text>
+          <text x="180" y="60" fill="#202124" font-size="14">R−CHO</text>
+          <text x="280" y="60" fill="#1a73e8">→</text>
+          <text x="310" y="60" fill="#202124" font-size="14">R−COOH</text>
+          <text x="430" y="60" fill="#5f6368" font-size="11">(Easy oxidation)</text>
+
+          <!-- Ketone -->
+          <text x="50" y="110" fill="#ea4335" font-weight="600" font-size="13">Ketone:</text>
+          <text x="180" y="110" fill="#202124" font-size="14">R−CO−R'</text>
+          <text x="280" y="110" fill="#1a73e8">→</text>
+          <text x="310" y="110" fill="#5f6368" font-size="11">(Difficult, C−C cleavage)</text>
+
+          <!-- Tests -->
+          <text x="50" y="160" fill="#f9ab00" font-weight="600" font-size="13">Tests:</text>
+          <text x="180" y="160" fill="#202124" font-size="13">Tollens (Ag mirror) → Aldehyde only</text>
+          <text x="180" y="185" fill="#202124" font-size="13">Fehling (Red ppt) → Aldehyde only</text>
+        </svg>
+        <div class="diagram-caption">Aldehyde easily oxidises, Ketone difficult</div>
+      </div>
+
+      <h3>3.3 Important Named Reactions</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">2 CH₃CHO</text>
+          <text x="130" y="40" fill="#1a73e8">→</text>
+          <text x="155" y="40" fill="#202124" font-weight="600">CH₃−CH(OH)−CH₂−CHO</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Aldol, dil. NaOH)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde → Aldol (3-Hydroxybutanal)</span><span>(Aldol Condensation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">2 HCHO</text>
+          <text x="110" y="40" fill="#1a73e8">→</text>
+          <text x="135" y="40" fill="#202124" font-weight="600">CH₃OH + HCOONa</text>
+          <text x="370" y="40" fill="#5f6368" font-size="12">(Cannizzaro, conc. NaOH)</text>
+        </svg>
+        <div class="dual-name"><span>Formaldehyde → Methanol + Sodium formate</span><span>(Cannizzaro Reaction)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + Zn(Hg)/HCl</text>
+          <text x="210" y="40" fill="#1a73e8">→</text>
+          <text x="235" y="40" fill="#202124" font-weight="600">R−CH₃ + H₂O</text>
+          <text x="430" y="40" fill="#5f6368" font-size="12">(Clemmensen)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde/Ketone → Alkane</span><span>(Clemmensen Reduction)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NH₂NH₂/KOH</text>
+          <text x="230" y="40" fill="#1a73e8">→</text>
+          <text x="255" y="40" fill="#202124" font-weight="600">R−CH₃ + N₂ + H₂O</text>
+          <text x="450" y="40" fill="#5f6368" font-size="12">(Wolff-Kishner)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde/Ketone → Alkane</span><span>(Wolff-Kishner Reduction)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NH₂OH</text>
+          <text x="190" y="40" fill="#1a73e8">→</text>
+          <text x="215" y="40" fill="#202124" font-weight="600">R−CH=N−OH</text>
+          <text x="400" y="40" fill="#5f6368" font-size="12">(Oxime)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde + Hydroxylamine → Oxime</span><span>(Oxime Formation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NH₂NH₂</text>
+          <text x="200" y="40" fill="#1a73e8">→</text>
+          <text x="225" y="40" fill="#202124" font-weight="600">R−CH=N−NH₂</text>
+          <text x="410" y="40" fill="#5f6368" font-size="12">(Hydrazone)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde + Hydrazine → Hydrazone</span><span>(Hydrazone Formation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + 2,4-DNP</text>
+          <text x="200" y="40" fill="#1a73e8">→</text>
+          <text x="225" y="40" fill="#202124" font-weight="600">Orange/Red ppt</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(2,4-DNP Test)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde/Ketone + 2,4-DNP → Orange/Red ppt</span><span>(2,4-DNP Test)</span></div>
+      </div>
+
+      <h3>3.4 Distinction Tests</h3>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Distinction Tests</text>
+          
+          <!-- Tollens -->
+          <text x="50" y="60" fill="#34a853" font-weight="600" font-size="13">Tollens Test:</text>
+          <text x="250" y="60" fill="#202124" font-size="13">Aldehyde → Silver mirror</text>
+          <text x="250" y="80" fill="#5f6368" font-size="11">(Ag(NH₃)₂⁺ + R−CHO → Ag↓)</text>
+
+          <!-- Fehling -->
+          <text x="50" y="110" fill="#f9ab00" font-weight="600" font-size="13">Fehling Test:</text>
+          <text x="250" y="110" fill="#202124" font-size="13">Aldehyde → Red-brown ppt (Cu₂O)</text>
+          <text x="250" y="130" fill="#5f6368" font-size="11">(Aliphatic aldehyde only)</text>
+
+          <!-- Iodoform -->
+          <text x="50" y="160" fill="#ea4335" font-weight="600" font-size="13">Iodoform Test:</text>
+          <text x="250" y="160" fill="#202124" font-size="13">CH₃CO− or CH₃CH(OH)− → Yellow ppt</text>
+        </svg>
+        <div class="diagram-caption">Tollens, Fehling, Iodoform Tests</div>
+      </div>
+
+      <h2>4. Carboxylic Acids</h2>
+
+      <div class="diagram-box">
+        <svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+          <text x="20" y="25" fill="#1a73e8" font-weight="700" font-size="14">Carboxylic Acid (R−COOH)</text>
+          
+          <!-- Structure -->
+          <text x="50" y="80" fill="#202124" font-weight="700" font-size="18">R − C</text>
+          <text x="120" y="60" fill="#ea4335" font-weight="700" font-size="18">=O</text>
+          <text x="120" y="100" fill="#34a853" font-weight="700" font-size="18">−OH</text>
+          
+          <text x="250" y="60" fill="#5f6368" font-size="12">• sp² hybridised</text>
+          <text x="250" y="80" fill="#5f6368" font-size="12">• Resonance stabilised</text>
+          <text x="250" y="100" fill="#5f6368" font-size="12">• Acidic (pKa ~ 4-5)</text>
+          <text x="250" y="120" fill="#5f6368" font-size="12">• More acidic than phenol</text>
+        </svg>
+        <div class="diagram-caption">Carboxylic Acid — Resonance Stabilised</div>
+      </div>
+
+      <h3>4.1 Reactions of Carboxylic Acids</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + NaOH</text>
+          <text x="200" y="40" fill="#1a73e8">→</text>
+          <text x="225" y="40" fill="#202124" font-weight="600">R−COONa + H₂O</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(Salt formation)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid + NaOH → Sodium Acetate</span><span>(Salt Formation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + NaHCO₃</text>
+          <text x="210" y="40" fill="#1a73e8">→</text>
+          <text x="235" y="40" fill="#202124" font-weight="600">R−COONa + CO₂↑ + H₂O</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Test)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid + NaHCO₃ → CO₂ (Effervescence)</span><span>(Test for −COOH)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + NaOH (CaO, Δ)</text>
+          <text x="260" y="40" fill="#1a73e8">→</text>
+          <text x="285" y="40" fill="#202124" font-weight="600">R−H + Na₂CO₃</text>
+          <text x="460" y="40" fill="#5f6368" font-size="12">(Decarboxylation)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid → Methane (Decarboxylation)</span><span>(Decarboxylation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + LiAlH₄</text>
+          <text x="210" y="40" fill="#1a73e8">→</text>
+          <text x="235" y="40" fill="#202124" font-weight="600">R−CH₂OH</text>
+          <text x="400" y="40" fill="#5f6368" font-size="12">(Reduction)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid → Ethanol (Reduction)</span><span>(Reduction)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + R'OH (H₂SO₄, Δ)</text>
+          <text x="260" y="40" fill="#1a73e8">→</text>
+          <text x="285" y="40" fill="#202124" font-weight="600">R−COOR' + H₂O</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Esterification)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid + Ethanol → Ethyl Acetate</span><span>(Esterification)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + PCl₅</text>
+          <text x="190" y="40" fill="#1a73e8">→</text>
+          <text x="215" y="40" fill="#202124" font-weight="600">R−COCl + POCl₃ + HCl</text>
+          <text x="460" y="40" fill="#5f6368" font-size="12">(Acid Chloride)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid + PCl₅ → Acetyl Chloride</span><span>(Acid Chloride Formation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COCl + NH₃</text>
+          <text x="180" y="40" fill="#1a73e8">→</text>
+          <text x="205" y="40" fill="#202124" font-weight="600">R−CONH₂ + HCl</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(Amide)</text>
+        </svg>
+        <div class="dual-name"><span>Acetyl Chloride + NH₃ → Acetamide</span><span>(Amide Formation)</span></div>
+      </div>
+
+      <h3>4.2 HVZ Reaction (Hell-Volhard-Zelinsky)</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CH₂COOH + Br₂/P</text>
+          <text x="240" y="40" fill="#1a73e8">→</text>
+          <text x="265" y="40" fill="#202124" font-weight="600">R−CHBr−COOH</text>
+          <text x="480" y="40" fill="#5f6368" font-size="12">(HVZ)</text>
+        </svg>
+        <div class="dual-name"><span>Propanoic Acid + Br₂/P → 2-Bromopropanoic Acid</span><span>(HVZ Reaction)</span></div>
+      </div>
+
+      <h3>4.3 Decarboxylation</h3>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COONa + NaOH (CaO, Δ)</text>
+          <text x="280" y="40" fill="#1a73e8">→</text>
+          <text x="305" y="40" fill="#202124" font-weight="600">R−H + Na₂CO₃</text>
+          <text x="490" y="40" fill="#5f6368" font-size="12">(Decarboxylation)</text>
+        </svg>
+        <div class="dual-name"><span>Sodium Acetate + NaOH → Methane</span><span>(Decarboxylation)</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: SOLVED PROBLEMS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Problems — Aldehydes, Ketones & Carboxylic Acids</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 1: Aldol Condensation</span>
+        <p><strong>Q:</strong> Acetaldehyde + dil. NaOH → ?</p>
+        <ol>
+          <li>Aldol Condensation</li>
+          <li>2 CH₃CHO → CH₃−CH(OH)−CH₂−CHO</li>
+          <li><strong>Answer: Aldol (3-Hydroxybutanal)</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 2: Cannizzaro Reaction</span>
+        <p><strong>Q:</strong> Formaldehyde + conc. NaOH → ?</p>
+        <ol>
+          <li>Cannizzaro Reaction (no α-H)</li>
+          <li>2 HCHO → CH₃OH + HCOONa</li>
+          <li><strong>Answer: Methanol + Sodium formate</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 3: Clemmensen Reduction</span>
+        <p><strong>Q:</strong> Acetone + Zn(Hg)/HCl → ?</p>
+        <ol>
+          <li>Clemmensen Reduction</li>
+          <li>CH₃COCH₃ → CH₃CH₂CH₃</li>
+          <li><strong>Answer: Propane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 4: Wolff-Kishner</span>
+        <p><strong>Q:</strong> Acetaldehyde + NH₂NH₂/KOH → ?</p>
+        <ol>
+          <li>Wolff-Kishner Reduction</li>
+          <li>CH₃CHO → CH₃CH₃</li>
+          <li><strong>Answer: Ethane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 5: Tollens Test</span>
+        <p><strong>Q:</strong> Which gives silver mirror with Tollens reagent?</p>
+        <ol>
+          <li>Tollens: Aldehyde only</li>
+          <li>Acetaldehyde → Silver mirror</li>
+          <li>Acetone → No reaction</li>
+          <li><strong>Answer: Acetaldehyde</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 6: Iodoform Test</span>
+        <p><strong>Q:</strong> Which gives yellow ppt with I₂/NaOH?</p>
+        <ol>
+          <li>Iodoform: CH₃CO− or CH₃CH(OH)−</li>
+          <li>Acetone (CH₃COCH₃) → Positive</li>
+          <li>Acetaldehyde (CH₃CHO) → Positive</li>
+          <li><strong>Answer: Acetone & Acetaldehyde</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 7: HVZ Reaction</span>
+        <p><strong>Q:</strong> Propanoic Acid + Br₂/P → ?</p>
+        <ol>
+          <li>HVZ Reaction</li>
+          <li>CH₃CH₂COOH → CH₃CHBrCOOH</li>
+          <li><strong>Answer: 2-Bromopropanoic Acid</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 8: Decarboxylation</span>
+        <p><strong>Q:</strong> Sodium Acetate + NaOH (CaO, Δ) → ?</p>
+        <ol>
+          <li>Decarboxylation</li>
+          <li>CH₃COONa → CH₄ + Na₂CO₃</li>
+          <li><strong>Answer: Methane</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 9: Esterification</span>
+        <p><strong>Q:</strong> Acetic Acid + Ethanol (H₂SO₄) → ?</p>
+        <ol>
+          <li>Esterification</li>
+          <li>CH₃COOH + C₂H₅OH → CH₃COOC₂H₅</li>
+          <li><strong>Answer: Ethyl Acetate</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Problem 10: NaHCO₃ Test</span>
+        <p><strong>Q:</strong> Which gives CO₂ with NaHCO₃?</p>
+        <ol>
+          <li>Carboxylic Acid → CO₂</li>
+          <li>Phenol → No reaction</li>
+          <li>Alcohol → No reaction</li>
+          <li><strong>Answer: Carboxylic Acid</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Aldehydes, Ketones & Carboxylic Acids PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>Aldol, Cannizzaro, Tollens Test</td></tr>
+          <tr><td><strong>2020</strong></td><td>Clemmensen, Wolff-Kishner, HVZ</td></tr>
+          <tr><td><strong>2021</strong></td><td>Iodoform Test, Esterification, Decarboxylation</td></tr>
+          <tr><td><strong>2022</strong></td><td>Aldol, Cannizzaro, Fehling Test</td></tr>
+          <tr><td><strong>2023</strong></td><td>Clemmensen, Wolff-Kishner, NaHCO₃ Test</td></tr>
+          <tr><td><strong>2024</strong></td><td>Aldol, Tollens, HVZ, Esterification</td></tr>
+          <tr><td><strong>2025</strong></td><td>Iodoform, Decarboxylation, Cannizzaro</td></tr>
+          <tr><td><strong>2026</strong></td><td>Aldol, Clemmensen, Tollens, NaHCO₃ Test</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>Aldol Condensation</strong> → Har saal aata hai</li>
+          <li><strong>Cannizzaro</strong> → 2019, 2022, 2025</li>
+          <li><strong>Clemmensen & Wolff-Kishner</strong> → 2020, 2023, 2026</li>
+          <li><strong>Tollens Test</strong> → 2019, 2024, 2026</li>
+          <li><strong>Iodoform Test</strong> → 2021, 2025</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: Aldol Condensation</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>2 CH₃CHO → CH₃−CH(OH)−CH₂−CHO</li>
+          <li>α-H required</li>
+          <li>Dilute NaOH</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Cannizzaro Reaction</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2022, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>No α-H aldehyde</li>
+          <li>Disproportionation (Oxidation + Reduction)</li>
+          <li>HCHO → CH₃OH + HCOONa</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Clemmensen & Wolff-Kishner</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Both reduce C=O to CH₂</li>
+          <li><strong>Clemmensen:</strong> Zn(Hg)/HCl (acidic)</li>
+          <li><strong>Wolff-Kishner:</strong> NH₂NH₂/KOH (basic)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: Tollens Test</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2024, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>Aldehyde → Silver mirror</li>
+          <li>Ketone → No reaction</li>
+          <li>Reagent: Ag(NH₃)₂⁺</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Iodoform Test</h3>
+      <p><strong>PYQ Trend:</strong> 2021, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li>CH₃CO− or CH₃CH(OH)− group</li>
+          <li>Acetone, Acetaldehyde, Ethanol positive</li>
+          <li>Yellow ppt (CHI₃)</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>Aldol</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Cannizzaro</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Clemmensen/W-K</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Tollens</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Iodoform</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> Aldol (4/5), Tollens (2/5), Clemmensen/W-K (2/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Aldehydes, Ketones & Carboxylic Acids (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Concepts</span>
+        <ul>
+          <li><strong>Aldol:</strong> α-H required, dil. NaOH</li>
+          <li><strong>Cannizzaro:</strong> No α-H, conc. NaOH</li>
+          <li><strong>Clemmensen:</strong> Zn(Hg)/HCl (acidic)</li>
+          <li><strong>Wolff-Kishner:</strong> NH₂NH₂/KOH (basic)</li>
+          <li><strong>Tollens:</strong> Aldehyde → Silver mirror</li>
+          <li><strong>Iodoform:</strong> CH₃CO− or CH₃CH(OH)−</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Key Traps</span>
+        <ul>
+          <li><strong>Aldol:</strong> α-H required</li>
+          <li><strong>Cannizzaro:</strong> No α-H</li>
+          <li><strong>Tollens:</strong> Only Aldehyde</li>
+          <li><strong>Fehling:</strong> Aliphatic aldehyde only</li>
+          <li><strong>NaHCO₃:</strong> Carboxylic acid → CO₂</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Named Reactions</span>
+        <ul>
+          <li><strong>Aldol:</strong> 2 CH₃CHO → Aldol</li>
+          <li><strong>Cannizzaro:</strong> 2 HCHO → CH₃OH + HCOONa</li>
+          <li><strong>Clemmensen:</strong> C=O → CH₂ (Zn/Hg/HCl)</li>
+          <li><strong>Wolff-Kishner:</strong> C=O → CH₂ (NH₂NH₂/KOH)</li>
+          <li><strong>HVZ:</strong> α-Bromination of acid</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 Distinction Tests</span>
+        <ul>
+          <li><strong>Tollens:</strong> Aldehyde → Silver mirror</li>
+          <li><strong>Fehling:</strong> Aldehyde → Red ppt</li>
+          <li><strong>Iodoform:</strong> CH₃CO− → Yellow ppt</li>
+          <li><strong>NaHCO₃:</strong> −COOH → CO₂</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: REACTION SHEET (DIAGRAM-BASED) -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Reaction Sheet — Aldehydes, Ketones & Carboxylic Acids</h2>
+      <p style="color: #5f6368;">Saare reactions diagram form mein — visual learning ke liye best.</p>
+
+      <div class="formula-category">1. NUCLEOPHILIC ADDITION</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + HCN → R−CH(OH)−CN</text>
+          <text x="450" y="40" fill="#5f6368" font-size="12">(Cyanohydrin)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde → 2-Hydroxypropanenitrile</span><span>(Cyanohydrin)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NaHSO₃ → R−CH(OH)−SO₃Na</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Bisulphite)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde + NaHSO₃ → Bisulphite adduct</span><span>(Purification)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + R'MgX → R−CH(OH)−R'</text>
+          <text x="450" y="40" fill="#5f6368" font-size="12">(Alcohol)</text>
+        </svg>
+        <div class="dual-name"><span>Grignard + Aldehyde → Secondary Alcohol</span><span>(Grignard)</span></div>
+      </div>
+
+      <div class="formula-category">2. NAMED REACTIONS</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">2 CH₃CHO (dil. NaOH) → CH₃CH(OH)CH₂CHO</text>
+          <text x="500" y="40" fill="#5f6368" font-size="12">(Aldol)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde → Aldol (3-Hydroxybutanal)</span><span>(Aldol Condensation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">2 HCHO (conc. NaOH) → CH₃OH + HCOONa</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Cannizzaro)</text>
+        </svg>
+        <div class="dual-name"><span>Formaldehyde → Methanol + Sodium formate</span><span>(Cannizzaro)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + Zn(Hg)/HCl → R−CH₃</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(Clemmensen)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde → Ethane (Zn/Hg/HCl)</span><span>(Clemmensen)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + NH₂NH₂/KOH → R−CH₃</text>
+          <text x="430" y="40" fill="#5f6368" font-size="12">(Wolff-Kishner)</text>
+        </svg>
+        <div class="dual-name"><span>Acetaldehyde → Ethane (NH₂NH₂/KOH)</span><span>(Wolff-Kishner)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + Br₂/P → R−CHBr−COOH</text>
+          <text x="460" y="40" fill="#5f6368" font-size="12">(HVZ)</text>
+        </svg>
+        <div class="dual-name"><span>Propanoic Acid → 2-Bromopropanoic Acid</span><span>(HVZ)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COONa + NaOH (CaO, Δ) → R−H</text>
+          <text x="450" y="40" fill="#5f6368" font-size="12">(Decarboxylation)</text>
+        </svg>
+        <div class="dual-name"><span>Sodium Acetate → Methane</span><span>(Decarboxylation)</span></div>
+      </div>
+
+      <div class="formula-category">3. DISTINCTION TESTS</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + Ag(NH₃)₂⁺ → Ag↓</text>
+          <text x="430" y="40" fill="#5f6368" font-size="12">(Tollens — Silver mirror)</text>
+        </svg>
+        <div class="dual-name"><span>Aldehyde + Tollens → Silver mirror</span><span>(Tollens Test)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−CHO + Fehling → Cu₂O↓ (Red)</text>
+          <text x="440" y="40" fill="#5f6368" font-size="12">(Fehling Test)</text>
+        </svg>
+        <div class="dual-name"><span>Aliphatic Aldehyde + Fehling → Red ppt</span><span>(Fehling Test)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">CH₃CO− + I₂/NaOH → CHI₃↓ (Yellow)</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Iodoform)</text>
+        </svg>
+        <div class="dual-name"><span>Acetone + I₂/NaOH → Yellow ppt</span><span>(Iodoform Test)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + NaHCO₃ → CO₂↑</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(NaHCO₃ Test)</text>
+        </svg>
+        <div class="dual-name"><span>Carboxylic Acid + NaHCO₃ → CO₂</span><span>(Test for −COOH)</span></div>
+      </div>
+
+      <div class="formula-category">4. CARBOXYLIC ACID — REACTIONS</div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + NaOH → R−COONa + H₂O</text>
+          <text x="460" y="40" fill="#5f6368" font-size="12">(Salt)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid → Sodium Acetate</span><span>(Salt Formation)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + LiAlH₄ → R−CH₂OH</text>
+          <text x="440" y="40" fill="#5f6368" font-size="12">(Reduction)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid → Ethanol</span><span>(Reduction)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + R'OH (H₂SO₄) → R−COOR'</text>
+          <text x="470" y="40" fill="#5f6368" font-size="12">(Esterification)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid + Ethanol → Ethyl Acetate</span><span>(Esterification)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COOH + PCl₅ → R−COCl</text>
+          <text x="420" y="40" fill="#5f6368" font-size="12">(Acid Chloride)</text>
+        </svg>
+        <div class="dual-name"><span>Acetic Acid → Acetyl Chloride</span><span>(Acid Chloride)</span></div>
+      </div>
+
+      <div class="reaction-svg">
+        <svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" font-family="Cambria Math, Times New Roman, serif" font-size="15">
+          <text x="10" y="40" fill="#202124" font-weight="600">R−COCl + NH₃ → R−CONH₂</text>
+          <text x="430" y="40" fill="#5f6368" font-size="12">(Amide)</text>
+        </svg>
+        <div class="dual-name"><span>Acetyl Chloride → Acetamide</span><span>(Amide Formation)</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

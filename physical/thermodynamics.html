@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermodynamics | JEE Chemistry Notes</title>
+  <meta name="description" content="Chemical Thermodynamics Notes for JEE Mains — First Law, Hess's Law, Entropy, Gibbs Free Energy, Formula Sheet, PYQ Analysis (2019-2026).">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../inorganic/index.html">Inorganic</a>
+        <a href="index.html" class="active">Physical</a>
+        <a href="../organic/index.html">Organic</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="index.html">Physical</a> &gt; Thermodynamics
+  </div>
+
+  <header class="chapter-header">
+    <h1>Chemical Thermodynamics</h1>
+    <p>First Law, Enthalpy, Hess's Law, Entropy, Gibbs Free Energy, Spontaneity</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-notes">📖 Theory & Formulas</button>
+    <button class="tab-btn" data-tab="tab-numericals">🧮 Numericals</button>
+    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+    <button class="tab-btn" data-tab="tab-formula">📋 Formula Sheet</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: THEORY & FORMULAS -->
+  <!-- ============================================ -->
+  <div id="tab-notes" class="tab-content">
+    <div class="notes">
+
+      <h2>1. Basic Concepts</h2>
+
+      <div class="box">
+        <span class="box-title">System & Surroundings</span>
+        <p><strong>System:</strong> The part of the universe being studied.</p>
+        <p><strong>Surroundings:</strong> The rest of the universe that interacts with the system.</p>
+        <p><strong>Types:</strong> Open, Closed, Isolated</p>
+      </div>
+
+      <h3>1.1 State Variables</h3>
+      <p>Properties that describe the state of a system (e.g., P, V, T, U, H, S).</p>
+      <ul>
+        <li><strong>State Function:</strong> Depends only on initial and final state (U, H, S, G).</li>
+        <li><strong>Path Function:</strong> Depends on the path taken (q, w).</li>
+      </ul>
+
+      <h3>1.2 Types of Processes</h3>
+      <table>
+        <thead><tr><th>Process</th><th>Condition</th><th>Key Point</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Isothermal</strong></td><td>ΔT = 0</td><td>ΔU = 0, q = −w</td></tr>
+          <tr><td><strong>Adiabatic</strong></td><td>q = 0</td><td>ΔU = w</td></tr>
+          <tr><td><strong>Isochoric</strong></td><td>ΔV = 0</td><td>w = 0, ΔU = q</td></tr>
+          <tr><td><strong>Isobaric</strong></td><td>ΔP = 0</td><td>w = −PΔV, ΔU = q + w</td></tr>
+          <tr><td><strong>Reversible</strong></td><td>Infinite steps</td><td>Max work done</td></tr>
+          <tr><td><strong>Irreversible</strong></td><td>Finite steps</td><td>Min work done</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. First Law of Thermodynamics</h2>
+
+      <div class="formula">
+        ΔU = q + w
+      </div>
+
+      <div class="box">
+        <span class="box-title">Sign Convention (IUPAC)</span>
+        <ul>
+          <li><strong>Heat absorbed by system:</strong> q = +ve</li>
+          <li><strong>Heat released by system:</strong> q = −ve</li>
+          <li><strong>Work done on system:</strong> w = +ve</li>
+          <li><strong>Work done by system:</strong> w = −ve</li>
+        </ul>
+      </div>
+
+      <h3>2.1 Work Done (w)</h3>
+      <div class="formula">
+        w = −P_ext × ΔV
+      </div>
+      <p>For reversible isothermal expansion of ideal gas:</p>
+      <div class="formula">
+        w = −nRT ln(V₂/V₁) = −2.303 nRT log(P₁/P₂)
+      </div>
+
+      <h3>2.2 Free Expansion</h3>
+      <ul>
+        <li>P_ext = 0 → w = 0</li>
+        <li>q = 0 (adiabatic) → ΔU = 0</li>
+      </ul>
+
+      <h2>3. Enthalpy (H)</h2>
+
+      <div class="formula">
+        H = U + PV
+      </div>
+
+      <h3>3.1 Relationship between ΔH and ΔU</h3>
+      <div class="formula">
+        ΔH = ΔU + Δn_g RT
+      </div>
+      <p>Where Δn_g = change in moles of gas (products − reactants).</p>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <ul>
+          <li>If <strong>Δn_g = 0</strong> → ΔH = ΔU</li>
+          <li>If <strong>Δn_g > 0</strong> → ΔH > ΔU</li>
+          <li>If <strong>Δn_g < 0</strong> → ΔH < ΔU</li>
+        </ul>
+      </div>
+
+      <h3>3.2 Heat Capacity</h3>
+      <ul>
+        <li><strong>C_p − C_v = R</strong> (for ideal gas)</li>
+        <li><strong>C_v = f/2 R</strong> (f = degrees of freedom)</li>
+        <li><strong>Monoatomic:</strong> C_v = 3/2 R, C_p = 5/2 R, γ = 1.67</li>
+        <li><strong>Diatomic:</strong> C_v = 5/2 R, C_p = 7/2 R, γ = 1.4</li>
+      </ul>
+
+      <h2>4. Thermochemistry</h2>
+
+      <h3>4.1 Standard Enthalpy Changes</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Definition</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ΔH_f°</strong></td><td>Formation of 1 mole compound from elements</td></tr>
+          <tr><td><strong>ΔH_c°</strong></td><td>Complete combustion of 1 mole substance</td></tr>
+          <tr><td><strong>ΔH_neutralization°</strong></td><td>Formation of 1 mole water from acid + base</td></tr>
+          <tr><td><strong>Bond Enthalpy</strong></td><td>Energy to break 1 mole bonds</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Hess's Law</h3>
+      <div class="box">
+        <span class="box-title">Hess's Law</span>
+        <p>Enthalpy change is independent of the path taken. ΔH_total = sum of ΔH for individual steps.</p>
+      </div>
+
+      <h3>4.3 Kirchhoff's Equation</h3>
+      <div class="formula">
+        ΔH₂ = ΔH₁ + ΔC_p (T₂ − T₁)
+      </div>
+      <p>Where ΔC_p = C_p(products) − C_p(reactants).</p>
+
+      <h2>5. Second Law of Thermodynamics</h2>
+
+      <div class="box">
+        <span class="box-title">Statement</span>
+        <p>The entropy of an isolated system always increases over time. ΔS_universe > 0 for spontaneous process.</p>
+      </div>
+
+      <div class="formula">
+        ΔS = q_rev / T
+      </div>
+
+      <h3>5.1 Entropy Changes</h3>
+      <table>
+        <thead><tr><th>Process</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Phase Change</strong></td><td>ΔS = ΔH_transition / T</td></tr>
+          <tr><td><strong>Heating (Isobaric)</strong></td><td>ΔS = nC_p ln(T₂/T₁)</td></tr>
+          <tr><td><strong>Heating (Isochoric)</strong></td><td>ΔS = nC_v ln(T₂/T₁)</td></tr>
+          <tr><td><strong>Isothermal Expansion</strong></td><td>ΔS = nR ln(V₂/V₁)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap</span>
+        <p><strong>Entropy Order:</strong> Solid < Liquid < Gas</p>
+        <p>Ice → Water → Vapor: Entropy increases</p>
+      </div>
+
+      <h2>6. Gibbs Free Energy (G)</h2>
+
+      <div class="formula">
+        ΔG = ΔH − TΔS
+      </div>
+
+      <div class="box">
+        <span class="box-title">Spontaneity Criteria</span>
+        <ul>
+          <li><strong>ΔG < 0</strong> → Spontaneous</li>
+          <li><strong>ΔG = 0</strong> → Equilibrium</li>
+          <li><strong>ΔG > 0</strong> → Non-spontaneous</li>
+        </ul>
+      </div>
+
+      <h3>6.1 Spontaneity Table</h3>
+      <table>
+        <thead><tr><th>ΔH</th><th>ΔS</th><th>ΔG = ΔH − TΔS</th><th>Spontaneity</th></tr></thead>
+        <tbody>
+          <tr><td>−</td><td>+</td><td>Always −</td><td>Spontaneous at all T</td></tr>
+          <tr><td>+</td><td>−</td><td>Always +</td><td>Non-spontaneous at all T</td></tr>
+          <tr><td>−</td><td>−</td><td>− at low T</td><td>Spontaneous at low T</td></tr>
+          <tr><td>+</td><td>+</td><td>− at high T</td><td>Spontaneous at high T</td></tr>
+        </tbody>
+      </table>
+
+      <h3>6.2 ΔG and Equilibrium Constant</h3>
+      <div class="formula">
+        ΔG° = −RT ln K = −2.303 RT log K
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">Mains Trap (2026 PYQ)</span>
+        <p><strong>log K vs 1/T plot:</strong></p>
+        <ul>
+          <li>Slope = −ΔH° / 2.303R</li>
+          <li>Intercept = ΔS° / 2.303R</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: NUMERICALS -->
+  <!-- ============================================ -->
+  <div id="tab-numericals" class="tab-content">
+    <div class="notes">
+      <h2>Solved Numericals — Thermodynamics</h2>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 1: First Law (ΔU = q + w)</span>
+        <p><strong>Q:</strong> A gas absorbs 100 J heat and does 20 J work. Find ΔU.</p>
+        <ol>
+          <li>q = +100 J (absorbed)</li>
+          <li>w = −20 J (work done by system)</li>
+          <li>ΔU = q + w = 100 + (−20) = <strong>80 J</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 2: Isothermal Reversible Expansion</span>
+        <p><strong>Q:</strong> 2 moles ideal gas expands isothermally at 300 K from 10 L to 20 L. Find w.</p>
+        <ol>
+          <li>w = −nRT ln(V₂/V₁)</li>
+          <li>w = −2 × 8.314 × 300 × ln(20/10)</li>
+          <li>w = −2 × 8.314 × 300 × 0.693</li>
+          <li>w = <strong>−3457 J</strong> = −3.46 kJ</li>
+        </ol>
+        <p>Also, ΔU = 0 (isothermal), so q = −w = +3457 J</p>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 3: ΔH and ΔU Relationship</span>
+        <p><strong>Q:</strong> For C(s) + O₂(g) → CO₂(g), ΔH = −393.5 kJ. Find ΔU at 298 K.</p>
+        <ol>
+          <li>Δn_g = moles gas products − moles gas reactants = 1 − 1 = 0</li>
+          <li>ΔH = ΔU + Δn_g RT</li>
+          <li>−393500 = ΔU + 0 × 8.314 × 298</li>
+          <li>ΔU = <strong>−393.5 kJ</strong> (same as ΔH, since Δn_g = 0)</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 4: Entropy Change (Phase Transition)</span>
+        <p><strong>Q:</strong> Find ΔS for melting 1 mole ice at 0°C. (ΔH_fus = 6.01 kJ/mol)</p>
+        <ol>
+          <li>T = 0°C = 273 K</li>
+          <li>ΔS = ΔH_fus / T = 6010 / 273</li>
+          <li>ΔS = <strong>+22.0 J/K·mol</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 5: Spontaneity (ΔG = ΔH − TΔS)</span>
+        <p><strong>Q:</strong> If ΔH = +50 kJ and ΔS = +100 J/K, at what T does reaction become spontaneous?</p>
+        <ol>
+          <li>For spontaneity, ΔG < 0 → ΔH − TΔS < 0</li>
+          <li>T > ΔH / ΔS = 50000 / 100</li>
+          <li>T > <strong>500 K</strong></li>
+          <li>Reaction is spontaneous above 500 K</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 6: ΔG° and K (Equilibrium)</span>
+        <p><strong>Q:</strong> If K = 10 at 300 K, find ΔG°.</p>
+        <ol>
+          <li>ΔG° = −2.303 RT log K</li>
+          <li>ΔG° = −2.303 × 8.314 × 300 × log(10)</li>
+          <li>ΔG° = −2.303 × 8.314 × 300 × 1</li>
+          <li>ΔG° = <strong>−5744 J</strong> = −5.74 kJ</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 7: Hess's Law</span>
+        <p><strong>Q:</strong> Calculate ΔH for C(s) + ½O₂(g) → CO(g)</p>
+        <p>Given: C(s) + O₂(g) → CO₂(g), ΔH = −393.5 kJ</p>
+        <p>CO(g) + ½O₂(g) → CO₂(g), ΔH = −283.0 kJ</p>
+        <ol>
+          <li>Reverse second equation: CO₂ → CO + ½O₂, ΔH = +283.0 kJ</li>
+          <li>Add: C + O₂ + CO₂ → CO₂ + CO + ½O₂</li>
+          <li>Cancel common terms: C + ½O₂ → CO</li>
+          <li>ΔH = −393.5 + 283.0 = <strong>−110.5 kJ</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 8: Kirchhoff's Equation</span>
+        <p><strong>Q:</strong> ΔH₁ = −100 kJ at 300 K, ΔC_p = 10 J/K. Find ΔH₂ at 400 K.</p>
+        <ol>
+          <li>ΔH₂ = ΔH₁ + ΔC_p (T₂ − T₁)</li>
+          <li>ΔH₂ = −100000 + 10 × (400 − 300)</li>
+          <li>ΔH₂ = −100000 + 1000</li>
+          <li>ΔH₂ = <strong>−99 kJ</strong></li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 9: Adiabatic Process</span>
+        <p><strong>Q:</strong> 1 mole ideal gas (γ = 1.4) expands adiabatically from 300 K to 200 K. Find w.</p>
+        <ol>
+          <li>Adiabatic → q = 0 → ΔU = w</li>
+          <li>ΔU = nC_v ΔT = 1 × (5/2 × 8.314) × (200 − 300)</li>
+          <li>ΔU = 1 × 20.785 × (−100)</li>
+          <li>w = ΔU = <strong>−2078.5 J</strong> = −2.08 kJ</li>
+        </ol>
+      </div>
+
+      <div class="numeric-box">
+        <span class="box-title">🧮 Type 10: Bond Enthalpy</span>
+        <p><strong>Q:</strong> Find ΔH for H₂(g) + Cl₂(g) → 2HCl(g)</p>
+        <p>Given: BE(H−H) = 436 kJ/mol, BE(Cl−Cl) = 243 kJ/mol, BE(H−Cl) = 431 kJ/mol</p>
+        <ol>
+          <li>ΔH = ΣBE(reactants) − ΣBE(products)</li>
+          <li>ΔH = [436 + 243] − [2 × 431]</li>
+          <li>ΔH = 679 − 862</li>
+          <li>ΔH = <strong>−183 kJ</strong></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: PYQ ANALYSIS -->
+  <!-- ============================================ -->
+  <div id="tab-pyq" class="tab-content">
+    <div class="notes">
+      <h2>JEE Main 2019–2026: Thermodynamics PYQ Analysis</h2>
+      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
+
+      <h3>📈 8 Saal Ka Trend Data</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Topics Asked</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2019</strong></td><td>First Law, Entropy, Path Function, Reversible Expansion</td></tr>
+          <tr><td><strong>2020</strong></td><td>First Law, Second Law, Spontaneity, Gibbs Energy</td></tr>
+          <tr><td><strong>2021</strong></td><td>Entropy, Second Law, P-V Graphs</td></tr>
+          <tr><td><strong>2022</strong></td><td>First Law, P-V Work, Enthalpy of Formation</td></tr>
+          <tr><td><strong>2023</strong></td><td>Entropy, Spontaneity, ΔG and K</td></tr>
+          <tr><td><strong>2024</strong></td><td>First Law Application, ΔH, ΔG, Spontaneity</td></tr>
+          <tr><td><strong>2025</strong></td><td>Partial Derivatives, Entropy Change (Ice to Vapor), Spontaneity Table</td></tr>
+          <tr><td><strong>2026</strong></td><td>ΔG, Spontaneity, First Law, Isothermal Expansion</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box">
+        <span class="box-title">Observation</span>
+        <ul>
+          <li><strong>First Law (ΔU = q + w)</strong> → Har saal aata hai</li>
+          <li><strong>Spontaneity & Gibbs Free Energy</strong> → 2020, 2023, 2024, 2025, 2026</li>
+          <li><strong>Entropy</strong> → 2019, 2021, 2023, 2025</li>
+          <li><strong>Hess's Law & Enthalpy</strong> → 2022, 2024</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 1: First Law & Sign Convention</h3>
+      <p><strong>PYQ Trend:</strong> Har saal</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>ΔU = q + w</strong> — IUPAC sign convention</li>
+          <li><strong>Work done on system:</strong> w = +ve</li>
+          <li><strong>Work done by system:</strong> w = −ve</li>
+          <li>Isothermal ideal gas: <strong>ΔU = 0, q = −w</strong></li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 2: Spontaneity & Gibbs Free Energy</h3>
+      <p><strong>PYQ Trend:</strong> 2020, 2023, 2024, 2025, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>ΔG = ΔH − TΔS</strong></li>
+          <li><strong>ΔH +, ΔS +</strong> → Spontaneous at High T (2025 PYQ)</li>
+          <li><strong>ΔH −, ΔS −</strong> → Spontaneous at Low T (2025 PYQ)</li>
+          <li><strong>ΔG < 0</strong> → Spontaneous</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 3: Entropy Change</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2021, 2023, 2025</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>Ice → Vapor</strong> ka entropy change (2025 PYQ)</li>
+          <li>ΔS = ΔH / T (phase change)</li>
+          <li>ΔS = nC_p ln(T₂/T₁) (heating)</li>
+          <li>ΔS = nR ln(V₂/V₁) (isothermal expansion)</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 4: ΔG° and K</h3>
+      <p><strong>PYQ Trend:</strong> 2023, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>ΔG° = −RT ln K</strong></li>
+          <li>log K vs 1/T plot: intercept and slope (2026 PYQ)</li>
+          <li>Slope = −ΔH° / 2.303R</li>
+          <li>Intercept = ΔS° / 2.303R</li>
+        </ul>
+      </div>
+
+      <h3>🧠 Concept 5: Isothermal Reversible Expansion</h3>
+      <p><strong>PYQ Trend:</strong> 2019, 2026</p>
+      <div class="box">
+        <span class="box-title">PYQ se Learning</span>
+        <ul>
+          <li><strong>w = −2.303 nRT log(P₁/P₂)</strong></li>
+          <li>ΔU = 0, ΔH = 0 (ideal gas, constant T)</li>
+          <li>q = −w</li>
+          <li>2026 PYQ: 20 L ideal gas at 600 K, 0.5 MPa to 0.2 MPa</li>
+        </ul>
+      </div>
+
+      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
+      <table>
+        <thead><tr><th>Concept</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead>
+        <tbody>
+          <tr><td>First Law</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Spontaneity/ΔG</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Entropy</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+          <tr><td>ΔG° & K</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Most Repeated:</strong> First Law (4/5), Spontaneity/ΔG (4/5).</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>Quick Revision — Thermodynamics (Last 10 Minutes)</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>First Law:</strong> ΔU = q + w</li>
+          <li><strong>Enthalpy:</strong> H = U + PV</li>
+          <li><strong>ΔH = ΔU + Δn_g RT</strong></li>
+          <li><strong>Work (reversible isothermal):</strong> w = −nRT ln(V₂/V₁)</li>
+          <li><strong>Entropy (phase change):</strong> ΔS = ΔH/T</li>
+          <li><strong>Gibbs Free Energy:</strong> ΔG = ΔH − TΔS</li>
+          <li><strong>ΔG° = −RT ln K = −2.303 RT log K</strong></li>
+          <li><strong>Kirchhoff's Equation:</strong> ΔH₂ = ΔH₁ + ΔC_p (T₂ − T₁)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📊 Spontaneity Table</span>
+        <ul>
+          <li><strong>ΔH −, ΔS +</strong> → Spontaneous at all T</li>
+          <li><strong>ΔH +, ΔS −</strong> → Non-spontaneous at all T</li>
+          <li><strong>ΔH −, ΔS −</strong> → Spontaneous at Low T</li>
+          <li><strong>ΔH +, ΔS +</strong> → Spontaneous at High T</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">⚠️ Sign Convention</span>
+        <ul>
+          <li><strong>Heat absorbed:</strong> q = +ve</li>
+          <li><strong>Heat released:</strong> q = −ve</li>
+          <li><strong>Work done on system:</strong> w = +ve</li>
+          <li><strong>Work done by system:</strong> w = −ve</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Key Points</span>
+        <ul>
+          <li><strong>Isothermal:</strong> ΔU = 0, q = −w</li>
+          <li><strong>Adiabatic:</strong> q = 0, ΔU = w</li>
+          <li><strong>Isochoric:</strong> w = 0, ΔU = q</li>
+          <li><strong>Isobaric:</strong> ΔU = q + w, w = −PΔV</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 ΔG° & K (2026 PYQ)</span>
+        <ul>
+          <li><strong>log K vs 1/T plot:</strong></li>
+          <li>Slope = −ΔH° / 2.303R</li>
+          <li>Intercept = ΔS° / 2.303R</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">💡 Entropy Order</span>
+        <ul>
+          <li><strong>Solid < Liquid < Gas</strong></li>
+          <li>Ice → Water → Vapor: Entropy increases</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 5: FORMULA SHEET -->
+  <!-- ============================================ -->
+  <div id="tab-formula" class="tab-content">
+    <div class="notes">
+      <h2>📋 Complete Formula Sheet — Thermodynamics</h2>
+      <p style="color: #5f6368;">Saare formulas ek jagah — category-wise. Print karke revision ke liye use karo.</p>
+
+      <div class="formula-category">1. FIRST LAW & WORK</div>
+      <div class="formula-box"><strong>ΔU = q + w</strong> — First Law of Thermodynamics</div>
+      <div class="formula-box"><strong>w = −P_ext × ΔV</strong> — Irreversible work (constant external pressure)</div>
+      <div class="formula-box"><strong>w = −nRT ln(V₂/V₁)</strong> — Reversible isothermal work (volume form)</div>
+      <div class="formula-box"><strong>w = −2.303 nRT log(P₁/P₂)</strong> — Reversible isothermal work (pressure form)</div>
+      <div class="formula-box"><strong>w = 0</strong> — Free expansion (P_ext = 0)</div>
+      <div class="formula-box"><strong>w = 0</strong> — Isochoric process (ΔV = 0)</div>
+
+      <div class="formula-category">2. HEAT & HEAT CAPACITY</div>
+      <div class="formula-box"><strong>q = nC_p ΔT</strong> — Heat at constant pressure (isobaric)</div>
+      <div class="formula-box"><strong>q = nC_v ΔT</strong> — Heat at constant volume (isochoric)</div>
+      <div class="formula-box"><strong>C_p − C_v = R</strong> — Ideal gas</div>
+      <div class="formula-box"><strong>C_v = f/2 × R</strong> — Degrees of freedom (f)</div>
+      <div class="formula-box"><strong>C_p = (f/2 + 1) × R</strong> — Ideal gas</div>
+      <div class="formula-box"><strong>γ = C_p / C_v</strong> — Adiabatic index</div>
+      <div class="formula-box"><strong>Monoatomic:</strong> C_v = 3/2 R, C_p = 5/2 R, γ = 1.67</div>
+      <div class="formula-box"><strong>Diatomic:</strong> C_v = 5/2 R, C_p = 7/2 R, γ = 1.4</div>
+
+      <div class="formula-category">3. ENTHALPY</div>
+      <div class="formula-box"><strong>H = U + PV</strong> — Enthalpy definition</div>
+      <div class="formula-box"><strong>ΔH = ΔU + Δn_g RT</strong> — Relationship between ΔH and ΔU</div>
+      <div class="formula-box"><strong>ΔH = nC_p ΔT</strong> — Enthalpy change (ideal gas)</div>
+      <div class="formula-box"><strong>ΔU = nC_v ΔT</strong> — Internal energy change (ideal gas)</div>
+
+      <div class="formula-category">4. THERMOCHEMISTRY</div>
+      <div class="formula-box"><strong>ΔH_f° = ΣΔH_f°(products) − ΣΔH_f°(reactants)</strong> — Hess's Law</div>
+      <div class="formula-box"><strong>ΔH_reaction = ΣBE(reactants) − ΣBE(products)</strong> — Bond Enthalpy</div>
+      <div class="formula-box"><strong>ΔH₂ = ΔH₁ + ΔC_p (T₂ − T₁)</strong> — Kirchhoff's Equation</div>
+      <div class="formula-box"><strong>ΔH_neutralization = −57.1 kJ/mol</strong> — Strong acid + Strong base</div>
+
+      <div class="formula-category">5. ENTROPY</div>
+      <div class="formula-box"><strong>ΔS = q_rev / T</strong> — Entropy definition</div>
+      <div class="formula-box"><strong>ΔS = ΔH_transition / T</strong> — Phase change</div>
+      <div class="formula-box"><strong>ΔS = nC_p ln(T₂/T₁)</strong> — Heating (isobaric)</div>
+      <div class="formula-box"><strong>ΔS = nC_v ln(T₂/T₁)</strong> — Heating (isochoric)</div>
+      <div class="formula-box"><strong>ΔS = nR ln(V₂/V₁)</strong> — Isothermal expansion</div>
+      <div class="formula-box"><strong>ΔS = 2.303 nR log(V₂/V₁)</strong> — Isothermal expansion (log form)</div>
+      <div class="formula-box"><strong>ΔS_universe = ΔS_system + ΔS_surroundings</strong></div>
+
+      <div class="formula-category">6. GIBBS FREE ENERGY</div>
+      <div class="formula-box"><strong>ΔG = ΔH − TΔS</strong> — Gibbs Free Energy</div>
+      <div class="formula-box"><strong>ΔG° = −RT ln K</strong> — Standard Gibbs Energy</div>
+      <div class="formula-box"><strong>ΔG° = −2.303 RT log K</strong> — Log form</div>
+      <div class="formula-box"><strong>ΔG = ΔG° + RT ln Q</strong> — Reaction quotient form</div>
+      <div class="formula-box"><strong>ΔG° = −nFE°_cell</strong> — Electrochemistry link</div>
+
+      <div class="formula-category">7. ADIABATIC PROCESS</div>
+      <div class="formula-box"><strong>PV^γ = constant</strong> — Adiabatic reversible</div>
+      <div class="formula-box"><strong>TV^(γ−1) = constant</strong> — Adiabatic</div>
+      <div class="formula-box"><strong>T^γ P^(1−γ) = constant</strong> — Adiabatic</div>
+      <div class="formula-box"><strong>q = 0, ΔU = w</strong> — Adiabatic condition</div>
+      <div class="formula-box"><strong>w = ΔU = nC_v ΔT</strong> — Adiabatic work</div>
+
+      <div class="formula-category">8. PROCESS SUMMARY</div>
+      <div class="formula-box"><strong>Isothermal:</strong> ΔT = 0 → ΔU = 0, q = −w</div>
+      <div class="formula-box"><strong>Adiabatic:</strong> q = 0 → ΔU = w</div>
+      <div class="formula-box"><strong>Isochoric:</strong> ΔV = 0 → w = 0, ΔU = q</div>
+      <div class="formula-box"><strong>Isobaric:</strong> ΔP = 0 → w = −PΔV, ΔU = q + w</div>
+      <div class="formula-box"><strong>Reversible:</strong> Infinite steps → Max work</div>
+      <div class="formula-box"><strong>Irreversible:</strong> Finite steps → Min work</div>
+
+      <div class="formula-category">9. SPONTANEITY TABLE</div>
+      <div class="formula-box"><strong>ΔH −, ΔS +</strong> → ΔG always − → Spontaneous at all T</div>
+      <div class="formula-box"><strong>ΔH +, ΔS −</strong> → ΔG always + → Non-spontaneous at all T</div>
+      <div class="formula-box"><strong>ΔH −, ΔS −</strong> → ΔG − at low T → Spontaneous at Low T</div>
+      <div class="formula-box"><strong>ΔH +, ΔS +</strong> → ΔG − at high T → Spontaneous at High T</div>
+
+      <div class="formula-category">10. IMPORTANT CONSTANTS</div>
+      <div class="formula-box"><strong>R = 8.314 J/K·mol</strong> = 0.0821 L·atm/K·mol = 2 cal/K·mol</div>
+      <div class="formula-box"><strong>1 cal = 4.184 J</strong></div>
+      <div class="formula-box"><strong>1 L·atm = 101.3 J</strong></div>
+      <div class="formula-box"><strong>1 bar = 10⁵ Pa</strong></div>
+      <div class="formula-box"><strong>1 atm = 1.013 × 10⁵ Pa</strong></div>
+      <div class="formula-box"><strong>2.303 RT = 5700 J/mol at 298 K</strong></div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

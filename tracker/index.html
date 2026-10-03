@@ -12,43 +12,64 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
+      <a href="../index.html" class="navbar-brand">📚 JEE Notes</a>
       <div class="navbar-links">
         <a href="../index.html">Home</a>
-        <a href="../inorganic/index.html">Inorganic</a>
-        <a href="../physical/index.html">Physical</a>
-        <a href="../organic/index.html">Organic</a>
+        <a href="../chemistry.html">Chemistry</a>
+        <a href="../physics.html">Physics</a>
+        <a href="../maths.html">Maths</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <h1>🎯 Prepration Tracker</h1>
+    <h1>🎯 Preparation Tracker</h1>
     <p>JEE Main 2019–2026 | Chemistry • Physics • Maths</p>
   </header>
 
-  <!-- STATS DASHBOARD -->
+  <!-- STATS DASHBOARD — SUBJECT-WISE -->
   <section class="stats-dashboard">
-    <div class="stat-card">
-      <div class="stat-icon">📊</div>
-      <div class="stat-value" id="total-progress">0%</div>
-      <div class="stat-label">Overall Progress</div>
+    <div class="subject-stat-card">
+      <div class="subject-stat-title">🧪 Chemistry</div>
+      <div class="subject-stat-row">
+        <span class="stat-item">
+          <span class="stat-value" id="chem-questions">0</span>
+          <span class="stat-label">Questions</span>
+        </span>
+        <span class="stat-item">
+          <span class="stat-value" id="chem-chapters">0</span>
+          <span class="stat-label">Chapters</span>
+        </span>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="stat-icon">✅</div>
-      <div class="stat-value" id="total-solved">0</div>
-      <div class="stat-label">Chapters Solved</div>
+
+    <div class="subject-stat-card">
+      <div class="subject-stat-title">⚛️ Physics</div>
+      <div class="subject-stat-row">
+        <span class="stat-item">
+          <span class="stat-value" id="phys-questions">0</span>
+          <span class="stat-label">Questions</span>
+        </span>
+        <span class="stat-item">
+          <span class="stat-value" id="phys-chapters">0</span>
+          <span class="stat-label">Chapters</span>
+        </span>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="stat-icon">📝</div>
-      <div class="stat-value" id="total-questions">0</div>
-      <div class="stat-label">Questions Solved</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-icon">🔥</div>
-      <div class="stat-value" id="streak-days">0</div>
-      <div class="stat-label">Day Streak</div>
+
+    <div class="subject-stat-card">
+      <div class="subject-stat-title">📐 Maths</div>
+      <div class="subject-stat-row">
+        <span class="stat-item">
+          <span class="stat-value" id="maths-questions">0</span>
+          <span class="stat-label">Questions</span>
+        </span>
+        <span class="stat-item">
+          <span class="stat-value" id="maths-chapters">0</span>
+          <span class="stat-label">Chapters</span>
+        </span>
+      </div>
     </div>
   </section>
 
@@ -92,7 +113,7 @@
           <input type="number" id="modal-questions" min="1" placeholder="Enter count" autofocus>
         </div>
         <div class="modal-warning">
-          ⚠️ Ek baar save karne ke baad, ye <strong>lock</strong> ho jayega. Edit ya delete nahi kar paoge.
+          ⚠️ Once you save, this will be <strong>locked</strong>. You cannot edit or delete it.
         </div>
       </div>
       <div class="modal-footer">
@@ -135,7 +156,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>Made with ❤️ & Curiosity | <a href="https://github.com/ravirajhere">GitHub</a></p>
+    <p>Made with ❤️ & Curiosity |  <a href="https://github.com/ravirajhere">GitHub</a></p>
   </footer>
 
   <script src="tracker.js"></script>

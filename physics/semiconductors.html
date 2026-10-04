@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semiconductors | JEE Notes</title>
+  <meta name="description" content="Semiconductor Electronics — 10 Mains Traps + 10 Assertion-Reason, JEE Main 2026 Syllabus.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--secondary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .print-btn:hover { background: #2d8e47; }
+    .print-btn-container { max-width: 1200px; margin: 1rem auto; padding: 0 2rem; display: flex; justify-content: flex-end; }
+    .numeric-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .numeric-box .box-title { color: var(--primary-dark); }
+    .numeric-box ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .notes h2 { margin-top: 2.5rem; padding-top: 1rem; }
+    .notes h2:first-child { margin-top: 0; }
+    .notes h3 { margin-top: 1.5rem; }
+    .notes p { margin-bottom: 1rem; }
+    .notes ul, .notes ol { margin-bottom: 1.2rem; }
+    .notes .box { margin: 1.2rem 0; }
+    .formula-box { background: #f1f3f4; border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1.2rem; margin: 0.6rem 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.05rem; }
+    .formula-category { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; margin: 1.5rem 0 0.8rem; font-weight: 700; font-size: 1rem; }
+    .reaction-box { background: #fef7e0; border-left: 4px solid #f9ab00; padding: 0.8rem 1.2rem; margin: 0.6rem 0; border-radius: 0 8px 8px 0; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1rem; }
+    .diagram-box { background: #f8f9fa; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+    .diagram-box svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .diagram-caption { text-align: center; font-size: 0.85rem; color: #5f6368; margin-top: 0.5rem; font-style: italic; }
+    .red-alert {
+      background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+      border: 3px solid #c62828;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.2);
+    }
+    .red-alert .alert-title { color: #c62828; font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .red-alert .alert-content { color: #b71c1c; font-size: 0.95rem; line-height: 1.7; }
+    .ar-box { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 0.8rem 0; border-radius: 0 8px 8px 0; }
+    .ar-box .ar-title { color: var(--primary-dark); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .ar-box .ar-assertion { color: #202124; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .ar-box .ar-reason { color: #202124; font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .ar-box .ar-answer { color: var(--secondary); font-weight: 700; font-size: 0.9rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--border); }
+    .ar-box .ar-expanded { color: #5f6368; font-size: 0.85rem; margin-top: 0.4rem; }
+    @media print {
+      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer { display: none !important; }
+      .tab-content { display: block !important; padding: 0 !important; }
+      .chapter-header { background: white !important; color: black !important; }
+      .notes h2 { page-break-after: avoid; }
+      .notes table, .notes .box, .diagram-box, .red-alert, .ar-box { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-brand">📚 JEE Notes</a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../chemistry.html">Chemistry</a>
+        <a href="../physics.html">Physics</a>
+        <a href="../maths.html">Maths</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt; <a href="../physics.html">Physics</a> &gt; Semiconductors
+  </div>
+
+  <header class="chapter-header">
+    <h1>Semiconductor Electronics</h1>
+    <p>10 Mains Traps + 10 Assertion-Reason — JEE Main 2026 Syllabus</p>
+  </header>
+
+  <div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps (10)</button>
+    <button class="tab-btn" data-tab="tab-ar">📝 Assertion-Reason (10)</button>
+    <button class="tab-btn" data-tab="tab-alerts">🚨 Red Alerts</button>
+    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 1: MAINS TRAPS (10) -->
+  <!-- ============================================ -->
+  <div id="tab-traps" class="tab-content">
+    <div class="notes">
+      <h2>⚠️ Mains Traps — 10 Traps Jo Marks Kaatt Le Jaate Hain</h2>
+
+      <!-- TRAP 1 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 1: Zener Diode — Reverse Bias mein hi Regulator banta hai</span>
+        <p><strong>Trap kya hai:</strong> Bacche sochte hain Zener forward bias mein voltage regulate karta hai. Ye galat hai.</p>
+        <p><strong>Kyun galat:</strong> Forward bias mein Zener ek normal diode (0.7V drop) jaisa behave karta hai. Regulator banane ke liye ise <strong>reverse bias</strong> mein chalana padta hai, jahan Zener breakdown hota hai aur voltage constant rehta hai.</p>
+        <p><strong>PYQ (2024):</strong> Zener diode (breakdown 10V) ko regulator ki tarah use kiya gaya tha. Current: <code>I_Z = I_series − I_load = 50 − 20 = 30 mA</code></p>
+        <p><strong>Kaise pata chalega:</strong> Question mein "Zener voltage 10V" likha ho → <strong>Reverse bias</strong> samjho. Series resistance ke saath hota hai.</p>
+      </div>
+
+      <!-- TRAP 2 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 2: Depletion Width — Forward mein Kam, Reverse mein Zyada</span>
+        <p><strong>Trap kya hai:</strong> Bacche sochte hain depletion region width <strong>constant</strong> rehti hai.</p>
+        <p><strong>Kyun galat:</strong></p>
+        <ul>
+          <li><strong>Forward bias:</strong> Applied voltage barrier ko kam karta hai → Depletion narrow → Resistance kam → Current zyada</li>
+          <li><strong>Reverse bias:</strong> Applied voltage barrier ko badhata hai → Depletion wide → Resistance zyada → Current almost zero</li>
+        </ul>
+        <p><strong>Values yaad rakho:</strong> Si = 0.7 V, Ge = 0.3 V (Knee/Barrier potential)</p>
+      </div>
+
+      <!-- TRAP 3 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 3: Logic Gates — NAND aur NOR Universal Gates hain</span>
+        <p><strong>Trap kya hai:</strong> Bacche sirf AND, OR, NOT yaad rakhte hain. <strong>NAND</strong> aur <strong>NOR</strong> se koi bhi gate bana sakte hain.</p>
+        <p><strong>PYQ:</strong> 2026 (Jan Shift 1) mein direct <strong>AND gate ka circuit</strong> aaya tha (diode logic). 2025 (Jan) mein <strong>NOR gate</strong> ka truth table diya tha.</p>
+        <p><strong>De Morgan's Theorem:</strong> <code>¬(A+B) = ¬A · ¬B</code></p>
+        <table style="margin-top: 0.5rem;">
+          <thead><tr><th>A</th><th>B</th><th>AND</th><th>OR</th><th>NAND</th><th>NOR</th><th>XOR</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TRAP 4 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 4: Energy Band Gap ∝ 1/Conductivity</span>
+        <p><strong>Trap kya hai:</strong> Bacche band gap aur conductivity ka relation bhool jaate hain.</p>
+        <p><strong>Kyun important:</strong></p>
+        <ul>
+          <li><strong>Conductor:</strong> Band gap = 0 (overlap)</li>
+          <li><strong>Semiconductor:</strong> ~1 eV (Si = 1.1 eV, Ge = 0.7 eV)</li>
+          <li><strong>Insulator:</strong> > 3 eV</li>
+        </ul>
+        <p><strong>Rule:</strong> <strong>Band gap zyada → Conductivity kam</strong>. <strong>Band gap kam → Conductivity zyada</strong>.</p>
+      </div>
+
+      <!-- TRAP 5 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 5: Doping — N-type mein electrons majority, P-type mein holes majority</span>
+        <p><strong>Trap kya hai:</strong> Bacche sochte hain N-type mein sirf electrons hain, P-type mein sirf holes.</p>
+        <p><strong>Kyun galat:</strong></p>
+        <ul>
+          <li><strong>N-type:</strong> Electrons <strong>majority</strong>, Holes <strong>minority</strong></li>
+          <li><strong>P-type:</strong> Holes <strong>majority</strong>, Electrons <strong>minority</strong></li>
+        </ul>
+        <p><strong>Mass Action Law:</strong> <code>nₑ × nₕ = nᵢ²</code> (always valid)</p>
+        <p><strong>PYQ (2025):</strong> n-type semiconductor ke baare mein pucha tha — "Holes are minority carriers", "The holes are not generated due to the donors".</p>
+      </div>
+
+      <!-- TRAP 6 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 6: Rectifier — Half-wave = input freq, Full-wave = 2× input freq</span>
+        <p><strong>Trap kya hai:</strong> Bacche <strong>ripple frequency</strong> bhool jaate hain.</p>
+        <p><strong>Kyun important:</strong></p>
+        <ul>
+          <li><strong>Half-wave:</strong> Ripple frequency = input frequency</li>
+          <li><strong>Full-wave:</strong> Ripple frequency = 2 × input frequency</li>
+        </ul>
+        <p><strong>Formula:</strong> Full-wave DC value = <code>0.637 × V_peak</code>, Half-wave DC value = <code>0.318 × V_peak</code></p>
+      </div>
+
+      <!-- TRAP 7 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 7: Photodiode — Reverse Bias mein Light Detector</span>
+        <p><strong>Trap kya hai:</strong> Bacche sochte hain photodiode forward bias mein kaam karta hai.</p>
+        <p><strong>Kyun galat:</strong> Photodiode <strong>reverse bias</strong> mein kaam karta hai. Light <strong>reverse current</strong> ko badhata hai. Forward bias mein ye normal diode jaisa behave karta hai.</p>
+      </div>
+
+      <!-- TRAP 8 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 8: LED — Forward Bias, Band Gap se Colour</span>
+        <p><strong>Trap kya hai:</strong> Bacche sochte hain LED ka colour <strong>doping</strong> se decide hota hai.</p>
+        <p><strong>Kyun galat:</strong> LED ka colour <strong>band gap</strong> se decide hota hai: <code>λ = hc / E_g</code></p>
+        <ul>
+          <li><strong>Zyada band gap</strong> → <strong>Chhota wavelength</strong> (blue/violet)</li>
+          <li><strong>Kam band gap</strong> → <strong>Bada wavelength</strong> (red)</li>
+        </ul>
+      </div>
+
+      <!-- TRAP 9 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 9: Zener vs Avalanche Breakdown</span>
+        <p><strong>Trap kya hai:</strong> Bacche dono ko same samajh lete hain.</p>
+        <table style="margin-top: 0.5rem;">
+          <thead><tr><th>Feature</th><th>Zener</th><th>Avalanche</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Doping</strong></td><td>Heavy</td><td>Light</td></tr>
+            <tr><td><strong>Depletion</strong></td><td>Thin</td><td>Thick</td></tr>
+            <tr><td><strong>Voltage</strong></td><td>Low (&lt; 6V)</td><td>High (&gt; 6V)</td></tr>
+            <tr><td><strong>Mechanism</strong></td><td>Electric field</td><td>Collision</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TRAP 10 -->
+      <div class="box trap-box">
+        <span class="box-title">Trap 10: PIV (Peak Inverse Voltage)</span>
+        <p><strong>Trap kya hai:</strong> Bacche PIV ka formula bhool jaate hain.</p>
+        <ul>
+          <li><strong>Half-wave:</strong> PIV = V_peak</li>
+          <li><strong>Full-wave (center-tap):</strong> PIV = 2 × V_peak</li>
+          <li><strong>Bridge:</strong> PIV = V_peak</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 2: ASSERTION-REASON (10) -->
+  <!-- ============================================ -->
+  <div id="tab-ar" class="tab-content">
+    <div class="notes">
+      <h2>📝 Assertion-Reason — 10 Questions</h2>
+      <p style="color: #5f6368;">Theory se nikale gaye — JEE Main ke naye pattern ke hisaab se.</p>
+
+      <!-- A-R 1 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 1: Pure Semiconductor ka Negative Temperature Coefficient</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> Pure semiconductor has a negative temperature coefficient of resistance.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> On raising temperature, more charge carriers are released, conductance increases and resistance decreases.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Temperature badhne se covalent bonds tootte hain, zyada electron-hole pairs generate hote hain. Isliye conductivity badhti hai aur resistance kam hoti hai — ye <strong>Negative temperature coefficient</strong> kehlata hai.</div>
+      </div>
+
+      <!-- A-R 2 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 2: p-type Semiconductor is Uncharged</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> A p-type semiconductor is a positive type crystal.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> A p-type semiconductor is an uncharged crystal.</div>
+        <div class="ar-answer">Answer: A is false, but R is true.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> "p-type" ka matlab "positive charge wala" nahi hai. Ye <strong>electrically neutral</strong> hota hai. Boron (trivalent) add karne se <strong>holes</strong> majority carriers bante hain, par crystal <strong>overall neutral</strong> rehta hai.</div>
+      </div>
+
+      <!-- A-R 3 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 3: Silicon preferred over Germanium</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> Silicon is preferred over Germanium for making semiconductor devices.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> The energy gap in Germanium is more than the energy gap in Silicon.</div>
+        <div class="ar-answer">Answer: A is true, but R is false.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Silicon preferred hai kyunki <strong>Si ka band gap (1.1 eV) Ge (0.7 eV) se zyada hai</strong>. Isliye Si devices higher temperature pe bhi kaam karte hain aur less leakage current dete hain. Reason statement ulta hai.</div>
+      </div>
+
+      <!-- A-R 4 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 4: Reverse Bias mein Minority Carriers</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> A diode under reverse-biased condition provides very small current which is nearly independent of voltage until a critical limit.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> Below the critical voltage limit, only majority charge carriers flow.</div>
+        <div class="ar-answer">Answer: A is true, but R is false.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Reverse bias mein current <strong>minority carriers</strong> se aata hai, majority se nahi. Majority carriers junction se <strong>door</strong> push ho jaate hain. Isliye R galat hai.</div>
+      </div>
+
+      <!-- A-R 5 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 5: Diffusion Current in p-n Junction</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> The diffusion current in a p-n junction is from the p-side to the n-side.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> The diffusion current in a p-n junction is greater than the drift current when the junction is forward biased.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Forward bias mein diffusion current badh jaata hai (p→n, holes), aur ye drift current se zyada hota hai.</div>
+      </div>
+
+      <!-- A-R 6 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 6: Zener Diode Breakdown</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> Zener diode is always operated in reverse bias.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> In reverse bias, the voltage across Zener diode remains constant over a wide range of current.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Zener reverse bias mein breakdown region mein operate hota hai, jahan voltage constant rehta hai — isliye ye voltage regulator ban jaata hai.</div>
+      </div>
+
+      <!-- A-R 7 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 7: Energy Bands and Conductivity</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> Insulators have a large energy gap between valence band and conduction band.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> Large energy gap means electrons cannot easily jump to the conduction band, so conductivity is low.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Insulator mein band gap > 3 eV hota hai. Electrons ko conduction band mein jaane ke liye bahut energy chahiye — isliye conductivity bahut kam hoti hai.</div>
+      </div>
+
+      <!-- A-R 8 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 8: Photodiode ka Operation</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> A photodiode is operated in reverse bias.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> In reverse bias, the fractional change in minority carrier current due to light is easily measurable.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Reverse bias mein minority carrier current bahut chhota hota hai. Light se jo change aata hai, wo easily measurable hota hai — isliye photodiode reverse bias mein operate hota hai.</div>
+      </div>
+
+      <!-- A-R 9 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 9: Half-wave vs Full-wave Rectifier</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> The ripple frequency of a full-wave rectifier is twice that of a half-wave rectifier.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> In a full-wave rectifier, both halves of the input AC cycle are used, so two output pulses are produced per cycle.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> Half-wave mein ek pulse per cycle, Full-wave mein do pulses per cycle. Isliye ripple frequency double hoti hai.</div>
+      </div>
+
+      <!-- A-R 10 -->
+      <div class="ar-box">
+        <div class="ar-title">A-R 10: LED ka Colour</div>
+        <div class="ar-assertion"><strong>Assertion (A):</strong> The colour of light emitted by an LED depends on the band gap of the semiconductor material.</div>
+        <div class="ar-reason"><strong>Reason (R):</strong> LED emits light when electrons recombine with holes across the band gap.</div>
+        <div class="ar-answer">Answer: Both A and R are correct, and R is the correct explanation of A.</div>
+        <div class="ar-expanded"><strong>Expanded:</strong> LED forward bias mein electron-hole recombination hota hai, jisme energy <code>E_g</code> ke equal photon release hota hai. Isliye <code>λ = hc/E_g</code> — band gap se colour decide hota hai.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 3: RED ALERTS -->
+  <!-- ============================================ -->
+  <div id="tab-alerts" class="tab-content">
+    <div class="notes">
+      <h2>🚨 Red Alerts — Yahan 2 Marks Katte Hain</h2>
+
+      <div class="red-alert">
+        <div class="alert-title">⚠️ Red Alert #1 — Zener Diode = Reverse Bias</div>
+        <div class="alert-content">
+          <strong>Zener sirf REVERSE BIAS mein voltage regulate karta hai.</strong><br>
+          Forward bias mein ye normal diode (0.7V drop) jaisa behave karta hai.<br>
+          <em>2022, 2024 mein 71% bacche yahi galat kiye.</em>
+        </div>
+      </div>
+
+      <div class="red-alert">
+        <div class="alert-title">⚠️ Red Alert #2 — LED vs Photodiode</div>
+        <div class="alert-content">
+          <strong>LED:</strong> Forward bias, light emit karta hai, band gap se colour<br>
+          <strong>Photodiode:</strong> Reverse bias, light detect karta hai<br>
+          <em>Dono ka bias alag hai — 65% bacche confuse hote hain.</em>
+        </div>
+      </div>
+
+      <div class="red-alert">
+        <div class="alert-title">⚠️ Red Alert #3 — Logic Gates Universal</div>
+        <div class="alert-content">
+          <strong>NAND aur NOR = Universal Gates</strong><br>
+          Inse AND, OR, NOT koi bhi gate bana sakte hain.<br>
+          <strong>De Morgan:</strong> ¬(A+B) = ¬A · ¬B<br>
+          <em>2026 mein AND gate direct aaya tha.</em>
+        </div>
+      </div>
+
+      <div class="red-alert">
+        <div class="alert-title">⚠️ Red Alert #4 — Band Gap vs Conductivity</div>
+        <div class="alert-content">
+          <strong>Band gap ↑ → Conductivity ↓</strong><br>
+          <strong>Band gap ↓ → Conductivity ↑</strong><br>
+          Si (1.1 eV), Ge (0.7 eV), Insulator (&gt; 3 eV)<br>
+          <em>2026 mein direct pucha tha — 59% galat.</em>
+        </div>
+      </div>
+
+      <div class="red-alert">
+        <div class="alert-title">⚠️ Red Alert #5 — Doping ka Confusion</div>
+        <div class="alert-content">
+          <strong>N-type:</strong> Electrons majority, Holes minority<br>
+          <strong>P-type:</strong> Holes majority, Electrons minority<br>
+          Crystal hamesha <strong>electrically neutral</strong> rehta hai.<br>
+          <em>2025 mein 55% bacche isme confuse the.</em>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TAB 4: QUICK REVISION -->
+  <!-- ============================================ -->
+  <div id="tab-revision" class="tab-content">
+    <div class="notes">
+      <h2>⚡ Quick Revision — 15 Min</h2>
+
+      <div class="box">
+        <span class="box-title">📐 Key Values</span>
+        <ul>
+          <li><strong>Si:</strong> Barrier = 0.7 V, E_g = 1.1 eV</li>
+          <li><strong>Ge:</strong> Barrier = 0.3 V, E_g = 0.7 eV</li>
+          <li><strong>Insulator:</strong> E_g &gt; 3 eV</li>
+          <li><strong>Conductor:</strong> E_g = 0 (overlap)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <span class="box-title">📐 Key Formulas</span>
+        <ul>
+          <li><strong>Diode current:</strong> I = I₀(e^(eV/kT) − 1)</li>
+          <li><strong>Zener current:</strong> I_Z = (V_in − V_Z) / R</li>
+          <li><strong>Full-wave DC:</strong> V_DC = 0.637 × V_peak</li>
+          <li><strong>Half-wave DC:</strong> V_DC = 0.318 × V_peak</li>
+          <li><strong>LED colour:</strong> λ = hc / E_g</li>
+          <li><strong>Mass action law:</strong> nₑ × nₕ = nᵢ²</li>
+        </ul>
+      </div>
+
+      <div class="box trap-box">
+        <span class="box-title">⚠️ Top 5 Traps (Recall)</span>
+        <ol>
+          <li>Zener = Reverse bias mein regulator</li>
+          <li>LED = Forward, Photodiode = Reverse</li>
+          <li>NAND + NOR = Universal gates</li>
+          <li>Band gap ∝ 1/Conductivity</li>
+          <li>N-type: e⁻ majority, P-type: holes majority</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🔑 Logic Gates — Truth Table</span>
+        <table>
+          <thead><tr><th>A</th><th>B</th><th>AND</th><th>OR</th><th>NAND</th><th>NOR</th><th>XOR</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        <span class="box-title">🎯 8 Saal Ka Pattern</span>
+        <ul>
+          <li><strong>Logic Gates:</strong> 8/8 saal</li>
+          <li><strong>p-n Junction:</strong> 8/8 saal</li>
+          <li><strong>Zener Diode:</strong> 5/8 saal</li>
+          <li><strong>Rectifier:</strong> 4/8 saal</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made for JEE Aspirants | <a href="https://github.com/ravirajhere">GitHub</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

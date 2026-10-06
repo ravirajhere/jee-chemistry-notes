@@ -1,107 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JEE Chemistry Notes — Chapter-wise </title>
-  <meta name="description" content="Complete JEE Mains Chemistry notes — Inorganic, Physical, Organic. Chapter-wise, PYQ analysis (2019-2026), Mains traps, quick revision sheets. Handcrafted for JEE 2026 aspirants.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b2545" />
+
+  <title>JEE Chemistry Notes — 22 Chapters · PYQ 2019–2026 · Print-Ready</title>
+  <meta name="description" content="22 chapters of JEE Main Chemistry — Inorganic, Physical, Organic. Chapter-wise notes with PYQ analysis (2019–2026), mains traps, solved problems, and quick revision sheets. Handcrafted, print-ready, no fluff." />
+  <meta name="keywords" content="JEE Main Chemistry, JEE 2026 Chemistry Notes, PYQ Analysis, Chemical Bonding Notes, Coordination Compounds, Organic Chemistry, Physical Chemistry, Inorganic Chemistry" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JEE Chemistry Notes — Complete 22 Chapters" />
+  <meta property="og:description" content="Chapter-wise notes · PYQ analysis (2019–2026) · Mains traps · Quick revision sheets · Print-ready." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <!-- SKIP TO CONTENT (a11y) -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" aria-label="Main navigation">
     <div class="navbar-container">
-      <a href="index.html" class="navbar-brand">JEE Chemistry Notes</a>
+      <a href="index.html" class="navbar-brand" aria-label="Home">
+        <span class="brand-mark">JC</span>
+        <span class="brand-text">JEE Chemistry</span>
+      </a>
+
       <div class="navbar-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="chemistry.html">Chemistry</a>
-        <a href="tracker/index.html">PYQ Tracker</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="#inorganic">Inorganic</a>
+        <a href="#physical">Physical</a>
+        <a href="#organic">Organic</a>
+        <a href="tracker/index.html">Tracker</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ==================== HERO ==================== -->
   <header class="hero">
-    <h1>JEE Main Chemistry — Complete Notes</h1>
-    <p>Chapter-wise notes · PYQ analysis (2019–2026) · Mains traps · Quick revision sheets · Print-ready</p>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">JEE Main 2026 · Handcrafted Notes</span>
+      <h1 class="hero-title">22 Chapters.<br>One Honest Chemistry Resource.</h1>
+      <p class="hero-subtitle">
+        PYQ analysis from 2019–2026. Mains traps. Solved problems. Quick revision sheets.
+        No AI fluff. No filler. Just the content that scored 99+ percentile.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#inorganic" class="btn btn-primary">Start Reading</a>
+        <a href="tracker/index.html" class="btn btn-secondary">Track Your PYQs</a>
+      </div>
+
+      <!-- ==================== STATS ==================== -->
+      <div class="stats-bar" role="region" aria-label="Content stats">
+        <div class="stat">
+          <span class="stat-num">22</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Years of PYQs</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">100+</span>
+          <span class="stat-label">Solved Problems</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Subject Pillars</span>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
+  <!-- ==================== MAIN ==================== -->
+  <main id="main" class="container">
 
-    <!-- CHEMISTRY SECTION -->
-    <h2 class="section-title">Chemistry — All Chapters</h2>
-    <div class="cards-grid">
-
-      <a href="inorganic/index.html" class="card">
-        <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>
-          </svg>
+    <!-- ---------- SECTION: HOW TO USE ---------- -->
+    <section class="howto" aria-labelledby="howto-title">
+      <h2 id="howto-title" class="section-title">How to Use These Notes</h2>
+      <div class="howto-grid">
+        <div class="howto-card">
+          <span class="howto-num">1</span>
+          <h3>Read the Chapter</h3>
+          <p>Concept + exceptions + diagrams. Har concept ke saath NCERT reference.</p>
         </div>
-        <div class="card-title">Inorganic Chemistry</div>
-        <div class="card-desc">Chemical Bonding, Periodic Table, Coordination Compounds, p-Block, d &amp; f-Block, Qualitative Analysis.</div>
-        <span class="card-badge badge-ready">6 Chapters</span>
-      </a>
-
-      <a href="physical/index.html" class="card">
-        <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3"/>
-            <path d="M8 3h8M7 12h10"/>
-          </svg>
+        <div class="howto-card">
+          <span class="howto-num">2</span>
+          <h3>Solve the PYQs</h3>
+          <p>Pichhle 8 saal ke actual questions. Pattern samajh mein aayega.</p>
         </div>
-        <div class="card-title">Physical Chemistry</div>
-        <div class="card-desc">Mole Concept, Thermodynamics, Equilibrium, Electrochemistry, Kinetics, Solutions, Atomic Structure, Redox.</div>
-        <span class="card-badge badge-ready">8 Chapters</span>
-      </a>
-
-      <a href="organic/index.html" class="card">
-        <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
-            <path d="M8 12h8M12 8v8"/>
-          </svg>
+        <div class="howto-card">
+          <span class="howto-num">3</span>
+          <h3>Track. Revise. Repeat.</h3>
+          <p>Quick Revision sheet se 10-min mein poora chapter recall karo.</p>
         </div>
-        <div class="card-title">Organic Chemistry</div>
-        <div class="card-desc">GOC, Hydrocarbons, Haloalkanes, Alcohols &amp; Phenols, Aldehydes &amp; Ketones, Amines, Biomolecules.</div>
-        <span class="card-badge badge-ready">8 Chapters</span>
-      </a>
+      </div>
+    </section>
 
-    </div>
-
-    <!-- TOOLS SECTION -->
-    <h2 class="section-title" style="margin-top: 4rem;">Tools</h2>
-    <div class="cards-grid">
-
-      <a href="tracker/index.html" class="card">
-        <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 11l3 3L22 4"/>
-            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-          </svg>
+    <!-- ---------- SECTION: INORGANIC ---------- -->
+    <section id="inorganic" class="pillar" aria-labelledby="inorganic-title">
+      <div class="pillar-head">
+        <div>
+          <span class="pillar-tag">Pillar 01</span>
+          <h2 id="inorganic-title" class="section-title">Inorganic Chemistry</h2>
+          <p class="pillar-desc">NCERT-driven. Predictable. Highest scoring section if memorized properly.</p>
         </div>
-        <div class="card-title">PYQ Tracker</div>
-        <div class="card-desc">Track your chapter-wise progress. Mark PYQs as you solve them and see your preparation graph grow.</div>
-        <span class="card-badge badge-ready">Ready</span>
-      </a>
+        <a href="inorganic/index.html" class="pillar-cta">
+          View All <span aria-hidden="true">→</span>
+        </a>
+      </div>
 
-    </div>
+      <div class="cards-grid">
+        <a href="inorganic/chemical-bonding.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~5% Weightage</span>
+          </div>
+          <div class="card-title">Chemical Bonding</div>
+          <div class="card-desc">VSEPR, Bent's Rule, Drago's Rule, MOT, Back Bonding, Banana Bond.</div>
+          <div class="card-foot">
+            <span>6 topics · 15 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
 
-    <!-- ABOUT / NOTE -->
-    <div style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid var(--border); text-align: center;">
-      <p style="color: var(--text-light); font-size: 0.9rem; max-width: 640px; margin: 0 auto; font-style: italic;">
-        Handcrafted notes for JEE Main Aspirants. Every chapter includes PYQ analysis (2019–2026), mains traps, solved problems, and quick revision sheets — built for serious aspirants.
+        <a href="inorganic/periodic-table.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~3% Weightage</span>
+          </div>
+          <div class="card-title">Periodic Table</div>
+          <div class="card-desc">Periodicity, Ionization Enthalpy, Electron Gain, Anomalies.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="inorganic/coordination-compounds.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-hard">Hard</span>
+            <span class="card-badge badge-weight">~9% Weightage</span>
+          </div>
+          <div class="card-title">Coordination Compounds</div>
+          <div class="card-desc">Werner's Theory, IUPAC Naming, Isomerism, CFT, Magnetic Moment.</div>
+          <div class="card-foot">
+            <span>7 topics · 20 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="inorganic/p-block.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~6% Weightage</span>
+          </div>
+          <div class="card-title">p-Block Elements</div>
+          <div class="card-desc">Group 13-18 trends, oxides, inert pair effect, exceptions.</div>
+          <div class="card-foot">
+            <span>6 topics · 12 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="inorganic/d-f-block.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~3% Weightage</span>
+          </div>
+          <div class="card-title">d &amp; f-Block Elements</div>
+          <div class="card-desc">Transition metals, oxidation states, lanthanoid contraction.</div>
+          <div class="card-foot">
+            <span>4 topics · 8 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="inorganic/qualitative-analysis.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~2% Weightage</span>
+          </div>
+          <div class="card-title">Qualitative Analysis</div>
+          <div class="card-desc">Cation &amp; anion detection, group separation, flame test.</div>
+          <div class="card-foot">
+            <span>4 topics · 6 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- SECTION: PHYSICAL ---------- -->
+    <section id="physical" class="pillar" aria-labelledby="physical-title">
+      <div class="pillar-head">
+        <div>
+          <span class="pillar-tag">Pillar 02</span>
+          <h2 id="physical-title" class="section-title">Physical Chemistry</h2>
+          <p class="pillar-desc">Formula-driven. Calculation-heavy. Speed practice se 100% accuracy possible.</p>
+        </div>
+        <a href="physical/index.html" class="pillar-cta">
+          View All <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="cards-grid">
+        <a href="physical/mole-concept.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Mole Concept</div>
+          <div class="card-desc">Stoichiometry, concentration terms, limiting reagent.</div>
+          <div class="card-foot">
+            <span>5 topics · 12 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/thermodynamics.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-hard">Hard</span>
+            <span class="card-badge badge-weight">~6% Weightage</span>
+          </div>
+          <div class="card-title">Thermodynamics</div>
+          <div class="card-desc">ΔH, ΔG, spontaneity, Hess's law, entropy.</div>
+          <div class="card-foot">
+            <span>6 topics · 14 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/equilibrium.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~6% Weightage</span>
+          </div>
+          <div class="card-title">Equilibrium</div>
+          <div class="card-desc">Kc, Kp, Le Chatelier, pH, buffers, Ksp, salt hydrolysis.</div>
+          <div class="card-foot">
+            <span>7 topics · 15 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/electrochemistry.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-hard">Hard</span>
+            <span class="card-badge badge-weight">~5% Weightage</span>
+          </div>
+          <div class="card-title">Electrochemistry</div>
+          <div class="card-desc">Nernst equation, Faraday's laws, conductance, EMF.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/chemical-kinetics.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Chemical Kinetics</div>
+          <div class="card-desc">Rate law, order, half-life, Arrhenius equation.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/solutions.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~3% Weightage</span>
+          </div>
+          <div class="card-title">Solutions</div>
+          <div class="card-desc">Raoult's law, colligative properties, Van't Hoff factor.</div>
+          <div class="card-foot">
+            <span>4 topics · 8 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/atomic-structure.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Atomic Structure</div>
+          <div class="card-desc">Bohr model, quantum numbers, electronic configuration.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="physical/redox.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~3% Weightage</span>
+          </div>
+          <div class="card-title">Redox Reactions</div>
+          <div class="card-desc">Oxidation number, balancing, disproportionation.</div>
+          <div class="card-foot">
+            <span>4 topics · 8 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- SECTION: ORGANIC ---------- -->
+    <section id="organic" class="pillar" aria-labelledby="organic-title">
+      <div class="pillar-head">
+        <div>
+          <span class="pillar-tag">Pillar 03</span>
+          <h2 id="organic-title" class="section-title">Organic Chemistry</h2>
+          <p class="pillar-desc">Mechanism-driven. Logic se solve hota hai. Ratta nahi.</p>
+        </div>
+        <a href="organic/index.html" class="pillar-cta">
+          View All <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="cards-grid">
+        <a href="organic/goc.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-hard">Hard</span>
+            <span class="card-badge badge-weight">~7% Weightage</span>
+          </div>
+          <div class="card-title">General Organic Chemistry</div>
+          <div class="card-desc">Inductive, resonance, hyperconjugation, acidity/basicity, mechanisms.</div>
+          <div class="card-foot">
+            <span>8 topics · 20 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/hydrocarbons.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Hydrocarbons</div>
+          <div class="card-desc">Alkanes, alkenes, alkynes, aromatic compounds, reactions.</div>
+          <div class="card-foot">
+            <span>6 topics · 12 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/haloalkanes.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Haloalkanes &amp; Haloarenes</div>
+          <div class="card-desc">SN1, SN2, E1, E2, Saytzeff rule, SNAr.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/alcohols-phenols-ethers.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~5% Weightage</span>
+          </div>
+          <div class="card-title">Alcohols, Phenols &amp; Ethers</div>
+          <div class="card-desc">Preparation, reactions, Reimer-Tiemann, Kolbe, Williamson.</div>
+          <div class="card-foot">
+            <span>6 topics · 12 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/aldehydes-ketones.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-hard">Hard</span>
+            <span class="card-badge badge-weight">~6% Weightage</span>
+          </div>
+          <div class="card-title">Aldehydes &amp; Ketones</div>
+          <div class="card-desc">Nucleophilic addition, aldol, Cannizzaro, HVZ, decarboxylation.</div>
+          <div class="card-foot">
+            <span>7 topics · 15 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/amines.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-medium">Medium</span>
+            <span class="card-badge badge-weight">~4% Weightage</span>
+          </div>
+          <div class="card-title">Amines</div>
+          <div class="card-desc">Basicity, preparation, reactions, diazonium salts, carbylamine.</div>
+          <div class="card-foot">
+            <span>5 topics · 10 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/biomolecules.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~3% Weightage</span>
+          </div>
+          <div class="card-title">Biomolecules</div>
+          <div class="card-desc">Carbohydrates, proteins, vitamins, nucleic acids.</div>
+          <div class="card-foot">
+            <span>4 topics · 8 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="organic/purification.html" class="card">
+          <div class="card-head">
+            <span class="card-badge badge-difficulty badge-easy">Easy</span>
+            <span class="card-badge badge-weight">~2% Weightage</span>
+          </div>
+          <div class="card-title">Purification &amp; Characterisation</div>
+          <div class="card-desc">Crystallization, distillation, chromatography, spectroscopy.</div>
+          <div class="card-foot">
+            <span>4 topics · 6 PYQs</span>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- SECTION: WHY THIS PROJECT ---------- -->
+    <section class="why" aria-labelledby="why-title">
+      <h2 id="why-title" class="section-title">Why This Project Exists</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Handcrafted, Not Scraped</h3>
+          <p>Every line is written by hand — no AI-generated content, no copy-paste from other sites.</p>
+        </div>
+        <div class="why-item">
+          <h3>PYQ-Anchored</h3>
+          <p>Every concept is mapped to actual PYQs (2019–2026). You learn what JEE actually asks.</p>
+        </div>
+        <div class="why-item">
+          <h3>Print-Ready</h3>
+          <p>Each chapter has a clean print mode. Save as PDF, bind it, revise offline.</p>
+        </div>
+        <div class="why-item">
+          <h3>Free Forever</h3>
+          <p>No login. No ads. Open source on GitHub.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CLOSING NOTE ---------- -->
+    <div class="home-note">
+      <p>
+        Built for JEE aspirants. Every chapter includes PYQ analysis (2019–2026),
+        mains traps, solved problems, and quick revision sheets.
+        <strong>Content is being added chapter-by-chapter.</strong>
       </p>
     </div>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <p>Handcrafted for JEE Aspirants · <a href="https://github.com/ravirajhere">GitHub</a> · <a href="https://jee-chemistry-notes.vercel.app">Live</a></p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">JC</span>
+        <span>JEE Chemistry Notes</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ravirajhere">GitHub</a>
+        <a href="https://jee-chemistry-notes.vercel.app">Live Site</a>
+        <a href="LICENSE">License</a>
+      </div>
+      <div class="footer-note">
+        Made with ❤️ & Curiosity 
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

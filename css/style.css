@@ -1190,3 +1190,136 @@ code {
   .pillar-cta { font-size: 0.85rem; }
   .howto-card { padding: 18px 16px; }
 }
+
+/* ============================================
+   HERO COMPACT (Hub pages)
+   ============================================ */
+.hero-compact {
+  padding: 50px 20px 40px;
+}
+
+.hero-compact .hero-title {
+  font-size: 2rem;
+}
+
+/* ============================================
+   PILLAR STATS (Hub page stats bar)
+   ============================================ */
+.pillar-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 40px 0 50px;
+}
+
+.pillar-stat {
+  background: #fff;
+  padding: 22px 14px;
+  text-align: center;
+}
+
+.pillar-stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.pillar-stat-label {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+/* ============================================
+   PRIORITY GUIDE (Study order)
+   ============================================ */
+.priority-guide {
+  margin: 70px 0 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.priority-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 4px solid var(--navy-500);
+}
+
+.priority-item.priority-high {
+  border-left-color: var(--accent-red);
+}
+
+.priority-item.priority-medium {
+  border-left-color: var(--accent-orange);
+}
+
+.priority-item.priority-low {
+  border-left-color: var(--accent-green);
+}
+
+.priority-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.priority-chapters {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.priority-why {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  text-align: right;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .pillar-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-compact .hero-title { font-size: 1.7rem; }
+
+  .priority-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .priority-why { text-align: left; }
+}
+
+@media (max-width: 600px) {
+  .pillar-stat-num { font-size: 1.3rem; }
+  .pillar-stat { padding: 16px 10px; }
+  .hero-compact { padding: 36px 16px 28px; }
+  .hero-compact .hero-title { font-size: 1.4rem; }
+}

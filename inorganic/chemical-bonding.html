@@ -1,739 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemical Bonding | JEE Chemistry Notes</title>
-  <meta name="description" content="Chemical Bonding Notes for JEE Mains — Ionic Bond, Lattice Energy, Fajan's Rule, VSEPR, Hybridisation, MOT, PYQ Analysis (2019-2026).">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* Print Button */
-    .print-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--secondary);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-decoration: none;
-    }
-    .print-btn:hover {
-      background: #2d8e47;
-    }
-    .print-btn-container {
-      max-width: 1200px;
-      margin: 1rem auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: flex-end;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chemical Bonding — Master Notes | JEE Main 2026</title>
+<style>
+  /* ============ RESET ============ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 15px;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px 60px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    border-radius: 4px;
+  }
 
-    /* Born-Haber Diagram */
-    .bh-diagram {
-      background: #f8f9fa;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      overflow-x: auto;
-    }
-    .bh-diagram svg {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
+  /* ============ TYPOGRAPHY ============ */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0b2545;
+    text-align: center;
+    border-bottom: 3px double #0b2545;
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  h1 + .subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #4a5c7a;
+    font-style: italic;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 22px;
+    color: #0b2545;
+    margin: 40px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0b2545;
+    letter-spacing: 0.3px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 17px;
+    color: #1e3a5f;
+    margin: 25px 0 10px;
+    letter-spacing: 0.2px;
+  }
+  h4 {
+    font-size: 15px;
+    color: #2c4a6e;
+    margin: 18px 0 8px;
+    font-style: italic;
+  }
+  p { margin-bottom: 12px; }
+  strong { color: #0b2545; }
+  code {
+    background: #eef2f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 13.5px;
+    color: #1e3a5f;
+  }
 
-    /* Numerical Example Box */
-    .numeric-box {
-      background: #e8f0fe;
-      border-left: 4px solid var(--primary);
-      padding: 1rem 1.2rem;
-      margin: 1rem 0;
-      border-radius: 0 8px 8px 0;
-    }
-    .numeric-box .box-title {
-      color: var(--primary-dark);
-    }
-    .numeric-box ol {
-      margin-left: 1.5rem;
-      margin-top: 0.5rem;
-    }
+  /* ============ LISTS ============ */
+  ul, ol { margin: 10px 0 15px 25px; }
+  li { margin-bottom: 6px; }
+  ol.numbered { counter-reset: item; list-style: none; padding-left: 0; }
+  ol.numbered > li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+  }
+  ol.numbered > li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: #0b2545;
+    font-size: 15px;
+  }
 
-    /* Notes Spacing */
-    .notes h2 {
-      margin-top: 2.5rem;
-      padding-top: 1rem;
-    }
-    .notes h2:first-child {
-      margin-top: 0;
-    }
-    .notes h3 {
-      margin-top: 1.5rem;
-    }
-    .notes p {
-      margin-bottom: 1rem;
-    }
-    .notes ul, .notes ol {
-      margin-bottom: 1.2rem;
-    }
-    .notes .box {
-      margin: 1.2rem 0;
-    }
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    border: 1px solid #c8d3e0;
+    padding: 9px 12px;
+    text-align: left;
+  }
+  th {
+    background: #0b2545;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 0.3px;
+  }
+  tr:nth-child(even) td { background: #f5f8fb; }
+  td.center { text-align: center; }
+  td.code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #1e3a5f;
+  }
 
-    /* Print Styles */
-    @media print {
-      .navbar, .breadcrumb, .tabs, .print-btn-container, .footer {
-        display: none !important;
-      }
-      .tab-content {
-        display: block !important;
-        padding: 0 !important;
-      }
-      .chapter-header {
-        background: white !important;
-        color: black !important;
-      }
-      .notes h2 {
-        page-break-after: avoid;
-      }
-      .notes table, .notes .box {
-        page-break-inside: avoid;
-      }
-    }
-  </style>
+  /* ============ CALLOUT BOXES ============ */
+  .callout {
+    background: #f0f7ff;
+    border-left: 4px solid #1e3a5f;
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 14.5px;
+  }
+  .callout.trap {
+    background: #fff8f0;
+    border-left-color: #c45d16;
+  }
+  .callout.trap strong { color: #c45d16; }
+  .callout.cheat {
+    background: #f0f9f0;
+    border-left-color: #2d6a2d;
+  }
+  .callout.cheat strong { color: #2d6a2d; }
+  .callout.pyq {
+    background: #f9f0ff;
+    border-left-color: #6a2d8f;
+  }
+  .callout.pyq strong { color: #6a2d8f; }
+  .callout-title {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* ============ FORMULA BOX ============ */
+  .formula {
+    background: #0b2545;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 15px 0;
+  }
+  .formula small {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-top: 6px;
+    letter-spacing: 0;
+    font-style: italic;
+  }
+
+  /* ============ DIAGRAM BOX ============ */
+  .diagram-box {
+    background: #fbfcfe;
+    border: 1px solid #d8e0eb;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    overflow-x: auto;
+  }
+  .diagram-caption {
+    font-size: 12.5px;
+    color: #5a6b82;
+    font-style: italic;
+    margin-top: 10px;
+    letter-spacing: 0.2px;
+  }
+  svg {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  /* ============ SECTION DIVIDER ============ */
+  hr.divider {
+    border: none;
+    border-top: 1px solid #e0e6ee;
+    margin: 35px 0;
+  }
+
+  /* ============ TOC ============ */
+  .toc {
+    background: #f5f8fb;
+    padding: 18px 25px;
+    border-radius: 6px;
+    margin: 25px 0 35px;
+    border: 1px solid #d8e0eb;
+  }
+  .toc h3 { margin-top: 0; color: #0b2545; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; }
+  .toc ol { columns: 2; column-gap: 30px; margin-left: 20px; }
+  .toc li { font-size: 13.5px; margin-bottom: 4px; font-family: Arial, sans-serif; }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px solid #0b2545;
+    text-align: center;
+    font-size: 13px;
+    color: #5a6b82;
+    font-style: italic;
+  }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: #fff; padding: 0; font-size: 12px; }
+    .container { box-shadow: none; padding: 0; max-width: 100%; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 17px; page-break-after: avoid; }
+    h3 { font-size: 14px; page-break-after: avoid; }
+    table { font-size: 11px; page-break-inside: avoid; }
+    .diagram-box { page-break-inside: avoid; }
+    .callout { page-break-inside: avoid; }
+    .formula { background: #0b2545 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    th { background: #0b2545 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #f5f8fb !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 600px) {
+    body { padding: 10px; font-size: 14px; }
+    .container { padding: 25px 20px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 15px; }
+    table { font-size: 12.5px; }
+    th, td { padding: 6px 8px; }
+    .toc ol { columns: 1; }
+    .formula { font-size: 15px; padding: 12px; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="../index.html" class="navbar-brand">📚 JEE Chemistry Notes</a>
-      <div class="navbar-links">
-        <a href="../index.html">Home</a>
-        <a href="index.html" class="active">Inorganic</a>
-        <a href="../physical/index.html">Physical</a>
-        <a href="../organic/index.html">Organic</a>
-      </div>
-    </div>
-  </nav>
+<div class="container">
 
-  <!-- BREADCRUMB -->
-  <div class="breadcrumb">
-    <a href="../index.html">Home</a> &gt; <a href="index.html">Inorganic</a> &gt; Chemical Bonding
+  <h1>Chemical Bonding</h1>
+  <div class="subtitle">Master Notes · JEE Main 2026 · 99.5+ Percentile Edition</div>
+
+  <!-- ============ TOC ============ -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li>VSEPR Theory</li>
+      <li>Bent's Rule</li>
+      <li>Drago's Rule</li>
+      <li>Hybridisation & Back Bonding</li>
+      <li>Molecular Orbital Theory</li>
+      <li>Banana Bond (B₂H₆)</li>
+      <li>Dipole Moment</li>
+      <li>Fajan's Rule & Lattice Energy</li>
+      <li>Quick Revision Sheet</li>
+      <li>Common Mistakes</li>
+      <li>PYQ Trend Analysis</li>
+      <li>4-Week Study Plan</li>
+    </ol>
   </div>
 
-  <!-- CHAPTER HEADER -->
-  <header class="chapter-header">
-    <h1>Chemical Bonding</h1>
-    <p>Ionic Bond, Lattice Energy, Fajan's Rule, VSEPR, Hybridisation, MOT</p>
-  </header>
+  <!-- ============================================================
+       SECTION 1: VSEPR
+       ============================================================ -->
+  <h2>1. VSEPR Theory</h2>
 
-  <!-- PRINT BUTTON -->
-  <div class="print-btn-container">
-    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  <h3>1.1 Core Concept</h3>
+  <p><strong>VSEPR</strong> = Valence Shell Electron Pair Repulsion Theory.</p>
+  <p>Electron pairs (bonding + lone) maximum door rehna chahte hain. Shape isi se decide hota hai.</p>
+
+  <h3>1.2 Notation: AXₘEₙ</h3>
+  <table>
+    <tr><th>Symbol</th><th>Matlab</th></tr>
+    <tr><td class="center"><strong>A</strong></td><td>Central atom</td></tr>
+    <tr><td class="center"><strong>X</strong></td><td>Bonded atoms</td></tr>
+    <tr><td class="center"><strong>E</strong></td><td>Lone pairs on central atom</td></tr>
+    <tr><td class="center"><strong>m</strong></td><td>Number of X</td></tr>
+    <tr><td class="center"><strong>n</strong></td><td>Number of E</td></tr>
+  </table>
+  <p><strong>Example:</strong> H₂O = AX₂E₂</p>
+
+  <h3>1.3 Repulsion Order</h3>
+  <div class="formula">lp-lp &gt; lp-bp &gt; bp-bp</div>
+
+  <h3>1.4 Complete Geometry Table</h3>
+  <table>
+    <tr><th>m+n</th><th>Hybrid</th><th>Geometry</th><th>Example</th><th>Bond Angle</th></tr>
+    <tr><td class="center">2</td><td class="center">sp</td><td>Linear</td><td>BeCl₂, CO₂</td><td class="center">180°</td></tr>
+    <tr><td class="center">3</td><td class="center">sp²</td><td>Trigonal Planar</td><td>BF₃, SO₃</td><td class="center">120°</td></tr>
+    <tr><td class="center">4</td><td class="center">sp³</td><td>Tetrahedral</td><td>CH₄</td><td class="center">109.5°</td></tr>
+    <tr><td class="center">3+1</td><td class="center">sp³</td><td>Pyramidal</td><td>NH₃</td><td class="center">107°</td></tr>
+    <tr><td class="center">2+2</td><td class="center">sp³</td><td>Bent</td><td>H₂O</td><td class="center">104.5°</td></tr>
+    <tr><td class="center">5</td><td class="center">sp³d</td><td>Trigonal Bipyramidal</td><td>PCl₅</td><td class="center">90°, 120°</td></tr>
+    <tr><td class="center">4+1</td><td class="center">sp³d</td><td>See-Saw</td><td>SF₄</td><td class="center">&lt; 90°, &lt; 120°</td></tr>
+    <tr><td class="center">3+2</td><td class="center">sp³d</td><td>T-Shape</td><td>ClF₃</td><td class="center">~87.5°</td></tr>
+    <tr><td class="center">2+3</td><td class="center">sp³d</td><td>Linear</td><td>XeF₂</td><td class="center">180°</td></tr>
+    <tr><td class="center">6</td><td class="center">sp³d²</td><td>Octahedral</td><td>SF₆</td><td class="center">90°</td></tr>
+    <tr><td class="center">5+1</td><td class="center">sp³d²</td><td>Square Pyramidal</td><td>BrF₅</td><td class="center">~84.8°</td></tr>
+    <tr><td class="center">4+2</td><td class="center">sp³d²</td><td>Square Planar</td><td>XeF₄</td><td class="center">90°</td></tr>
+    <tr><td class="center">7</td><td class="center">sp³d³</td><td>Pentagonal Bipyramidal</td><td>IF₇</td><td class="center">72°, 90°</td></tr>
+  </table>
+
+  <h3>1.5 Edge Cases (99%ile Topic)</h3>
+
+  <h4>SF₄ — See-Saw Shape</h4>
+  <div class="diagram-box">
+    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Central S -->
+      <circle cx="150" cy="100" r="22" fill="#0b2545"/>
+      <text x="150" y="106" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="Arial">S</text>
+      <!-- Lone pair (dashed) -->
+      <ellipse cx="150" cy="155" rx="18" ry="10" fill="none" stroke="#c45d16" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="150" y="178" text-anchor="middle" fill="#c45d16" font-size="11" font-family="Arial" font-style="italic">lone pair (eq)</text>
+      <!-- Axial F (top) -->
+      <circle cx="150" cy="30" r="16" fill="#1e3a5f"/>
+      <text x="150" y="35" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Arial">F</text>
+      <line x1="150" y1="78" x2="150" y2="46" stroke="#0b2545" stroke-width="2"/>
+      <!-- Equatorial F (bottom-left) -->
+      <circle cx="70" cy="145" r="16" fill="#1e3a5f"/>
+      <text x="70" y="150" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Arial">F</text>
+      <line x1="132" y1="115" x2="86" y2="140" stroke="#0b2545" stroke-width="2"/>
+      <!-- Equatorial F (bottom-right) -->
+      <circle cx="230" cy="145" r="16" fill="#1e3a5f"/>
+      <text x="230" y="150" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Arial">F</text>
+      <line x1="168" y1="115" x2="214" y2="140" stroke="#0b2545" stroke-width="2"/>
+      <!-- Equatorial F (left) -->
+      <circle cx="55" cy="70" r="16" fill="#1e3a5f"/>
+      <text x="55" y="75" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Arial">F</text>
+      <line x1="130" y1="90" x2="70" y2="76" stroke="#0b2545" stroke-width="2"/>
+    </svg>
+    <div class="diagram-caption">SF₄ — See-Saw shape. Lone pair equatorial position mein, isliye axial bonds 90° se kam angle banate hain.</div>
   </div>
 
-  <!-- TABS -->
-  <div class="tabs">
-    <button class="tab-btn" data-tab="tab-notes">📖 Full Notes</button>
-    <button class="tab-btn" data-tab="tab-traps">⚠️ Mains Traps</button>
-    <button class="tab-btn" data-tab="tab-pyq">📊 PYQ Analysis (2019–2026)</button>
-    <button class="tab-btn" data-tab="tab-revision">⚡ Quick Revision</button>
+  <h4>XeF₆ — Distorted Octahedral</h4>
+  <div class="diagram-box">
+    <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="110" r="24" fill="#0b2545"/>
+      <text x="150" y="117" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Arial">Xe</text>
+      <!-- Lone pair on top -->
+      <ellipse cx="150" cy="60" rx="14" ry="9" fill="none" stroke="#c45d16" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="150" y="42" text-anchor="middle" fill="#c45d16" font-size="11" font-family="Arial" font-style="italic">lone pair</text>
+      <!-- 6 F atoms -->
+      <circle cx="150" cy="20" r="14" fill="#1e3a5f"/><text x="150" y="25" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="150" y1="86" x2="150" y2="34" stroke="#0b2545" stroke-width="1.8"/>
+      <circle cx="150" cy="200" r="14" fill="#1e3a5f"/><text x="150" y="205" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="150" y1="134" x2="150" y2="186" stroke="#0b2545" stroke-width="1.8"/>
+      <circle cx="50" cy="110" r="14" fill="#1e3a5f"/><text x="50" y="115" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="126" y1="110" x2="64" y2="110" stroke="#0b2545" stroke-width="1.8"/>
+      <circle cx="250" cy="110" r="14" fill="#1e3a5f"/><text x="250" y="115" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="174" y1="110" x2="236" y2="110" stroke="#0b2545" stroke-width="1.8"/>
+      <circle cx="75" cy="185" r="14" fill="#1e3a5f"/><text x="75" y="190" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="134" y1="126" x2="88" y2="178" stroke="#0b2545" stroke-width="1.8"/>
+      <circle cx="225" cy="185" r="14" fill="#1e3a5f"/><text x="225" y="190" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="166" y1="126" x2="212" y2="178" stroke="#0b2545" stroke-width="1.8"/>
+    </svg>
+    <div class="diagram-caption">XeF₆ — Distorted octahedral. Lone pair ki wajah se perfect octahedral nahi rehta. Steric number 7 → sp³d³.</div>
   </div>
 
-  <!-- ============================================ -->
-  <!-- TAB 1: FULL NOTES -->
-  <!-- ============================================ -->
-  <div id="tab-notes" class="tab-content">
-    <div class="notes">
+  <!-- ============================================================
+       SECTION 2: BENT'S RULE
+       ============================================================ -->
+  <h2>2. Bent's Rule ⭐</h2>
 
-      <h2>1. Ionic Bond & Lattice Energy</h2>
-
-      <div class="box">
-        <span class="box-title">Ionic Bond Formation</span>
-        <p><strong>Condition:</strong> Low IE (e⁻ donor) + High EA (e⁻ acceptor)</p>
-        <p><strong>Stability Condition:</strong> Lattice Energy > (IE − EA)</p>
-      </div>
-
-      <h3>1.1 Lattice Energy (U) – Do Definitions</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Type</th>
-            <th>Definition</th>
-            <th>Sign</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Formation</strong></td>
-            <td>1 mole solid banne par release hone wali energy</td>
-            <td>Negative (exothermic)</td>
-          </tr>
-          <tr>
-            <td><strong>Dissociation</strong></td>
-            <td>1 mole solid ko gaseous ions mein todne ki energy</td>
-            <td>Positive (endothermic)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="formula">
-        U ∝ (q₁ × q₂) / r₀, jahan r₀ = r(cation) + r(anion)
-      </div>
-
-      <h3>1.2 Trends</h3>
-      <ul>
-        <li><strong>Charge ↑</strong> → U ↑</li>
-        <li><strong>Size ↑</strong> → U ↓</li>
-      </ul>
-
-      <div class="box trap-box">
-        <span class="box-title">Mains Trap</span>
-        <p>MgO > CaO > SrO > BaO (Size ↑, U ↓)</p>
-        <p>NaF &lt; MgF₂ &lt; AlF₃ (Charge ↑, U ↑)</p>
-      </div>
-
-      <h3>1.3 Born-Haber Cycle (Diagram)</h3>
-
-      <div class="bh-diagram">
-        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
-          <!-- M(s) -->
-          <text x="30" y="40" fill="#202124" font-weight="600">M(s)</text>
-          <line x1="80" y1="35" x2="180" y2="35" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="95" y="25" fill="#1a73e8" font-size="11">Sublimation (+)</text>
-          <text x="195" y="40" fill="#202124" font-weight="600">M(g)</text>
-
-          <!-- M(g) to M+(g) -->
-          <line x1="240" y1="35" x2="340" y2="35" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="255" y="25" fill="#1a73e8" font-size="11">Ionisation (+)</text>
-          <text x="355" y="40" fill="#202124" font-weight="600">M⁺(g)</text>
-
-          <!-- Vertical downward line -->
-          <line x1="410" y1="45" x2="410" y2="150" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="420" y="100" fill="#ea4335" font-size="11">Lattice Formation (−)</text>
-
-          <!-- Bottom row: X2(g) -->
-          <text x="30" y="280" fill="#202124" font-weight="600">X₂(g)</text>
-          <line x1="80" y1="275" x2="180" y2="275" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="95" y="265" fill="#1a73e8" font-size="11">Dissociation (+)</text>
-          <text x="195" y="280" fill="#202124" font-weight="600">2X(g)</text>
-
-          <!-- 2X(g) to 2X-(g) -->
-          <line x1="240" y1="275" x2="340" y2="275" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="255" y="265" fill="#1a73e8" font-size="11">EA (−)</text>
-          <text x="355" y="280" fill="#202124" font-weight="600">2X⁻(g)</text>
-
-          <!-- 2X-(g) to MX(s) -->
-          <line x1="410" y1="275" x2="410" y2="190" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="420" y="240" fill="#34a853" font-size="11">MX(s)</text>
-
-          <!-- Arrow marker -->
-          <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-              <path d="M0,0 L0,6 L9,3 z" fill="#1a73e8"/>
-            </marker>
-          </defs>
-        </svg>
-      </div>
-
-      <div class="box">
-        <span class="box-title">Signs yaad rakho</span>
-        <ul>
-          <li>Sublimation: +</li>
-          <li>Ionisation: +</li>
-          <li>Dissociation: +</li>
-          <li>Electron Affinity: −</li>
-          <li>Lattice Formation: −</li>
-        </ul>
-      </div>
-
-      <h2>2. Fajan's Rule (Polarization)</h2>
-
-      <h3>2.1 Rules</h3>
-      <ol>
-        <li><strong>Cation chota</strong> → zyada covalent</li>
-        <li><strong>Anion bada</strong> → zyada covalent</li>
-        <li><strong>Charge zyada</strong> → zyada covalent</li>
-        <li><strong>d¹⁰ configuration</strong> (Ag⁺, Zn²⁺) → zyada covalent</li>
-      </ol>
-
-      <div class="box trap-box">
-        <span class="box-title">Priority Order (JEE Trick)</span>
-        <p><strong>Ionic vs Covalent</strong> ka sawal aaye toh:</p>
-        <ol>
-          <li>Pehle Charge dekho</li>
-          <li>Phir Size dekho</li>
-          <li>Phir d¹⁰ configuration dekho</li>
-        </ol>
-      </div>
-
-      <h3>2.2 Mains Fixed Orders</h3>
-      <ul>
-        <li>AlF₃ &lt; AlCl₃ &lt; AlBr₃ &lt; AlI₃</li>
-        <li>NaCl &lt; MgCl₂ &lt; AlCl₃</li>
-        <li>LiF most ionic, LiI most covalent</li>
-        <li>AgCl &lt; AgBr &lt; AgI (covalent)</li>
-      </ul>
-
-      <h2>3. VSEPR & Hybridisation</h2>
-
-      <h3>3.1 Steric Number (SN)</h3>
-      <div class="formula">
-        SN = σ bonds + Lone Pairs
-      </div>
-
-      <h3>3.2 Hybridisation Formula</h3>
-      <div class="formula">
-        H = ½ [V + M − C + A]
-      </div>
-      <ul>
-        <li><strong>V</strong> = Valence electrons of central atom</li>
-        <li><strong>M</strong> = Monovalent atoms attached</li>
-        <li><strong>C</strong> = Cation charge</li>
-        <li><strong>A</strong> = Anion charge</li>
-      </ul>
-
-      <div class="numeric-box">
-        <span class="box-title">🧮 Numerical Examples (Hybridisation)</span>
-        <p><strong>Example 1:</strong> Find hybridisation of S in SF₄</p>
-        <ol>
-          <li>V = 6 (S ke valence e⁻)</li>
-          <li>M = 4 (4 F atoms)</li>
-          <li>C = 0, A = 0</li>
-          <li>H = ½ [6 + 4 − 0 + 0] = ½ × 10 = <strong>5</strong></li>
-          <li>SN = 5 → <strong>sp³d</strong> → See-Saw</li>
-        </ol>
-      </div>
-
-      <div class="numeric-box">
-        <span class="box-title">🧮 Numerical Examples (Hybridisation)</span>
-        <p><strong>Example 2:</strong> Find hybridisation of Xe in XeF₄</p>
-        <ol>
-          <li>V = 8 (Xe ke valence e⁻)</li>
-          <li>M = 4 (4 F atoms)</li>
-          <li>C = 0, A = 0</li>
-          <li>H = ½ [8 + 4 − 0 + 0] = ½ × 12 = <strong>6</strong></li>
-          <li>SN = 6 → <strong>sp³d²</strong> → Square Planar</li>
-        </ol>
-      </div>
-
-      <h3>3.3 Complete VSEPR Table</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>SN</th>
-            <th>LP</th>
-            <th>Shape</th>
-            <th>Bond Angle</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>2</td><td>0</td><td>Linear</td><td>180°</td><td>BeCl₂, CO₂</td></tr>
-          <tr><td>3</td><td>0</td><td>Trigonal Planar</td><td>120°</td><td>BF₃</td></tr>
-          <tr><td>3</td><td>1</td><td>Bent</td><td>&lt;120°</td><td>SO₂, O₃</td></tr>
-          <tr><td>4</td><td>0</td><td>Tetrahedral</td><td>109.5°</td><td>CH₄, NH₄⁺</td></tr>
-          <tr><td>4</td><td>1</td><td>Pyramidal</td><td>107°</td><td>NH₃, PCl₃</td></tr>
-          <tr><td>4</td><td>2</td><td>Bent</td><td>104.5°</td><td>H₂O</td></tr>
-          <tr><td>5</td><td>0</td><td>Trigonal Bipyramidal</td><td>90°, 120°</td><td>PCl₅</td></tr>
-          <tr><td>5</td><td>1</td><td>See-Saw</td><td>89°, 117°</td><td>SF₄</td></tr>
-          <tr><td>5</td><td>2</td><td>T-Shape</td><td>87.5°</td><td>ClF₃</td></tr>
-          <tr><td>5</td><td>3</td><td>Linear</td><td>180°</td><td>XeF₂, I₃⁻</td></tr>
-          <tr><td>6</td><td>0</td><td>Octahedral</td><td>90°</td><td>SF₆</td></tr>
-          <tr><td>6</td><td>1</td><td>Square Pyramidal</td><td>84.8°</td><td>BrF₅</td></tr>
-          <tr><td>6</td><td>2</td><td>Square Planar</td><td>90°</td><td>XeF₄, [ICl₄]⁻</td></tr>
-          <tr><td>7</td><td>0</td><td>Pentagonal Bipyramidal</td><td>72°, 90°</td><td>IF₇</td></tr>
-        </tbody>
-      </table>
-
-      <h3>3.4 Bond Angle Comparison</h3>
-      <ul>
-        <li>CH₄ (109.5°) > NH₃ (107°) > H₂O (104.5°)</li>
-        <li><strong>NF₃ (102°) &lt; NH₃ (107°)</strong> ← Exception</li>
-        <li><strong>H₂S (92°)</strong> &lt; H₂O (104.5°)</li>
-      </ul>
-
-      <h2>4. Molecular Orbital Theory (MOT)</h2>
-
-      <h3>4.1 Bond Order Formula</h3>
-      <div class="formula">
-        BO = (N_b − N_a) / 2
-      </div>
-
-      <h3>4.2 MOT Order</h3>
-
-      <div class="box">
-        <span class="box-title">≤14 electrons (π pehle, σ baad)</span>
-        <p>σ1s, σ*1s, σ2s, σ*2s, (π2px = π2py), σ2pz, (π*2px = π*2py), σ*2pz</p>
-      </div>
-
-      <div class="box">
-        <span class="box-title">&gt;14 electrons (σ pehle, π baad)</span>
-        <p>σ1s, σ*1s, σ2s, σ*2s, σ2pz, (π2px = π2py), (π*2px = π*2py), σ*2pz</p>
-      </div>
-
-      <div class="numeric-box">
-        <span class="box-title">🧮 Numerical Example (Bond Order)</span>
-        <p><strong>Example:</strong> Find bond order of O₂</p>
-        <ol>
-          <li>O₂ → 16 e⁻ → >14 e⁻ → σ pehle, π baad</li>
-          <li>Configuration: σ1s², σ*1s², σ2s², σ*2s², σ2pz², π2px² = π2py², π*2px¹ = π*2py¹</li>
-          <li>N_b = 2 + 2 + 2 + 2 + 2 = 10</li>
-          <li>N_a = 2 + 2 + 1 + 1 = 6</li>
-          <li>BO = (10 − 6) / 2 = <strong>2</strong></li>
-          <li>Unpaired e⁻ = 2 → <strong>Paramagnetic</strong></li>
-        </ol>
-      </div>
-
-      <h3>4.3 IMP List (JEE Mains 2019–2026)</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Molecule</th>
-            <th>Total e⁻</th>
-            <th>Bond Order</th>
-            <th>Magnetic</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>B₂</td><td>10</td><td>1</td><td>Para</td></tr>
-          <tr><td>C₂</td><td>12</td><td>2</td><td>Dia</td></tr>
-          <tr><td>N₂</td><td>14</td><td>3</td><td>Dia</td></tr>
-          <tr><td>O₂</td><td>16</td><td>2</td><td>Para</td></tr>
-          <tr><td>O₂⁺</td><td>15</td><td>2.5</td><td>Para</td></tr>
-          <tr><td>O₂⁻</td><td>17</td><td>1.5</td><td>Para</td></tr>
-          <tr><td>O₂²⁻</td><td>18</td><td>1</td><td>Dia</td></tr>
-          <tr><td>F₂</td><td>18</td><td>1</td><td>Dia</td></tr>
-          <tr><td>NO</td><td>15</td><td>2.5</td><td>Para</td></tr>
-          <tr><td>NO⁺</td><td>14</td><td>3</td><td>Dia</td></tr>
-          <tr><td>CN⁻</td><td>14</td><td>3</td><td>Dia</td></tr>
-          <tr><td>CO</td><td>14</td><td>3</td><td>Dia</td></tr>
-        </tbody>
-      </table>
-
-      <h3>4.4 Stability Order</h3>
-      <div class="formula">
-        O₂⁺ (2.5) > O₂ (2) > O₂⁻ (1.5) > O₂²⁻ (1)
-      </div>
-
-      <h2>5. Dipole Moment</h2>
-
-      <div class="formula">
-        μ = q × d
-      </div>
-
-      <ul>
-        <li><strong>Symmetric molecule</strong> → μ = 0 (CO₂, CH₄, BF₃)</li>
-        <li><strong>Asymmetric molecule</strong> → μ ≠ 0 (H₂O, NH₃, CHCl₃)</li>
-        <li>NH₃ (1.47 D) > NF₃ (0.24 D)</li>
-      </ul>
-
-      <h2>6. Back Bonding</h2>
-      <ul>
-        <li>Lone pair donation from filled orbital to empty orbital of adjacent atom.</li>
-        <li><strong>BF₃</strong> – B has empty p orbital, F has lone pair</li>
-        <li><strong>CO</strong> – C and O both have lone pairs</li>
-        <li>Effect: Bond length ↓, Stability ↑</li>
-      </ul>
-
-    </div>
+  <div class="callout">
+    <span class="callout-title">Definition</span>
+    More electronegative substituent <strong>s-character kam</strong> wale hybrid orbital mein jaata hai.
   </div>
 
-  <!-- ============================================ -->
-  <!-- TAB 2: MAINS TRAPS -->
-  <!-- ============================================ -->
-  <div id="tab-traps" class="tab-content">
-    <div class="notes">
-      <h2>Mains Traps — Chemical Bonding</h2>
+  <p><strong>Matlab:</strong> Agar central atom pe 2 substituents hain (ek electronegative, ek electropositive), toh <strong>electropositive</strong> wala zyada s-character lega.</p>
 
-      <div class="box trap-box">
-        <span class="box-title">1. Lattice Energy Order</span>
-        <p>MgO &gt; CaO &gt; SrO &gt; BaO</p>
-        <p>NaF &lt; MgF₂ &lt; AlF₃</p>
-      </div>
+  <h3>2.1 Application 1: NH₃ vs NF₃ Dipole</h3>
+  <table>
+    <tr><th>Molecule</th><th>Dipole (D)</th><th>Reason</th></tr>
+    <tr><td>NH₃</td><td class="center">1.47</td><td>N-H + lone pair <strong>same direction</strong></td></tr>
+    <tr><td>NF₃</td><td class="center">0.23</td><td>N-F + lone pair <strong>opposite direction</strong></td></tr>
+  </table>
+  <p><strong>Explanation:</strong> N-H bond mein s-character kam hai. Lone pair zyada p-character lega. Isliye lone pair aur N-H bond same direction → dipole zyada.</p>
 
-      <div class="box trap-box">
-        <span class="box-title">2. Fajan's Rule</span>
-        <p>LiF most ionic, LiI most covalent</p>
-        <p>AgCl &lt; AgBr &lt; AgI (covalent)</p>
-        <p>Priority: Charge &gt; Size &gt; d¹⁰</p>
-      </div>
+  <h3>2.2 Application 2: Bond Angle Order</h3>
+  <div class="formula">H₂O (104.5°) &gt; H₂S (92°) &gt; H₂Se (91°)</div>
 
-      <div class="box trap-box">
-        <span class="box-title">3. Bond Angle</span>
-        <p>CH₄ &gt; NH₃ &gt; H₂O</p>
-        <p>NF₃ &lt; NH₃ (Exception)</p>
-        <p>H₂S &lt; H₂O</p>
-      </div>
+  <h3>2.3 Application 3: NH₃ vs PH₃</h3>
+  <table>
+    <tr><th>Molecule</th><th>Bond Angle</th><th>Reason</th></tr>
+    <tr><td>NH₃</td><td class="center">107°</td><td>sp³ (Bent's Rule)</td></tr>
+    <tr><td>PH₃</td><td class="center">93.5°</td><td>Pure p-orbitals (Drago's Rule)</td></tr>
+  </table>
 
-      <div class="box trap-box">
-        <span class="box-title">4. MOT Bond Order</span>
-        <p>O₂⁺ &gt; O₂ &gt; O₂⁻ &gt; O₂²⁻</p>
-        <p>N₂ (3) &gt; O₂ (2) &gt; F₂ (1)</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">5. Magnetic Nature</span>
-        <p>O₂ → Paramagnetic</p>
-        <p>N₂ → Diamagnetic</p>
-        <p>B₂ → Paramagnetic</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">6. Iso-electronic Species</span>
-        <p>14 e⁻: N₂, CO, CN⁻, NO⁺</p>
-        <p>16 e⁻: O₂, NO⁻</p>
-        <p>18 e⁻: F₂, O₂²⁻, Ar</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">7. Hybridisation</span>
-        <p>XeF₄ → sp³d², Square Planar</p>
-        <p>SF₄ → sp³d, See-Saw</p>
-        <p>ClF₃ → sp³d, T-Shape</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">8. Dipole Moment</span>
-        <p>NH₃ &gt; NF₃</p>
-        <p>H₂O &gt; H₂S</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">9. Repulsion Order</span>
-        <p>lp-lp &gt; lp-bp &gt; bp-bp</p>
-      </div>
-
-      <div class="box trap-box">
-        <span class="box-title">10. Back Bonding</span>
-        <p>BF₃, CO</p>
-        <p>Bond length ↓, Stability ↑</p>
-      </div>
-    </div>
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    Bond angle ya dipole moment ka question aaye → <strong>Bent's Rule lagao</strong>. Central atom ke electronegativity ke hisaab se s-character decide karo.
   </div>
 
-  <!-- ============================================ -->
-  <!-- TAB 3: PYQ ANALYSIS (2019–2026) -->
-  <!-- ============================================ -->
-  <div id="tab-pyq" class="tab-content">
-    <div class="notes">
+  <!-- ============================================================
+       SECTION 3: DRAGO'S RULE
+       ============================================================ -->
+  <h2>3. Drago's Rule</h2>
 
-      <h2>JEE Main 2019–2026: Chemical Bonding PYQ Analysis</h2>
-      <p style="color: #5f6368;">8 saal ke PYQ ka nichod — sirf questions nahi, unse nikale gaye concepts aur trends.</p>
-
-      <h3>📈 8 Saal Ka Trend Data</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Topics Asked</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>2019</strong></td><td>Fajan's Rule, Isoelectronic, Bond order</td></tr>
-          <tr><td><strong>2020</strong></td><td>Lattice Energy, Born-Haber, MOT Bond Order</td></tr>
-          <tr><td><strong>2021</strong></td><td>MOT, VSEPR, Dipole moment</td></tr>
-          <tr><td><strong>2022</strong></td><td>Bond angle, Hybridisation, MOT</td></tr>
-          <tr><td><strong>2023</strong></td><td>Fajan's Rule, Bond angle, MOT stability</td></tr>
-          <tr><td><strong>2024</strong></td><td>Hybridisation, Shape, Lattice Energy, Isoelectronic</td></tr>
-          <tr><td><strong>2025</strong></td><td>VSEPR, MOT, Dipole moment</td></tr>
-          <tr><td><strong>2026</strong></td><td>Fajan's Rule, Bond angle, MOT</td></tr>
-        </tbody>
-      </table>
-
-      <div class="box">
-        <span class="box-title">Observation</span>
-        <ul>
-          <li><strong>VSEPR & Hybridisation</strong> → Har saal</li>
-          <li><strong>Fajan's Rule</strong> → 4 baar (2019, 2023, 2024, 2026)</li>
-          <li><strong>MOT</strong> → Har saal</li>
-          <li><strong>Bond Angle</strong> → 3 baar</li>
-          <li><strong>Dipole Moment</strong> → 2 baar</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 1: Fajan's Rule</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>LiCl &gt; NaCl (covalent)</li>
-          <li>LiF most ionic, LiI most covalent</li>
-          <li>AgCl &lt; AgBr &lt; AgI (covalent)</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 2: VSEPR & Hybridisation</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>XeF₄ → sp³d², Square Planar</li>
-          <li>SF₄ → sp³d, See-Saw</li>
-          <li>ClF₃ → sp³d, T-Shape</li>
-          <li>IF₇ → sp³d³, Pentagonal Bipyramidal</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 3: Bond Angle</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>CH₄ &gt; NH₃ &gt; H₂O</li>
-          <li>NH₃ &gt; NF₃ (Exception)</li>
-          <li>H₂O &gt; H₂S</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 4: MOT</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>O₂⁺ (2.5) &gt; O₂ (2) &gt; O₂⁻ (1.5) &gt; O₂²⁻ (1)</li>
-          <li>O₂ Paramagnetic, N₂ Diamagnetic</li>
-          <li>B₂ Paramagnetic</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 5: Dipole Moment</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>NH₃ (1.47 D) &gt; NF₃ (0.24 D)</li>
-          <li>H₂O (1.85 D) &gt; H₂S (0.95 D)</li>
-          <li>CO₂, CH₄, BF₃ → μ = 0</li>
-        </ul>
-      </div>
-
-      <h3>🧠 Concept 6: Isoelectronic Species</h3>
-      <div class="box">
-        <span class="box-title">PYQ se Learning</span>
-        <ul>
-          <li>14 e⁻: N₂, CO, CN⁻, NO⁺</li>
-          <li>16 e⁻: O₂, NO⁻</li>
-          <li>18 e⁻: F₂, O₂²⁻, Ar</li>
-        </ul>
-      </div>
-
-      <h3>📊 Last 5 Years ke Repeated Concepts</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Concept</th>
-            <th>2022</th>
-            <th>2023</th>
-            <th>2024</th>
-            <th>2025</th>
-            <th>2026</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>VSEPR/Hybridisation</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
-          <tr><td>MOT Bond Order</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
-          <tr><td>Fajan's Rule</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
-          <tr><td>Bond Angle</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
-          <tr><td>Dipole Moment</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td></tr>
-        </tbody>
-      </table>
-      <p><strong>Most Repeated:</strong> VSEPR & Hybridisation (100%), MOT (100%).</p>
-
-    </div>
+  <div class="callout">
+    <span class="callout-title">Definition</span>
+    Jab central atom ka size <strong>bada</strong> ho aur electronegativity <strong>&lt; 2.1</strong> ho, toh hybridisation nahi hoti. Pure <strong>p-orbitals</strong> use hote hain, aur bond angle <strong>90° ke paas</strong> hota hai.
   </div>
 
-  <!-- ============================================ -->
-  <!-- TAB 4: QUICK REVISION -->
-  <!-- ============================================ -->
-  <div id="tab-revision" class="tab-content">
-    <div class="notes">
-      <h2>Quick Revision — Chemical Bonding (Last 10 Minutes)</h2>
+  <h3>3.1 Conditions</h3>
+  <table>
+    <tr><th>Condition</th><th>Requirement</th></tr>
+    <tr><td>Central atom size</td><td><strong>Large</strong></td></tr>
+    <tr><td>Electronegativity</td><td><strong>&lt; 2.1</strong></td></tr>
+    <tr><td>Consequence</td><td>No hybridisation, pure p-orbitals</td></tr>
+    <tr><td>Bond Angle</td><td><strong>~90°</strong></td></tr>
+  </table>
 
-      <div class="box">
-        <span class="box-title">📐 Formulas</span>
-        <ul>
-          <li>Lattice Energy: U ∝ (q₁q₂)/r₀</li>
-          <li>Hybridisation: H = ½ [V + M − C + A]</li>
-          <li>Bond Order: BO = (N_b − N_a)/2</li>
-          <li>Magnetic Moment: μ = √n(n+2) BM</li>
-          <li>Dipole Moment: μ = q × d</li>
-        </ul>
-      </div>
+  <h3>3.2 Key Examples</h3>
+  <table>
+    <tr><th>Molecule</th><th>Central Atom</th><th>EN</th><th>Bond Angle</th><th>Reason</th></tr>
+    <tr><td>PH₃</td><td class="center">P</td><td class="center">2.19</td><td class="center">93.5°</td><td>Drago (borderline)</td></tr>
+    <tr><td>AsH₃</td><td class="center">As</td><td class="center">2.18</td><td class="center">91.8°</td><td>Drago</td></tr>
+    <tr><td>SbH₃</td><td class="center">Sb</td><td class="center">2.05</td><td class="center">91.3°</td><td><strong>Pure Drago</strong></td></tr>
+    <tr><td>H₂S</td><td class="center">S</td><td class="center">2.58</td><td class="center">92°</td><td>Drago (size)</td></tr>
+    <tr><td>H₂Se</td><td class="center">Se</td><td class="center">2.55</td><td class="center">91°</td><td>Drago</td></tr>
+    <tr><td>H₂Te</td><td class="center">Te</td><td class="center">2.1</td><td class="center">90°</td><td><strong>Pure Drago</strong></td></tr>
+  </table>
 
-      <div class="box">
-        <span class="box-title">📊 Key Orders</span>
-        <ul>
-          <li>Lattice Energy: MgO > CaO > SrO > BaO</li>
-          <li>Bond Angle: CH₄ > NH₃ > H₂O</li>
-          <li>Stability: O₂⁺ > O₂ > O₂⁻ > O₂²⁻</li>
-          <li>Bond Order: N₂ (3) > O₂ (2) > F₂ (1)</li>
-          <li>Dipole Moment: H₂O > NH₃ > NF₃</li>
-        </ul>
-      </div>
+  <h3>3.3 Bent's Rule vs Drago's Rule</h3>
+  <table>
+    <tr><th>Rule</th><th>Kab Lagao</th><th>Examples</th></tr>
+    <tr><td><strong>Bent's Rule</strong></td><td>Central atom small, EN high</td><td>NH₃, H₂O, NF₃</td></tr>
+    <tr><td><strong>Drago's Rule</strong></td><td>Central atom large, EN &lt; 2.1</td><td>PH₃, AsH₃, SbH₃, H₂S</td></tr>
+  </table>
 
-      <div class="box">
-        <span class="box-title">⚠️ Key Exceptions</span>
-        <ul>
-          <li>LiF most ionic, LiI most covalent</li>
-          <li>AgCl < AgBr < AgI</li>
-          <li>NF₃ < NH₃</li>
-          <li>O₂ Paramagnetic, N₂ Diamagnetic</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <span class="box-title">🔄 Iso-electronic Species</span>
-        <ul>
-          <li>14 e⁻: N₂, CO, CN⁻, NO⁺</li>
-          <li>16 e⁻: O₂, NO⁻</li>
-          <li>18 e⁻: F₂, O₂²⁻, Ar</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <span class="box-title">🧬 Hybridisation & Shapes</span>
-        <ul>
-          <li>sp → Linear</li>
-          <li>sp² → Trigonal Planar</li>
-          <li>sp³ → Tetrahedral</li>
-          <li>sp³d → Trigonal Bipyramidal</li>
-          <li>sp³d² → Octahedral</li>
-          <li>sp³d³ → Pentagonal Bipyramidal</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <span class="box-title">🎯 MOT Quick Points</span>
-        <ul>
-          <li>≤14 e⁻: π pehle, σ baad</li>
-          <li>&gt;14 e⁻: σ pehle, π baad</li>
-          <li>B₂: Paramagnetic</li>
-          <li>O₂: Paramagnetic</li>
-          <li>N₂: Diamagnetic</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <span class="box-title">🔑 Repulsion Order</span>
-        <ul>
-          <li>lp-lp &gt; lp-bp &gt; bp-bp</li>
-        </ul>
-      </div>
-    </div>
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    NH₃ aur PH₃ compare karte waqt — NH₃ mein <strong>Bent's</strong>, PH₃ mein <strong>Drago's</strong> lagao.
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Made with ❤️ & Curiosity | <a href="https://github.com/ravirajhere">GitHub</a></p>
-  </footer>
+  <!-- ============================================================
+       SECTION 4: HYBRIDISATION
+       ============================================================ -->
+  <h2>4. Hybridisation & Back Bonding</h2>
 
-  <script src="../js/main.js"></script>
+  <h3>4.1 Formula</h3>
+  <div class="formula">
+    H = ½ (V + M − C + A)
+    <small>V = valence e⁻, M = monovalent atoms, C = cation charge, A = anion charge</small>
+  </div>
+
+  <h3>4.2 Examples</h3>
+  <table>
+    <tr><th>Molecule</th><th>V</th><th>M</th><th>C</th><th>A</th><th>H</th><th>Hybrid</th></tr>
+    <tr><td>CH₄</td><td class="center">4</td><td class="center">4</td><td class="center">0</td><td class="center">0</td><td class="center">4</td><td class="center">sp³</td></tr>
+    <tr><td>NH₄⁺</td><td class="center">5</td><td class="center">4</td><td class="center">1</td><td class="center">0</td><td class="center">4</td><td class="center">sp³</td></tr>
+    <tr><td>H₂O</td><td class="center">6</td><td class="center">2</td><td class="center">0</td><td class="center">0</td><td class="center">4</td><td class="center">sp³</td></tr>
+    <tr><td>SF₄</td><td class="center">6</td><td class="center">4</td><td class="center">0</td><td class="center">0</td><td class="center">5</td><td class="center">sp³d</td></tr>
+    <tr><td>PCl₅</td><td class="center">5</td><td class="center">5</td><td class="center">0</td><td class="center">0</td><td class="center">5</td><td class="center">sp³d</td></tr>
+    <tr><td>SF₆</td><td class="center">6</td><td class="center">6</td><td class="center">0</td><td class="center">0</td><td class="center">6</td><td class="center">sp³d²</td></tr>
+    <tr><td>XeF₄</td><td class="center">8</td><td class="center">4</td><td class="center">0</td><td class="center">0</td><td class="center">6</td><td class="center">sp³d²</td></tr>
+    <tr><td>IF₇</td><td class="center">7</td><td class="center">7</td><td class="center">0</td><td class="center">0</td><td class="center">7</td><td class="center">sp³d³</td></tr>
+  </table>
+
+  <h3>4.3 Hybridisation ≠ Geometry</h3>
+  <table>
+    <tr><th>Molecule</th><th>Hybridisation</th><th>Geometry</th></tr>
+    <tr><td>CH₄</td><td class="center">sp³</td><td class="center">Tetrahedral</td></tr>
+    <tr><td>NH₃</td><td class="center">sp³</td><td class="center">Pyramidal</td></tr>
+    <tr><td>H₂O</td><td class="center">sp³</td><td class="center">Bent</td></tr>
+  </table>
+
+  <h3>4.4 Back Bonding (99%ile Topic)</h3>
+
+  <div class="callout">
+    <span class="callout-title">Definition</span>
+    Electron density <strong>filled orbital se empty orbital</strong> mein jaati hai. Ye π-character deta hai aur molecule stable karta hai.
+  </div>
+
+  <h4>BF₃ — Back Bonding</h4>
+  <div class="diagram-box">
+    <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="160" cy="90" r="20" fill="#0b2545"/>
+      <text x="160" y="96" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Arial">B</text>
+      <circle cx="80" cy="40" r="16" fill="#2c4a6e"/><text x="80" y="45" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="146" y1="76" x2="94" y2="50" stroke="#0b2545" stroke-width="2"/>
+      <circle cx="240" cy="40" r="16" fill="#2c4a6e"/><text x="240" y="45" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="174" y1="76" x2="226" y2="50" stroke="#0b2545" stroke-width="2"/>
+      <circle cx="160" cy="160" r="16" fill="#2c4a6e"/><text x="160" y="165" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Arial">F</text>
+      <line x1="160" y1="110" x2="160" y2="144" stroke="#0b2545" stroke-width="2"/>
+      <!-- Back bonding arrow (curved, from F to B) -->
+      <path d="M 95 55 Q 130 85 148 82" fill="none" stroke="#c45d16" stroke-width="2" stroke-dasharray="4,3"/>
+      <polygon points="148,82 142,78 144,86" fill="#c45d16"/>
+      <text x="110" y="70" fill="#c45d16" font-size="11" font-family="Arial" font-style="italic">back bond</text>
+    </svg>
+    <div class="diagram-caption">BF₃ — F ka filled p-orbital se B ka empty p-orbital mein electron density donate hota hai. Isliye BF₃ Lewis acid hai.</div>
+  </div>
+
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    Back bonding check karo jab central atom ke paas <strong>empty orbital</strong> ho aur ligand ke paas <strong>lone pair</strong> ho.
+  </div>
+
+  <!-- ============================================================
+       SECTION 5: MOT
+       ============================================================ -->
+  <h2>5. Molecular Orbital Theory</h2>
+
+  <h3>5.1 MOT Energy Order</h3>
+
+  <h4>For O₂, F₂, Ne₂:</h4>
+  <div class="formula" style="font-size:13px;">
+    σ1s &lt; σ*1s &lt; σ2s &lt; σ*2s &lt; σ2pz &lt; π2px=π2py &lt; π*2px=π*2py &lt; σ*2pz
+  </div>
+
+  <h4>For N₂, C₂, B₂, Be₂, Li₂:</h4>
+  <div class="formula" style="font-size:13px;">
+    σ1s &lt; σ*1s &lt; σ2s &lt; σ*2s &lt; π2px=π2py &lt; σ2pz &lt; π*2px=π*2py &lt; σ*2pz
+  </div>
+
+  <h3>5.2 Bond Order Formula</h3>
+  <div class="formula">
+    BO = ½ (N<sub>b</sub> − N<sub>a</sub>)
+    <small>N_b = bonding electrons · N_a = antibonding electrons</small>
+  </div>
+
+  <h3>5.3 N₂ MO Diagram</h3>
+  <div class="diagram-box">
+    <svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+      <!-- Axes -->
+      <line x1="40" y1="360" x2="460" y2="360" stroke="#555" stroke-width="1.5"/>
+      <line x1="40" y1="360" x2="40" y2="20" stroke="#555" stroke-width="1.5"/>
+      <text x="20" y="30" font-size="11" fill="#555" font-family="Arial">E</text>
+      <text x="470" y="365" font-size="11" fill="#555" font-family="Arial">orbitals</text>
+
+      <!-- N atom (left) -->
+      <text x="80" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#0b2545" font-family="Arial">N atom</text>
+      <!-- N atom (right) -->
+      <text x="420" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#0b2545" font-family="Arial">N atom</text>
+
+      <!-- Left atomic orbitals -->
+      <text x="80" y="355" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">2p</text>
+      <line x1="60" y1="320" x2="100" y2="320" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="80" y="315" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="290" x2="100" y2="290" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="80" y="285" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="260" x2="100" y2="260" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="80" y="255" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <text x="80" y="230" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">2s</text>
+      <line x1="60" y1="200" x2="100" y2="200" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="80" y="195" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <text x="80" y="170" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">1s</text>
+      <line x1="60" y1="140" x2="100" y2="140" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="80" y="135" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <!-- Right atomic orbitals -->
+      <text x="420" y="355" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">2p</text>
+      <line x1="400" y1="320" x2="440" y2="320" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="420" y="315" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="290" x2="440" y2="290" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="420" y="285" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="260" x2="440" y2="260" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="420" y="255" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <text x="420" y="230" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">2s</text>
+      <line x1="400" y1="200" x2="440" y2="200" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="420" y="195" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <text x="420" y="170" text-anchor="middle" font-size="11" fill="#2c4a6e" font-family="Arial">1s</text>
+      <line x1="400" y1="140" x2="440" y2="140" stroke="#1e3a5f" stroke-width="2"/>
+      <text x="420" y="135" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <!-- Central: MO diagram (simplified) -->
+      <text x="250" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#c45d16" font-family="Arial">Molecular Orbitals</text>
+
+      <!-- σ*2pz (top) -->
+      <line x1="230" y1="60" x2="270" y2="60" stroke="#c45d16" stroke-width="2"/>
+      <text x="250" y="55" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="63" font-size="10" fill="#0b2545" font-family="Arial">σ*2pz</text>
+
+      <!-- π*2px, π*2py (empty in N₂) -->
+      <line x1="215" y1="90" x2="245" y2="90" stroke="#c45d16" stroke-width="2"/>
+      <line x1="255" y1="90" x2="285" y2="90" stroke="#c45d16" stroke-width="2"/>
+      <text x="300" y="93" font-size="10" fill="#0b2545" font-family="Arial">π*2p (empty)</text>
+
+      <!-- σ2pz -->
+      <line x1="230" y1="130" x2="270" y2="130" stroke="#2d6a2d" stroke-width="2"/>
+      <text x="250" y="125" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="133" font-size="10" fill="#0b2545" font-family="Arial">σ2pz</text>
+
+      <!-- π2px, π2py -->
+      <line x1="215" y1="170" x2="245" y2="170" stroke="#2d6a2d" stroke-width="2"/>
+      <text x="230" y="165" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <line x1="255" y1="170" x2="285" y2="170" stroke="#2d6a2d" stroke-width="2"/>
+      <text x="270" y="165" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="300" y="173" font-size="10" fill="#0b2545" font-family="Arial">π2p</text>
+
+      <!-- σ*2s -->
+      <line x1="230" y1="215" x2="270" y2="215" stroke="#c45d16" stroke-width="2"/>
+      <text x="250" y="210" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="218" font-size="10" fill="#0b2545" font-family="Arial">σ*2s</text>
+
+      <!-- σ2s -->
+      <line x1="230" y1="255" x2="270" y2="255" stroke="#2d6a2d" stroke-width="2"/>
+      <text x="250" y="250" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="258" font-size="10" fill="#0b2545" font-family="Arial">σ2s</text>
+
+      <!-- σ*1s -->
+      <line x1="230" y1="300" x2="270" y2="300" stroke="#c45d16" stroke-width="2"/>
+      <text x="250" y="295" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="303" font-size="10" fill="#0b2545" font-family="Arial">σ*1s</text>
+
+      <!-- σ1s -->
+      <line x1="230" y1="340" x2="270" y2="340" stroke="#2d6a2d" stroke-width="2"/>
+      <text x="250" y="335" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="343" font-size="10" fill="#0b2545" font-family="Arial">σ1s</text>
+    </svg>
+    <div class="diagram-caption">N₂ MO Diagram — Configuration: σ1s² σ*1s² σ2s² σ*2s² π2px² π2py² σ2pz² · BO = 3 · Diamagnetic</div>
+  </div>
+
+  <h3>5.4 O₂ MO Diagram</h3>
+  <div class="diagram-box">
+    <svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="360" x2="460" y2="360" stroke="#555" stroke-width="1.5"/>
+      <line x1="40" y1="360" x2="40" y2="20" stroke="#555" stroke-width="1.5"/>
+      <text x="20" y="30" font-size="11" fill="#555" font-family="Arial">E</text>
+
+      <text x="80" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#0b2545" font-family="Arial">O atom</text>
+      <text x="420" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#0b2545" font-family="Arial">O atom</text>
+      <text x="250" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#c45d16" font-family="Arial">Molecular Orbitals</text>
+
+      <!-- Left O orbitals -->
+      <line x1="60" y1="320" x2="100" y2="320" stroke="#1e3a5f" stroke-width="2"/><text x="80" y="315" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="290" x2="100" y2="290" stroke="#1e3a5f" stroke-width="2"/><text x="80" y="285" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="260" x2="100" y2="260" stroke="#1e3a5f" stroke-width="2"/><text x="80" y="255" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="200" x2="100" y2="200" stroke="#1e3a5f" stroke-width="2"/><text x="80" y="195" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="60" y1="140" x2="100" y2="140" stroke="#1e3a5f" stroke-width="2"/><text x="80" y="135" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <!-- Right O orbitals -->
+      <line x1="400" y1="320" x2="440" y2="320" stroke="#1e3a5f" stroke-width="2"/><text x="420" y="315" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="290" x2="440" y2="290" stroke="#1e3a5f" stroke-width="2"/><text x="420" y="285" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="260" x2="440" y2="260" stroke="#1e3a5f" stroke-width="2"/><text x="420" y="255" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="200" x2="440" y2="200" stroke="#1e3a5f" stroke-width="2"/><text x="420" y="195" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <line x1="400" y1="140" x2="440" y2="140" stroke="#1e3a5f" stroke-width="2"/><text x="420" y="135" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+
+      <!-- σ*2pz -->
+      <line x1="230" y1="60" x2="270" y2="60" stroke="#c45d16" stroke-width="2"/><text x="250" y="55" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="63" font-size="10" fill="#0b2545" font-family="Arial">σ*2pz</text>
+
+      <!-- π*2px, π*2py — 2 unpaired -->
+      <line x1="215" y1="95" x2="245" y2="95" stroke="#c45d16" stroke-width="2"/><text x="230" y="90" text-anchor="middle" font-size="11" fill="#c45d16" font-weight="700">↑</text>
+      <line x1="255" y1="95" x2="285" y2="95" stroke="#c45d16" stroke-width="2"/><text x="270" y="90" text-anchor="middle" font-size="11" fill="#c45d16" font-weight="700">↑</text>
+      <text x="300" y="98" font-size="10" fill="#c45d16" font-weight="700" font-family="Arial">π*2p (PARA)</text>
+
+      <!-- σ2pz -->
+      <line x1="230" y1="135" x2="270" y2="135" stroke="#2d6a2d" stroke-width="2"/><text x="250" y="130" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="138" font-size="10" fill="#0b2545" font-family="Arial">σ2pz</text>
+
+      <!-- π2px, π2py -->
+      <line x1="215" y1="170" x2="245" y2="170" stroke="#2d6a2d" stroke-width="2"/><text x="230" y="165" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <line x1="255" y1="170" x2="285" y2="170" stroke="#2d6a2d" stroke-width="2"/><text x="270" y="165" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="300" y="173" font-size="10" fill="#0b2545" font-family="Arial">π2p</text>
+
+      <!-- σ*2s, σ2s, σ*1s, σ1s -->
+      <line x1="230" y1="215" x2="270" y2="215" stroke="#c45d16" stroke-width="2"/><text x="250" y="210" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="218" font-size="10" fill="#0b2545" font-family="Arial">σ*2s</text>
+
+      <line x1="230" y1="255" x2="270" y2="255" stroke="#2d6a2d" stroke-width="2"/><text x="250" y="250" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="258" font-size="10" fill="#0b2545" font-family="Arial">σ2s</text>
+
+      <line x1="230" y1="300" x2="270" y2="300" stroke="#c45d16" stroke-width="2"/><text x="250" y="295" text-anchor="middle" font-size="10" fill="#c45d16">↑↓</text>
+      <text x="285" y="303" font-size="10" fill="#0b2545" font-family="Arial">σ*1s</text>
+
+      <line x1="230" y1="340" x2="270" y2="340" stroke="#2d6a2d" stroke-width="2"/><text x="250" y="335" text-anchor="middle" font-size="10" fill="#2d6a2d">↑↓</text>
+      <text x="285" y="343" font-size="10" fill="#0b2545" font-family="Arial">σ1s</text>
+    </svg>
+    <div class="diagram-caption">O₂ MO Diagram — 2 unpaired electrons in π*2p. Configuration: σ1s² σ*1s² σ2s² σ*2s² σ2pz² π2px² π2py² π*2px¹ π*2py¹ · BO = 2 · <strong>Paramagnetic</strong></div>
+  </div>
+
+  <h3>5.5 Key Examples Table</h3>
+  <table>
+    <tr><th>Molecule</th><th>BO</th><th>Magnetic</th></tr>
+    <tr><td>H₂</td><td class="center">1</td><td class="center">Dia</td></tr>
+    <tr><td>He₂</td><td class="center">0</td><td class="center">—</td></tr>
+    <tr><td>Li₂</td><td class="center">1</td><td class="center">Dia</td></tr>
+    <tr><td>B₂</td><td class="center">1</td><td class="center">Para</td></tr>
+    <tr><td>C₂</td><td class="center">2</td><td class="center">Dia</td></tr>
+    <tr><td><strong>N₂</strong></td><td class="center"><strong>3</strong></td><td class="center"><strong>Dia</strong></td></tr>
+    <tr><td><strong>O₂</strong></td><td class="center"><strong>2</strong></td><td class="center"><strong>Para</strong></td></tr>
+    <tr><td>F₂</td><td class="center">1</td><td class="center">Dia</td></tr>
+    <tr><td>Ne₂</td><td class="center">0</td><td class="center">—</td></tr>
+  </table>
+
+  <h3>5.6 Heteronuclear MOT (99%ile Topic)</h3>
+  <table>
+    <tr><th>Molecule</th><th>Electrons</th><th>BO</th><th>Magnetic</th></tr>
+    <tr><td>NO</td><td class="center">11</td><td class="center">2.5</td><td class="center">Para</td></tr>
+    <tr><td>NO⁺</td><td class="center">10</td><td class="center">3</td><td class="center">Dia</td></tr>
+    <tr><td>CO</td><td class="center">14</td><td class="center">3</td><td class="center">Dia</td></tr>
+    <tr><td>CN⁻</td><td class="center">14</td><td class="center">3</td><td class="center">Dia</td></tr>
+  </table>
+
+  <div class="callout">
+    <span class="callout-title">Key Insight</span>
+    CO, CN⁻, NO⁺, N₂ — <strong>sab isoelectronic hain</strong> (14 electrons, BO = 3)
+  </div>
+
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    O₂ ke baad MOT order badal jaata hai. <strong>N₂ tak π pehle, O₂ se σ pehle.</strong>
+  </div>
+
+  <!-- ============================================================
+       SECTION 6: BANANA BOND
+       ============================================================ -->
+  <h2>6. Banana Bond (B₂H₆)</h2>
+
+  <div class="callout">
+    <span class="callout-title">Definition</span>
+    <strong>3-centre-2-electron (3c-2e) bond</strong> — 3 atoms, 2 electrons. Ye B₂H₆ (diborane) mein hota hai. Curved shape ki wajah se "banana bond" kehte hain.
+  </div>
+
+  <h3>6.1 Structure of B₂H₆</h3>
+  <div class="diagram-box">
+    <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+      <!-- Left B -->
+      <circle cx="140" cy="120" r="22" fill="#0b2545"/>
+      <text x="140" y="127" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="Arial">B</text>
+      <!-- Right B -->
+      <circle cx="260" cy="120" r="22" fill="#0b2545"/>
+      <text x="260" y="127" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="Arial">B</text>
+
+      <!-- Terminal H (top-left) -->
+      <circle cx="70" cy="60" r="14" fill="#1e3a5f"/><text x="70" y="65" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="125" y1="105" x2="80" y2="70" stroke="#0b2545" stroke-width="2"/>
+      <!-- Terminal H (top-right) -->
+      <circle cx="330" cy="60" r="14" fill="#1e3a5f"/><text x="330" y="65" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="275" y1="105" x2="320" y2="70" stroke="#0b2545" stroke-width="2"/>
+      <!-- Terminal H (bottom-left) -->
+      <circle cx="70" cy="180" r="14" fill="#1e3a5f"/><text x="70" y="185" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="125" y1="135" x2="80" y2="172" stroke="#0b2545" stroke-width="2"/>
+      <!-- Terminal H (bottom-right) -->
+      <circle cx="330" cy="180" r="14" fill="#1e3a5f"/><text x="330" y="185" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="275" y1="135" x2="320" y2="172" stroke="#0b2545" stroke-width="2"/>
+
+      <!-- Bridge H (top) -->
+      <circle cx="200" cy="70" r="14" fill="#c45d16"/><text x="200" y="75" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="155" y1="105" x2="192" y2="82" stroke="#c45d16" stroke-width="2" stroke-dasharray="5,2"/>
+      <line x1="208" y1="82" x2="245" y2="105" stroke="#c45d16" stroke-width="2" stroke-dasharray="5,2"/>
+      <!-- Bridge H (bottom) -->
+      <circle cx="200" cy="170" r="14" fill="#c45d16"/><text x="200" y="175" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial">H</text>
+      <line x1="155" y1="135" x2="192" y2="158" stroke="#c45d16" stroke-width="2" stroke-dasharray="5,2"/>
+      <line x1="208" y1="158" x2="245" y2="135" stroke="#c45d16" stroke-width="2" stroke-dasharray="5,2"/>
+
+      <!-- Label -->
+      <text x="200" y="215" text-anchor="middle" font-size="12" fill="#0b2545" font-family="Arial" font-style="italic">
+        4 terminal 2c-2e bonds (solid) · 2 bridge 3c-2e bonds (dashed)
+      </text>
+    </svg>
+    <div class="diagram-caption">B₂H₆ (Diborane) — Bridge hydrogens 3c-2e bonds banate hain. Ye banana bonds hain.</div>
+  </div>
+
+  <h3>6.2 Bonding Analysis</h3>
+  <table>
+    <tr><th>Bond Type</th><th>Atoms</th><th>Electrons</th><th>Count</th></tr>
+    <tr><td>2c-2e</td><td>B-H (terminal)</td><td class="center">2</td><td class="center">4 bonds</td></tr>
+    <tr><td>3c-2e</td><td>B-H-B (bridge)</td><td class="center">2</td><td class="center">2 bonds</td></tr>
+  </table>
+  <p><strong>Total electrons:</strong> 4 × 2 + 2 × 2 = <strong>12 electrons</strong></p>
+
+  <h3>6.3 Other Examples</h3>
+  <table>
+    <tr><th>Molecule</th><th>Bonding</th></tr>
+    <tr><td>B₂H₆</td><td>3c-2e banana bonds</td></tr>
+    <tr><td>Al₂Cl₆</td><td>3c-4e bridge bonds</td></tr>
+    <tr><td>BeCl₂ (dimer)</td><td>3c-2e bridge bonds</td></tr>
+  </table>
+
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    B₂H₆ dekhte hi <strong>2 banana bonds</strong> likho. Terminal 4, bridge 2.
+  </div>
+
+  <!-- ============================================================
+       SECTION 7: DIPOLE MOMENT
+       ============================================================ -->
+  <h2>7. Dipole Moment & Polarity</h2>
+
+  <h3>7.1 Formula</h3>
+  <div class="formula">μ = q × d</div>
+  <p><strong>Unit:</strong> Debye (D), 1 D = 3.336 × 10⁻³⁰ C·m</p>
+
+  <h3>7.2 Polarity Rules</h3>
+  <table>
+    <tr><th>Case</th><th>μ</th><th>Example</th></tr>
+    <tr><td>Symmetrical</td><td class="center">0</td><td>CO₂, CH₄, BF₃</td></tr>
+    <tr><td>Asymmetrical</td><td class="center">≠ 0</td><td>H₂O, NH₃, CHCl₃</td></tr>
+  </table>
+
+  <h3>7.3 Dipole Moment Order</h3>
+  <h4>Ammonia Family</h4>
+  <div class="formula">NH₃ (1.47) &gt; NF₃ (0.23)</div>
+  <p><strong>Reason:</strong> Bent's Rule — lone pair direction</p>
+
+  <h4>Water Family</h4>
+  <div class="formula">H₂O (1.85) &gt; H₂S (0.95) &gt; H₂Se (0.63)</div>
+  <p><strong>Reason:</strong> Electronegativity difference</p>
+
+  <!-- ============================================================
+       SECTION 8: FAJAN'S RULE
+       ============================================================ -->
+  <h2>8. Fajan's Rule & Lattice Energy</h2>
+
+  <div class="callout">
+    <span class="callout-title">Fajan's Rule</span>
+    Ionic bond mein covalent character kab badhta hai, ye batata hai.
+  </div>
+
+  <h3>8.1 4 Factors</h3>
+  <table>
+    <tr><th>Factor</th><th>Covalent Character</th></tr>
+    <tr><td>Small cation</td><td class="center">↑</td></tr>
+    <tr><td>Large anion</td><td class="center">↑</td></tr>
+    <tr><td>High charge on cation</td><td class="center">↑</td></tr>
+    <tr><td>Pseudo noble gas config</td><td class="center">↑↑</td></tr>
+  </table>
+  <p><strong>Pseudo Noble Gas:</strong> Cu⁺, Ag⁺, Zn²⁺ (d¹⁰ config)</p>
+
+  <h3>8.2 Polarizing Power Formula</h3>
+  <div class="formula">
+    Polarizing Power = Charge / (radius)²
+    <small>Chhota cation + high charge = zyada polarizing power = zyada covalent character</small>
+  </div>
+
+  <h3>8.3 Lattice Energy Formula</h3>
+  <div class="formula">U = (K × q₁ × q₂) / (r₁ + r₂)</div>
+
+  <h3>8.4 Application: AlCl₃ vs MgCl₂ vs NaCl</h3>
+  <table>
+    <tr><th>Cation</th><th>Charge</th><th>Radius (pm)</th><th>Polarizing Power</th></tr>
+    <tr><td>Na⁺</td><td class="center">+1</td><td class="center">102</td><td class="center">9.6 × 10⁻⁵</td></tr>
+    <tr><td>Mg²⁺</td><td class="center">+2</td><td class="center">72</td><td class="center">3.86 × 10⁻⁴</td></tr>
+    <tr><td>Al³⁺</td><td class="center">+3</td><td class="center">53.5</td><td class="center">1.05 × 10⁻³</td></tr>
+  </table>
+  <p><strong>Order:</strong> AlCl₃ &gt; MgCl₂ &gt; NaCl (covalent character)</p>
+
+  <div class="callout cheat">
+    <span class="callout-title">Cheat Code</span>
+    Lattice energy compare karte waqt, <strong>charge zyada important</strong> hai radius se. Charge double = lattice 4x.
+  </div>
+
+  <!-- ============================================================
+       SECTION 9: QUICK REVISION
+       ============================================================ -->
+  <h2>9. Quick Revision Sheet</h2>
+
+  <h3>9.1 All Formulas</h3>
+  <table>
+    <tr><th>Topic</th><th>Formula</th></tr>
+    <tr><td>Hybridisation</td><td class="code">H = ½ (V + M − C + A)</td></tr>
+    <tr><td>Bond Order</td><td class="code">BO = ½ (N_b − N_a)</td></tr>
+    <tr><td>Dipole Moment</td><td class="code">μ = q × d</td></tr>
+    <tr><td>Lone Pairs</td><td class="code">LP = (V − B) / 2</td></tr>
+    <tr><td>Polarizing Power</td><td class="code">Charge / (radius)²</td></tr>
+    <tr><td>Lattice Energy</td><td class="code">K × q₁ × q₂ / (r₁ + r₂)</td></tr>
+  </table>
+
+  <h3>9.2 Key Orders</h3>
+  <table>
+    <tr><th>Order</th><th>Sequence</th></tr>
+    <tr><td>Bond Angle</td><td class="code">CH₄ (109.5) &gt; NH₃ (107) &gt; H₂O (104.5)</td></tr>
+    <tr><td>Dipole Moment</td><td class="code">H₂O &gt; NH₃ &gt; NF₃</td></tr>
+    <tr><td>Covalent Character</td><td class="code">LiCl &gt; NaCl &gt; KCl &gt; RbCl</td></tr>
+    <tr><td>Isoelectronic (BO=3)</td><td class="code">N₂, CO, CN⁻, NO⁺</td></tr>
+  </table>
+
+  <!-- ============================================================
+       SECTION 10: COMMON MISTAKES
+       ============================================================ -->
+  <h2>10. Common Mistakes (99%ile Trap List)</h2>
+  <table>
+    <tr><th>Mistake</th><th>Fix</th></tr>
+    <tr><td>Lone pair count bhoolna</td><td>LP = (V − B)/2</td></tr>
+    <tr><td>Hybridisation = Geometry</td><td>H alag, shape alag</td></tr>
+    <tr><td>MOT π/σ order galat</td><td>N₂ tak π, O₂ se σ</td></tr>
+    <tr><td>Dipole direction bhoolna</td><td>Bent's Rule lagao</td></tr>
+    <tr><td>Fajan's rule size only</td><td>Size + Charge + Pseudo noble</td></tr>
+    <tr><td>O₂ ko diamagnetic samajhna</td><td>O₂ <strong>paramagnetic</strong> hai</td></tr>
+    <tr><td>Back bonding ignore karna</td><td>BF₃, CO, CN⁻ check karo</td></tr>
+    <tr><td>Bent's Rule use nahi karna</td><td>Bond angle + dipole ke liye</td></tr>
+    <tr><td>PH₃ mein Bent's lagana</td><td>Drago's Rule lagao</td></tr>
+    <tr><td>B₂H₆ mein banana bonds bhoolna</td><td>2 bridge bonds yaad rakho</td></tr>
+  </table>
+
+  <!-- ============================================================
+       SECTION 11: PYQ TREND
+       ============================================================ -->
+  <h2>11. PYQ Trend Analysis (2017–2026)</h2>
+
+  <table>
+    <tr><th>Year</th><th>Key Topics</th></tr>
+    <tr><td>2026</td><td>VSEPR Matching, Hybridisation</td></tr>
+    <tr><td>2025</td><td>MOT, Bond Order</td></tr>
+    <tr><td>2024</td><td>VSEPR, Dipole Moment, Bent's Rule</td></tr>
+    <tr><td>2023</td><td>MOT, Back Bonding</td></tr>
+    <tr><td>2022</td><td>Hybridisation, Bond Angle</td></tr>
+    <tr><td>2021</td><td>VSEPR, MOT</td></tr>
+    <tr><td>2020</td><td>Bond Order, Dipole</td></tr>
+    <tr><td>2019</td><td>VSEPR, Hybridisation</td></tr>
+  </table>
+
+  <h3>Recurring Themes (Priority Order)</h3>
+  <table>
+    <tr><th>Topic</th><th>Frequency</th></tr>
+    <tr><td>VSEPR shape prediction</td><td class="center">100%</td></tr>
+    <tr><td>Bond order calculation</td><td class="center">80%</td></tr>
+    <tr><td>Hybridisation</td><td class="center">70%</td></tr>
+    <tr><td>Dipole moment</td><td class="center">50%</td></tr>
+    <tr><td>Back bonding</td><td class="center">30%</td></tr>
+    <tr><td>Bent's Rule</td><td class="center">20% (rising)</td></tr>
+    <tr><td>Drago's Rule</td><td class="center">15% (rising)</td></tr>
+  </table>
+
+  <!-- ============================================================
+       SECTION 12: STUDY PLAN
+       ============================================================ -->
+  <h2>12. 4-Week Study Plan</h2>
+
+  <table>
+    <tr><th>Week</th><th>Focus</th><th>Daily Target</th></tr>
+    <tr><td>1</td><td>VSEPR + Hybridisation</td><td>1 hr + 10 PYQs</td></tr>
+    <tr><td>2</td><td>MOT + Bond Order</td><td>1 hr + 15 PYQs</td></tr>
+    <tr><td>3</td><td>Dipole + Fajan + Bent's + Drago's + Back Bonding</td><td>1 hr + 10 PYQs</td></tr>
+    <tr><td>4</td><td>Full Revision + Mocks</td><td>2 hrs + 3 mocks</td></tr>
+  </table>
+
+  <h3>Daily Ritual</h3>
+  <ul>
+    <li><strong>Subah (30 min):</strong> Theory padho</li>
+    <li><strong>Shaam (30 min):</strong> PYQs solve karo</li>
+    <li><strong>Raat (10 min):</strong> Apne notes revise karo</li>
+  </ul>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <div class="footer">
+    Chemical Bonding · Master Notes · 99.5+ Percentile Edition<br>
+    JEE Main 2026 · Prepared with senior POV analysis
+  </div>
+
+</div>
+
 </body>
 </html>
